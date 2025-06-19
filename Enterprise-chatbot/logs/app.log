@@ -1,0 +1,418 @@
+[2025-06-16 11:16:04] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 11:18:29] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 11:18:29] ERROR: ❌ classifyHandler Error: classifyQuery is not a function
+[2025-06-16 11:21:50] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 11:21:56] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 11:21:58] INFO: 📦 Classification Result: {"category":"Unknown","originalQuery":"List all male employees in Finance department","error":"Gemini API failed"}
+[2025-06-16 11:23:41] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 11:23:49] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 11:23:49] INFO: 📦 Classification Result: {"category":"Unknown","originalQuery":"List all male employees in Finance department","error":"Gemini API failed"}
+[2025-06-16 11:24:56] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 11:25:01] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 11:25:04] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"department":"Finance","gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","department","gender"],"groupBy":"","sortBy":"fullName","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"authContext":{"userId":"","role":"","region":""},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"debug":false}
+[2025-06-16 12:08:36] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 12:08:42] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 12:08:46] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email","department","gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"authContext":{"userId":"","role":"","region":""},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"debug":false}
+[2025-06-16 12:20:14] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 12:20:17] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email","department","gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"authContext":{"userId":"","role":"","region":""},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"debug":false}
+[2025-06-16 12:20:23] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 12:20:30] INFO: 🧠 Classifying Query: List all male employees in Finance department
+[2025-06-16 12:20:34] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:32:52] INFO: 💬 Incoming Query: List all male employees in Finance department
+[2025-06-16 12:32:55] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:32:55] ERROR: ❌ askHandler Error: validateSchema is not a function
+[2025-06-16 12:37:07] INFO: 💬 Incoming Query: List all male employees in Finance department
+[2025-06-16 12:37:10] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:37:10] ERROR: ❌ askHandler Error: validateSchema is not a function
+[2025-06-16 12:37:13] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 12:37:16] INFO: 💬 Incoming Query: List all male employees in Finance department
+[2025-06-16 12:37:19] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:37:19] ERROR: ❌ askHandler Error: validateSchema is not a function
+[2025-06-16 12:39:50] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 12:40:25] INFO: 💬 Incoming Query: List all male employees in Finance department
+[2025-06-16 12:40:28] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:40:28] ERROR: ❌ askHandler Error: routeQuery is not a function
+[2025-06-16 12:51:26] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 12:51:37] INFO: 💬 Incoming Query: List all male employees in Finance department
+[2025-06-16 12:51:40] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:51:40] ERROR: ❌ Invalid schema: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:53:11] INFO: 🚀 Server started at http://localhost:8000
+[2025-06-16 12:53:15] INFO: 💬 Incoming Query: List all male employees in Finance department
+[2025-06-16 12:53:18] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:53:18] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 12:53:18] ERROR: ❌ routeQuery error: chroma.getOrCreateCollection is not a function
+[2025-06-16 12:53:18] ERROR: ❌ askHandler Error: chroma.getOrCreateCollection is not a function
+[2025-06-16 15:00:00] INFO: 🚀 Server started at http://localhost:3000
+[2025-06-16 15:00:25] INFO: 💬 Incoming Query: How many male employees are in the Finance department?
+[2025-06-16 15:00:28] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"How many male employees are in the Finance department?","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:00:28] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 15:00:28] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 15:00:28] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 15:02:11] INFO: 🧠 Classifying Query: How many male employees are in the Finance department?
+[2025-06-16 15:02:14] INFO: 📦 Classification Result: {"category":"Statistical","originalQuery":"How many male employees are in the Finance department?","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:02:59] INFO: 🧠 Classifying Query: how many male employees are there?
+[2025-06-16 15:03:03] INFO: 📦 Classification Result: {"category":"Statistical","originalQuery":"how many male employees are there?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:03:58] INFO: 🧠 Classifying Query: what is the total number of male employees in the zone c?
+[2025-06-16 15:04:01] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:04:12] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 15:04:16] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:04:16] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 15:04:16] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:04:16] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:12:46] INFO: 🚀 Server started at http://localhost:3000
+[2025-06-16 15:13:01] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 15:13:04] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:13:04] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 15:13:04] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:13:04] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:20:45] INFO: 🚀 Server started at http://localhost:3000
+[2025-06-16 15:20:51] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 15:20:54] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:20:54] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 15:20:54] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:20:54] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:21:26] INFO: 🚀 Server started at http://localhost:3000
+[2025-06-16 15:21:38] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 15:21:42] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:21:42] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 15:22:09] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:22:09] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:27:06] INFO: 🚀 Server started at http://localhost:3000
+[2025-06-16 15:27:14] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 15:27:18] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 15:27:18] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:23:29] INFO: 🚀 Server started at http://localhost:3000
+[2025-06-16 16:50:11] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:50:13] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:50:13] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:50:13] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:50:13] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:52:08] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:52:11] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:52:11] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:52:11] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:52:11] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:55:38] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:55:41] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:55:41] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 16:55:41] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 16:55:41] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 16:55:48] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:55:51] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:55:51] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:55:51] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 16:55:51] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 16:55:51] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-06-16 16:57:28] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:57:30] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:57:30] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:57:30] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 16:57:30] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 16:57:31] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2025-06-16 16:58:03] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:58:07] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:58:07] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:58:07] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 16:58:07] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 16:58:08] INFO: ✅ Gemini Answer Generated
+[2025-06-16 16:59:44] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:59:46] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":null,"sortBy":null,"sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":null,"xField":null,"yField":null},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:59:46] ERROR: ❌ Invalid schema: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":null,"sortBy":null,"sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":null,"xField":null,"yField":null},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:59:53] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 16:59:55] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 16:59:56] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 16:59:56] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 16:59:56] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 16:59:57] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:00:46] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 17:00:49] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:00:49] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:00:50] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:00:50] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:00:50] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:05:34] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 17:05:38] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:05:38] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:05:38] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:05:38] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:05:42] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 17:05:46] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:05:46] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:05:46] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:05:46] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:05:49] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 17:05:51] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:05:51] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:05:51] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:05:51] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:06:03] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 17:06:06] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:06:06] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:06:06] ERROR: ❌ routeQuery error: enterprise is not defined
+[2025-06-16 17:06:06] ERROR: ❌ askHandler Error: enterprise is not defined
+[2025-06-16 17:06:35] INFO: 💬 Incoming Query: what is the total number of male employees in the zone c?
+[2025-06-16 17:06:37] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:06:37] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:06:38] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:06:38] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:06:38] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:07:09] INFO: 💬 Incoming Query: what is the total number of male employee?
+[2025-06-16 17:07:11] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employee?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:07:11] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:07:11] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:07:11] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:07:14] INFO: 💬 Incoming Query: what is the total number of male employee?
+[2025-06-16 17:07:16] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employee?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:07:16] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:07:16] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:07:16] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:07:31] INFO: 💬 Incoming Query: what is the total number of male employee?
+[2025-06-16 17:07:33] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total number of male employee?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:07:33] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:07:33] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:07:33] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:08:00] INFO: 💬 Incoming Query: how many male employees are there in total?
+[2025-06-16 17:08:03] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many male employees are there in total?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:08:03] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:08:03] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:08:03] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:08:34] INFO: 💬 Incoming Query: what is the total count of male employees?
+[2025-06-16 17:08:37] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total count of male employees?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:08:37] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:08:37] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:08:37] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:09:01] INFO: 💬 Incoming Query: what is the total count of male employees?
+[2025-06-16 17:09:03] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total count of male employees?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:09:03] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:09:03] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:09:03] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:09:24] INFO: 💬 Incoming Query: How many male employees are there in total?
+[2025-06-16 17:09:27] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"How many male employees are there in total?","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:09:27] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:09:27] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:09:27] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:10:12] INFO: 💬 Incoming Query: List all male employees
+[2025-06-16 17:10:15] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:10:15] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:10:17] INFO: 📥 Retrieved Context: 494 items
+[2025-06-16 17:10:17] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:10:19] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:10:53] INFO: 💬 Incoming Query: List the total count of all the male employees
+[2025-06-16 17:10:55] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"List the total count of all the male employees","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:10:55] INFO: 🔀 Routing Category: Statistical
+[2025-06-16 17:10:55] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:10:55] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:11:29] INFO: 💬 Incoming Query: List all male employees in numbers
+[2025-06-16 17:11:32] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:11:32] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:11:33] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:11:33] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:11:33] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:13:11] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 17:13:15] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:13:15] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:13:15] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:13:15] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:13:16] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:14:27] INFO: 💬 Incoming Query: List all male employees 
+[2025-06-16 17:14:29] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees ","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:14:29] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:14:30] INFO: 📥 Retrieved Context: 494 items
+[2025-06-16 17:14:30] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:14:34] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:16:05] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 17:16:09] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:16:09] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:16:09] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:16:09] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:16:10] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:16:22] INFO: 💬 Incoming Query: List all male employees  whose salary is less than 50000
+[2025-06-16 17:16:25] INFO: ✅ Classified JSON: {"category":"Conditional","originalQuery":"List all male employees  whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["fullName","employeeId","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:16:25] INFO: 🔀 Routing Category: Conditional
+[2025-06-16 17:16:25] ERROR: ❌ routeQuery error: conditionalQuery is not a function
+[2025-06-16 17:16:25] ERROR: ❌ askHandler Error: conditionalQuery is not a function
+[2025-06-16 17:17:02] INFO: 💬 Incoming Query: List all male employees  salary less than 50000
+[2025-06-16 17:17:05] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees  salary less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["fullName","employeeId","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:17:05] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:17:06] INFO: 📥 Retrieved Context: 104 items
+[2025-06-16 17:17:06] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:17:07] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:18:05] INFO: 💬 Incoming Query: List all male employees  salary less than 50000
+[2025-06-16 17:18:09] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees  salary less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["fullName","employeeId","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:18:09] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:18:09] INFO: 📥 Retrieved Context: 104 items
+[2025-06-16 17:18:10] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:18:13] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:18:29] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 17:18:35] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male","salary":{"$lt":50000}},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId","fullName","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:18:35] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:18:35] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:18:35] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:18:36] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:19:12] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 17:19:16] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:19:16] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:19:16] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:19:16] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:19:17] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:20:21] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 17:20:25] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:20:25] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:20:26] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 17:20:26] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:20:27] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:21:05] INFO: 💬 Incoming Query: List all male employees  salary  less than 50000
+[2025-06-16 17:21:10] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees  salary  less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["fullName","employeeId","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:21:10] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 17:21:10] INFO: 📥 Retrieved Context: 104 items
+[2025-06-16 17:21:10] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 17:21:12] INFO: ✅ Gemini Answer Generated
+[2025-06-16 17:52:13] INFO: 🧠 Classifying Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 17:52:17] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male","salary":{"$lt":50000}},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:05:50] INFO: 🧠 Classifying Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 18:05:54] INFO: 📦 Classification Result: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:06:14] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 18:06:18] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:06:18] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:06:18] ERROR: ❌ routeQuery error: Expected 'include' items to be one of distances, documents, embeddings, metadatas, uris, but got ids
+[2025-06-16 18:06:18] ERROR: ❌ askHandler Error: Expected 'include' items to be one of distances, documents, embeddings, metadatas, uris, but got ids
+[2025-06-16 18:08:27] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 18:08:30] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:08:30] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:08:30] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:08:30] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:12:06] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 18:12:09] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:12:09] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:12:09] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:12:09] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:25:47] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 50000
+[2025-06-16 18:25:50] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["employeeId","fullName","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:25:50] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:25:51] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 18:25:51] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 18:25:51] INFO: ✅ Gemini Answer Generated
+[2025-06-16 18:47:23] INFO: 💬 Incoming Query: List all male employees  salary  less than 50000
+[2025-06-16 18:47:26] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees  salary  less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"whereDocument":[],"fields":["fullName","employeeId","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:47:26] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:47:26] INFO: 📥 Retrieved Context: 104 items
+[2025-06-16 18:47:26] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 18:47:54] INFO: ✅ Gemini Answer Generated
+[2025-06-16 18:51:30] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 70000
+[2025-06-16 18:51:33] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 70000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":70000}},"whereDocument":[],"fields":["employeeId","fullName","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:51:33] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:51:33] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 18:51:33] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 18:51:34] INFO: ✅ Gemini Answer Generated
+[2025-06-16 18:59:13] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 70000
+[2025-06-16 18:59:17] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 70000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":70000}},"whereDocument":[],"fields":["employeeId","fullName","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:59:17] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:59:17] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 18:59:17] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 18:59:18] INFO: ✅ Gemini Answer Generated
+[2025-06-16 18:59:27] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 40000
+[2025-06-16 18:59:31] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 40000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":40000}},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 18:59:31] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 18:59:31] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 18:59:31] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 18:59:32] INFO: ✅ Gemini Answer Generated
+[2025-06-16 19:04:12] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 40000
+[2025-06-16 19:04:15] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 40000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":40000}},"whereDocument":[],"fields":["employeeId","fullName","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 19:04:15] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 19:04:16] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 19:04:16] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 19:04:18] INFO: ✅ Gemini Answer Generated
+[2025-06-16 19:05:26] INFO: 💬 Incoming Query: List all male employees  salary  less than 40000
+[2025-06-16 19:05:30] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees  salary  less than 40000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":40000}},"whereDocument":[],"fields":["fullName","employeeId","email","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 19:05:30] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 19:05:30] INFO: 📥 Retrieved Context: 58 items
+[2025-06-16 19:05:31] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 19:05:46] INFO: ✅ Gemini Answer Generated
+[2025-06-16 19:08:44] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 40000
+[2025-06-16 19:08:48] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 40000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":40000}},"whereDocument":[],"fields":["employeeId","fullName","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 19:08:48] INFO: 🔀 Routing Category: Aggregate
+[2025-06-16 19:08:48] INFO: 📥 Retrieved Context: 1 items
+[2025-06-16 19:08:48] INFO: 📨 Sending prompt to Gemini...
+[2025-06-16 19:08:49] INFO: ✅ Gemini Answer Generated
+[2025-06-19 16:19:46] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 40000
+[2025-06-19 16:19:48] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 40000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":40000}},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:19:48] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 16:19:48] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 16:19:48] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 16:19:49] INFO: ✅ Gemini Answer Generated
+[2025-06-19 16:30:28] INFO: 💬 Incoming Query: hi
+[2025-06-19 16:30:31] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"hi","metadataFilters":{},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:30:31] INFO: 🔀 Routing Category: General
+[2025-06-19 16:30:31] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 16:30:31] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 16:30:32] INFO: ✅ Gemini Answer Generated
+[2025-06-19 16:30:55] INFO: 💬 Incoming Query: list the total number of malle employees
+[2025-06-19 16:30:58] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"list the total number of malle employees","metadataFilters":{},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:30:58] INFO: 🔀 Routing Category: Statistical
+[2025-06-19 16:30:58] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-19 16:30:58] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-19 16:37:30] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 40000
+[2025-06-19 16:37:34] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 40000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":40000}},"whereDocument":[],"fields":["employeeId","fullName"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:37:34] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 16:37:34] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 16:37:34] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 16:37:35] INFO: ✅ Gemini Answer Generated
+[2025-06-19 16:38:55] INFO: 💬 Incoming Query: List all male employees in numbers whose salary is less than 70000
+[2025-06-19 16:38:58] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"List all male employees in numbers whose salary is less than 70000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":70000}},"whereDocument":[],"fields":["employeeId","fullName","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:38:58] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 16:38:59] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 16:38:59] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 16:38:59] INFO: ✅ Gemini Answer Generated
+[2025-06-19 16:39:34] INFO: 💬 Incoming Query: list all the female employees in the payzone c
+[2025-06-19 16:39:37] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the female employees in the payzone c","metadataFilters":{"gender":"female","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:39:37] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 16:39:37] INFO: 📥 Retrieved Context: 0 items
+[2025-06-19 16:39:37] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 16:39:38] INFO: ✅ Gemini Answer Generated
+[2025-06-19 16:40:03] INFO: 💬 Incoming Query: list number of female employees
+[2025-06-19 16:40:06] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"list number of female employees","metadataFilters":{"gender":"female"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"employeeId":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 16:40:06] INFO: 🔀 Routing Category: Statistical
+[2025-06-19 16:40:06] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-19 16:40:06] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-19 17:26:33] INFO: 💬 Incoming Query: hi
+[2025-06-19 17:26:36] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"hi","metadataFilters":{},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:26:36] INFO: 🔀 Routing Category: General
+[2025-06-19 17:26:37] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 17:26:37] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:26:38] INFO: ✅ Gemini Answer Generated
+[2025-06-19 17:27:01] INFO: 💬 Incoming Query: what is your name and tell me a nice quote
+[2025-06-19 17:27:04] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"what is your name and tell me a nice quote","metadataFilters":{},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:27:04] INFO: 🔀 Routing Category: General
+[2025-06-19 17:27:04] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 17:27:04] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:27:06] INFO: ✅ Gemini Answer Generated
+[2025-06-19 17:31:05] INFO: 💬 Incoming Query: what is your name and tell me a nice quote
+[2025-06-19 17:31:09] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"what is your name and tell me a nice quote","metadataFilters":{},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:31:09] INFO: 🔀 Routing Category: General
+[2025-06-19 17:31:09] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 17:31:09] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:31:11] INFO: ✅ Gemini Answer Generated
+[2025-06-19 17:36:51] INFO: 💬 Incoming Query: list all the male employee
+[2025-06-19 17:36:54] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the male employee","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:36:55] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 17:36:55] INFO: 📥 Retrieved Context: 13 items
+[2025-06-19 17:36:55] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:36:58] INFO: ✅ Gemini Answer Generated
+[2025-06-19 17:45:04] INFO: 💬 Incoming Query: list all the employees
+[2025-06-19 17:45:07] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the employees","metadataFilters":{},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email","department","empType"],"groupBy":"","sortBy":"employeeId","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:45:07] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 17:45:07] INFO: 📥 Retrieved Context: 1 items
+[2025-06-19 17:45:07] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:45:08] INFO: ✅ Gemini Answer Generated
+[2025-06-19 17:45:50] INFO: 💬 Incoming Query: list all the male employees
+[2025-06-19 17:45:54] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the male employees","metadataFilters":{"gender":"male"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:45:54] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 17:45:54] INFO: 📥 Retrieved Context: 13 items
+[2025-06-19 17:45:54] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:45:58] INFO: ✅ Gemini Answer Generated
+[2025-06-19 17:46:16] INFO: 💬 Incoming Query: list all the female employees
+[2025-06-19 17:46:19] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the female employees","metadataFilters":{"gender":"female"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-19 17:46:19] INFO: 🔀 Routing Category: Aggregate
+[2025-06-19 17:46:19] INFO: 📥 Retrieved Context: 11 items
+[2025-06-19 17:46:20] INFO: 📨 Sending prompt to Gemini...
+[2025-06-19 17:46:22] INFO: ✅ Gemini Answer Generated

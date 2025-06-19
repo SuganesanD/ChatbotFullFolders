@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+   
+  
+  }
+  
+  .home-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    height: 180px;  
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .message-row {
+    display: flex;
+    margin: 5px 0;
+  }
+  
+  .user-query {
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px 20px 4px 20px;
+    padding: 10px 15px;
+    max-width: 75%;
+    margin-left: auto;  /* Align to right */
+    font-size: 16px;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
+  .response {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 20px 20px 4px 20px;
+    padding: 10px 15px;
+    max-width: 75%;
+    font-size: 16px;
+    word-wrap: break-word;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-right: auto; /* Align to left */
+  }
+  
+  .preserve-format {
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+  
+  .typing-indicator {
+    display: inline-block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #999;
+  }
+  
+  .sources {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  
+  .sources ul {
+    padding-left: 18px;
+    margin: 5px 0;
+  }
+  
+  .sources li {
+    list-style-type: disc;
+  }
+  
+  .error-message {
+    background-color: #ffe6e6;
+    padding: 10px 15px;
+    border-left: 4px solid red;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .search-bar {
+    flex: 1;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: #036ada;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .stop-button {
+    background-color: #dc3545;
+  }
+  
+  .stop-button:hover {
+    background-color: #a71d2a;
+  }
+
+  .imagerender {
+    background-color: transparent;
+    color: blue;
+    border: 1px solid blue;
+    transition: 0.3s;
+  }
+
+  .imagerender:hover {
+    background-color: transparent;
+    color: blue;
+    border: 1px solid blue;
+    transition: 0.3s;
+  }
+  
+  .active-style {
+    background-color: blue;
+    color: white;
+  }
+
+  

@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/966/456/desktop-wallpaper-login-page-login.jpg');
+    background-size: cover;
+  }
+  
+  .login-container {
+    background-color: #dceefb; /* Pale blue */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0.9, 0.6, 1, 0.8);
+    width: 300px;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  .logo img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Soft round corners */
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    background-color: #5a9bf6; /* Matching blue color */
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #4a8cd8;
+    transform: scale(1.02);
+  }
+  
+  button:active {
+    background-color: #3a7bc4;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  

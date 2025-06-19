@@ -1,0 +1,63 @@
+[2025-06-16 11:18:29] ERROR: ❌ classifyHandler Error: classifyQuery is not a function
+[2025-06-16 12:32:55] ERROR: ❌ askHandler Error: validateSchema is not a function
+[2025-06-16 12:37:10] ERROR: ❌ askHandler Error: validateSchema is not a function
+[2025-06-16 12:37:19] ERROR: ❌ askHandler Error: validateSchema is not a function
+[2025-06-16 12:40:28] ERROR: ❌ askHandler Error: routeQuery is not a function
+[2025-06-16 12:51:40] ERROR: ❌ Invalid schema: {"category":"Aggregate","originalQuery":"List all male employees in Finance department","metadataFilters":{"gender":"male","department":"Finance"},"metadataConditionalFields":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 12:53:18] ERROR: ❌ routeQuery error: chroma.getOrCreateCollection is not a function
+[2025-06-16 12:53:18] ERROR: ❌ askHandler Error: chroma.getOrCreateCollection is not a function
+[2025-06-16 15:00:28] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 15:00:28] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 15:04:16] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:04:16] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:13:04] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:13:04] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:20:54] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:20:54] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:22:09] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 15:22:09] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:50:13] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:50:13] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:52:11] ERROR: ❌ routeQuery error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:52:11] ERROR: ❌ askHandler Error: ❌ Collection 'employee-embeddings1' not found.
+[2025-06-16 16:55:41] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 16:55:41] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 16:55:51] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-06-16 16:57:31] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2025-06-16 16:59:46] ERROR: ❌ Invalid schema: {"category":"Aggregate","originalQuery":"what is the total number of male employees in the zone c?","metadataFilters":{"gender":"male","payZone":"c"},"metadataConditionalFields":{},"whereDocument":[],"fields":["employeeId"],"groupBy":null,"sortBy":null,"sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":null,"xField":null,"yField":null},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-16 17:05:38] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:05:38] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:05:46] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:05:46] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:05:51] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:05:51] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:06:06] ERROR: ❌ routeQuery error: enterprise is not defined
+[2025-06-16 17:06:06] ERROR: ❌ askHandler Error: enterprise is not defined
+[2025-06-16 17:07:11] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:07:11] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:07:16] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:07:16] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:07:33] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:07:33] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:08:03] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:08:03] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:08:37] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:08:37] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:09:03] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:09:03] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:09:27] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:09:27] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:10:55] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-16 17:10:55] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-16 17:16:25] ERROR: ❌ routeQuery error: conditionalQuery is not a function
+[2025-06-16 17:16:25] ERROR: ❌ askHandler Error: conditionalQuery is not a function
+[2025-06-16 18:06:18] ERROR: ❌ routeQuery error: Expected 'include' items to be one of distances, documents, embeddings, metadatas, uris, but got ids
+[2025-06-16 18:06:18] ERROR: ❌ askHandler Error: Expected 'include' items to be one of distances, documents, embeddings, metadatas, uris, but got ids
+[2025-06-16 18:08:30] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:08:30] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:12:09] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-16 18:12:09] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-06-19 16:30:58] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-19 16:30:58] ERROR: ❌ askHandler Error: statisticalInsight is not a function
+[2025-06-19 16:40:06] ERROR: ❌ routeQuery error: statisticalInsight is not a function
+[2025-06-19 16:40:06] ERROR: ❌ askHandler Error: statisticalInsight is not a function

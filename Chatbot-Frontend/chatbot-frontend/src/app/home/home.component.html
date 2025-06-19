@@ -1,0 +1,57 @@
+<div class="home-container">
+  <!-- Header with logo -->
+  <div class="header">
+    <div class="logo">
+      <img src="\assets\chainsys logo.jfif" alt="ChainSys Logo">
+    </div>
+  </div>
+
+  <!-- Conversation History -->
+  <div *ngFor="let item of conversation;let i=index" class="message">
+    <div class="user-query"><strong>You:</strong> {{ item.query }}</div>
+
+    <div class="response">
+      <strong>AI:</strong>
+      <div class="preserve-format">
+        {{ item.response }}
+        <span *ngIf="item.isTyping" class="typing-indicator">...</span>
+      </div>
+
+      <button (click)="renderImage(i)" *ngIf="!item.image && !item.isRendering">Render Image</button>
+
+      <div *ngIf="item.isRendering">Generating image...</div>
+
+      <div *ngIf="item.image">
+        <img [src]="item.image" alt="AI Generated Image"
+          style="max-width: 100%; margin-top: 10px; border-radius: 8px;" />
+      </div>
+
+      <div *ngIf="item.sources?.length" class="sources">
+        <strong>Sources:</strong>
+        <ul>
+          <li *ngFor="let source of item.sources">{{ source.doc_id }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Disclaimer -->
+  <p style="display: flex; justify-content: center; color: rgb(148, 146, 146);">
+    The answer from the chatbot is subjective, so always clarify the answers with the proper sources.
+  </p>
+
+  <!-- Input & Buttons -->
+  <div class="search-container">
+    <input #searchInput type="text" placeholder="Enter something to search" [(ngModel)]="query1" class="search-bar"
+      (keydown.enter)="onSearch(query1)" />
+
+
+
+    <button (click)="onSearch(searchInput.value)">Search 🔎</button>
+
+    <button (click)="onStop()" class="stop-button" *ngIf="conversation[conversation.length - 1]?.isTyping">
+      Stop
+    </button>
+  </div>
+</div>

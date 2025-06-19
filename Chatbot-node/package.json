@@ -1,0 +1,33 @@
+{
+  "name": "chatbot-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "@google-ai/generativelanguage": "^3.1.0",
+    "@google/genai": "^0.14.1",
+    "@google/generative-ai": "^0.24.1",
+    "@langchain/community": "^0.3.42",
+    "@langchain/google-genai": "^0.2.7",
+    "axios": "^1.9.0",
+    "chromadb": "^2.3.0",
+    "cohere-ai": "^7.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "dotenv-safe": "^9.1.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "langchain": "^0.3.24",
+    "nano": "^10.1.4",
+    "openai": "^4.98.0",
+    "uuid": "^11.1.0"
+  },
+  "type": "module"
+}

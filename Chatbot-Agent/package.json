@@ -1,0 +1,24 @@
+{
+  "name": "chatbot-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^0.14.1",
+    "@google/generative-ai": "^0.24.1",
+    "body-parser": "^2.2.0",
+    "chromadb": "^2.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "genai": "^0.0.18",
+    "nano": "^10.1.4",
+    "openai": "^5.0.1"
+  }
+}

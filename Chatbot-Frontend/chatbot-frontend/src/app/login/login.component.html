@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <img src="https://trial.chainsys.com/appplatform/images/chainsys-platform-logo.png" alt="ChainSys Logo">
+    </div>
+    <form (ngSubmit)="onSubmit()" autocomplete="off">
+      <div class="form-group">
+        <input type="text" id="username"  [(ngModel)]="username" name="username" placeholder="Username" required autocomplete="off">
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Password" required autocomplete="new-password">
+        <!-- Hidden field to prevent password suggestion -->
+        <input type="password" style="display: none;">
+      </div>
+      <button type="submit">Login</button>
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </form>
+  </div>
+</body>
+</html>
