@@ -75,34 +75,40 @@ const processAndEmbedEmployee = async (empInfo, additionalInfo, leaveInfo) => {
         };
 
         function generateEmployeeSummary({ empInfo, additionalInfo, leaveInfo }) {
-            const  fullName =`${empInfo.FirstName} ${empInfo.LastName}`; 
-            const summaryData = {
-              fullName :fullName,   
-              employeeId: empInfo.EmpID,
-              firstname: empInfo.FirstName,
-              lastname: empInfo.LastName,
-              empType: empInfo.EmployeeType,
-              department: empInfo.DepartmentType,
-              division: empInfo.Division,
-              startDate: formatDate(empInfo.StartDate),
-              manager: empInfo.Manager,
-              email: empInfo.Email,
-              status: empInfo.EmployeeStatus,
-              payZone: empInfo.PayZone,
-              salary: empInfo.Salary,
-              additionalID: empInfo.additionalinfo_id,
-          
-              dob: formatDate(additionalInfo.DOB),
-              gender: additionalInfo.GenderCode,
-              marital: additionalInfo.MaritalDesc,
-              state: additionalInfo.State,
-              locationCode: additionalInfo.LocationCode,
-              performance: additionalInfo.PerformanceScore,
-              rating: additionalInfo.CurrentEmployeeRating,
-          
-              leaveDates: (leaveInfo.length > 0 ? leaveInfo.map(leave => formatDate(leave.date)) : ["N/A"]).join(', '),
-              leaveEmpID: leaveInfo.length > 0 ? leaveInfo[0].employee_id : "N/A"
-            };
+            const fullName = `${empInfo.FirstName} ${empInfo.LastName}`;
+const summaryData = {
+  fullName: fullName.toLowerCase(),
+  employeeId: empInfo.EmpID.toLowerCase(),
+  firstname: empInfo.FirstName.toLowerCase(),
+  lastname: empInfo.LastName.toLowerCase(),
+  empType: empInfo.EmployeeType.toLowerCase(),
+  department: empInfo.DepartmentType.toLowerCase(),
+  division: empInfo.Division.toLowerCase(),
+  startDate: formatDate(empInfo.StartDate), // Keep original case/date format
+  manager: empInfo.Manager.toLowerCase(),
+  email: empInfo.Email.toLowerCase(),
+  status: empInfo.EmployeeStatus.toLowerCase(),
+  payZone: empInfo.PayZone.toLowerCase(),
+  salary: empInfo.Salary, // numeric
+  additionalID: empInfo.additionalinfo_id.toLowerCase(),
+
+  dob: formatDate(additionalInfo.DOB),
+  gender: additionalInfo.GenderCode.toLowerCase(),
+  marital: additionalInfo.MaritalDesc.toLowerCase(),
+  state: additionalInfo.State.toLowerCase(),
+  locationCode: additionalInfo.LocationCode, // numeric
+  performance: additionalInfo.PerformanceScore.toLowerCase(),
+  rating: additionalInfo.CurrentEmployeeRating, // numeric
+
+  leaveDates: (leaveInfo.length > 0
+    ? leaveInfo.map(leave => formatDate(leave.date))
+    : ["N/A"]
+  ).join(', '),
+  leaveEmpID: leaveInfo.length > 0
+    ? leaveInfo[0].employee_id.toLowerCase()
+    : "n/a"
+};
+
           
             const profileText = `
           ${summaryData.fullName} (Employee ID: ${summaryData.employeeId}) is a ${summaryData.empType} employee who joined the organization on ${summaryData.startDate}. 

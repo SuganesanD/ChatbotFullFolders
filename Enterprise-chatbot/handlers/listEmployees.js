@@ -1,58 +1,38 @@
 const chroma = require('../config/chromaClient');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+
 
 async function listEmployees(classified) {
   const {
-    metadataFilters = {},
-    metadataOrFilters = [],
-    metadataConditionalFields = {},
+    where,
     whereDocument = [],
     fields = [],
-    pagination = { limit: 100, offset: 0 }
+    pagination = { limit: 100, offset: 0 },
+    originalQuery = ""
   } = classified;
 
   const collection = await chroma.getCollection({ name: 'enterprise-collection' });
 
-  const andConditions = [];
-
-  // Add exact filters as $eq
-  for (const [key, value] of Object.entries(metadataFilters)) {
-    andConditions.push({ [key]: { "$eq": value } });
+  // 👉 Embed originalQuery using Gemini (optional semantic boost)
+  let queryEmbedding = undefined;
+  if (originalQuery?.trim()) {
+    const genAI = new GoogleGenerativeAI('AIzaSyD4zXj3LQtUGxPRbAwxkVM4lzZpQE6urOk');
+    const embeddingModel = genAI.getGenerativeModel({ model: 'embedding-001' });
+    const embed = await embeddingModel.embedContent({
+      content: { parts: [{ text: originalQuery }] }
+    });
+    const vector = embed.embedding?.values || embed.embedding;
+    queryEmbedding = Array.isArray(vector[0]) ? vector : [vector];
   }
 
-  // Add conditional filters like $gt, $lt, etc.
-  for (const [key, condition] of Object.entries(metadataConditionalFields)) {
-    andConditions.push({ [key]: condition });
-  }
+ console.log("queryembedding:",queryEmbedding);
+  console.log("📦 Final WHERE:", JSON.stringify(where, null, 2));
+  
 
-  const orConditions = [];
-  for (const orBlock of metadataOrFilters) {
-    const key = Object.keys(orBlock)[0];
-    const value = orBlock[key];
-
-    if (typeof value === "object") {
-      // e.g., { salary: { "$lt": 50000 } }
-      orConditions.push({ [key]: value });
-    } else {
-      // e.g., { department: "Engineering" }
-      orConditions.push({ [key]: { "$eq": value } });
-    }
-  }
-
-  // ✅ Compose the full `where` filter
-  let where = {};
-  if (andConditions.length > 0 && orConditions.length > 0) {
-    where = { "$and": [ ...andConditions, { "$or": orConditions } ] };
-  } else if (andConditions.length > 0) {
-    where = { "$and": andConditions };
-  } else if (orConditions.length > 0) {
-    where = { "$or": orConditions };
-  }
-
-  console.log("where:", JSON.stringify(where, null, 2));
-
-
+  // 🔍 Perform vector query
   const queryResult = await collection.query({
-    where,
+    queryEmbeddings: queryEmbedding,
+    where:where,
     whereDocument: whereDocument.length > 0 ? { "$contains": whereDocument.join(" ") } : undefined,
     nResults: pagination.limit,
     offset: pagination.offset

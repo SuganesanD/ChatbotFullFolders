@@ -83,3 +83,38 @@
 [2025-06-20 12:49:57] ERROR: ❌ askHandler Error: log is not defined
 [2025-06-20 12:50:21] ERROR: ❌ routeQuery error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
 [2025-06-20 12:50:21] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-06-20 12:51:43] ERROR: ❌ routeQuery error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-06-20 12:51:43] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-06-20 14:27:50] ERROR: ❌ routeQuery error: query is not defined
+[2025-06-20 14:27:50] ERROR: ❌ askHandler Error: query is not defined
+[2025-06-20 14:30:17] ERROR: ❌ routeQuery error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [400 Bad Request] * EmbedContentRequest.content.parts[0].data: required oneof field 'data' must have one initialized field
+
+[2025-06-20 14:30:17] ERROR: ❌ askHandler Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [400 Bad Request] * EmbedContentRequest.content.parts[0].data: required oneof field 'data' must have one initialized field
+
+[2025-06-20 14:32:17] ERROR: ❌ routeQuery error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [400 Bad Request] * EmbedContentRequest.content.parts[0].data: required oneof field 'data' must have one initialized field
+
+[2025-06-20 14:32:17] ERROR: ❌ askHandler Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [400 Bad Request] * EmbedContentRequest.content.parts[0].data: required oneof field 'data' must have one initialized field
+
+[2025-06-20 14:34:04] ERROR: ❌ routeQuery error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-06-20 14:34:04] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-06-20 14:50:09] ERROR: ❌ routeQuery error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-06-20 14:50:09] ERROR: ❌ askHandler Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-06-20 14:51:27] ERROR: ❌ routeQuery error: values is not iterable
+[2025-06-20 14:51:27] ERROR: ❌ askHandler Error: values is not iterable
+[2025-06-20 14:55:20] ERROR: ❌ routeQuery error: values is not iterable
+[2025-06-20 14:55:20] ERROR: ❌ askHandler Error: values is not iterable
+[2025-06-20 14:57:28] ERROR: ❌ routeQuery error: values is not iterable
+[2025-06-20 14:57:28] ERROR: ❌ askHandler Error: values is not iterable
+[2025-06-20 15:08:10] ERROR: ❌ routeQuery error: queryResult is not defined
+[2025-06-20 15:08:10] ERROR: ❌ askHandler Error: queryResult is not defined
+[2025-06-20 15:44:15] ERROR: ❌ routeQuery error: queryResult is not defined
+[2025-06-20 15:44:15] ERROR: ❌ askHandler Error: queryResult is not defined
+[2025-06-20 16:18:05] ERROR: ❌ routeQuery error: conditionalQuery is not a function
+[2025-06-20 16:18:05] ERROR: ❌ askHandler Error: conditionalQuery is not a function
+[2025-06-20 17:17:49] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the male employee who are either getting salary more than 80000 or in zone a","error":"Gemini API failed"}
+[2025-06-20 17:21:34] ERROR: ❌ routeQuery error: Expected where to be a non-empty object
+[2025-06-20 17:21:34] ERROR: ❌ askHandler Error: Expected where to be a non-empty object
+[2025-06-20 17:23:23] ERROR: ❌ routeQuery error: Expected where to be a non-empty object
+[2025-06-20 17:23:23] ERROR: ❌ askHandler Error: Expected where to be a non-empty object
+[2025-06-20 17:27:56] ERROR: ❌ routeQuery error: Expected where to be a non-empty object
+[2025-06-20 17:27:56] ERROR: ❌ askHandler Error: Expected where to be a non-empty object

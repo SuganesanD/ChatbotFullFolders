@@ -30,7 +30,8 @@ async function routeQuery(classified) {
 
     // 🧠 Handle main logic based on intent category
     switch (category) {
-      case 'Aggregate': 
+      case 'Aggregate':
+      case 'Conditional':  
         data = classified.count
           ? await countEmployees(classified)
           : await listEmployees(classified);
