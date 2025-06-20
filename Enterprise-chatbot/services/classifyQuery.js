@@ -10,30 +10,35 @@ const VALID_METADATA_FIELDS = [
 
 // ✅ Gemini prompt
 const promptTemplate = `
-You are a professional AI query classifier for an enterprise-grade employee information system. Your task is to convert natural language user queries into structured JSON instructions.
+You are a professional AI query classifier for an enterprise-grade employee chatbot. Your task is to convert any user query into a structured JSON instruction object used for backend processing.
 
-🧠 Output a JSON object in the following format:
+🎯 GOAL:
+Understand the user's intent and return a clean JSON object with filters, logic, and field details.
+
+✅ OUTPUT FORMAT:
+Return **only** a valid JSON object in this format (no comments, no extra text):
 
 {
   category: "Specific" | "Aggregate" | "Comparative" | "Conditional" | "Statistical" | "GroupedAggregate" | "General",
-  originalQuery: "...",                     
-  metadataFilters: { key: value },          
-  metadataConditionalFields: { key: { "$gt": value } }, 
-  whereDocument: ["..."],                   
-  fields: ["fullName", "email", ...],       
-  groupBy: "",                              
-  sortBy: "",                               
-  sortOrder: "asc" | "desc",                
-  count: true | false,                      
+  originalQuery: "...",
+  metadataFilters: { key: value },
+  metadataConditionalFields: { key: { "$gt" | "$lt" | "$gte" | "$lte": number | string } },
+  metadataOrFilters: { key: [value1, value2, ...] },
+  whereDocument: ["..."],
+  fields: ["..."],
+  groupBy: "fieldName",
+  sortBy: "fieldName",
+  sortOrder: "asc" | "desc",
+  count: true | false,
   pagination: {
     limit: 100,
     offset: 0
   },
-  tools: [],                                
+  tools: [],
   chartConfig: {
-    chartType: "",
-    xField: "",
-    yField: ""
+    chartType: "bar" | "line" | "pie" | "",
+    xField: "fieldName",
+    yField: "fieldName"
   },
   statisticalFields: { key: "sum" | "average" | "count" | "max" | "min" },
   pluginExtensions: {},
@@ -44,25 +49,60 @@ You are a professional AI query classifier for an enterprise-grade employee info
   }
 }
 
-🔒 Only use these allowed metadata fields:
+🔐 Use only these allowed metadata fields (case-sensitive):
 ${VALID_METADATA_FIELDS.join(', ')}
+
+---
 
 📌 Example 1:
 "List all male employees in Finance"
-→ category: "Aggregate"
-→ metadataFilters: { gender: "male", department: "Finance" }
-→ fields: ["fullName", "employeeId", "email"]
+{
+  "category": "Aggregate",
+  "originalQuery": "List all male employees in Finance",
+  "metadataFilters": { "gender": "male", "department": "Finance" },
+  "metadataConditionalFields": {},
+  "metadataOrFilters": {},
+  "whereDocument": [],
+  "fields": ["fullName", "employeeId", "email"],
+  "groupBy": "",
+  "sortBy": "",
+  "sortOrder": "asc",
+  "count": false,
+  "pagination": { "limit": 100, "offset": 0 },
+  "tools": [],
+  "chartConfig": { "chartType": "", "xField": "", "yField": "" },
+  "statisticalFields": {},
+  "pluginExtensions": {},
+  "formatting": { "markdownTable": true, "summaryOnly": false, "language": "en" }
+}
 
 📌 Example 2:
-"Show average salary of HR employees"
-→ category: "Statistical"
-→ metadataFilters: { department: "HR" }
-→ statisticalFields: { salary: "average" }
+"List employees in Sales or Marketing department"
+{
+  "category": "Aggregate",
+  "originalQuery": "List employees in Sales or Marketing department",
+  "metadataFilters": {},
+  "metadataConditionalFields": {},
+  "metadataOrFilters": { "department": ["Sales", "Marketing"] },
+  "whereDocument": [],
+  "fields": ["fullName", "department"],
+  "groupBy": "",
+  "sortBy": "",
+  "sortOrder": "asc",
+  "count": false,
+  "pagination": { "limit": 100, "offset": 0 },
+  "tools": [],
+  "chartConfig": { "chartType": "", "xField": "", "yField": "" },
+  "statisticalFields": {},
+  "pluginExtensions": {},
+  "formatting": { "markdownTable": true, "summaryOnly": false, "language": "en" }
+}
 
-Return **ONLY** the final JSON object. No comments, no markdown.
+🛑 Return only the valid JSON object — no markdown, no explanation, no extra text.
 
 User Query:
 `;
+
 
 async function classifyQuery(userQuery) {
   try {
