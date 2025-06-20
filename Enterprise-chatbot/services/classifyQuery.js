@@ -22,8 +22,8 @@ Return **only** a valid JSON object in this format (no comments, no extra text):
   category: "Specific" | "Aggregate" | "Comparative" | "Conditional" | "Statistical" | "GroupedAggregate" | "General",
   originalQuery: "...",
   metadataFilters: { key: value },
-  metadataConditionalFields: { key: { "$gt" | "$lt" | "$gte" | "$lte": number | string } },
-  metadataOrFilters: { key: [value1, value2, ...] },
+  metadataConditionalFields: { key: { "$gt" | "$lt" | "$gte" | "$lte" | "$eq": number | string } },
+  metadataOrFilters: [ { key: value }, { key: value } ],
   whereDocument: ["..."],
   fields: ["..."],
   groupBy: "fieldName",
@@ -61,7 +61,7 @@ ${VALID_METADATA_FIELDS.join(', ')}
   "originalQuery": "List all male employees in Finance",
   "metadataFilters": { "gender": "male", "department": "Finance" },
   "metadataConditionalFields": {},
-  "metadataOrFilters": {},
+  "metadataOrFilters": [],
   "whereDocument": [],
   "fields": ["fullName", "employeeId", "email"],
   "groupBy": "",
@@ -83,9 +83,31 @@ ${VALID_METADATA_FIELDS.join(', ')}
   "originalQuery": "List employees in Sales or Marketing department",
   "metadataFilters": {},
   "metadataConditionalFields": {},
-  "metadataOrFilters": { "department": ["Sales", "Marketing"] },
+  "metadataOrFilters": [ { "department": "Sales" }, { "department": "Marketing" } ],
   "whereDocument": [],
   "fields": ["fullName", "department"],
+  "groupBy": "",
+  "sortBy": "",
+  "sortOrder": "asc",
+  "count": false,
+  "pagination": { "limit": 100, "offset": 0 },
+  "tools": [],
+  "chartConfig": { "chartType": "", "xField": "", "yField": "" },
+  "statisticalFields": {},
+  "pluginExtensions": {},
+  "formatting": { "markdownTable": true, "summaryOnly": false, "language": "en" }
+}
+
+📌 Example 3:
+"List male employees OR employees in Tamil Nadu"
+{
+  "category": "Aggregate",
+  "originalQuery": "List male employees OR employees in Tamil Nadu",
+  "metadataFilters": {},
+  "metadataConditionalFields": {},
+  "metadataOrFilters": [ { "gender": "male" }, { "state": "Tamil Nadu" } ],
+  "whereDocument": [],
+  "fields": ["fullName", "state", "gender"],
   "groupBy": "",
   "sortBy": "",
   "sortOrder": "asc",
@@ -102,6 +124,7 @@ ${VALID_METADATA_FIELDS.join(', ')}
 
 User Query:
 `;
+
 
 
 async function classifyQuery(userQuery) {

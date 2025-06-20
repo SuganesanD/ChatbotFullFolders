@@ -534,3 +534,34 @@
 [2025-06-20 10:45:51] INFO: 📥 Retrieved Context: 1026 items
 [2025-06-20 10:45:51] INFO: 📨 Sending prompt to Gemini...
 [2025-06-20 10:46:06] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [503 Service Unavailable] The model is overloaded. Please try again later.
+[2025-06-20 12:41:43] INFO: 💬 Incoming Query: hi
+[2025-06-20 12:41:47] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"hi","metadataFilters":{},"metadataConditionalFields":{},"metadataOrFilters":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-20 12:41:47] INFO: 🔀 Routing Category: General
+[2025-06-20 12:41:48] INFO: 📥 Retrieved Context: 1 items
+[2025-06-20 12:41:48] INFO: 📨 Sending prompt to Gemini...
+[2025-06-20 12:41:49] INFO: ✅ Gemini Answer Generated
+[2025-06-20 12:42:15] INFO: 💬 Incoming Query: list all the male employee whose is getting salary less than 50000
+[2025-06-20 12:42:19] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the male employee whose is getting salary less than 50000","metadataFilters":{"gender":"male"},"metadataConditionalFields":{"salary":{"$lt":50000}},"metadataOrFilters":{},"whereDocument":[],"fields":["fullName","employeeId","salary","gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-20 12:42:19] INFO: 🔀 Routing Category: Aggregate
+[2025-06-20 12:42:19] ERROR: ❌ routeQuery error: metadataOrFilters is not iterable
+[2025-06-20 12:42:19] ERROR: ❌ askHandler Error: metadataOrFilters is not iterable
+[2025-06-20 12:45:46] INFO: 💬 Incoming Query: list the employee either male or in payzone a
+[2025-06-20 12:45:50] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list the employee either male or in payzone a","metadataFilters":{},"metadataConditionalFields":{},"metadataOrFilters":{"gender":["male"],"payZone":["a"]},"whereDocument":[],"fields":["fullName","employeeId","gender","payZone"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-20 12:45:50] INFO: 🔀 Routing Category: Aggregate
+[2025-06-20 12:45:50] ERROR: ❌ routeQuery error: metadataOrFilters is not iterable
+[2025-06-20 12:45:50] ERROR: ❌ askHandler Error: metadataOrFilters is not iterable
+[2025-06-20 12:49:09] INFO: 💬 Incoming Query: list all the employee either male or in zone a
+[2025-06-20 12:49:13] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the employee either male or in zone a","metadataFilters":{},"metadataConditionalFields":{},"metadataOrFilters":[{"gender":"male"},{"payZone":"a"}],"whereDocument":[],"fields":["fullName","employeeId","gender","payZone"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-20 12:49:13] INFO: 🔀 Routing Category: Aggregate
+[2025-06-20 12:49:13] ERROR: ❌ routeQuery error: log is not defined
+[2025-06-20 12:49:13] ERROR: ❌ askHandler Error: log is not defined
+[2025-06-20 12:49:54] INFO: 💬 Incoming Query: list the employee who are either male or in zone a
+[2025-06-20 12:49:57] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list the employee who are either male or in zone a","metadataFilters":{},"metadataConditionalFields":{},"metadataOrFilters":[{"gender":"male"},{"payZone":"a"}],"whereDocument":[],"fields":["fullName","employeeId","gender","payZone"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-20 12:49:57] INFO: 🔀 Routing Category: Aggregate
+[2025-06-20 12:49:57] ERROR: ❌ routeQuery error: log is not defined
+[2025-06-20 12:49:57] ERROR: ❌ askHandler Error: log is not defined
+[2025-06-20 12:50:18] INFO: 💬 Incoming Query: list the employee who are either male or in zone a
+[2025-06-20 12:50:21] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list the employee who are either male or in zone a","metadataFilters":{},"metadataConditionalFields":{},"metadataOrFilters":[{"gender":"male"},{"payZone":"a"}],"whereDocument":[],"fields":["fullName","employeeId","gender","payZone"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-06-20 12:50:21] INFO: 🔀 Routing Category: Aggregate
+[2025-06-20 12:50:21] ERROR: ❌ routeQuery error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-06-20 12:50:21] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided

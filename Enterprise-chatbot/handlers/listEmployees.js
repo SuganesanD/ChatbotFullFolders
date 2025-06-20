@@ -1,84 +1,81 @@
 const chroma = require('../config/chromaClient');
 
-/**
- * List employees using full classified query format.
- * Supports metadata filters, conditional fields, semantic document filters (whereDocument), and field selection.
- * Fetches all matching data in batches.
- *
- * @param {Object} classified - Structured query from classifier
- * @returns {Promise<Object[]>} - Filtered and matched employee documents
- */
 async function listEmployees(classified) {
-  const BATCH_SIZE = 500;
-  const allMatched = [];
-  let offset = 0;
-  let batchCount = 0;
-
   const {
     metadataFilters = {},
+    metadataOrFilters = [],
     metadataConditionalFields = {},
     whereDocument = [],
-    fields = []
+    fields = [],
+    pagination = { limit: 100, offset: 0 }
   } = classified;
 
   const collection = await chroma.getCollection({ name: 'enterprise-collection' });
 
-  while (true) {
-    const response = await collection.get({
-      include: ['metadatas', 'documents'],
-      limit: BATCH_SIZE,
-      offset
-    });
+  const andConditions = [];
 
-    const metadatas = response?.metadatas || [];
-    const documents = response?.documents || [];
-    const fetchedCount = metadatas.length;
-
-    if (fetchedCount === 0) break;
-
-    for (let i = 0; i < metadatas.length; i++) {
-      const metadata = metadatas[i];
-      const documentText = documents[i]?.toLowerCase() || '';
-      let match = true;
-
-      // Apply exact metadata filters
-      for (const [key, value] of Object.entries(metadataFilters)) {
-        const metaValue = metadata[key];
-        if (!metaValue || metaValue.toString().toLowerCase() !== value.toString().toLowerCase()) {
-          match = false;
-          break;
-        }
-      }
-
-      // Apply conditional field filters (e.g., salary > 50000)
-      for (const [key, condition] of Object.entries(metadataConditionalFields)) {
-        const actual = parseFloat(metadata[key]);
-        const operator = Object.keys(condition)[0];
-        const target = parseFloat(condition[operator]);
-
-        if (operator === '$gt' && !(actual > target)) match = false;
-        if (operator === '$lt' && !(actual < target)) match = false;
-        if (operator === '$gte' && !(actual >= target)) match = false;
-        if (operator === '$lte' && !(actual <= target)) match = false;
-        if (operator === '$eq' && !(actual === target)) match = false;
-      }
-
-      // Apply semantic document filter (if whereDocument keywords are given)
-      if (whereDocument.length > 0) {
-        const containsKeyword = whereDocument.some(keyword => documentText.includes(keyword.toLowerCase()));
-        if (!containsKeyword) match = false;
-      }
-
-      if (match) {
-        allMatched.push(documents[i]); // ✅ Return the document, not metadata
-      }
-    }
-
-    offset += BATCH_SIZE;
-    batchCount++;
+  // Add exact filters as $eq
+  for (const [key, value] of Object.entries(metadataFilters)) {
+    andConditions.push({ [key]: { "$eq": value } });
   }
 
-  return allMatched;
+  // Add conditional filters like $gt, $lt, etc.
+  for (const [key, condition] of Object.entries(metadataConditionalFields)) {
+    andConditions.push({ [key]: condition });
+  }
+
+  const orConditions = [];
+  for (const orBlock of metadataOrFilters) {
+    const key = Object.keys(orBlock)[0];
+    const value = orBlock[key];
+
+    if (typeof value === "object") {
+      // e.g., { salary: { "$lt": 50000 } }
+      orConditions.push({ [key]: value });
+    } else {
+      // e.g., { department: "Engineering" }
+      orConditions.push({ [key]: { "$eq": value } });
+    }
+  }
+
+  // ✅ Compose the full `where` filter
+  let where = {};
+  if (andConditions.length > 0 && orConditions.length > 0) {
+    where = { "$and": [ ...andConditions, { "$or": orConditions } ] };
+  } else if (andConditions.length > 0) {
+    where = { "$and": andConditions };
+  } else if (orConditions.length > 0) {
+    where = { "$or": orConditions };
+  }
+
+  console.log("where:", JSON.stringify(where, null, 2));
+
+
+  const queryResult = await collection.query({
+    where,
+    whereDocument: whereDocument.length > 0 ? { "$contains": whereDocument.join(" ") } : undefined,
+    nResults: pagination.limit,
+    offset: pagination.offset
+  });
+
+  const results = [];
+
+  for (let i = 0; i < queryResult.documents.length; i++) {
+    const doc = queryResult.documents[i];
+    const meta = queryResult.metadatas[i];
+
+    if (fields.length > 0) {
+      const filtered = {};
+      for (const field of fields) {
+        filtered[field] = meta[field];
+      }
+      results.push(filtered);
+    } else {
+      results.push({ ...meta });
+    }
+  }
+
+  return results;
 }
 
 module.exports = listEmployees;
