@@ -38,7 +38,7 @@ async function generateAnswer(context, query, classified) {
     const readableContext = formatContext(context);
     console.log("readablecontext:",readableContext);  
     
-    const prompt = `
+   const prompt = `
 You are an intelligent assistant for an enterprise HR team. Your job is to answer employee-related queries accurately and politely.
 
 Here is the context retrieved from the database or internal logic:
@@ -52,17 +52,23 @@ ${JSON.stringify(classified, null, 2)}
 Here is the user's original question:
 "${query}"
 
-Answer clearly using only the context above. If the context doesn't have enough info to answer, say:
+Answer clearly using only the context above for all the category in the classified intent except "General".
+If the classified intent count is "true" then use the number in the readableContext to answer the query.
+IF the classified intent category is "General", do NOT use the context; instead, answer in a general manner relevant to employee queries.
+IF the context doesn't have enough information to answer (and the intent is NOT "General"), say:
 "I don’t have enough information to answer that right now."
 
-Do not hallucinate or assume anything beyond the context.
+Do not hallucinate or assume anything beyond the context for non-general queries and do not leave any context.
 `;
 
     logger.info("📨 Sending prompt to Gemini...");
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
     const result = await model.generateContent(prompt);
     const response = result.response;
     const answer = response.text().trim();
+
+    console.log(`🤖 Generated Answer:${answer}`);
+    
 
     logger.info("✅ Gemini Answer Generated");
     return answer;

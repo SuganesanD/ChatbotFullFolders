@@ -1,4 +1,5 @@
 const chroma = require('../config/chromaClient');
+const logger = require('../services/logger');
 
 /**
  * Count employees using filters (metadata, conditionals, keywords)
@@ -6,6 +7,9 @@ const chroma = require('../config/chromaClient');
  * @returns {Promise<number>} - Total count of matched employees
  */
 async function countEmployees(classified) {
+
+  logger.info(`🔀 Routing Funtion: countEmployees`);
+
   const BATCH_SIZE = 500;
   let offset = 0;
   let totalCount = 0;

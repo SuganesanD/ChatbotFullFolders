@@ -1,22 +1,32 @@
 const chroma = require('../config/chromaClient');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const logger = require('../services/logger');
+const { configDotenv } = require('dotenv');
+configDotenv({path:'./couchdb_credentials.env'})
+
+
 
 
 async function listEmployees(classified) {
+
+logger.info(`🔀 Routing Funtion: listEmployees`);
+ 
   const {
     where,
     whereDocument = [],
-    fields = [],
+    // fields = [],
     pagination = { limit: 100, offset: 0 },
     originalQuery = ""
-  } = classified;
+  } = classified;   
+
 
   const collection = await chroma.getCollection({ name: 'enterprise-collection' });
+
 
   // 👉 Embed originalQuery using Gemini (optional semantic boost)
   let queryEmbedding = undefined;
   if (originalQuery?.trim()) {
-    const genAI = new GoogleGenerativeAI('AIzaSyD4zXj3LQtUGxPRbAwxkVM4lzZpQE6urOk');
+    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
     const embeddingModel = genAI.getGenerativeModel({ model: 'embedding-001' });
     const embed = await embeddingModel.embedContent({
       content: { parts: [{ text: originalQuery }] }
@@ -25,37 +35,35 @@ async function listEmployees(classified) {
     queryEmbedding = Array.isArray(vector[0]) ? vector : [vector];
   }
 
+
  console.log("queryembedding:",queryEmbedding);
-  console.log("📦 Final WHERE:", JSON.stringify(where, null, 2));
-  
+ console.log("📦 Final WHERE:", JSON.stringify(where, null, 2));
+ console.log("whereDocument:" ,JSON.stringify(whereDocument,null,2));
+ 
+
 
   // 🔍 Perform vector query
   const queryResult = await collection.query({
     queryEmbeddings: queryEmbedding,
-    where:where,
-    whereDocument: whereDocument.length > 0 ? { "$contains": whereDocument.join(" ") } : undefined,
+    where: where,
+    whereDocument:{ "$contains": whereDocument.join(" ") },
     nResults: pagination.limit,
     offset: pagination.offset
   });
 
-  const results = [];
 
-  for (let i = 0; i < queryResult.documents.length; i++) {
-    const doc = queryResult.documents[i];
-    const meta = queryResult.metadatas[i];
+console.log(`documents:${queryResult.documents}`);
 
-    if (fields.length > 0) {
-      const filtered = {};
-      for (const field of fields) {
-        filtered[field] = meta[field];
-      }
-      results.push(filtered);
-    } else {
-      results.push({ ...meta });
-    }
-  }
+const finaldocument=queryResult.documents.toString().split(".,");
 
-  return results;
+
+if (classified.count===true){
+ console.log(`length of the document is :${finaldocument.length}`);
+ console.log("finaldocument:", finaldocument)
+ return finaldocument.length
+}
+else{ return  queryResult.documents}
+ 
 }
 
 module.exports = listEmployees;

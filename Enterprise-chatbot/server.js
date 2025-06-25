@@ -43,7 +43,7 @@ app.use(express.json());
 let select_modal='gemini'
 
 // === Routes ===
-app.use('/api/chatbot', chatbotRoutes);
+app.use('/api/chatbot', chatbotRoutes); 
 
 // === Health Check ===
 app.get('/', (req, res) => {
@@ -111,15 +111,8 @@ const summaryData = {
 
           
             const profileText = `
-          ${summaryData.fullName} (Employee ID: ${summaryData.employeeId}) is a ${summaryData.empType} employee who joined the organization on ${summaryData.startDate}. 
-          They work in the ${summaryData.department} department under the ${summaryData.division} division, reporting to ${summaryData.manager}. 
-          Their registered email is ${summaryData.email}. Currently, their employment status is marked as "${summaryData.status}", and they are in pay zone ${summaryData.payZone} with a monthly salary of ₹${summaryData.salary}. 
-          Their additional identifier is ${summaryData.additionalID}. They were born on ${summaryData.dob}, identify as ${summaryData.gender}, are currently ${summaryData.marital}, and are located in ${summaryData.state} with a location code of ${summaryData.locationCode}. 
-          Performance-wise, they are rated as "${summaryData.performance}" with a score of ${summaryData.rating}. 
-          Recent leave dates include: ${summaryData.leaveDates}. The leave records are associated with employee ID ${summaryData.leaveEmpID}.
-          `.trim();
+          ${summaryData.fullName} (Employee ID: ${summaryData.employeeId}) is a ${summaryData.empType} employee who joined the organization on ${summaryData.startDate}. They work in the ${summaryData.department} department under the ${summaryData.division} division, reporting to ${summaryData.manager}. Their registered email is ${summaryData.email}. Currently, their employment status is marked as "${summaryData.status}", and they are in pay zone ${summaryData.payZone} with a monthly salary of ₹${summaryData.salary}. Their additional identifier is ${summaryData.additionalID}. They were born on ${summaryData.dob}, identify as ${summaryData.gender}, are currently ${summaryData.marital}, and are located in ${summaryData.state} with a location code of ${summaryData.locationCode}. Performance-wise, they are rated as "${summaryData.performance}" with a score of ${summaryData.rating}. Recent leave dates include: ${summaryData.leaveDates}. The leave records are associated with employee ID ${summaryData.leaveEmpID}.`.trim();
             
-          
             return {
               profileText,
               metadata: summaryData

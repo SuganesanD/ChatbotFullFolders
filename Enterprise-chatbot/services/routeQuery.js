@@ -32,9 +32,10 @@ async function routeQuery(classified) {
     switch (category) {
       case 'Aggregate':
       case 'Conditional':  
-        data = classified.count
-          ? await countEmployees(classified)
-          : await listEmployees(classified);
+        // data = classified.count
+        //   ? await countEmployees(classified)
+        //   : await listEmployees(classified);
+        data=await listEmployees(classified);
         break;
 
       case 'Specific':

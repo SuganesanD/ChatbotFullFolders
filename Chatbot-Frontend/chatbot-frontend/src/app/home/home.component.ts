@@ -24,14 +24,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     isRendering?: boolean;
   }[] = [];
 
+
   errorMessage: string | null = null;
   isLoading: boolean = false;
   private currentRequest?: Subscription;  
   private typingInterval?: any;
 
-  currentImageRenderFlag = false; 
+
+  currentImageRenderFlag = false;
+
 
   constructor(private router: Router, private couchService: CouchdbService ,private http: HttpClient) {}
+
 
   ngOnInit(): void {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
@@ -40,50 +44,56 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
+
   onSearch(searchValue: string): void {
     this.query=this.query1
     this.query1=''
     if (this.isLoading) return;
-  
+ 
     this.query = searchValue.trim();
     if (!this.query) {
       this.errorMessage = 'Enter something to search';
       return;
     }
-  
-    
+ 
+   
     this.isLoading = true;
     this.errorMessage = null;
-  
+ 
     this.conversation.push({ query: this.query, response: '', isTyping: true });
-  
+ 
     this.currentRequest = this.couchService.sendQuery(this.query).subscribe({
       next: (data) => {
         const response = data?.answer || 'No result found';
         const image = data?.image || null;
         const sources = data?.sources || [];
         const index = this.conversation.length - 1;
-  
+ 
         this.typeResponse(response, index, () => {
           if (!this.conversation[index]) return;
-  
-          this.conversation[index].sources = sources; 
+ 
+          this.conversation[index].sources = sources;
           this.conversation[index].image = image;
         });
-  
+ 
         this.query = '';
         this.errorMessage = null;
       },
       error: (error) => {
-        this.errorMessage = 'There was an error processing your request';
-        console.error('Error:', error);
+        const response = 'There was an error processing your request';
+        const index = this.conversation.length - 1;
+          this.typeResponse(response, index, () => {
+          if (!this.conversation[index]) return;
+        });
+        console.log('Error:', error);
       },
       complete: () => {
         this.isLoading = false;
       }
     });
   }
-  
+ 
+
 
   typeResponse(text: string, index: number, callback?: () => void, delay: number = 0): void {
     let i = 0;
@@ -100,6 +110,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }, delay);
   }
 
+
   onStop(): void {
     if (this.typingInterval) {
       clearInterval(this.typingInterval);
@@ -112,10 +123,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
  
 
+
   renderImage(index: number): void {
     const item = this.conversation[index];
     if (!item || !item.response) return;
-  
+ 
     // Mark rendering state
     item.isRendering = true;
     console.log(item.response);
@@ -133,6 +145,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     });
   }
+
+
 
 
   ngOnDestroy(): void {
