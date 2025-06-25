@@ -1168,3 +1168,132 @@
 [2025-06-25 10:23:16] INFO: 📥 Retrieved Context: 1 items
 [2025-06-25 10:23:16] INFO: 📨 Sending prompt to Gemini...
 [2025-06-25 10:23:17] INFO: ✅ Gemini Answer Generated
+[2025-06-25 10:52:41] INFO: 💬 Incoming Query: list all the terminated employees
+[2025-06-25 10:52:44] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all the terminated employees","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["fullName","employeeId","status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 10:52:44] INFO: 🔀 Routing Category: Aggregate
+[2025-06-25 10:52:44] INFO: 🔀 Routing Funtion: listEmployees
+[2025-06-25 10:52:44] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 10:52:44] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 10:52:59] INFO: ✅ Gemini Answer Generated
+[2025-06-25 10:54:53] INFO: 💬 Incoming Query: list all male employees
+[2025-06-25 10:54:56] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"list all male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["fullName","gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 10:54:56] INFO: 🔀 Routing Category: Aggregate
+[2025-06-25 10:54:56] INFO: 🔀 Routing Funtion: listEmployees
+[2025-06-25 10:54:57] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 10:54:57] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 10:55:44] INFO: ✅ Gemini Answer Generated
+[2025-06-25 11:41:03] INFO: 💬 Incoming Query: what is the average salary of male employees
+[2025-06-25 11:41:06] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average salary of male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 11:41:06] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 11:41:06] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 11:41:07] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 11:41:07] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 11:41:08] INFO: ✅ Gemini Answer Generated
+[2025-06-25 11:44:52] INFO: 💬 Incoming Query: what is the average salary of all the male employees
+[2025-06-25 11:44:52] INFO: ✅ Classified JSON: {"category":"Unknown","originalQuery":"what is the average salary of all the male employees","error":"Gemini API failed"}
+[2025-06-25 11:44:52] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"what is the average salary of all the male employees","error":"Gemini API failed"}
+[2025-06-25 11:45:28] INFO: 💬 Incoming Query: what is the average salary of male employees
+[2025-06-25 11:45:29] INFO: ✅ Classified JSON: {"category":"Unknown","originalQuery":"what is the average salary of male employees","error":"Gemini API failed"}
+[2025-06-25 11:45:29] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"what is the average salary of male employees","error":"Gemini API failed"}
+[2025-06-25 11:46:57] INFO: 💬 Incoming Query: what is the average salary of male employees
+[2025-06-25 11:47:01] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average salary of male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 11:47:01] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 11:47:01] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:07:28] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:07:28] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:07:28] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: fetch failed
+[2025-06-25 12:08:17] INFO: 💬 Incoming Query: what is the average salary of male employees
+[2025-06-25 12:08:20] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average salary of male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:08:20] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:08:20] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:08:21] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:08:21] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:08:22] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:09:21] INFO: 💬 Incoming Query: what is the maximum salary in all the male employees
+[2025-06-25 12:09:23] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the maximum salary in all the male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"max"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:09:23] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:09:23] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:09:24] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:09:24] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:09:25] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:10:33] INFO: 💬 Incoming Query: what is the average rating of all the female employees
+[2025-06-25 12:10:36] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average rating of all the female employees","where":{"gender":{"$eq":"female"}},"whereDocument":[],"fields":["rating"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"rating":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:10:36] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:10:36] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:10:37] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:10:37] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:10:38] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:17:31] INFO: 💬 Incoming Query: what is the total salary of all the terminated employees
+[2025-06-25 12:17:35] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the total salary of all the terminated employees","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"sum"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:17:35] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:17:35] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:17:36] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:17:36] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:17:37] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:18:18] INFO: 💬 Incoming Query: how many employees are terminated
+[2025-06-25 12:18:21] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many employees are terminated","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"status":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:18:21] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:18:21] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:18:21] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:18:21] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:18:22] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:20:54] INFO: 💬 Incoming Query: how many employees are terminated?
+[2025-06-25 12:20:58] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many employees are terminated?","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"status":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:20:58] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:20:58] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:20:58] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:20:58] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:21:00] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:21:25] INFO: 💬 Incoming Query: how many male employee are there?
+[2025-06-25 12:21:31] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many male employee are there?","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"gender":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:21:31] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:21:31] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:21:31] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:21:31] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:21:33] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:21:50] INFO: 💬 Incoming Query: how many female employees are there
+[2025-06-25 12:21:53] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many female employees are there","where":{"gender":{"$eq":"female"}},"whereDocument":[],"fields":["gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"gender":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:21:53] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:21:53] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-06-25 12:21:54] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:21:54] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:21:55] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:28:08] INFO: 💬 Incoming Query: how many employees are terminated?
+[2025-06-25 12:28:11] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many employees are terminated?","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"status":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:28:11] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:28:11] INFO: 🔀 Routing Function: statisticalInsight
+[2025-06-25 12:28:12] INFO: 📊 Total embeddings fetched: 1
+[2025-06-25 12:28:12] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:28:12] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:28:13] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:29:14] INFO: 💬 Incoming Query: how many employees are terminated?
+[2025-06-25 12:29:18] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many employees are terminated?","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"status":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:29:18] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:29:18] INFO: 🔀 Routing Function: statisticalInsight
+[2025-06-25 12:29:19] INFO: 📊 Total embeddings fetched: 100
+[2025-06-25 12:29:19] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:29:19] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:29:20] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:36:37] INFO: 💬 Incoming Query: how many employees are terminated?
+[2025-06-25 12:36:40] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"how many employees are terminated?","where":{"status":{"$eq":"terminated"}},"whereDocument":[],"fields":["status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"status":"count"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:36:40] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:36:40] INFO: 🔀 Routing Function: statisticalInsight
+[2025-06-25 12:36:41] INFO: 📊 Total embeddings fetched: 100
+[2025-06-25 12:36:41] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:36:41] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:36:42] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:38:18] INFO: 💬 Incoming Query: what is the maximum salary of male employees
+[2025-06-25 12:38:21] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the maximum salary of male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"max"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:38:21] INFO: 🔀 Routing Category: Statistical
+[2025-06-25 12:38:21] INFO: 🔀 Routing Function: statisticalInsight
+[2025-06-25 12:38:22] INFO: 📊 Total embeddings fetched: 100
+[2025-06-25 12:38:22] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:38:22] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:38:23] INFO: ✅ Gemini Answer Generated
+[2025-06-25 12:39:37] INFO: 💬 Incoming Query: list the male employee are are terminated and should be either under babu or getting salary less than 50 thousand
+[2025-06-25 12:39:41] INFO: ✅ Classified JSON: {"category":"Conditional","originalQuery":"list the male employee are are terminated and should be either under babu or getting salary less than 50 thousand","where":{"$and":[{"gender":{"$eq":"male"}},{"status":{"$eq":"terminated"}},{"$or":[{"manager":{"$eq":"babu"}},{"salary":{"$lt":50000}}]}]},"whereDocument":[],"fields":["fullName","employeeId","gender","status","manager","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-06-25 12:39:41] INFO: 🔀 Routing Category: Conditional
+[2025-06-25 12:39:41] INFO: 🔀 Routing Funtion: listEmployees
+[2025-06-25 12:39:42] INFO: 📥 Retrieved Context: 1 items
+[2025-06-25 12:39:42] INFO: 📨 Sending prompt to Gemini...
+[2025-06-25 12:39:46] INFO: ✅ Gemini Answer Generated

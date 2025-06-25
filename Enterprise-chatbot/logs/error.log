@@ -155,3 +155,6 @@
 [2025-06-24 18:50:47] ERROR: ❌ askHandler Error: queryResult.documents[0].split is not a function
 [2025-06-24 19:08:26] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the female employee who is in zone a and should be either under babu or getting less than 50 thousand","error":"Gemini API failed"}
 [2025-06-24 19:09:08] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the female employee who is in zone a and should be either under babu or getting less than 50 thousand","error":"Gemini API failed"}
+[2025-06-25 11:44:52] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"what is the average salary of all the male employees","error":"Gemini API failed"}
+[2025-06-25 11:45:29] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"what is the average salary of male employees","error":"Gemini API failed"}
+[2025-06-25 12:07:28] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: fetch failed

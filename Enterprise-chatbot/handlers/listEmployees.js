@@ -53,6 +53,13 @@ logger.info(`🔀 Routing Funtion: listEmployees`);
 console.log(`documents:${queryResult.documents}`);
 
 const finaldocument=queryResult.documents.toString().split(".,");
+const metadata=queryResult.metadatas[0]
+console.log("metadata:",metadata);
+
+if(classified.category==="Statistical"){
+  
+}
+  
 
 
 if (classified.count===true){
@@ -64,4 +71,5 @@ else{ return  queryResult.documents}
  
 }
 
-module.exports = listEmployees;
+
+module.exports = listEmployees; 
