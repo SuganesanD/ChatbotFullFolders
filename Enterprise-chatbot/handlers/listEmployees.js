@@ -5,8 +5,6 @@ const { configDotenv } = require('dotenv');
 configDotenv({path:'./couchdb_credentials.env'})
 
 
-
-
 async function listEmployees(classified) {
 
 logger.info(`🔀 Routing Funtion: listEmployees`);
