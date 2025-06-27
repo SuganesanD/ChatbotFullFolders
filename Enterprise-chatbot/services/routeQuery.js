@@ -95,6 +95,8 @@ async function routeQuery(classified) {
 
     // 🎯 Format context for LLM answer generation
     context = Array.isArray(data) ? data : [data];
+    console.log("context:",context);
+    
 
     return { data, context };
   } catch (err) {

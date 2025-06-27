@@ -158,3 +158,44 @@
 [2025-06-25 11:44:52] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"what is the average salary of all the male employees","error":"Gemini API failed"}
 [2025-06-25 11:45:29] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"what is the average salary of male employees","error":"Gemini API failed"}
 [2025-06-25 12:07:28] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: fetch failed
+[2025-06-26 10:20:04] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 10:20:04] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 10:41:11] ERROR: ❌ routeQuery error: groupByAggregate is not a function
+[2025-06-26 10:41:11] ERROR: ❌ askHandler Error: groupByAggregate is not a function
+[2025-06-26 10:41:52] ERROR: ❌ routeQuery error: groupByAggregate is not a function
+[2025-06-26 10:41:52] ERROR: ❌ askHandler Error: groupByAggregate is not a function
+[2025-06-26 10:43:02] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 10:43:02] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 17:03:31] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 17:03:31] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 17:04:12] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 17:04:12] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 17:23:41] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 17:23:41] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 18:25:52] ERROR: ❌ Error in tool 'generateChart': generateChart is not a function
+[2025-06-26 18:33:25] ERROR: ❌ routeQuery error: getSpecificEmployeeInfo is not a function
+[2025-06-26 18:33:25] ERROR: ❌ askHandler Error: getSpecificEmployeeInfo is not a function
+[2025-06-26 18:40:35] ERROR: ❌ routeQuery error: getSpecificEmployeeInfo is not a function
+[2025-06-26 18:40:35] ERROR: ❌ askHandler Error: getSpecificEmployeeInfo is not a function
+[2025-06-26 18:57:17] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 18:57:17] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-26 19:11:55] ERROR: ❌ routeQuery error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got $regex
+[2025-06-26 19:11:55] ERROR: ❌ askHandler Error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got $regex
+[2025-06-26 19:12:54] ERROR: ❌ routeQuery error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got $regex
+[2025-06-26 19:12:54] ERROR: ❌ askHandler Error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got $regex
+[2025-06-27 11:10:50] ERROR: ❌ routeQuery error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-27 11:10:50] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-06-27 11:19:00] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the employee based on each department","error":"Gemini API failed"}
+[2025-06-27 11:19:24] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the employees based on each department","error":"Gemini API failed"}
+[2025-06-27 11:20:09] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the employees based on each departments","error":"Gemini API failed"}
+[2025-06-27 11:20:27] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all the employees group by each departments","error":"Gemini API failed"}
+[2025-06-27 14:13:08] ERROR: ❌ routeQuery error: The requested resource could not be found
+[2025-06-27 14:13:08] ERROR: ❌ askHandler Error: The requested resource could not be found
+[2025-06-27 14:14:31] ERROR: ❌ routeQuery error: The requested resource could not be found
+[2025-06-27 14:14:31] ERROR: ❌ askHandler Error: The requested resource could not be found
+[2025-06-27 14:14:58] ERROR: ❌ routeQuery error: The requested resource could not be found
+[2025-06-27 14:14:58] ERROR: ❌ askHandler Error: The requested resource could not be found
+[2025-06-27 14:31:05] ERROR: ❌ routeQuery error: addedThisRound is not defined
+[2025-06-27 14:31:05] ERROR: ❌ askHandler Error: addedThisRound is not defined
+[2025-06-27 14:32:18] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the employees based on each department","error":"Gemini API failed"}
+[2025-06-27 14:43:58] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the employees based on each department","error":"Gemini API failed"}

@@ -1,0 +1,16 @@
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
