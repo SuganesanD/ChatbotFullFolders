@@ -11,10 +11,12 @@ const https = require('https');
 const readline = require('readline');
 const { ChromaClient } = require('chromadb');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { CohereClient } =require('cohere-ai') ;
 
 const chroma = new ChromaClient({ path: 'http://127.0.0.1:8000' });
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+const cohere = new CohereClient();
 
 // Load .env config
 dotenv.config({path:'couchdb_creadentials.env'});
@@ -66,58 +68,18 @@ var Template=''
 
 //pre process fetched data
 const processAndEmbedEmployee = async (empInfo, additionalInfo, leaveInfo) => {
+  try {
+    const combinedData = {
+      empInfo: empInfo.data,
+      additionalInfo: additionalInfo,
+      leaveInfo: leaveInfo
+    };
 
-    try {
-        const combinedData = {
-            empInfo: empInfo.data,
-            additionalInfo: additionalInfo,
-            leaveInfo: leaveInfo
-        };
-
-        async function generateEmployeeSummary({ empInfo, additionalInfo, leaveInfo }) {
-            const fullName = `${empInfo.FirstName} ${empInfo.LastName}`;
-const summaryData = {
-  fullName: fullName.toLowerCase(),
-  employeeId: empInfo.EmpID.toLowerCase(),
-  firstname: empInfo.FirstName.toLowerCase(),
-  lastname: empInfo.LastName.toLowerCase(),
-  empType: empInfo.EmployeeType.toLowerCase(),
-  department: empInfo.DepartmentType.toLowerCase(),
-  division: empInfo.Division.toLowerCase(),
-  startDate: formatDate(empInfo.StartDate), // Keep original case/date format
-  manager: empInfo.Manager.toLowerCase(),
-  email: empInfo.Email.toLowerCase(),
-  status: empInfo.EmployeeStatus.toLowerCase(),
-  payZone: empInfo.PayZone.toLowerCase(),
-  salary: empInfo.Salary, // numeric
-  additionalID: empInfo.additionalinfo_id.toLowerCase(),
-
-  dob: formatDate(additionalInfo.DOB),
-  gender: additionalInfo.GenderCode.toLowerCase(),
-  marital: additionalInfo.MaritalDesc.toLowerCase(),
-  state: additionalInfo.State.toLowerCase(),
-  locationCode: additionalInfo.LocationCode, // numeric
-  performance: additionalInfo.PerformanceScore.toLowerCase(),
-  rating: additionalInfo.CurrentEmployeeRating, // numeric
-
-  leaveDates: (leaveInfo.length > 0
-    ? leaveInfo.map(leave => formatDate(leave.date))
-    : ["N/A"]
-  ).join(', '),
-  leaveEmpID: leaveInfo.length > 0
-    ? leaveInfo[0].employee_id.toLowerCase()
-    : "n/a"
-};
-
-
-if(Template==''){
-
-
-async function generateDynamicTemplate(summaryData) {
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-
-const allFields = Object.keys(summaryData);
-const prompt = `
+    
+      async function generateDynamicTemplate(summaryData) {
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+        const allFields = Object.keys(summaryData);
+        const prompt = `
 You are a Node.js assistant.
 
 Your job is to generate a professional and meaningful paragraph summarizing an employee profile using the provided object named \`summaryData\`.
@@ -143,147 +105,137 @@ ${allFields.map(field => `- summaryData.${field}`).join('\n')}
 Here is the object definition:
 const summaryData = ${JSON.stringify(summaryData, null, 2)}
 
-Now return ONLY the template literal wrapped in **one backtick pair**. No comments. No markdown. No code block fences.
-`;
+Now return ONLY the template literal wrapped in **one backtick pair**. No comments. No markdown. No code block fences.`;
 
+        const result = await model.generateContent(prompt);
+        const response = result.response;
+        return response.text().trim();
+      }
 
-  const result = await model.generateContent(prompt);
-  const response = await result.response;
-  return response.text().trim();
-}
+      function askUser(question) {
+        const rl = require('readline').createInterface({
+          input: process.stdin,
+          output: process.stdout
+        });
+        return new Promise(resolve => rl.question(question, ans => {
+          rl.close();
+          resolve(ans.trim().toLowerCase());
+        }));
+      }
 
-
-// helper to ask for terminal input
-function askUser(question) {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  return new Promise(resolve => rl.question(question, ans => {
-    rl.close();
-    resolve(ans.trim().toLowerCase());
-  }));
-}
-
-// loop until user confirms
-async function loopUntilApproved() {
-  while (true) {
-    Template = await generateDynamicTemplate(summaryData);
-
-    console.log('\n📝 Generated Template:\n');
-    console.log(Template);
-
-    console.log(("\n sample Generated template:\n"));
-    renderFn = new Function('summaryData', `return ${Template};`);
-    sampleOutput = renderFn(summaryData);
-    console.log(sampleOutput);
-    
-    console.log('\n');
-
-    const userInput = await askUser("👉 Is this template okay? Type 'ok' to accept, or press enter to regenerate: ");
-
-    if (userInput === 'ok') {
-    //   console.log('\n✅ Template accepted!',Template);
-      // Optional: evaluate final output with actual data
-    //   const finalOutput = eval(Template);
-    //   console.log('\n📄 Final Paragraph:\n', finalOutput);
-      
-      break;
-    }
-
-    console.log('\n🔁 Regenerating template...\n');
-  }
-}
-
-// run the loop
-await loopUntilApproved();
-}
-      
-        //     const profileText = `
-        //   ${summaryData.fullName} (Employee ID: ${summaryData.employeeId}) is a ${summaryData.empType} employee who joined the organization on ${summaryData.startDate}. They work in the ${summaryData.department} department under the ${summaryData.division} division, reporting to ${summaryData.manager}. Their registered email is ${summaryData.email}. Currently, their employment status is marked as "${summaryData.status}", and they are in pay zone ${summaryData.payZone} with a monthly salary of ₹${summaryData.salary}. Their additional identifier is ${summaryData.additionalID}. They were born on ${summaryData.dob}, identify as ${summaryData.gender}, are currently ${summaryData.marital}, and are located in ${summaryData.state} with a location code of ${summaryData.locationCode}. Performance-wise, they are rated as "${summaryData.performance}" with a score of ${summaryData.rating}. Recent leave dates include: ${summaryData.leaveDates}. The leave records are associated with employee ID ${summaryData.leaveEmpID}.`.trim();
+      async function loopUntilApproved(summaryData) {
+        while (true) {
+          let Template = await generateDynamicTemplate(summaryData);
           let cleanedTemplate = Template
-  .replace(/^```[a-z]*\n?/i, '')  // remove starting ``` or ```js
-  .replace(/```$/, '')            // remove ending ```
-  .trim();
+            .replace(/^```[a-z]*\n?/i, '')
+            .replace(/```$/, '')
+            .trim();
 
-// ✅ Remove surrounding "..." if Gemini returns the template in quotes
-if (cleanedTemplate.startsWith('"') && cleanedTemplate.endsWith('"')) {
-  cleanedTemplate = cleanedTemplate.slice(1, -1);
-}
-
-// ✅ Optional: Escape internal backticks if any (edge case)
-cleanedTemplate = cleanedTemplate.replace(/`/g, '\\`');
-let finalTemplate=''
-try {
-  const fillTemplate = new Function('summaryData', `return \`${cleanedTemplate}\`;`);
-  finalTemplate = fillTemplate(summaryData);
-
-  console.log('\n📄 Final Output:\n', finalTemplate);
-} catch (err) {
-  console.error('❌ Template evaluation error:', err.message);
-}
-        // console.log("finalTemplate:",finalTemplate);
-        
-            return {
-              template:finalTemplate,
-              metadata: summaryData
-            };
+          if (cleanedTemplate.startsWith('"') && cleanedTemplate.endsWith('"')) {
+            cleanedTemplate = cleanedTemplate.slice(1, -1);
           }
-          
 
-        function formatDate(dateString) {
-            if (!dateString) return 'N/A';
+          cleanedTemplate = cleanedTemplate.replace(/`/g, '\\`');
 
-            const monthMap = {
-                '01': 'January', '02': 'February', '03': 'March', '04': 'April',
-                '05': 'May', '06': 'June', '07': 'July', '08': 'August',
-                '09': 'September', '10': 'October', '11': 'November', '12': 'December'
-            };
+          try {
+            const renderPreviewFn = new Function('summaryData', `return \`${cleanedTemplate}\`;`);
+            const sampleOutput = renderPreviewFn(summaryData);
 
-            let day, month, year;
-            if (dateString.includes('-')) {
-                [day, month, year] = dateString.split('-');
-            } else if (dateString.includes('/')) {
-                [month, day, year] = dateString.split('/');
+            console.log('\n📝 Generated Template:\n');
+            console.log(Template);
+            console.log('\nSample Output:\n');
+            console.log(sampleOutput);
+            console.log('\n');
+
+            const userInput = await askUser("👉 Is this template okay? Type 'ok' to accept, or press enter to regenerate: ");
+            if (userInput === 'ok') {
+              global.renderFn = new Function('summaryData', `return \`${cleanedTemplate}\`;`);
+              break;
             }
-
-            const monthName = monthMap[month.padStart(2, '0')] || month;
-            return `${monthName},${parseInt(day)},${year} `;
+            console.log('\n🔁 Regenerating template...\n');
+          } catch (err) {
+            console.error('❌ Error evaluating the template:', err.message);
+            console.log('\n🔁 Regenerating template...\n');
+          }
         }
+      }
+    
 
-        const normalizedanswer = await generateEmployeeSummary(combinedData);
-        // console.log("normalizedanswer:", normalizedanswer);
+    async function generateEmployeeSummary({ empInfo, additionalInfo, leaveInfo }) {
+      const fullName = `${empInfo.FirstName} ${empInfo.LastName}`;
+      const summaryData = {
+        fullName: fullName.toLowerCase(),
+        employeeId: empInfo.EmpID.toLowerCase(),
+        firstname: empInfo.FirstName.toLowerCase(),
+        lastname: empInfo.LastName.toLowerCase(),
+        empType: empInfo.EmployeeType.toLowerCase(),
+        department: empInfo.DepartmentType.toLowerCase(),
+        division: empInfo.Division.toLowerCase(),
+        startDate: formatDate(empInfo.StartDate),
+        manager: empInfo.Manager.toLowerCase(),
+        email: empInfo.Email.toLowerCase(),
+        status: empInfo.EmployeeStatus.toLowerCase(),
+        payZone: empInfo.PayZone.toLowerCase(),
+        salary: empInfo.Salary,
+        additionalID: empInfo.additionalinfo_id.toLowerCase(),
+        dob: formatDate(additionalInfo.DOB),
+        gender: additionalInfo.GenderCode.toLowerCase(),
+        marital: additionalInfo.MaritalDesc.toLowerCase(),
+        state: additionalInfo.State.toLowerCase(),
+        locationCode: additionalInfo.LocationCode,
+        performance: additionalInfo.PerformanceScore.toLowerCase(),
+        rating: additionalInfo.CurrentEmployeeRating,
+        leaveDates: (leaveInfo.length > 0 ? leaveInfo.map(leave => formatDate(leave.date)) : ["N/A"]).join(', '),
+        leaveEmpID: leaveInfo.length > 0 ? leaveInfo[0].employee_id.toLowerCase() : "n/a"
+      };
 
-        // ✂️ Chunking Function
-        // const chunkText = (text) => {
-        //     // Split by period and remove any empty or whitespace-only entries
-        //     const chunks = text.split('$').map(s => s.trim()).filter(s => s.length > 0);
+      if (!global.renderFn) {
+        await loopUntilApproved(summaryData);
+      }
 
-        //     return chunks;
-        // };
+      const finalTemplate = global.renderFn(summaryData);
 
-        // const textChunks = chunkText(normalizedanswer);
-        // const textChunks=normalizedanswer;
-        const { template, metadata } = normalizedanswer;
-        console.log("Template:", template);
-        console.log("Metadata:",metadata);
-        
-        if (select_modal === 'gemini') {
-            // await embed_fetchedData_gemini(textChunks,empInfo)
-            await embed_employee_profile_gemini(template,metadata)
-        }
-        else if (select_modal === 'cohere') {
-            await embed_fetchedData_cohere(textChunks,empInfo)
-        }
-        else {
-            console.log("Invalid select modal");
-        };
-        
-    } catch (err) {
-        console.error(`❌ Embedding error for employee ID ${empInfo._id}:`, err.message);
+      return {
+        template: finalTemplate,
+        metadata: summaryData
+      };
     }
+
+    function formatDate(dateString) {
+      if (!dateString) return 'N/A';
+      const monthMap = {
+        '01': 'January', '02': 'February', '03': 'March', '04': 'April',
+        '05': 'May', '06': 'June', '07': 'July', '08': 'August',
+        '09': 'September', '10': 'October', '11': 'November', '12': 'December'
+      };
+      let day, month, year;
+      if (dateString.includes('-')) {
+        [day, month, year] = dateString.split('-');
+      } else if (dateString.includes('/')) {
+        [month, day, year] = dateString.split('/');
+      }
+      const monthName = monthMap[month.padStart(2, '0')] || month;
+      return `${monthName},${parseInt(day)},${year} `;
+    }
+
+    const normalizedanswer = await generateEmployeeSummary(combinedData);
+    const { template, metadata } = normalizedanswer;
+
+    console.log("Template:", template);
+    console.log("Metadata:", metadata);
+
+    if (select_modal === 'gemini') {
+      await embed_employee_profile_gemini(template, metadata);
+    } else if (select_modal === 'cohere') {
+      await embed_fetchedData_cohere(template, metadata);
+    } else {
+      console.log("Invalid select modal");
+    }
+  } catch (err) {
+    console.error(`❌ Embedding error for employee ID ${empInfo._id}:`, err.message);
+  }
 };
+
 
 // //embedded fetched data
 // async function embed_fetchedData_gemini(textChunks,empInfo) {
@@ -338,12 +290,12 @@ try {
 //     return;
 // }
 
-async function embed_employee_profile_gemini(profileText, metadata) {
+async function embed_employee_profile_gemini(template_to_embed, metadata) {
     try {
-        const embeddingModel = genAI.getGenerativeModel({ model: 'embedding-001' });
+        const embeddingModel = genAI.getGenerativeModel({ model: 'text-embedding-004' });
         const collection = await chroma.getCollection({ name: 'enterprise-collection' });
 
-        const embed = await embeddingModel.embedContent({ content: { parts: [{ text: profileText }] } });
+        const embed = await embeddingModel.embedContent({ content: { parts: [{ text: template_to_embed }] } });
         const vector = embed?.embedding?.values;
 
         if (!vector || !Array.isArray(vector) || vector.length !== 768 || typeof vector[0] !== 'number') {
@@ -357,7 +309,7 @@ async function embed_employee_profile_gemini(profileText, metadata) {
             ids: [documentId],
             embeddings: [vector],
             metadatas: [metadata],   
-            documents: [profileText],
+            documents: [template_to_embed],
         });
 
         console.log(`✅ Upserted employee profile for ID: ${metadata.employeeId}`);
@@ -369,61 +321,92 @@ async function embed_employee_profile_gemini(profileText, metadata) {
     }
 }
 
-async function embed_fetchedData_cohere(textChunks,empInfo) {
-    const collection = await chroma.getCollection({ name: 'enterprise-collection' });
+async function embed_fetchedData_cohere(template_to_embed,metadata) {
+    // const collection = await chroma.getCollection({ name: 'enterprise-collection' });
 
-    for (let i = 0; i < textChunks.length; i++) {
-        const chunkText = textChunks[i];
-        const chunkId = `${empInfo._id}_chunk_${i}`;
+    // for (let i = 0; i < textChunks.length; i++) {
+    //     const chunkText = textChunks[i];
+    //     const chunkId = `${empInfo._id}_chunk_${i}`;
+
+    //     const embed = await cohere.embed({
+    //         texts: [chunkText],
+    //         model: "embed-english-v3.0", // Or "embed-multilingual-v3.0"
+    //         input_type: "search_document"
+    //     });
+    //     const vector = embed.embeddings[0];
+
+    //     console.log('Query vector length:', vector.length);
+    //     if (
+    //         !vector ||
+    //         !Array.isArray(vector) ||
+    //         (vector.length !== 768 && vector.length !== 1024) ||
+    //         typeof vector[0] !== 'number'
+    //       ) {
+    //         console.error('❌ Invalid embedding vector during upsert:', vector);
+    //         continue;
+    //       }
+
+    //     if (!chunkId || !chunkText || !empInfo._id) {
+    //         console.error('❌ Invalid metadata or chunk data');
+    //         continue;
+    //     }
+
+    //     console.log("chunkId", chunkId);
+
+
+    //     await collection.upsert({
+    //         ids: [chunkId],
+    //         embeddings: [vector],
+    //         metadatas: [{
+    //             employeeId: empInfo._id,
+    //             chunkIndex: i,
+    //             text: chunkText
+    //         }],
+    //         documents: [chunkText],
+    //     });
+
+    //     console.log(`✅ Upserted chunk ${i} for employee ID: ${empInfo._id}`);
+    // }
+
+    // const embeddingsCount = await collection.peek({ limit: 1000000 });
+
+    // if (embeddingsCount?.ids) {
+    //     console.log(`🔢 Total embeddings count in Chroma: ${embeddingsCount.ids.length}`);
+    // } else {
+    //     console.log(`🔢 No embeddings found.`);
+    // };
+    // return;
+
+
+    try {
+        const embeddingModel = genAI.getGenerativeModel({ model: 'text-embedding-004' });
+        const collection = await chroma.getCollection({ name: 'enterprise-collection' });
 
         const embed = await cohere.embed({
-            texts: [chunkText],
+            texts: [template_to_embed],
             model: "embed-english-v3.0", // Or "embed-multilingual-v3.0"
             input_type: "search_document"
         });
         const vector = embed.embeddings[0];
 
-        console.log('Query vector length:', vector.length);
-        if (
-            !vector ||
-            !Array.isArray(vector) ||
-            (vector.length !== 768 && vector.length !== 1024) ||
-            typeof vector[0] !== 'number'
-          ) {
-            console.error('❌ Invalid embedding vector during upsert:', vector);
-            continue;
-          }
+       
 
-        if (!chunkId || !chunkText || !empInfo._id) {
-            console.error('❌ Invalid metadata or chunk data');
-            continue;
-        }
-
-        console.log("chunkId", chunkId);
-
+        const documentId = `${metadata.employeeId}_profile`; // ✅ Use employeeId from passed metadata
 
         await collection.upsert({
-            ids: [chunkId],
+            ids: [documentId],
             embeddings: [vector],
-            metadatas: [{
-                employeeId: empInfo._id,
-                chunkIndex: i,
-                text: chunkText
-            }],
-            documents: [chunkText],
+            metadatas: [metadata],   
+            documents: [template_to_embed],
         });
 
-        console.log(`✅ Upserted chunk ${i} for employee ID: ${empInfo._id}`);
+        console.log(`✅ Upserted employee profile for ID: ${metadata.employeeId}`);
+
+        const embeddingsCount = await collection.peek({ limit: 1000000 });
+        console.log(`🔢 Total embeddings in Chroma: ${embeddingsCount.ids?.length || 0}`);
+    } catch (error) {
+        console.error('❌ Error embedding employee profile:', error);
     }
-
-    const embeddingsCount = await collection.peek({ limit: 1000000 });
-
-    if (embeddingsCount?.ids) {
-        console.log(`🔢 Total embeddings count in Chroma: ${embeddingsCount.ids.length}`);
-    } else {
-        console.log(`🔢 No embeddings found.`);
-    };
-    return;
 }
 
 //InitializeEmbeddings
