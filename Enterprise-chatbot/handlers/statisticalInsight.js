@@ -5,7 +5,7 @@ const logger = require('../services/logger');
 require('dotenv').config({ path: './couchdb_credentials.env' });
 
 async function statisticalInsight(classified) {
-  logger.info(`🔀 Routing Function: tatisticalInsight`);
+  logger.info(`🔀 Routing Function: statisticalInsight`);
 
   const {
     where,

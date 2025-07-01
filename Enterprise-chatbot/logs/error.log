@@ -199,3 +199,8 @@
 [2025-06-27 14:31:05] ERROR: ❌ askHandler Error: addedThisRound is not defined
 [2025-06-27 14:32:18] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the employees based on each department","error":"Gemini API failed"}
 [2025-06-27 14:43:58] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the employees based on each department","error":"Gemini API failed"}
+[2025-07-01 15:02:40] ERROR: ❌ routeQuery error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/1f0c3f4c-c07c-4ddc-8712-5396de570c2d/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 15:02:40] ERROR: ❌ askHandler Error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/1f0c3f4c-c07c-4ddc-8712-5396de570c2d/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 17:02:32] ERROR: ❌ routeQuery error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/25bdb771-7a34-4c4b-9fbc-3b92523c9744/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 17:02:32] ERROR: ❌ askHandler Error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/25bdb771-7a34-4c4b-9fbc-3b92523c9744/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 17:05:31] ERROR: ❌ Error in tool 'summarizeData': summarizeData is not a function

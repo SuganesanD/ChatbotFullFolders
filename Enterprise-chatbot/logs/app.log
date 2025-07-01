@@ -10234,3 +10234,177 @@
 [2025-06-27 15:46:53] INFO: 📥 Retrieved Context: 1 items
 [2025-06-27 15:46:53] INFO: 📨 Sending prompt to Gemini...
 [2025-06-27 15:46:54] INFO: ✅ Gemini Answer Generated
+[2025-07-01 14:55:50] INFO: 💬 Incoming Query: hi
+[2025-07-01 14:55:53] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"hi","where":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 14:55:53] INFO: 🔀 Routing Category: General
+[2025-07-01 14:55:53] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 14:55:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 14:55:53] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:02:36] INFO: 💬 Incoming Query: give me the full details about derick
+[2025-07-01 15:02:40] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the full details about derick","where":{},"whereDocument":["derick"],"fields":["fullName","employeeId","email","department","manager","status","payZone","salary","additionalID","dob","gender","marital","state","locationCode","performance","rating","leaveDates","leaveEmpID","startDate","empType","division"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:02:40] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:02:40] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:02:40] ERROR: ❌ routeQuery error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/1f0c3f4c-c07c-4ddc-8712-5396de570c2d/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 15:02:40] ERROR: ❌ askHandler Error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/1f0c3f4c-c07c-4ddc-8712-5396de570c2d/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 15:04:53] INFO: 💬 Incoming Query: give me the full details about derick
+[2025-07-01 15:04:56] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the full details about derick","where":{},"whereDocument":["derick"],"fields":["fullName","employeeId","email","department","manager","status","payZone","salary","additionalID","dob","gender","marital","state","locationCode","performance","rating","leaveDates","leaveEmpID","startDate","empType","division"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:04:56] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:04:56] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:04:57] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:04:57] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:04:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:05:00] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:05:19] INFO: 💬 Incoming Query: list all the male employee under aravind
+[2025-07-01 15:05:25] INFO: ✅ Classified JSON: {"category":"Conditional","originalQuery":"list all the male employee under aravind","where":{"$and":[{"gender":{"$eq":"male"}},{"manager":{"$eq":"aravind"}}]},"whereDocument":[],"fields":["fullName","employeeId","gender","manager"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:05:25] INFO: 🔀 Routing Category: Conditional
+[2025-07-01 15:05:25] INFO: 🔀 Routing Funtion: listEmployees
+[2025-07-01 15:05:25] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:05:25] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:05:27] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:06:09] INFO: 💬 Incoming Query: what is the average salary of all the male employees
+[2025-07-01 15:06:11] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average salary of all the male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:06:11] INFO: 🔀 Routing Category: Statistical
+[2025-07-01 15:06:11] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-07-01 15:06:12] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:06:12] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:06:14] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:06:54] INFO: 💬 Incoming Query: list the employee based on the manger
+[2025-07-01 15:06:56] INFO: ✅ Classified JSON: {"category":"GroupedAggregate","originalQuery":"list the employee based on the manger","where":{},"whereDocument":[],"fields":["manager","employeeId"],"groupBy":"manager","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:06:56] INFO: 🔀 Routing Category: GroupedAggregate
+[2025-07-01 15:06:56] INFO: 🚀 [GroupedAggregate] Starting grouped aggregation process
+[2025-07-01 15:06:56] INFO: 📌 groupBy field: manager
+[2025-07-01 15:06:56] INFO: 📊 Chart Type: 
+[2025-07-01 15:06:56] INFO: 📦 Where Filter: {}
+[2025-07-01 15:06:56] INFO: 📘 WhereDocument Filter: []
+[2025-07-01 15:06:56] INFO: 🧠 Generating embedding for originalQuery: "list the employee based on the manger"
+[2025-07-01 15:06:57] INFO: ✅ Embedding generated successfully
+[2025-07-01 15:06:57] INFO: 📊 Total embeddings fetched: 20
+[2025-07-01 15:06:57] INFO: 🔍 Grouping data by field: manager
+[2025-07-01 15:06:57] INFO: 📈 Grouping result:
+[2025-07-01 15:06:57] INFO:    - aravind: 5
+[2025-07-01 15:06:57] INFO:    - dhanasekaran: 2
+[2025-07-01 15:06:57] INFO:    - charles: 5
+[2025-07-01 15:06:57] INFO:    - babu: 8
+[2025-07-01 15:06:57] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:06:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:06:59] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:34:30] INFO: 💬 Incoming Query: list the details of derick and morjorie
+[2025-07-01 15:34:33] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list the details of derick and morjorie","where":{},"whereDocument":["derick","morjorie"],"fields":["fullName","employeeId","email","department","manager","status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:34:33] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:34:33] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:34:34] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:34:34] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:34:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:34:35] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:35:03] INFO: 💬 Incoming Query: list the details about morjorie
+[2025-07-01 15:35:05] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list the details about morjorie","where":{},"whereDocument":["morjorie"],"fields":["fullName","employeeId","email","department","manager","status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:35:05] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:35:05] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:35:06] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:35:06] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:35:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:35:07] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:35:35] INFO: 💬 Incoming Query: give me the full details about derick
+[2025-07-01 15:35:39] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the full details about derick","where":{},"whereDocument":["derick"],"fields":["fullName","employeeId","email","department","manager","status","payZone","salary","additionalID","dob","gender","marital","state","locationCode","performance","rating","leaveDates","leaveEmpID","startDate","firstname","lastname","empType","division"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:35:39] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:35:39] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:35:40] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:35:40] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:35:40] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:35:43] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:36:19] INFO: 💬 Incoming Query: give me the details about morjorie
+[2025-07-01 15:36:22] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the details about morjorie","where":{},"whereDocument":["morjorie"],"fields":["fullName","employeeId","email","department","manager","status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:36:22] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:36:22] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:36:23] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:36:23] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:36:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:36:24] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:36:42] INFO: 💬 Incoming Query: give me the details about marjorie
+[2025-07-01 15:36:46] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the details about marjorie","where":{},"whereDocument":["marjorie"],"fields":["fullName","employeeId","email","department","manager","status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:36:46] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:36:46] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:36:46] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:36:46] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:36:46] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:36:48] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:37:47] INFO: 💬 Incoming Query: give me the details about derick and marjorie
+[2025-07-01 15:37:51] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the details about derick and marjorie","where":{},"whereDocument":["derick","marjorie"],"fields":["fullName","employeeId","email","department","manager","status"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:37:51] INFO: 🔀 Routing Category: Specific
+[2025-07-01 15:37:51] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 15:37:51] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 15:37:51] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:37:51] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:37:52] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:40:47] INFO: 💬 Incoming Query: list the count of employee are only male and give the average salary of them
+[2025-07-01 15:40:50] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"list the count of employee are only male and give the average salary of them","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["gender","salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":true,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:40:50] INFO: 🔀 Routing Category: Statistical
+[2025-07-01 15:40:50] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-07-01 15:40:51] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:40:51] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:40:52] INFO: ✅ Gemini Answer Generated
+[2025-07-01 15:41:29] INFO: 💬 Incoming Query: what is the average salary of only male employees
+[2025-07-01 15:41:31] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average salary of only male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["salary"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"salary":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 15:41:31] INFO: 🔀 Routing Category: Statistical
+[2025-07-01 15:41:31] INFO: 🔀 Routing Function: tatisticalInsight
+[2025-07-01 15:41:32] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 15:41:32] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 15:41:33] INFO: ✅ Gemini Answer Generated
+[2025-07-01 17:01:48] INFO: 💬 Incoming Query: Hi! how is the weather?
+[2025-07-01 17:01:51] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"Hi! how is the weather?","where":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 17:01:51] INFO: 🔀 Routing Category: General
+[2025-07-01 17:01:51] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 17:01:51] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 17:01:53] INFO: ✅ Gemini Answer Generated
+[2025-07-01 17:02:05] INFO: 💬 Incoming Query: Hi
+[2025-07-01 17:02:09] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"Hi","where":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 17:02:09] INFO: 🔀 Routing Category: General
+[2025-07-01 17:02:09] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 17:02:09] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 17:02:10] INFO: ✅ Gemini Answer Generated
+[2025-07-01 17:02:27] INFO: 💬 Incoming Query: give me the full details about derick
+[2025-07-01 17:02:32] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the full details about derick","where":{},"whereDocument":["derick"],"fields":["fullName","employeeId","email","department","manager","status","payZone","salary","additionalID","dob","gender","marital","state","locationCode","performance","rating","leaveDates","leaveEmpID","empType","division","startDate"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 17:02:32] INFO: 🔀 Routing Category: Specific
+[2025-07-01 17:02:32] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 17:02:32] ERROR: ❌ routeQuery error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/25bdb771-7a34-4c4b-9fbc-3b92523c9744/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 17:02:32] ERROR: ❌ askHandler Error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/25bdb771-7a34-4c4b-9fbc-3b92523c9744/query with status: Collection expecting embedding with dimension of 1024, got 768
+[2025-07-01 17:03:54] INFO: 💬 Incoming Query: give me the full details about derick
+[2025-07-01 17:03:58] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"give me the full details about derick","where":{},"whereDocument":["derick"],"fields":["fullName","employeeId","email","department","manager","status","payZone","salary","additionalID","dob","gender","marital","state","locationCode","performance","rating","leaveDates","leaveEmpID","startDate","empType","division"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 17:03:58] INFO: 🔀 Routing Category: Specific
+[2025-07-01 17:03:58] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-01 17:04:02] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-01 17:04:02] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 17:04:02] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 17:04:04] INFO: ✅ Gemini Answer Generated
+[2025-07-01 17:04:40] INFO: 💬 Incoming Query: list all the male employees under aravind
+[2025-07-01 17:04:49] INFO: ✅ Classified JSON: {"category":"Conditional","originalQuery":"list all the male employees under aravind","where":{"$and":[{"gender":{"$eq":"male"}},{"manager":{"$eq":"aravind"}}]},"whereDocument":[],"fields":["fullName","employeeId","gender","manager"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 17:04:49] INFO: 🔀 Routing Category: Conditional
+[2025-07-01 17:04:49] INFO: 🔀 Routing Funtion: listEmployees
+[2025-07-01 17:04:49] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 17:04:49] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 17:04:51] INFO: ✅ Gemini Answer Generated
+[2025-07-01 17:05:27] INFO: 💬 Incoming Query: what is the average rating for employees who are active
+[2025-07-01 17:05:30] INFO: ✅ Classified JSON: {"category":"Statistical","originalQuery":"what is the average rating for employees who are active","where":{"status":{"$eq":"active"}},"whereDocument":[],"fields":["rating"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":["summarizeData"],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{"rating":"average"},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 17:05:30] INFO: 🔀 Routing Category: Statistical
+[2025-07-01 17:05:30] INFO: 🔀 Routing Function: statisticalInsight
+[2025-07-01 17:05:31] INFO: 🔧 Executing tool: summarizeData
+[2025-07-01 17:05:31] ERROR: ❌ Error in tool 'summarizeData': summarizeData is not a function
+[2025-07-01 17:05:31] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 17:05:31] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 17:05:32] INFO: ✅ Gemini Answer Generated
+[2025-07-01 18:27:43] INFO: 💬 Incoming Query: hi
+[2025-07-01 18:27:45] INFO: ✅ Classified JSON: {"category":"General","originalQuery":"hi","where":{},"whereDocument":[],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 18:27:45] INFO: 🔀 Routing Category: General
+[2025-07-01 18:27:45] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 18:27:45] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 18:27:46] INFO: ✅ Gemini Answer Generated
+[2025-07-01 18:28:08] INFO: 💬 Incoming Query: list the full details of anita
+[2025-07-01 18:28:10] INFO: ✅ Classified JSON: {"category":"Unknown","originalQuery":"list the full details of anita","error":"Gemini API failed"}
+[2025-07-01 18:28:10] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the full details of anita","error":"Gemini API failed"}
+[2025-07-01 18:28:27] INFO: 💬 Incoming Query: what is the salary of all the male employees
+[2025-07-01 18:28:33] INFO: ✅ Classified JSON: {"category":"Aggregate","originalQuery":"what is the salary of all the male employees","where":{"gender":{"$eq":"male"}},"whereDocument":[],"fields":["fullName","employeeId","salary","gender"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-01 18:28:33] INFO: 🔀 Routing Category: Aggregate
+[2025-07-01 18:28:33] INFO: 🔀 Routing Funtion: listEmployees
+[2025-07-01 18:28:33] INFO: 📥 Retrieved Context: 1 items
+[2025-07-01 18:28:33] INFO: 📨 Sending prompt to Gemini...
+[2025-07-01 18:28:37] INFO: ✅ Gemini Answer Generated

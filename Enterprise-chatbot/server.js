@@ -155,7 +155,6 @@ const summaryData = ${JSON.stringify(summaryData, null, 2)}
         prompt: prompt,
         max_tokens: 1000,
         temperature: 0.7,
-        stop_sequences: [],
       });
 
       const answer = response.generations[0].text.trim();
