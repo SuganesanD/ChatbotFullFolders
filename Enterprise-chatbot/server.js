@@ -62,7 +62,7 @@ app.use((err, req, res, next) => {
 // });
 
 
-
+var Template=''
 
 //pre process fetched data
 const processAndEmbedEmployee = async (empInfo, additionalInfo, leaveInfo) => {
@@ -74,7 +74,7 @@ const processAndEmbedEmployee = async (empInfo, additionalInfo, leaveInfo) => {
             leaveInfo: leaveInfo
         };
 
-        function generateEmployeeSummary({ empInfo, additionalInfo, leaveInfo }) {
+        async function generateEmployeeSummary({ empInfo, additionalInfo, leaveInfo }) {
             const fullName = `${empInfo.FirstName} ${empInfo.LastName}`;
 const summaryData = {
   fullName: fullName.toLowerCase(),
@@ -109,12 +109,122 @@ const summaryData = {
     : "n/a"
 };
 
-          
-            const profileText = `
-          ${summaryData.fullName} (Employee ID: ${summaryData.employeeId}) is a ${summaryData.empType} employee who joined the organization on ${summaryData.startDate}. They work in the ${summaryData.department} department under the ${summaryData.division} division, reporting to ${summaryData.manager}. Their registered email is ${summaryData.email}. Currently, their employment status is marked as "${summaryData.status}", and they are in pay zone ${summaryData.payZone} with a monthly salary of ₹${summaryData.salary}. Their additional identifier is ${summaryData.additionalID}. They were born on ${summaryData.dob}, identify as ${summaryData.gender}, are currently ${summaryData.marital}, and are located in ${summaryData.state} with a location code of ${summaryData.locationCode}. Performance-wise, they are rated as "${summaryData.performance}" with a score of ${summaryData.rating}. Recent leave dates include: ${summaryData.leaveDates}. The leave records are associated with employee ID ${summaryData.leaveEmpID}.`.trim();
-            
+
+if(Template==''){
+
+
+async function generateDynamicTemplate(summaryData) {
+  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+
+const allFields = Object.keys(summaryData);
+const prompt = `
+You are a Node.js assistant.
+
+Your job is to generate a professional and meaningful paragraph summarizing an employee profile using the provided object named \`summaryData\`.
+
+✅ Use the following format:
+- The output must be a valid **JavaScript template literal**, wrapped in **a single pair of backticks** — that is: \` at the beginning and \` at the end.
+- Do NOT use triple backticks (e.g., \`\`\`)
+- Each dynamic field must use the full variable path like \${summaryData.fullName}, not just \${fullName}.
+- Include **all** of the following fields. Do not skip or rename any:
+
+${allFields.map(field => `- summaryData.${field}`).join('\n')}
+
+🚫 Do NOT:
+- Do NOT use example values
+- Do NOT invent or omit fields
+- Do NOT include any explanation, markdown, or code fencing (like \`\`\`js)
+- Do NOT start the paragraph with phrases like "This profile summarizes" — start directly with the employee’s name or key information.
+
+✅ DO:
+- Return only a single-line or multi-line JavaScript template literal
+- Wrap the whole thing with exactly one \` at the start and one \` at the end
+
+Here is the object definition:
+const summaryData = ${JSON.stringify(summaryData, null, 2)}
+
+Now return ONLY the template literal wrapped in **one backtick pair**. No comments. No markdown. No code block fences.
+`;
+
+
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  return response.text().trim();
+}
+
+
+// helper to ask for terminal input
+function askUser(question) {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  return new Promise(resolve => rl.question(question, ans => {
+    rl.close();
+    resolve(ans.trim().toLowerCase());
+  }));
+}
+
+// loop until user confirms
+async function loopUntilApproved() {
+  while (true) {
+    Template = await generateDynamicTemplate(summaryData);
+
+    console.log('\n📝 Generated Template:\n');
+    console.log(eval(Template));
+
+    
+
+    
+    console.log('\n');
+
+    const userInput = await askUser("👉 Is this template okay? Type 'ok' to accept, or press enter to regenerate: ");
+
+    if (userInput === 'ok') {
+    //   console.log('\n✅ Template accepted!',Template);
+      // Optional: evaluate final output with actual data
+    //   const finalOutput = eval(Template);
+    //   console.log('\n📄 Final Paragraph:\n', finalOutput);
+      
+      break;
+    }
+
+    console.log('\n🔁 Regenerating template...\n');
+  }
+}
+
+// run the loop
+await loopUntilApproved();
+}
+      
+        //     const profileText = `
+        //   ${summaryData.fullName} (Employee ID: ${summaryData.employeeId}) is a ${summaryData.empType} employee who joined the organization on ${summaryData.startDate}. They work in the ${summaryData.department} department under the ${summaryData.division} division, reporting to ${summaryData.manager}. Their registered email is ${summaryData.email}. Currently, their employment status is marked as "${summaryData.status}", and they are in pay zone ${summaryData.payZone} with a monthly salary of ₹${summaryData.salary}. Their additional identifier is ${summaryData.additionalID}. They were born on ${summaryData.dob}, identify as ${summaryData.gender}, are currently ${summaryData.marital}, and are located in ${summaryData.state} with a location code of ${summaryData.locationCode}. Performance-wise, they are rated as "${summaryData.performance}" with a score of ${summaryData.rating}. Recent leave dates include: ${summaryData.leaveDates}. The leave records are associated with employee ID ${summaryData.leaveEmpID}.`.trim();
+          let cleanedTemplate = Template
+  .replace(/^```[a-z]*\n?/i, '')  // remove starting ``` or ```js
+  .replace(/```$/, '')            // remove ending ```
+  .trim();
+
+// ✅ Remove surrounding "..." if Gemini returns the template in quotes
+if (cleanedTemplate.startsWith('"') && cleanedTemplate.endsWith('"')) {
+  cleanedTemplate = cleanedTemplate.slice(1, -1);
+}
+
+// ✅ Optional: Escape internal backticks if any (edge case)
+cleanedTemplate = cleanedTemplate.replace(/`/g, '\\`');
+let finalTemplate=''
+try {
+  const fillTemplate = new Function('summaryData', `return \`${cleanedTemplate}\`;`);
+  finalTemplate = fillTemplate(summaryData);
+
+  console.log('\n📄 Final Output:\n', finalTemplate);
+} catch (err) {
+  console.error('❌ Template evaluation error:', err.message);
+}
+        // console.log("finalTemplate:",finalTemplate);
+        
             return {
-              profileText,
+              template:finalTemplate,
               metadata: summaryData
             };
           }
@@ -140,26 +250,26 @@ const summaryData = {
             return `${monthName},${parseInt(day)},${year} `;
         }
 
-        const normalizedanswer = generateEmployeeSummary(combinedData);
+        const normalizedanswer = await generateEmployeeSummary(combinedData);
         // console.log("normalizedanswer:", normalizedanswer);
 
         // ✂️ Chunking Function
-        const chunkText = (text) => {
-            // Split by period and remove any empty or whitespace-only entries
-            const chunks = text.split('$').map(s => s.trim()).filter(s => s.length > 0);
+        // const chunkText = (text) => {
+        //     // Split by period and remove any empty or whitespace-only entries
+        //     const chunks = text.split('$').map(s => s.trim()).filter(s => s.length > 0);
 
-            return chunks;
-        };
+        //     return chunks;
+        // };
 
         // const textChunks = chunkText(normalizedanswer);
         // const textChunks=normalizedanswer;
-        const { profileText, metadata } = normalizedanswer;
-        console.log("profileText:", profileText);
-        console.log("metadata:",metadata);
+        const { template, metadata } = normalizedanswer;
+        console.log("Template:", template);
+        console.log("Metadata:",metadata);
         
         if (select_modal === 'gemini') {
             // await embed_fetchedData_gemini(textChunks,empInfo)
-            await embed_employee_profile_gemini(profileText,metadata)
+            await embed_employee_profile_gemini(template,metadata)
         }
         else if (select_modal === 'cohere') {
             await embed_fetchedData_cohere(textChunks,empInfo)
@@ -444,6 +554,7 @@ app.listen(PORT, async () => {
   
           if (model === 'gemini' || model === 'cohere') {
             select_modal = model;
+            rl.close()
             await initializeEmbeddings({ deleteExisting: true });
           } else {
             console.log("⚠️ Invalid Modal Selection");
