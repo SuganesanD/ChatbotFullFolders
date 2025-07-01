@@ -172,10 +172,12 @@ async function loopUntilApproved() {
     Template = await generateDynamicTemplate(summaryData);
 
     console.log('\n📝 Generated Template:\n');
-    console.log(eval(Template));
+    console.log(Template);
 
-    
-
+    console.log(("\n sample Generated template:\n"));
+    renderFn = new Function('summaryData', `return ${Template};`);
+    sampleOutput = renderFn(summaryData);
+    console.log(sampleOutput);
     
     console.log('\n');
 
