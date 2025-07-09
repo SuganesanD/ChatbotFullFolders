@@ -205,3 +205,49 @@
 [2025-07-01 17:02:32] ERROR: ❌ askHandler Error: Bad request to http://127.0.0.1:8000/api/v2/tenants/default_tenant/databases/default_database/collections/25bdb771-7a34-4c4b-9fbc-3b92523c9744/query with status: Collection expecting embedding with dimension of 1024, got 768
 [2025-07-01 17:05:31] ERROR: ❌ Error in tool 'summarizeData': summarizeData is not a function
 [2025-07-01 18:28:10] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the full details of anita","error":"Gemini API failed"}
+[2025-07-02 18:27:58] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all suganesan in staff object","error":"Cannot read properties of undefined (reading 'includes')"}
+[2025-07-02 19:51:54] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["name"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 19:55:38] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["objectname","name","staffid","contactnumber","experience","id"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 20:00:46] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["objectname","name","staffid","contactnumber","experience","id"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-03 15:28:34] ERROR: ❌ askHandler Error: objectclassifyQuery is not a function
+[2025-07-03 15:30:05] ERROR: ❌ askHandler Error: objectclassifyQuery is not a function
+[2025-07-03 15:31:09] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the suganesan in the staff object","error":"Cannot read properties of undefined (reading 'fields')"}
+[2025-07-03 15:38:15] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list the suganesan in the staff object","where":{},"whereDocument":["suganesan"],"fields":[],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-03 16:58:43] ERROR: ❌ askHandler Error: fetchEmbeddingsAndQuery is not a function
+[2025-07-03 17:08:22] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-07-03 17:14:39] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-07-03 17:18:49] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-07-03 17:24:04] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-07-03 18:16:04] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-07-03 18:21:24] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-07-07 16:43:35] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-07-07 16:46:12] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-07-07 16:56:54] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-07-07 17:51:34] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [503 Service Unavailable] The model is overloaded. Please try again later.
+[2025-07-07 18:33:12] ERROR: ❌ askHandler Error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got 0
+[2025-07-08 11:53:37] ERROR: ❌ askHandler Error: allUniqueKeys is not defined
+[2025-07-08 11:54:05] ERROR: ❌ askHandler Error: allUniqueKeys is not defined
+[2025-07-08 11:54:32] ERROR: ❌ askHandler Error: allUniqueKeys is not defined
+[2025-07-08 12:01:22] ERROR: ❌ Gemini returned invalid JSON:
+```json
+{
+  "originalQuery": "list the leave dates of derick",
+  "where": {
+    "firstname": { "$eq": "derick" }
+   concentric"
+  },
+  "whereDocument": [],
+  "layer": true
+}
+```
+[2025-07-08 16:53:00] ERROR: ❌ Error in objectclassifyQuery: selected_modal is not defined
+[2025-07-08 16:56:34] ERROR: ❌ Error in objectclassifyQuery: select_modal is not defined
+[2025-07-08 17:01:14] ERROR: ❌ Error in objectclassifyQuery: select_modal is not defined
+[2025-07-08 17:03:16] ERROR: ❌ Error in objectclassifyQuery: select_modal is not defined
+[2025-07-08 17:05:24] ERROR: ❌ Error in objectclassifyQuery: generateCohereResponse is not defined
+[2025-07-08 17:11:20] ERROR: ❌ Error in objectclassifyQuery: res is not defined
+[2025-07-08 17:19:43] ERROR: ❌ Error in objectclassifyQuery: res is not defined
+[2025-07-08 17:21:22] ERROR: ❌ Error in objectclassifyQuery: Assignment to constant variable.
+[2025-07-08 17:23:59] ERROR: ❌ Error in objectclassifyQuery: Assignment to constant variable.
+[2025-07-08 18:12:53] ERROR: ❌ Error in objectclassifyQuery: Gemini API failed
+[2025-07-08 18:24:01] ERROR: ❌ askHandler Error: Expected operand value to be a string, number, boolean, or a list of those types

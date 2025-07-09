@@ -10416,3 +10416,3125 @@
 [2025-07-02 18:00:01] INFO: 📥 Retrieved Context: 1 items
 [2025-07-02 18:00:01] INFO: 📨 Sending prompt to Gemini...
 [2025-07-02 18:00:02] INFO: ✅ Gemini Answer Generated
+[2025-07-02 18:23:59] INFO: 💬 Incoming Query: list all suganesan in staff object
+[2025-07-02 18:24:03] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list all suganesan in staff object","where":{},"whereDocument":["suganesan"],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-02 18:24:03] INFO: 🔀 Routing Category: Specific
+[2025-07-02 18:24:03] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-02 18:24:03] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-02 18:24:03] INFO: 📥 Retrieved Context: 1 items
+[2025-07-02 18:24:03] INFO: 📨 Sending prompt to Gemini...
+[2025-07-02 18:24:05] INFO: ✅ Gemini Answer Generated
+[2025-07-02 18:27:55] INFO: 💬 Incoming Query: list all suganesan in staff object
+[2025-07-02 18:27:58] INFO: ✅ Classified JSON: {"category":"Unknown","originalQuery":"list all suganesan in staff object","error":"Cannot read properties of undefined (reading 'includes')"}
+[2025-07-02 18:27:58] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list all suganesan in staff object","error":"Cannot read properties of undefined (reading 'includes')"}
+[2025-07-02 19:26:41] INFO: 💬 Incoming Query: list all the suganesan in student object
+[2025-07-02 19:26:43] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["fullName","employeeId","email"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"},"metadataFilters":{},"metadataConditionalFields":{}}
+[2025-07-02 19:26:43] INFO: 🔀 Routing Category: Specific
+[2025-07-02 19:26:43] INFO: 🔍 Routing Function: getSpecificEmployeeInfo
+[2025-07-02 19:26:44] INFO: ✅ Specific match found: 1 result(s)
+[2025-07-02 19:26:44] INFO: 📥 Retrieved Context: 1 items
+[2025-07-02 19:26:44] INFO: 📨 Sending prompt to Gemini...
+[2025-07-02 19:26:45] INFO: ✅ Gemini Answer Generated
+[2025-07-02 19:51:50] INFO: 💬 Incoming Query: list all the suganesan in student object
+[2025-07-02 19:51:54] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["name"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 19:51:54] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["name"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 19:55:35] INFO: 💬 Incoming Query: list all the suganesan in student object
+[2025-07-02 19:55:38] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["objectname","name","staffid","contactnumber","experience","id"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 19:55:38] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["objectname","name","staffid","contactnumber","experience","id"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 20:00:43] INFO: 💬 Incoming Query: list all the suganesan in student object
+[2025-07-02 20:00:46] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["objectname","name","staffid","contactnumber","experience","id"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-02 20:00:46] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list all the suganesan in student object","where":{},"whereDocument":["suganesan"],"fields":["objectname","name","staffid","contactnumber","experience","id"],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-03 15:28:34] INFO: 💬 Incoming Query: hi
+[2025-07-03 15:28:34] ERROR: ❌ askHandler Error: objectclassifyQuery is not a function
+[2025-07-03 15:30:05] INFO: 💬 Incoming Query: list the suganesan in the staff object
+[2025-07-03 15:30:05] ERROR: ❌ askHandler Error: objectclassifyQuery is not a function
+[2025-07-03 15:31:07] INFO: 💬 Incoming Query: list the suganesan in the staff object
+[2025-07-03 15:31:09] INFO: ✅ Classified JSON: {"category":"Unknown","originalQuery":"list the suganesan in the staff object","error":"Cannot read properties of undefined (reading 'fields')"}
+[2025-07-03 15:31:09] ERROR: ❌ Invalid schema: {"category":"Unknown","originalQuery":"list the suganesan in the staff object","error":"Cannot read properties of undefined (reading 'fields')"}
+[2025-07-03 15:38:12] INFO: 💬 Incoming Query: list the suganesan in the staff object
+[2025-07-03 15:38:15] INFO: ✅ Classified JSON: {"category":"Specific","originalQuery":"list the suganesan in the staff object","where":{},"whereDocument":["suganesan"],"fields":[],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-03 15:38:15] ERROR: ❌ Invalid schema: {"category":"Specific","originalQuery":"list the suganesan in the staff object","where":{},"whereDocument":["suganesan"],"fields":[],"groupBy":"","sortBy":"","sortOrder":"asc","count":false,"pagination":{"limit":100,"offset":0},"tools":[],"chartConfig":{"chartType":"","xField":"","yField":""},"statisticalFields":{},"pluginExtensions":{},"formatting":{"markdownTable":true,"summaryOnly":false,"language":"en"}}
+[2025-07-03 16:38:38] INFO: 💬 Incoming Query: list the suganesan record in staff object
+[2025-07-03 16:38:41] INFO: ✅ Classified JSON:
+[2025-07-03 16:38:41] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan record in staff object","where":{"objectname":{"$eq":"staff"},"name":{"$eq":"suganesan"}},"whereDocument":[]}
+[2025-07-03 16:38:41] INFO: 🔀 Routing Category: undefined
+[2025-07-03 16:38:41] WARN: ⚠️ Unknown category 'undefined', falling back to handleGeneral
+[2025-07-03 16:38:41] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 16:38:41] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:38:41] INFO: ✅ Gemini Answer Generated
+[2025-07-03 16:48:15] INFO: 💬 Incoming Query: list the suganesan record in staff object
+[2025-07-03 16:48:18] INFO: ✅ Classified JSON:
+[2025-07-03 16:48:18] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan record in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 16:48:18] INFO: 🔀 Routing Function: listEmployees
+[2025-07-03 16:48:18] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 16:48:18] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 16:48:18] INFO: 📄 Fetched 0 document(s)
+[2025-07-03 16:48:18] INFO: 📎 Sample metadata:
+[2025-07-03 16:48:18] INFO: 📥 Retrieved Context: 0 items
+[2025-07-03 16:48:18] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:48:20] INFO: ✅ Gemini Answer Generated
+[2025-07-03 16:53:17] INFO: 💬 Incoming Query: list the suganesan record in staff object
+[2025-07-03 16:53:18] INFO: ✅ Classified JSON:
+[2025-07-03 16:53:18] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan record in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 16:53:18] INFO: 🔀 Routing Function: 
+[2025-07-03 16:53:19] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 16:53:19] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 16:53:19] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 16:53:19] INFO: 📎 Sample metadata:
+[2025-07-03 16:53:19] INFO: 📥 Retrieved Context: 0 items
+[2025-07-03 16:53:19] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:53:20] INFO: ✅ Gemini Answer Generated
+[2025-07-03 16:55:37] INFO: 💬 Incoming Query: list the suganesan record in staff object
+[2025-07-03 16:55:39] INFO: ✅ Classified JSON:
+[2025-07-03 16:55:39] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan record in staff object","where":{"$and":[{"objectname":{"$eq":"staff"}},{"staffid":{"$eq":"suganesan"}}]},"whereDocument":[]}
+[2025-07-03 16:55:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 16:55:39] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "staff"
+      }
+    },
+    {
+      "staffid": {
+        "$eq": "suganesan"
+      }
+    }
+  ]
+}
+[2025-07-03 16:55:39] INFO: 📌 whereDocument: []
+[2025-07-03 16:55:39] INFO: 📄 Fetched 0 document(s)
+[2025-07-03 16:55:39] INFO: 📎 Sample metadata:
+[2025-07-03 16:55:39] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 16:55:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:55:41] INFO: ✅ Gemini Answer Generated
+[2025-07-03 16:55:59] INFO: 💬 Incoming Query: list the suganesan record in staff object
+[2025-07-03 16:56:00] INFO: ✅ Classified JSON:
+[2025-07-03 16:56:00] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan record in staff object","where":{"$and":[{"objectname":{"$eq":"staff"}},{"staffid":{"$eq":"suganesan"}}]},"whereDocument":[]}
+[2025-07-03 16:56:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 16:56:01] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "staff"
+      }
+    },
+    {
+      "staffid": {
+        "$eq": "suganesan"
+      }
+    }
+  ]
+}
+[2025-07-03 16:56:01] INFO: 📌 whereDocument: []
+[2025-07-03 16:56:01] INFO: 📄 Fetched 0 document(s)
+[2025-07-03 16:56:01] INFO: 📎 Sample metadata:
+[2025-07-03 16:56:01] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 16:56:01] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:56:02] INFO: ✅ Gemini Answer Generated
+[2025-07-03 16:56:27] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 16:56:28] INFO: ✅ Classified JSON:
+[2025-07-03 16:56:28] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 16:56:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 16:56:29] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 16:56:29] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 16:56:29] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 16:56:29] INFO: 📎 Sample metadata:
+[2025-07-03 16:56:29] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 16:56:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:56:30] INFO: ✅ Gemini Answer Generated
+[2025-07-03 16:58:41] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 16:58:43] INFO: ✅ Classified JSON:
+[2025-07-03 16:58:43] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 16:58:43] ERROR: ❌ askHandler Error: fetchEmbeddingsAndQuery is not a function
+[2025-07-03 16:59:25] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 16:59:27] INFO: ✅ Classified JSON:
+[2025-07-03 16:59:27] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 16:59:27] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 16:59:27] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 16:59:28] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 16:59:28] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 16:59:28] INFO: 📎 Sample metadata:
+[2025-07-03 16:59:28] INFO: []
+[2025-07-03 16:59:28] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 16:59:28] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 16:59:29] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:08:19] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 17:08:22] INFO: ✅ Classified JSON:
+[2025-07-03 17:08:22] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"},"name":{"$eq":"suganesan"}},"whereDocument":[]}
+[2025-07-03 17:08:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:08:22] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  },
+  "name": {
+    "$eq": "suganesan"
+  }
+}
+[2025-07-03 17:08:22] INFO: 📌 whereDocument: []
+[2025-07-03 17:08:22] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-07-03 17:09:31] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 17:09:33] INFO: ✅ Classified JSON:
+[2025-07-03 17:09:33] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:09:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:09:33] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 17:09:33] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:09:34] INFO: 📄 Fetched 0 document(s)
+[2025-07-03 17:09:34] INFO: 📥 Retrieved Context: 0 items
+[2025-07-03 17:09:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:09:35] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:14:37] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 17:14:39] INFO: ✅ Classified JSON:
+[2025-07-03 17:14:39] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:14:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:14:39] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 17:14:39] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:14:39] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-07-03 17:15:28] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 17:15:30] INFO: ✅ Classified JSON:
+[2025-07-03 17:15:30] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:15:30] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:15:31] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 17:15:31] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:15:31] INFO: 📄 Fetched 0 document(s)
+[2025-07-03 17:15:31] INFO: 📥 Retrieved Context: 0 items
+[2025-07-03 17:15:31] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:15:32] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:18:46] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 17:18:48] INFO: ✅ Classified JSON:
+[2025-07-03 17:18:48] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:18:48] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:18:49] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 17:18:49] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:18:49] ERROR: ❌ askHandler Error: At least one of 'queryEmbeddings' and 'queryTexts' must be provided
+[2025-07-03 17:20:04] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 17:20:06] INFO: ✅ Classified JSON:
+[2025-07-03 17:20:06] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:20:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:20:07] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 17:20:07] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:20:07] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:20:07] INFO: 📎 Sample metadata:
+[2025-07-03 17:20:07] INFO: [
+  [
+    {
+      "staffid": "stf102",
+      "objectname": "staff"
+    }
+  ]
+]
+[2025-07-03 17:20:07] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:20:07] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:20:08] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:20:39] INFO: 💬 Incoming Query: list the suganesan in student object
+[2025-07-03 17:20:42] INFO: ✅ Classified JSON:
+[2025-07-03 17:20:42] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:20:42] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:20:42] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 17:20:42] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:20:42] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:20:42] INFO: 📎 Sample metadata:
+[2025-07-03 17:20:42] INFO: [
+  []
+]
+[2025-07-03 17:20:42] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:20:42] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:20:43] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:22:02] INFO: 💬 Incoming Query: list the ram kumar in student object
+[2025-07-03 17:22:04] INFO: ✅ Classified JSON:
+[2025-07-03 17:22:04] INFO: ✅ Classified JSON: {"originalQuery":"list the ram kumar in student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["ram","kumar"]}
+[2025-07-03 17:22:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:22:04] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 17:22:04] INFO: 📌 whereDocument: [
+  "ram",
+  "kumar"
+]
+[2025-07-03 17:22:04] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:22:04] INFO: 📎 Sample metadata:
+[2025-07-03 17:22:04] INFO: [
+  [
+    {
+      "objectname": "student",
+      "id": 456
+    }
+  ]
+]
+[2025-07-03 17:22:04] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:22:04] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:22:06] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:23:24] INFO: 💬 Incoming Query: list the suganesan in student object
+[2025-07-03 17:23:26] INFO: ✅ Classified JSON:
+[2025-07-03 17:23:26] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:23:26] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:23:26] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 17:23:26] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:23:26] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:23:26] INFO: 📎 Sample metadata:
+[2025-07-03 17:23:26] INFO: [
+  []
+]
+[2025-07-03 17:23:26] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:23:26] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:23:27] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:24:02] INFO: 💬 Incoming Query: list the suganesan
+[2025-07-03 17:24:04] INFO: ✅ Classified JSON:
+[2025-07-03 17:24:04] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 17:24:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:24:04] INFO: 📌 Final WHERE: {}
+[2025-07-03 17:24:04] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:24:04] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 0
+[2025-07-03 17:26:53] INFO: 💬 Incoming Query: list the suganesan
+[2025-07-03 17:26:55] INFO: ✅ Classified JSON:
+[2025-07-03 17:26:55] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 17:26:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:26:56] INFO: 📌 Final WHERE: {}
+[2025-07-03 17:26:56] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:26:56] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:26:56] INFO: 📎 Sample metadata:
+[2025-07-03 17:26:56] INFO: [
+  [
+    {
+      "staffid": "stf102",
+      "objectname": "staff"
+    }
+  ]
+]
+[2025-07-03 17:26:56] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:26:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:26:57] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:31:13] INFO: 💬 Incoming Query: list the suganesan in the student object
+[2025-07-03 17:31:15] INFO: ✅ Classified JSON:
+[2025-07-03 17:31:15] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in the student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:31:15] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:31:16] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 17:31:16] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:31:16] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:31:16] INFO: 📎 Sample metadata:
+[2025-07-03 17:31:16] INFO: [
+  []
+]
+[2025-07-03 17:31:16] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:31:16] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:31:17] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:36:07] INFO: 💬 Incoming Query: list the suganesan, in the student object
+[2025-07-03 17:36:08] INFO: ✅ Classified JSON:
+[2025-07-03 17:36:08] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan, in the student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 17:36:08] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:36:08] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 17:36:08] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:36:08] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:36:08] INFO: 📎 Sample metadata:
+[2025-07-03 17:36:08] INFO: [
+  []
+]
+[2025-07-03 17:36:08] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:36:08] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:36:10] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:36:32] INFO: 💬 Incoming Query: suganesan
+[2025-07-03 17:36:34] INFO: ✅ Classified JSON:
+[2025-07-03 17:36:34] INFO: ✅ Classified JSON: {"originalQuery":"suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 17:36:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:36:34] INFO: 📌 Final WHERE: {}
+[2025-07-03 17:36:34] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:36:35] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:36:35] INFO: 📎 Sample metadata:
+[2025-07-03 17:36:35] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "staffid": "stf102"
+    }
+  ]
+]
+[2025-07-03 17:36:35] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:36:35] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:36:36] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:53:19] INFO: 💬 Incoming Query: suganesan
+[2025-07-03 17:53:21] INFO: ✅ Classified JSON:
+[2025-07-03 17:53:21] INFO: ✅ Classified JSON: {"originalQuery":"suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 17:53:21] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:53:22] INFO: 📌 Final WHERE: {}
+[2025-07-03 17:53:22] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 17:53:22] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:53:22] INFO: 📎 Sample metadata:
+[2025-07-03 17:53:22] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "experience": 5
+    }
+  ]
+]
+[2025-07-03 17:53:22] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:53:22] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:53:24] INFO: ✅ Gemini Answer Generated
+[2025-07-03 17:53:57] INFO: 💬 Incoming Query: student name suganesan
+[2025-07-03 17:53:59] INFO: ✅ Classified JSON:
+[2025-07-03 17:53:59] INFO: ✅ Classified JSON: {"originalQuery":"student name suganesan","where":{},"whereDocument":["suganesan","student","name"]}
+[2025-07-03 17:53:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 17:53:59] INFO: 📌 Final WHERE: {}
+[2025-07-03 17:53:59] INFO: 📌 whereDocument: [
+  "suganesan",
+  "student",
+  "name"
+]
+[2025-07-03 17:53:59] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 17:53:59] INFO: 📎 Sample metadata:
+[2025-07-03 17:53:59] INFO: [
+  []
+]
+[2025-07-03 17:53:59] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 17:53:59] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 17:54:01] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:03:20] INFO: 💬 Incoming Query: suganesan
+[2025-07-03 18:03:22] INFO: ✅ Classified JSON:
+[2025-07-03 18:03:22] INFO: ✅ Classified JSON: {"originalQuery":"suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 18:03:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:03:23] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:03:23] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:03:23] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:03:23] INFO: 📎 Sample metadata:
+[2025-07-03 18:03:23] INFO: [
+  [
+    {
+      "staffid": "stf102",
+      "objectname": "staff"
+    },
+    {
+      "id": 456,
+      "objectname": "student"
+    }
+  ]
+]
+[2025-07-03 18:03:23] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:03:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:03:26] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:04:54] INFO: 💬 Incoming Query: suganesan
+[2025-07-03 18:04:55] INFO: ✅ Classified JSON:
+[2025-07-03 18:04:55] INFO: ✅ Classified JSON: {"originalQuery":"suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 18:04:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:04:56] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:04:56] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:04:56] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:04:56] INFO: 📎 Sample metadata:
+[2025-07-03 18:04:56] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "address": "456 mount road"
+    },
+    {
+      "objectname": "student",
+      "name": "suganesan"
+    }
+  ]
+]
+[2025-07-03 18:04:56] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:04:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:04:57] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:05:17] INFO: 💬 Incoming Query: list the suganesan in staff object
+[2025-07-03 18:05:19] INFO: ✅ Classified JSON:
+[2025-07-03 18:05:19] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 18:05:19] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:05:20] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 18:05:20] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:05:20] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:05:20] INFO: 📎 Sample metadata:
+[2025-07-03 18:05:20] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "address": "456 mount road"
+    }
+  ]
+]
+[2025-07-03 18:05:20] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:05:20] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:05:22] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:05:49] INFO: 💬 Incoming Query: list the suganesan in student object
+[2025-07-03 18:05:53] INFO: ✅ Classified JSON:
+[2025-07-03 18:05:53] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 18:05:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:05:53] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 18:05:53] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:05:53] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:05:53] INFO: 📎 Sample metadata:
+[2025-07-03 18:05:53] INFO: [
+  [
+    {
+      "name": "suganesan",
+      "objectname": "student"
+    }
+  ]
+]
+[2025-07-03 18:05:53] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:05:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:05:55] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:06:12] INFO: 💬 Incoming Query: list the ram kumar in student object
+[2025-07-03 18:06:15] INFO: ✅ Classified JSON:
+[2025-07-03 18:06:15] INFO: ✅ Classified JSON: {"originalQuery":"list the ram kumar in student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["ram","kumar"]}
+[2025-07-03 18:06:15] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:06:15] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 18:06:15] INFO: 📌 whereDocument: [
+  "ram",
+  "kumar"
+]
+[2025-07-03 18:06:15] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:06:15] INFO: 📎 Sample metadata:
+[2025-07-03 18:06:15] INFO: [
+  []
+]
+[2025-07-03 18:06:15] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:06:15] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:06:17] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:06:23] INFO: 💬 Incoming Query: ram kumar
+[2025-07-03 18:06:25] INFO: ✅ Classified JSON:
+[2025-07-03 18:06:25] INFO: ✅ Classified JSON: {"originalQuery":"ram kumar","where":{},"whereDocument":["ram","kumar"]}
+[2025-07-03 18:06:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:06:25] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:06:25] INFO: 📌 whereDocument: [
+  "ram",
+  "kumar"
+]
+[2025-07-03 18:06:25] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:06:25] INFO: 📎 Sample metadata:
+[2025-07-03 18:06:25] INFO: [
+  []
+]
+[2025-07-03 18:06:25] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:06:25] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:06:27] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:15:44] INFO: 💬 Incoming Query: suganesan
+[2025-07-03 18:15:45] INFO: ✅ Classified JSON:
+[2025-07-03 18:15:45] INFO: ✅ Classified JSON: {"originalQuery":"suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 18:15:45] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:15:46] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:15:46] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:15:46] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:15:46] INFO: 📎 Sample metadata:
+[2025-07-03 18:15:46] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "contactnumber": "9876543210"
+    },
+    {
+      "id": 456,
+      "objectname": "student",
+      "name": "suganesan"
+    }
+  ]
+]
+[2025-07-03 18:15:46] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:15:46] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:15:48] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:16:02] INFO: 💬 Incoming Query: list the suganesan from the staff
+[2025-07-03 18:16:03] INFO: ✅ Classified JSON:
+[2025-07-03 18:16:03] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan from the staff","where":{"objectname":{"$eq":"staff"},"name":{"$eq":"suganesan"}},"whereDocument":[]}
+[2025-07-03 18:16:03] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:16:04] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  },
+  "name": {
+    "$eq": "suganesan"
+  }
+}
+[2025-07-03 18:16:04] INFO: 📌 whereDocument: []
+[2025-07-03 18:16:04] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-07-03 18:20:50] INFO: 💬 Incoming Query: list the suganesan from the staff
+[2025-07-03 18:20:52] INFO: ✅ Classified JSON:
+[2025-07-03 18:20:52] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan from the staff","where":{"$and":[{"objectname":{"$eq":"staff"}},{"name":{"$eq":"suganesan"}}]},"whereDocument":[]}
+[2025-07-03 18:20:52] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:20:53] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "staff"
+      }
+    },
+    {
+      "name": {
+        "$eq": "suganesan"
+      }
+    }
+  ]
+}
+[2025-07-03 18:20:53] INFO: 📌 whereDocument: []
+[2025-07-03 18:20:53] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:20:53] INFO: 📎 Sample metadata:
+[2025-07-03 18:20:53] INFO: [
+  [
+    {
+      "name": "suganesan",
+      "objectname": "staff",
+      "staffid": "stf102"
+    }
+  ]
+]
+[2025-07-03 18:20:53] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:20:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:20:54] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:21:22] INFO: 💬 Incoming Query: list the suganesan from the student object
+[2025-07-03 18:21:24] INFO: ✅ Classified JSON:
+[2025-07-03 18:21:24] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan from the student object","where":{"objectname":{"$eq":"student"},"name":{"$eq":"suganesan"}},"whereDocument":[]}
+[2025-07-03 18:21:24] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:21:24] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  },
+  "name": {
+    "$eq": "suganesan"
+  }
+}
+[2025-07-03 18:21:24] INFO: 📌 whereDocument: []
+[2025-07-03 18:21:24] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-07-03 18:24:36] INFO: 💬 Incoming Query: list the suganesan from the student object
+[2025-07-03 18:24:39] INFO: ✅ Classified JSON:
+[2025-07-03 18:24:39] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan from the student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 18:24:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:24:39] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 18:24:39] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:24:39] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:24:39] INFO: 📎 Sample metadata:
+[2025-07-03 18:24:39] INFO: [
+  [
+    {
+      "objectname": "student",
+      "address": "mani nagar"
+    }
+  ]
+]
+[2025-07-03 18:24:39] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:24:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:24:41] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:25:01] INFO: 💬 Incoming Query: list the suganesan from the staff object
+[2025-07-03 18:25:04] INFO: ✅ Classified JSON:
+[2025-07-03 18:25:04] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan from the staff object","where":{"objectname":{"$eq":"staff"}},"whereDocument":["suganesan"]}
+[2025-07-03 18:25:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:25:05] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "staff"
+  }
+}
+[2025-07-03 18:25:05] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:25:05] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:25:05] INFO: 📎 Sample metadata:
+[2025-07-03 18:25:05] INFO: [
+  [
+    {
+      "staffid": "stf102",
+      "objectname": "staff",
+      "experience": 5
+    }
+  ]
+]
+[2025-07-03 18:25:05] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:25:05] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:25:06] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:25:16] INFO: 💬 Incoming Query: suganesan
+[2025-07-03 18:25:17] INFO: ✅ Classified JSON:
+[2025-07-03 18:25:17] INFO: ✅ Classified JSON: {"originalQuery":"suganesan","whereDocument":["suganesan"],"where":{}}
+[2025-07-03 18:25:17] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:25:18] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:25:18] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:25:18] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:25:18] INFO: 📎 Sample metadata:
+[2025-07-03 18:25:18] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "staffid": "stf102",
+      "experience": 5
+    },
+    {
+      "objectname": "student",
+      "address": "mani nagar"
+    }
+  ]
+]
+[2025-07-03 18:25:18] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:25:18] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:25:19] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:25:34] INFO: 💬 Incoming Query: list the suganesan
+[2025-07-03 18:25:35] INFO: ✅ Classified JSON:
+[2025-07-03 18:25:35] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan","whereDocument":["suganesan"],"where":{}}
+[2025-07-03 18:25:35] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:25:35] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:25:35] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:25:36] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:25:36] INFO: 📎 Sample metadata:
+[2025-07-03 18:25:36] INFO: [
+  [
+    {
+      "experience": 5,
+      "staffid": "stf102",
+      "objectname": "staff"
+    },
+    {
+      "objectname": "student",
+      "address": "mani nagar"
+    }
+  ]
+]
+[2025-07-03 18:25:36] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:25:36] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:25:37] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:27:05] INFO: 💬 Incoming Query: list the suganesan
+[2025-07-03 18:27:06] INFO: ✅ Classified JSON:
+[2025-07-03 18:27:06] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan","where":{},"whereDocument":["suganesan"]}
+[2025-07-03 18:27:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:27:06] INFO: 📌 Final WHERE: {}
+[2025-07-03 18:27:06] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:27:07] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:27:07] INFO: 📎 Sample metadata:
+[2025-07-03 18:27:07] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "name": "suganesan",
+      "experience": 5
+    },
+    {
+      "id": 456,
+      "address": "mani nagar",
+      "objectname": "student"
+    }
+  ]
+]
+[2025-07-03 18:27:07] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:27:07] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:27:08] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:27:31] INFO: 💬 Incoming Query: list the suganesan in the student object
+[2025-07-03 18:27:34] INFO: ✅ Classified JSON:
+[2025-07-03 18:27:34] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in the student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 18:27:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:27:34] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 18:27:34] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:27:34] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:27:34] INFO: 📎 Sample metadata:
+[2025-07-03 18:27:34] INFO: [
+  [
+    {
+      "id": 456,
+      "address": "mani nagar",
+      "objectname": "student"
+    }
+  ]
+]
+[2025-07-03 18:27:34] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:27:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:27:36] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:28:02] INFO: 💬 Incoming Query: list the suganesan name in the student object
+[2025-07-03 18:28:04] INFO: ✅ Classified JSON:
+[2025-07-03 18:28:04] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan name in the student object","where":{"objectname":{"$eq":"student"}},"whereDocument":["suganesan"]}
+[2025-07-03 18:28:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:28:05] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "student"
+  }
+}
+[2025-07-03 18:28:05] INFO: 📌 whereDocument: [
+  "suganesan"
+]
+[2025-07-03 18:28:05] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:28:05] INFO: 📎 Sample metadata:
+[2025-07-03 18:28:05] INFO: [
+  [
+    {
+      "objectname": "student",
+      "address": "mani nagar",
+      "id": 456
+    }
+  ]
+]
+[2025-07-03 18:28:05] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:28:05] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:28:06] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:35:14] INFO: 💬 Incoming Query: list the suganesan in the student object
+[2025-07-03 18:35:16] INFO: ✅ Classified JSON:
+[2025-07-03 18:35:16] INFO: ✅ Classified JSON: {"originalQuery":"list the suganesan in the student object","where":{"$and":[{"objectname":{"$eq":"student"}},{"name":{"$eq":"suganesan"}}]},"whereDocument":[]}
+[2025-07-03 18:35:16] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:35:17] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "student"
+      }
+    },
+    {
+      "name": {
+        "$eq": "suganesan"
+      }
+    }
+  ]
+}
+[2025-07-03 18:35:17] INFO: 📌 whereDocument: []
+[2025-07-03 18:35:17] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:35:17] INFO: 📎 Sample metadata:
+[2025-07-03 18:35:17] INFO: [
+  []
+]
+[2025-07-03 18:35:17] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:35:17] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:35:18] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:41:47] INFO: 💬 Incoming Query: list the record in the student object with salary less than 20 thousand
+[2025-07-03 18:41:50] INFO: ✅ Classified JSON:
+[2025-07-03 18:41:50] INFO: ✅ Classified JSON: {"originalQuery":"list the record in the student object with salary less than 20 thousand","where":{"$and":[{"objectname":{"$eq":"student"}},{"salary":{"$lt":20000}}]},"whereDocument":[]}
+[2025-07-03 18:41:50] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:41:50] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "student"
+      }
+    },
+    {
+      "salary": {
+        "$lt": 20000
+      }
+    }
+  ]
+}
+[2025-07-03 18:41:50] INFO: 📌 whereDocument: []
+[2025-07-03 18:41:51] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:41:51] INFO: 📎 Sample metadata:
+[2025-07-03 18:41:51] INFO: [
+  []
+]
+[2025-07-03 18:41:51] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:41:51] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:41:52] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:42:06] INFO: 💬 Incoming Query: list the record in the student object with salary less than 30 thousand
+[2025-07-03 18:42:07] INFO: ✅ Classified JSON:
+[2025-07-03 18:42:07] INFO: ✅ Classified JSON: {"originalQuery":"list the record in the student object with salary less than 30 thousand","where":{"$and":[{"objectname":{"$eq":"student"}},{"salary":{"$lt":30000}}]},"whereDocument":[]}
+[2025-07-03 18:42:07] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:42:08] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "student"
+      }
+    },
+    {
+      "salary": {
+        "$lt": 30000
+      }
+    }
+  ]
+}
+[2025-07-03 18:42:08] INFO: 📌 whereDocument: []
+[2025-07-03 18:42:08] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:42:08] INFO: 📎 Sample metadata:
+[2025-07-03 18:42:08] INFO: [
+  [
+    {
+      "objectname": "student",
+      "id": 123,
+      "salary": 20000
+    }
+  ]
+]
+[2025-07-03 18:42:08] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:42:08] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:42:16] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:42:31] INFO: 💬 Incoming Query: list the record in the student object with salary greater than 20 thousand
+[2025-07-03 18:42:33] INFO: ✅ Classified JSON:
+[2025-07-03 18:42:33] INFO: ✅ Classified JSON: {"originalQuery":"list the record in the student object with salary greater than 20 thousand","where":{"$and":[{"objectname":{"$eq":"student"}},{"salary":{"$gt":20000}}]},"whereDocument":[]}
+[2025-07-03 18:42:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:42:33] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "student"
+      }
+    },
+    {
+      "salary": {
+        "$gt": 20000
+      }
+    }
+  ]
+}
+[2025-07-03 18:42:33] INFO: 📌 whereDocument: []
+[2025-07-03 18:42:34] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:42:34] INFO: 📎 Sample metadata:
+[2025-07-03 18:42:34] INFO: [
+  [
+    {
+      "objectname": "student",
+      "salary": 100000,
+      "id": 456
+    }
+  ]
+]
+[2025-07-03 18:42:34] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:42:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:42:35] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:56:10] INFO: 💬 Incoming Query: list suganesan
+[2025-07-03 18:56:12] INFO: ✅ Classified JSON:
+[2025-07-03 18:56:12] INFO: ✅ Classified JSON: {"originalQuery":"list suganesan","where":{"name":{"$eq":"suganesan"}},"whereDocument":[]}
+[2025-07-03 18:56:12] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:56:13] INFO: 📌 Final WHERE: {
+  "name": {
+    "$eq": "suganesan"
+  }
+}
+[2025-07-03 18:56:13] INFO: 📌 whereDocument: []
+[2025-07-03 18:56:13] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:56:13] INFO: 📎 Sample metadata:
+[2025-07-03 18:56:13] INFO: [
+  [
+    {
+      "objectname": "staff",
+      "staffid": "stf102",
+      "name": "suganesan"
+    },
+    {
+      "id": 456,
+      "objectname": "student",
+      "name": "suganesan"
+    }
+  ]
+]
+[2025-07-03 18:56:13] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:56:13] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:56:15] INFO: ✅ Gemini Answer Generated
+[2025-07-03 18:56:54] INFO: 💬 Incoming Query: what is the id of staff suganesan
+[2025-07-03 18:56:57] INFO: ✅ Classified JSON:
+[2025-07-03 18:56:57] INFO: ✅ Classified JSON: {"originalQuery":"what is the id of staff suganesan","where":{"$and":[{"objectname":{"$eq":"staff"}},{"name":{"$eq":"suganesan"}}]},"whereDocument":["id"]}
+[2025-07-03 18:56:57] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-03 18:56:57] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "staff"
+      }
+    },
+    {
+      "name": {
+        "$eq": "suganesan"
+      }
+    }
+  ]
+}
+[2025-07-03 18:56:57] INFO: 📌 whereDocument: [
+  "id"
+]
+[2025-07-03 18:56:57] INFO: 📄 Fetched 1 document(s)
+[2025-07-03 18:56:57] INFO: 📎 Sample metadata:
+[2025-07-03 18:56:57] INFO: [
+  [
+    {
+      "staffid": "stf102",
+      "objectname": "staff",
+      "name": "suganesan"
+    }
+  ]
+]
+[2025-07-03 18:56:57] INFO: 📥 Retrieved Context: 1 items
+[2025-07-03 18:56:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-03 18:56:59] INFO: ✅ Gemini Answer Generated
+[2025-07-07 16:43:31] INFO: 💬 Incoming Query: list the derick record in employee
+[2025-07-07 16:43:33] INFO: ✅ Classified JSON:
+[2025-07-07 16:43:33] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record in employee","where":{"$and":[{"objectname":{"$eq":"employee"}},{"$or":[{"name":{"$eq":"derick"}}]}]},"whereDocument":[],"layer":false}
+[2025-07-07 16:43:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 16:43:35] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    },
+    {
+      "$or": [
+        {
+          "name": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-07 16:43:35] INFO: 📌 whereDocument: []
+[2025-07-07 16:43:35] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-07-07 16:46:09] INFO: 💬 Incoming Query: list the derick record in employee
+[2025-07-07 16:46:12] INFO: ✅ Classified JSON:
+[2025-07-07 16:46:12] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record in employee","where":{"$and":[{"objectname":"employee"},{"$or":[{"name":{"$eq":"derick"}}]}]},"whereDocument":[],"layer":false}
+[2025-07-07 16:46:12] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 16:46:12] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": "employee"
+    },
+    {
+      "$or": [
+        {
+          "name": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-07 16:46:12] INFO: 📌 whereDocument: []
+[2025-07-07 16:46:12] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-07-07 16:56:52] INFO: 💬 Incoming Query: list the derick record in employee
+[2025-07-07 16:56:54] INFO: ✅ Classified JSON:
+[2025-07-07 16:56:54] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record in employee","where":{"$and":[{"objectname":{"$eq":"employee"}},{"$or":[{"employee":{"$eq":{"name":"derick"}}}]}]},"whereDocument":[],"layer":false}
+[2025-07-07 16:56:54] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 16:56:54] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    },
+    {
+      "$or": [
+        {
+          "employee": {
+            "$eq": {
+              "name": "derick"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-07 16:56:54] INFO: 📌 whereDocument: []
+[2025-07-07 16:56:54] INFO: 📌 layer: false
+[2025-07-07 16:56:54] ERROR: ❌ askHandler Error: Expected 'where' value for $and or $or to be a list of 'where' expressions, but got [object Object]
+[2025-07-07 17:02:08] INFO: 💬 Incoming Query: list the derick record
+[2025-07-07 17:02:09] INFO: ✅ Classified JSON:
+[2025-07-07 17:02:09] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record","where":{"$or":[{"name":{"$eq":"derick"}}]},"whereDocument":[],"layer":true}
+[2025-07-07 17:02:09] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:02:09] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "name": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-07 17:02:09] INFO: 📌 whereDocument: []
+[2025-07-07 17:02:09] INFO: 📌 layer: true
+[2025-07-07 17:02:10] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-07 17:02:10] INFO: 📦 Fetched 10 linked documents via embedding ID
+[2025-07-07 17:02:10] INFO: 📥 Retrieved Context: 10 items
+[2025-07-07 17:02:10] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:02:11] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:08:14] INFO: 💬 Incoming Query: list derick
+[2025-07-07 17:08:15] INFO: ✅ Classified JSON:
+[2025-07-07 17:08:15] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"name":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 17:08:15] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:08:16] INFO: 📌 Final WHERE: {
+  "name": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 17:08:16] INFO: 📌 whereDocument: []
+[2025-07-07 17:08:16] INFO: 📌 layer: true
+[2025-07-07 17:08:16] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-07 17:08:16] INFO: 📦 Fetched 10 linked documents via embedding ID
+[2025-07-07 17:08:16] INFO: 📥 Retrieved Context: 10 items
+[2025-07-07 17:08:16] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:08:17] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:15:06] INFO: 💬 Incoming Query: list all the records in the payzone a
+[2025-07-07 17:15:07] INFO: ✅ Classified JSON:
+[2025-07-07 17:15:07] INFO: ✅ Classified JSON: {"originalQuery":"list all the records in the payzone a","where":{"payzone":{"$eq":"a"}},"whereDocument":[],"layer":false}
+[2025-07-07 17:15:07] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:15:08] INFO: 📌 Final WHERE: {
+  "payzone": {
+    "$eq": "a"
+  }
+}
+[2025-07-07 17:15:08] INFO: 📌 whereDocument: []
+[2025-07-07 17:15:08] INFO: 📌 layer: false
+[2025-07-07 17:15:08] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 17:15:08] INFO: 📎 Sample metadata:
+[2025-07-07 17:15:08] INFO: [
+  []
+]
+[2025-07-07 17:15:08] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 17:15:08] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:15:09] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:15:32] INFO: 💬 Incoming Query: list all the records in the payzone zone a
+[2025-07-07 17:15:35] INFO: ✅ Classified JSON:
+[2025-07-07 17:15:35] INFO: ✅ Classified JSON: {"originalQuery":"list all the records in the payzone zone a","where":{"$and":[{"objectname":{"$eq":"payzone"}},{"zone":{"$eq":"a"}}]},"whereDocument":[],"layer":false}
+[2025-07-07 17:15:35] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:15:35] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "payzone"
+      }
+    },
+    {
+      "zone": {
+        "$eq": "a"
+      }
+    }
+  ]
+}
+[2025-07-07 17:15:35] INFO: 📌 whereDocument: []
+[2025-07-07 17:15:35] INFO: 📌 layer: false
+[2025-07-07 17:15:35] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 17:15:35] INFO: 📎 Sample metadata:
+[2025-07-07 17:15:35] INFO: [
+  []
+]
+[2025-07-07 17:15:35] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 17:15:35] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:15:37] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:15:58] INFO: 💬 Incoming Query: list all the records in zone a
+[2025-07-07 17:16:01] INFO: ✅ Classified JSON:
+[2025-07-07 17:16:01] INFO: ✅ Classified JSON: {"originalQuery":"list all the records in zone a","where":{"zone":{"$eq":"a"}},"whereDocument":[],"layer":false}
+[2025-07-07 17:16:01] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:16:01] INFO: 📌 Final WHERE: {
+  "zone": {
+    "$eq": "a"
+  }
+}
+[2025-07-07 17:16:01] INFO: 📌 whereDocument: []
+[2025-07-07 17:16:01] INFO: 📌 layer: false
+[2025-07-07 17:16:01] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 17:16:01] INFO: 📎 Sample metadata:
+[2025-07-07 17:16:01] INFO: [
+  []
+]
+[2025-07-07 17:16:01] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 17:16:01] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:16:03] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:16:10] INFO: 💬 Incoming Query: list derick
+[2025-07-07 17:16:12] INFO: ✅ Classified JSON:
+[2025-07-07 17:16:12] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"name":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 17:16:12] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:16:13] INFO: 📌 Final WHERE: {
+  "name": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 17:16:13] INFO: 📌 whereDocument: []
+[2025-07-07 17:16:13] INFO: 📌 layer: true
+[2025-07-07 17:16:13] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-07 17:16:13] INFO: 📦 Fetched 10 linked documents via embedding ID
+[2025-07-07 17:16:13] INFO: 📥 Retrieved Context: 10 items
+[2025-07-07 17:16:13] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:16:15] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:22:01] INFO: 💬 Incoming Query: list derick
+[2025-07-07 17:22:04] INFO: ✅ Classified JSON:
+[2025-07-07 17:22:04] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"name":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 17:22:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:22:04] INFO: 📌 Final WHERE: {
+  "name": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 17:22:04] INFO: 📌 whereDocument: []
+[2025-07-07 17:22:04] INFO: 📌 layer: true
+[2025-07-07 17:22:04] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-07 17:22:04] INFO: 📦 Fetched 10 linked documents via embedding ID
+[2025-07-07 17:22:04] INFO: 📥 Retrieved Context: 10 items
+[2025-07-07 17:22:04] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:22:07] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:32:36] INFO: 💬 Incoming Query: list derick
+[2025-07-07 17:32:38] INFO: ✅ Classified JSON:
+[2025-07-07 17:32:38] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"name":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 17:32:38] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:32:39] INFO: 📌 Final WHERE: {
+  "name": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 17:32:39] INFO: 📌 whereDocument: []
+[2025-07-07 17:32:39] INFO: 📌 layer: true
+[2025-07-07 17:32:39] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-07 17:32:39] INFO: 📦 Fetched 10 linked documents via embedding ID
+[2025-07-07 17:32:39] INFO: 📥 Retrieved Context: 10 items
+[2025-07-07 17:32:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:32:41] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:47:26] INFO: 💬 Incoming Query: list derick
+[2025-07-07 17:47:29] INFO: ✅ Classified JSON:
+[2025-07-07 17:47:29] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"whereDocument":[],"layer":false}
+[2025-07-07 17:47:29] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:47:30] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-07 17:47:30] INFO: 📌 whereDocument: []
+[2025-07-07 17:47:30] INFO: 📌 layer: false
+[2025-07-07 17:47:30] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 17:47:30] INFO: 📎 Sample metadata:
+[2025-07-07 17:47:30] INFO: [
+  [
+    {
+      "payzone": "zone a",
+      "empid": "emp_753",
+      "email": "derick.quigley@example.com",
+      "firstname": "derick",
+      "salary": 72616,
+      "objectname": "employee",
+      "employeeId": "employee_emp_753_1751890434027",
+      "manager": "aravind",
+      "lastname": "quigley"
+    }
+  ]
+]
+[2025-07-07 17:47:30] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 17:47:30] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:47:31] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:47:58] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 17:48:00] INFO: ✅ Classified JSON:
+[2025-07-07 17:48:00] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"whereDocument":["leave","dates"],"layer":true}
+[2025-07-07 17:48:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:48:00] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-07 17:48:00] INFO: 📌 whereDocument: [
+  "leave",
+  "dates"
+]
+[2025-07-07 17:48:00] INFO: 📌 layer: true
+[2025-07-07 17:48:00] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-07 17:48:00] INFO: 📦 Fetched 10 linked documents via embedding ID
+[2025-07-07 17:48:00] INFO: 📥 Retrieved Context: 10 items
+[2025-07-07 17:48:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:48:02] INFO: ✅ Gemini Answer Generated
+[2025-07-07 17:51:30] INFO: 💬 Incoming Query: list all the records manager is aravind
+[2025-07-07 17:51:31] INFO: ✅ Classified JSON:
+[2025-07-07 17:51:31] INFO: ✅ Classified JSON: {"originalQuery":"list all the records manager is aravind","where":{"manager":{"$eq":"aravind"}},"whereDocument":[],"layer":false}
+[2025-07-07 17:51:31] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 17:51:32] INFO: 📌 Final WHERE: {
+  "manager": {
+    "$eq": "aravind"
+  }
+}
+[2025-07-07 17:51:32] INFO: 📌 whereDocument: []
+[2025-07-07 17:51:32] INFO: 📌 layer: false
+[2025-07-07 17:51:32] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 17:51:32] INFO: 📎 Sample metadata:
+[2025-07-07 17:51:32] INFO: [
+  [
+    {
+      "manager": "aravind",
+      "payzone": "zone b",
+      "employeeId": "employee_emp_61_1751890547630",
+      "empid": "emp_61",
+      "email": "marjorie.hegmann@example.com",
+      "salary": 58340,
+      "firstname": "marjorie",
+      "lastname": "hegmann",
+      "objectname": "employee"
+    },
+    {
+      "manager": "aravind",
+      "objectname": "employee",
+      "payzone": "zone b",
+      "empid": "emp_992",
+      "lastname": "kozey",
+      "firstname": "adela",
+      "employeeId": "employee_emp_992_1751890555844",
+      "salary": 46622,
+      "email": "adela.kozey@example.com"
+    },
+    {
+      "lastname": "becker",
+      "objectname": "employee",
+      "empid": "emp_197",
+      "firstname": "justina",
+      "email": "justina.becker@example.com",
+      "salary": 119046,
+      "employeeId": "employee_emp_197_1751890568181",
+      "payzone": "zone b",
+      "manager": "aravind"
+    },
+    {
+      "payzone": "zone a",
+      "empid": "emp_753",
+      "email": "derick.quigley@example.com",
+      "objectname": "employee",
+      "lastname": "quigley",
+      "firstname": "derick",
+      "employeeId": "employee_emp_753_1751890434027",
+      "manager": "aravind",
+      "salary": 72616
+    },
+    {
+      "employeeId": "employee_emp_2757_1751890586038",
+      "empid": "emp_2757",
+      "objectname": "employee",
+      "salary": 70169,
+      "email": "alexandre.dubuque@example.com",
+      "manager": "aravind",
+      "lastname": "dubuque",
+      "payzone": "zone a",
+      "firstname": "alexandre"
+    }
+  ]
+]
+[2025-07-07 17:51:32] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 17:51:32] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 17:51:34] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [503 Service Unavailable] The model is overloaded. Please try again later.
+[2025-07-07 18:06:07] INFO: 💬 Incoming Query: list all the records manager is aravind
+[2025-07-07 18:06:11] INFO: ✅ Classified JSON:
+[2025-07-07 18:06:11] INFO: ✅ Classified JSON: {"originalQuery":"list all the records manager is aravind","where":{"$and":[{"objectname":{"$eq":"employee"}},{"manager":{"$eq":"aravind"}}]},"whereDocument":[],"layer":false}
+[2025-07-07 18:06:11] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:06:11] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    },
+    {
+      "manager": {
+        "$eq": "aravind"
+      }
+    }
+  ]
+}
+[2025-07-07 18:06:11] INFO: 📌 whereDocument: []
+[2025-07-07 18:06:11] INFO: 📌 layer: false
+[2025-07-07 18:06:11] INFO: 📄 Fetched 28 document(s)
+[2025-07-07 18:06:11] INFO: 📎 Sample metadata:
+[2025-07-07 18:06:11] INFO: {
+  "salary": 47731,
+  "payzone": "zone c",
+  "email": "pablo.o'reilly@example.com",
+  "employeeId": "employee_emp_1312_1751891699806",
+  "manager": "aravind",
+  "objectname": "employee",
+  "firstname": "pablo",
+  "empid": "emp_1312",
+  "lastname": "o'reilly"
+}
+[2025-07-07 18:06:11] INFO: 📥 Retrieved Context: 28 items
+[2025-07-07 18:06:12] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:06:32] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:07:04] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:07:19] INFO: ✅ Classified JSON:
+[2025-07-07 18:07:19] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 18:07:19] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:07:19] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 18:07:19] INFO: 📌 whereDocument: []
+[2025-07-07 18:07:19] INFO: 📌 layer: true
+[2025-07-07 18:07:19] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 18:07:19] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 18:07:19] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 18:07:19] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:07:21] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:15:53] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:15:59] INFO: ✅ Classified JSON:
+[2025-07-07 18:15:59] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"whereDocument":[],"layer":true}
+[2025-07-07 18:15:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:16:00] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-07 18:16:00] INFO: 📌 whereDocument: []
+[2025-07-07 18:16:00] INFO: 📌 layer: true
+[2025-07-07 18:16:00] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 18:16:00] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 18:16:00] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 18:16:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:16:02] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:22:24] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:22:38] INFO: ✅ Classified JSON:
+[2025-07-07 18:22:38] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"$and":[{"objectname":{"$eq":"employee"}},{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]}]},"whereDocument":[],"layer":true}
+[2025-07-07 18:22:38] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:22:38] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    },
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-07 18:22:38] INFO: 📌 whereDocument: []
+[2025-07-07 18:22:38] INFO: 📌 layer: true
+[2025-07-07 18:22:38] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 18:22:38] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 18:22:38] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 18:22:38] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:22:41] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:23:55] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:24:06] INFO: ✅ Classified JSON:
+[2025-07-07 18:24:06] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"$and":[{"objectname":{"$eq":"employee"}},{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]}]},"whereDocument":[],"layer":true}
+[2025-07-07 18:24:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:24:06] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    },
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-07 18:24:06] INFO: 📌 whereDocument: []
+[2025-07-07 18:24:06] INFO: 📌 layer: true
+[2025-07-07 18:24:06] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 18:24:06] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 18:24:06] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 18:24:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:24:07] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:29:24] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:29:30] INFO: ✅ Classified JSON:
+[2025-07-07 18:29:30] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{},"whereDocument":["derick"],"layer":true}
+[2025-07-07 18:29:30] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:29:30] INFO: 📌 Final WHERE: {}
+[2025-07-07 18:29:30] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:29:30] INFO: 📌 layer: true
+[2025-07-07 18:29:30] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 18:29:30] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 18:29:30] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 18:29:30] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:29:32] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:29:50] INFO: 💬 Incoming Query: when is leave request submitted by derick
+[2025-07-07 18:29:56] INFO: ✅ Classified JSON:
+[2025-07-07 18:29:56] INFO: ✅ Classified JSON: {"originalQuery":"when is leave request submitted by derick","where":{"objectname":{"$eq":"leaves"}},"whereDocument":["derick"],"layer":true}
+[2025-07-07 18:29:56] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:29:56] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "leaves"
+  }
+}
+[2025-07-07 18:29:56] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:29:56] INFO: 📌 layer: true
+[2025-07-07 18:29:56] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:29:56] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:29:56] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:29:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:29:57] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:30:17] INFO: 💬 Incoming Query: leave request by derick
+[2025-07-07 18:30:24] INFO: ✅ Classified JSON:
+[2025-07-07 18:30:24] INFO: ✅ Classified JSON: {"originalQuery":"leave request by derick","where":{"objectname":{"$eq":"leaves"}},"whereDocument":["derick"],"layer":true}
+[2025-07-07 18:30:24] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:30:24] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "leaves"
+  }
+}
+[2025-07-07 18:30:24] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:30:24] INFO: 📌 layer: true
+[2025-07-07 18:30:24] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:30:24] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:30:24] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:30:24] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:30:25] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:31:04] INFO: 💬 Incoming Query: list the leave of derick
+[2025-07-07 18:31:09] INFO: ✅ Classified JSON:
+[2025-07-07 18:31:09] INFO: ✅ Classified JSON: {"originalQuery":"list the leave of derick","where":{"objectname":{"$eq":"leaves"}},"whereDocument":["derick"],"layer":true}
+[2025-07-07 18:31:09] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:31:10] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "leaves"
+  }
+}
+[2025-07-07 18:31:10] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:31:10] INFO: 📌 layer: true
+[2025-07-07 18:31:10] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:31:10] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:31:10] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:31:10] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:31:11] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:31:27] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:31:31] INFO: ✅ Classified JSON:
+[2025-07-07 18:31:31] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"objectname":{"$eq":"leaves"}},"whereDocument":["derick"],"layer":true}
+[2025-07-07 18:31:31] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:31:32] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "leaves"
+  }
+}
+[2025-07-07 18:31:32] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:31:32] INFO: 📌 layer: true
+[2025-07-07 18:31:32] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:31:32] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:31:32] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:31:32] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:31:33] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:33:10] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:33:11] INFO: ✅ Classified JSON:
+[2025-07-07 18:33:11] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"whereDocument":["derick"]},"whereDocument":["list","the","leave","dates","of","derick"],"layer":true}
+[2025-07-07 18:33:11] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:33:12] INFO: 📌 Final WHERE: {
+  "whereDocument": [
+    "derick"
+  ]
+}
+[2025-07-07 18:33:12] INFO: 📌 whereDocument: [
+  "list",
+  "the",
+  "leave",
+  "dates",
+  "of",
+  "derick"
+]
+[2025-07-07 18:33:12] INFO: 📌 layer: true
+[2025-07-07 18:33:12] ERROR: ❌ askHandler Error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got 0
+[2025-07-07 18:34:00] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:34:05] INFO: ✅ Classified JSON:
+[2025-07-07 18:34:05] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"objectname":{"$eq":"leaves"}},"whereDocument":["derick"],"layer":true}
+[2025-07-07 18:34:05] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:34:06] INFO: 📌 Final WHERE: {
+  "objectname": {
+    "$eq": "leaves"
+  }
+}
+[2025-07-07 18:34:06] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:34:06] INFO: 📌 layer: true
+[2025-07-07 18:34:06] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:34:06] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:34:06] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:34:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:34:07] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:38:30] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-07 18:38:36] INFO: ✅ Classified JSON:
+[2025-07-07 18:38:36] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 18:38:36] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:38:36] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 18:38:36] INFO: 📌 whereDocument: []
+[2025-07-07 18:38:36] INFO: 📌 layer: true
+[2025-07-07 18:38:36] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:38:36] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:38:36] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:38:36] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:38:38] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:41:43] INFO: 💬 Incoming Query: list the leave  of derick
+[2025-07-07 18:41:53] INFO: ✅ Classified JSON:
+[2025-07-07 18:41:53] INFO: ✅ Classified JSON: {"originalQuery":"list the leave of derick","where":{},"whereDocument":["derick","leave"],"layer":true}
+[2025-07-07 18:41:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:41:53] INFO: 📌 Final WHERE: {}
+[2025-07-07 18:41:53] INFO: 📌 whereDocument: [
+  "derick",
+  "leave"
+]
+[2025-07-07 18:41:53] INFO: 📌 layer: true
+[2025-07-07 18:41:53] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 18:41:53] WARN: ⚠️ No empids found to expand results
+[2025-07-07 18:41:53] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 18:41:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:41:55] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:43:19] INFO: 💬 Incoming Query: derick
+[2025-07-07 18:43:23] INFO: ✅ Classified JSON:
+[2025-07-07 18:43:23] INFO: ✅ Classified JSON: {"originalQuery":"derick","where":{},"whereDocument":["derick"],"layer":false}
+[2025-07-07 18:43:23] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:43:23] INFO: 📌 Final WHERE: {}
+[2025-07-07 18:43:23] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:43:23] INFO: 📌 layer: false
+[2025-07-07 18:43:23] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 18:43:23] INFO: 📎 Sample metadata:
+[2025-07-07 18:43:23] INFO: {
+  "objectname": "employee",
+  "startdate": "2022-12-27",
+  "payzone": "zone a",
+  "employeeId": "employee_emp_753_1751893753417",
+  "manager": "aravind",
+  "salary": 72616,
+  "empid": "emp_753"
+}
+[2025-07-07 18:43:23] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 18:43:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:43:25] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:48:23] INFO: 💬 Incoming Query: derick
+[2025-07-07 18:48:29] INFO: ✅ Classified JSON:
+[2025-07-07 18:48:29] INFO: ✅ Classified JSON: {"originalQuery":"derick","where":{},"whereDocument":["derick"],"layer":false}
+[2025-07-07 18:48:29] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:48:30] INFO: 📌 Final WHERE: {}
+[2025-07-07 18:48:30] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-07 18:48:30] INFO: 📌 layer: false
+[2025-07-07 18:48:30] INFO: 📄 Fetched 1 document(s)
+[2025-07-07 18:48:30] INFO: 📎 Sample metadata:
+[2025-07-07 18:48:30] INFO: {
+  "salary": 72616,
+  "payzone": "zone a",
+  "startdate": "2022-12-27",
+  "employeeId": "employee_emp_753_1751893753417",
+  "manager": "aravind",
+  "empid": "emp_753",
+  "objectname": "employee"
+}
+[2025-07-07 18:48:30] INFO: 📥 Retrieved Context: 1 items
+[2025-07-07 18:48:30] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:48:32] INFO: ✅ Gemini Answer Generated
+[2025-07-07 18:51:20] INFO: 💬 Incoming Query: list the leave of derick
+[2025-07-07 18:51:24] INFO: ✅ Classified JSON:
+[2025-07-07 18:51:24] INFO: ✅ Classified JSON: {"originalQuery":"list the leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 18:51:24] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 18:51:25] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 18:51:25] INFO: 📌 whereDocument: []
+[2025-07-07 18:51:25] INFO: 📌 layer: true
+[2025-07-07 18:51:25] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 18:51:25] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 18:51:25] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 18:51:25] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 18:51:26] INFO: ✅ Gemini Answer Generated
+[2025-07-07 19:05:43] INFO: 💬 Incoming Query: list the leave of derick
+[2025-07-07 19:05:46] INFO: ✅ Classified JSON:
+[2025-07-07 19:05:46] INFO: ✅ Classified JSON: {"originalQuery":"list the leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 19:05:46] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 19:05:46] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 19:05:46] INFO: 📌 whereDocument: []
+[2025-07-07 19:05:46] INFO: 📌 layer: true
+[2025-07-07 19:05:46] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 19:05:47] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 19:05:47] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 19:06:31] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 19:06:57] INFO: ✅ Gemini Answer Generated
+[2025-07-07 19:07:31] INFO: 💬 Incoming Query: what is the gender or derick
+[2025-07-07 19:07:34] INFO: ✅ Classified JSON:
+[2025-07-07 19:07:34] INFO: ✅ Classified JSON: {"originalQuery":"what is the gender or derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-07 19:07:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 19:07:35] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-07 19:07:35] INFO: 📌 whereDocument: []
+[2025-07-07 19:07:35] INFO: 📌 layer: true
+[2025-07-07 19:07:35] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-07 19:07:35] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-07 19:07:35] INFO: 📥 Retrieved Context: 4 items
+[2025-07-07 19:07:52] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 19:08:02] INFO: ✅ Gemini Answer Generated
+[2025-07-07 19:08:42] INFO: 💬 Incoming Query: list the male records alone under manager aravind
+[2025-07-07 19:08:50] INFO: ✅ Classified JSON:
+[2025-07-07 19:08:50] INFO: ✅ Classified JSON: {"originalQuery":"list the male records alone under manager aravind","where":{"$and":[{"gendercode":{"$eq":"male"}},{"manager":{"$eq":"aravind"}}]},"whereDocument":[],"layer":true}
+[2025-07-07 19:08:50] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-07 19:08:50] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "gendercode": {
+        "$eq": "male"
+      }
+    },
+    {
+      "manager": {
+        "$eq": "aravind"
+      }
+    }
+  ]
+}
+[2025-07-07 19:08:50] INFO: 📌 whereDocument: []
+[2025-07-07 19:08:50] INFO: 📌 layer: true
+[2025-07-07 19:08:51] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-07 19:08:51] WARN: ⚠️ No empids found to expand results
+[2025-07-07 19:08:51] INFO: 📥 Retrieved Context: 0 items
+[2025-07-07 19:09:21] INFO: 📨 Sending prompt to Gemini...
+[2025-07-07 19:09:25] INFO: ✅ Gemini Answer Generated
+[2025-07-08 10:17:37] INFO: 💬 Incoming Query: list leave of derick
+[2025-07-08 10:17:41] INFO: ✅ Classified JSON:
+[2025-07-08 10:17:41] INFO: ✅ Classified JSON: {"originalQuery":"list leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 10:17:41] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 10:17:42] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 10:17:42] INFO: 📌 whereDocument: []
+[2025-07-08 10:17:42] INFO: 📌 layer: true
+[2025-07-08 10:17:42] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 10:17:42] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 10:17:42] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 10:17:42] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 10:17:43] INFO: ✅ Gemini Answer Generated
+[2025-07-08 10:23:20] INFO: 💬 Incoming Query: list leave of derick
+[2025-07-08 10:23:24] INFO: ✅ Classified JSON:
+[2025-07-08 10:23:24] INFO: ✅ Classified JSON: {"originalQuery":"list leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 10:23:24] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 10:23:25] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 10:23:25] INFO: 📌 whereDocument: []
+[2025-07-08 10:23:25] INFO: 📌 layer: true
+[2025-07-08 10:23:25] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 10:23:25] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 10:23:25] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 10:23:25] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 10:23:28] INFO: ✅ Gemini Answer Generated
+[2025-07-08 10:30:55] INFO: 💬 Incoming Query: list leave of derick
+[2025-07-08 10:30:59] INFO: ✅ Classified JSON:
+[2025-07-08 10:30:59] INFO: ✅ Classified JSON: {"originalQuery":"list leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 10:30:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 10:30:59] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 10:30:59] INFO: 📌 whereDocument: []
+[2025-07-08 10:30:59] INFO: 📌 layer: true
+[2025-07-08 10:30:59] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 10:30:59] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 10:30:59] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 10:30:59] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 10:31:02] INFO: ✅ Gemini Answer Generated
+[2025-07-08 10:34:21] INFO: 💬 Incoming Query: list leave of derick
+[2025-07-08 10:34:25] INFO: ✅ Classified JSON:
+[2025-07-08 10:34:25] INFO: ✅ Classified JSON: {"originalQuery":"list leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 10:34:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 10:34:25] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 10:34:25] INFO: 📌 whereDocument: []
+[2025-07-08 10:34:25] INFO: 📌 layer: true
+[2025-07-08 10:34:25] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 10:34:25] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 10:35:33] INFO: 💬 Incoming Query: list leave of derick
+[2025-07-08 10:35:37] INFO: ✅ Classified JSON:
+[2025-07-08 10:35:37] INFO: ✅ Classified JSON: {"originalQuery":"list leave of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 10:35:37] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 10:35:38] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 10:35:38] INFO: 📌 whereDocument: []
+[2025-07-08 10:35:38] INFO: 📌 layer: true
+[2025-07-08 10:35:38] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 10:35:38] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 10:35:38] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 10:35:44] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 10:39:06] INFO: ✅ Gemini Answer Generated
+[2025-07-08 10:39:19] INFO: 💬 Incoming Query: list the dates of derick
+[2025-07-08 10:39:24] INFO: ✅ Classified JSON:
+[2025-07-08 10:39:24] INFO: ✅ Classified JSON: {"originalQuery":"list the dates of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 10:39:24] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 10:39:24] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 10:39:24] INFO: 📌 whereDocument: []
+[2025-07-08 10:39:24] INFO: 📌 layer: true
+[2025-07-08 10:39:24] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 10:39:24] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 10:39:24] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 10:39:30] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 10:41:25] INFO: ✅ Gemini Answer Generated
+[2025-07-08 11:44:55] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 11:45:10] INFO: ✅ Classified JSON:
+[2025-07-08 11:45:10] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 11:45:10] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 11:45:10] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 11:45:10] INFO: 📌 whereDocument: []
+[2025-07-08 11:45:10] INFO: 📌 layer: true
+[2025-07-08 11:45:10] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 11:45:10] WARN: ⚠️ No empids found to expand results
+[2025-07-08 11:45:10] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 11:45:10] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 11:45:12] INFO: ✅ Gemini Answer Generated
+[2025-07-08 11:53:37] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 11:53:37] ERROR: ❌ askHandler Error: allUniqueKeys is not defined
+[2025-07-08 11:54:05] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 11:54:05] ERROR: ❌ askHandler Error: allUniqueKeys is not defined
+[2025-07-08 11:54:32] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 11:54:32] ERROR: ❌ askHandler Error: allUniqueKeys is not defined
+[2025-07-08 11:57:20] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 11:57:25] INFO: ✅ Classified JSON:
+[2025-07-08 11:57:25] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{},"whereDocument":["derick"],"layer":true}
+[2025-07-08 11:57:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 11:57:25] INFO: 📌 Final WHERE: {}
+[2025-07-08 11:57:25] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-08 11:57:25] INFO: 📌 layer: true
+[2025-07-08 11:57:26] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 11:57:26] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 11:57:26] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 11:57:26] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 11:57:31] INFO: ✅ Gemini Answer Generated
+[2025-07-08 11:57:49] INFO: 💬 Incoming Query: list the record date of derick
+[2025-07-08 11:57:58] INFO: ✅ Classified JSON:
+[2025-07-08 11:57:58] INFO: ✅ Classified JSON: {"originalQuery":"list the record date of derick","where":{},"whereDocument":["derick","record date"],"layer":true}
+[2025-07-08 11:57:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 11:57:58] INFO: 📌 Final WHERE: {}
+[2025-07-08 11:57:58] INFO: 📌 whereDocument: [
+  "derick",
+  "record date"
+]
+[2025-07-08 11:57:58] INFO: 📌 layer: true
+[2025-07-08 11:57:58] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 11:57:58] WARN: ⚠️ No empids found to expand results
+[2025-07-08 11:57:58] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 11:57:58] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 11:58:00] INFO: ✅ Gemini Answer Generated
+[2025-07-08 12:01:18] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 12:01:22] ERROR: ❌ Gemini returned invalid JSON:
+```json
+{
+  "originalQuery": "list the leave dates of derick",
+  "where": {
+    "firstname": { "$eq": "derick" }
+   concentric"
+  },
+  "whereDocument": [],
+  "layer": true
+}
+```
+[2025-07-08 12:01:22] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{},"whereDocument":["list the leave dates of derick"],"layer":false}
+[2025-07-08 12:01:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 12:01:23] INFO: 📌 Final WHERE: {}
+[2025-07-08 12:01:23] INFO: 📌 whereDocument: [
+  "list the leave dates of derick"
+]
+[2025-07-08 12:01:23] INFO: 📌 layer: false
+[2025-07-08 12:01:23] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 12:01:23] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 12:01:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 12:01:25] INFO: ✅ Gemini Answer Generated
+[2025-07-08 12:11:18] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 12:11:21] INFO: ✅ Classified JSON:
+[2025-07-08 12:11:21] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"firstname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 12:11:21] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 12:11:21] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 12:11:21] INFO: 📌 whereDocument: []
+[2025-07-08 12:11:21] INFO: 📌 layer: true
+[2025-07-08 12:11:21] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-08 12:11:21] INFO: 📦 Fetched 27 expanded documents for empid(s): emp_1777, emp_2044, emp_992, emp_753, emp_1314, emp_2019, emp_587
+[2025-07-08 12:11:21] INFO: 📥 Retrieved Context: 27 items
+[2025-07-08 12:11:21] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 12:11:27] INFO: ✅ Gemini Answer Generated
+[2025-07-08 12:13:35] INFO: 💬 Incoming Query: give the gender of derick
+[2025-07-08 12:13:39] INFO: ✅ Classified JSON:
+[2025-07-08 12:13:39] INFO: ✅ Classified JSON: {"originalQuery":"give the gender of derick","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"whereDocument":[],"layer":true}
+[2025-07-08 12:13:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 12:13:39] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-08 12:13:39] INFO: 📌 whereDocument: []
+[2025-07-08 12:13:39] INFO: 📌 layer: true
+[2025-07-08 12:13:39] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-08 12:13:39] INFO: 📦 Fetched 37 expanded documents for empid(s): emp_753, emp_587, emp_1314, emp_1777, emp_61, emp_992, emp_2044, emp_890, emp_2019
+[2025-07-08 12:13:39] INFO: 📥 Retrieved Context: 37 items
+[2025-07-08 12:13:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 12:13:42] INFO: ✅ Gemini Answer Generated
+[2025-07-08 12:44:30] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 12:44:37] INFO: ✅ Classified JSON:
+[2025-07-08 12:44:37] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{},"whereDocument":["derick"],"layer":true}
+[2025-07-08 12:44:37] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 12:44:38] INFO: 📌 Final WHERE: {}
+[2025-07-08 12:44:38] INFO: 📌 whereDocument: [
+  "derick"
+]
+[2025-07-08 12:44:38] INFO: 📌 layer: true
+[2025-07-08 12:44:38] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-08 12:44:38] INFO: 📦 Fetched 24 expanded documents for empid(s): emp_915, emp_1202, emp_1135, emp_1539, emp_635, emp_1518
+[2025-07-08 12:44:38] INFO: 📥 Retrieved Context: 24 items
+[2025-07-08 12:44:38] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 12:44:41] INFO: ✅ Gemini Answer Generated
+[2025-07-08 14:20:49] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 14:20:54] INFO: ✅ Classified JSON:
+[2025-07-08 14:20:54] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"lastname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 14:20:54] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 14:20:54] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 14:20:54] INFO: 📌 whereDocument: []
+[2025-07-08 14:20:54] INFO: 📌 layer: true
+[2025-07-08 14:20:54] INFO: 🔁 Layer = true → Matched 10 base embeddings
+[2025-07-08 14:20:54] INFO: 📦 Fetched 28 expanded documents for empid(s): emp_1202, emp_1135, emp_1518, emp_2757, emp_1777, emp_2454, emp_2044
+[2025-07-08 14:20:54] INFO: 📥 Retrieved Context: 28 items
+[2025-07-08 14:20:54] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 14:20:57] INFO: ✅ Gemini Answer Generated
+[2025-07-08 14:23:43] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-08 14:23:50] INFO: ✅ Classified JSON:
+[2025-07-08 14:23:50] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{"lastname":{"$eq":"derick"}},"whereDocument":[],"layer":true}
+[2025-07-08 14:23:50] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 14:23:50] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 14:23:50] INFO: 📌 whereDocument: []
+[2025-07-08 14:23:50] INFO: 📌 layer: true
+[2025-07-08 14:23:50] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 14:23:50] WARN: ⚠️ No empids found to expand results
+[2025-07-08 14:23:50] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 14:23:50] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 14:23:52] INFO: ✅ Gemini Answer Generated
+[2025-07-08 14:25:09] INFO: 💬 Incoming Query: list the derick in employee
+[2025-07-08 14:25:14] INFO: ✅ Classified JSON:
+[2025-07-08 14:25:14] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in employee","where":{"lastname":{"$eq":"derick"}},"whereDocument":[],"layer":false}
+[2025-07-08 14:25:14] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 14:25:14] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 14:25:14] INFO: 📌 whereDocument: []
+[2025-07-08 14:25:14] INFO: 📌 layer: false
+[2025-07-08 14:25:14] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 14:25:14] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 14:25:14] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 14:25:16] INFO: ✅ Gemini Answer Generated
+[2025-07-08 14:49:30] INFO: 💬 Incoming Query: list the derick in employee
+[2025-07-08 14:49:34] INFO: ✅ Classified JSON:
+[2025-07-08 14:49:34] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in employee","where":{"lastname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 14:49:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 14:49:34] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 14:49:34] INFO: 📌 whereDocument: []
+[2025-07-08 14:49:34] INFO: 📌 layer: false
+[2025-07-08 14:49:34] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 14:49:34] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 14:49:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 14:49:36] INFO: ✅ Gemini Answer Generated
+[2025-07-08 14:52:27] INFO: 💬 Incoming Query: list the derick in employee
+[2025-07-08 14:52:28] INFO: ✅ Classified JSON:
+[2025-07-08 14:52:28] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in employee","where":{"lastname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 14:52:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 14:52:29] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 14:52:29] INFO: 📌 layer: false
+[2025-07-08 14:52:29] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 14:52:29] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 14:52:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 14:52:31] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:00:29] INFO: 💬 Incoming Query: list the derick in employee
+[2025-07-08 15:00:33] INFO: ✅ Classified JSON:
+[2025-07-08 15:00:33] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in employee","where":{"$and":[{"lastname":{"$eq":"derick"}},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 15:00:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:00:34] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 15:00:34] INFO: 📌 layer: false
+[2025-07-08 15:00:34] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 15:00:34] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 15:00:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:00:36] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:00:47] INFO: 💬 Incoming Query: list derick
+[2025-07-08 15:00:50] INFO: ✅ Classified JSON:
+[2025-07-08 15:00:50] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"lastname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 15:00:50] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:00:51] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 15:00:51] INFO: 📌 layer: false
+[2025-07-08 15:00:51] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 15:00:51] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 15:00:51] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:00:53] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:01:06] INFO: 💬 Incoming Query: what is the leave dates of derick
+[2025-07-08 15:01:08] INFO: ✅ Classified JSON:
+[2025-07-08 15:01:08] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave dates of derick","where":{"lastname":{"$eq":"derick"}},"layer":true,"whereDocument":[]}
+[2025-07-08 15:01:08] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:01:08] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 15:01:08] INFO: 📌 layer: true
+[2025-07-08 15:01:08] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 15:01:08] WARN: ⚠️ No empids found to expand results
+[2025-07-08 15:01:08] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 15:01:08] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:01:10] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:01:57] INFO: 💬 Incoming Query: what is the leave dates of quigley
+[2025-07-08 15:02:01] INFO: ✅ Classified JSON:
+[2025-07-08 15:02:01] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave dates of quigley","where":{"lastname":{"$eq":"quigley"}},"layer":true,"whereDocument":[]}
+[2025-07-08 15:02:01] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:02:03] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "quigley"
+  }
+}
+[2025-07-08 15:02:03] INFO: 📌 layer: true
+[2025-07-08 15:02:03] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 15:02:03] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 15:02:03] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 15:02:03] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:02:07] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:02:36] INFO: 💬 Incoming Query: list the derick in the additional info
+[2025-07-08 15:02:44] INFO: ✅ Classified JSON:
+[2025-07-08 15:02:44] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in the additional info","where":{"$and":[{"lastname":{"$eq":"derick"}},{"objectname":{"$eq":"additionalinfo"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 15:02:44] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:02:46] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "additionalinfo"
+      }
+    }
+  ]
+}
+[2025-07-08 15:02:46] INFO: 📌 layer: true
+[2025-07-08 15:02:46] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 15:02:46] WARN: ⚠️ No empids found to expand results
+[2025-07-08 15:02:46] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 15:02:46] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:02:47] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:03:14] INFO: 💬 Incoming Query: list all the male employee
+[2025-07-08 15:03:17] INFO: ✅ Classified JSON:
+[2025-07-08 15:03:17] INFO: ✅ Classified JSON: {"originalQuery":"list all the male employee","where":{},"layer":true,"whereDocument":[]}
+[2025-07-08 15:03:17] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:03:19] INFO: 📌 Final WHERE: {}
+[2025-07-08 15:03:19] INFO: 📌 layer: true
+[2025-07-08 15:03:19] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-08 15:03:19] INFO: 📦 Fetched 18 expanded documents for empid(s): emp_231, emp_1202, emp_73, emp_2494, emp_1353
+[2025-07-08 15:03:19] INFO: 📥 Retrieved Context: 18 items
+[2025-07-08 15:03:19] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:03:23] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:05:23] INFO: 💬 Incoming Query: list all the male employee
+[2025-07-08 15:05:28] INFO: ✅ Classified JSON:
+[2025-07-08 15:05:28] INFO: ✅ Classified JSON: {"originalQuery":"list all the male employee","where":{},"layer":true,"whereDocument":[]}
+[2025-07-08 15:05:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:05:29] INFO: 📌 Final WHERE: {}
+[2025-07-08 15:05:29] INFO: 📌 layer: true
+[2025-07-08 15:05:29] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-08 15:05:29] INFO: 📦 Fetched 18 expanded documents for empid(s): emp_231, emp_1202, emp_73, emp_2494, emp_1353
+[2025-07-08 15:05:29] INFO: 📥 Retrieved Context: 18 items
+[2025-07-08 15:05:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:05:51] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:07:33] INFO: 💬 Incoming Query: list all the male employee
+[2025-07-08 15:07:41] INFO: ✅ Classified JSON:
+[2025-07-08 15:07:41] INFO: ✅ Classified JSON: {"originalQuery":"list all the male employee","where":{},"layer":false,"whereDocument":[]}
+[2025-07-08 15:07:41] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:07:43] INFO: 📌 Final WHERE: {}
+[2025-07-08 15:07:43] INFO: 📌 layer: false
+[2025-07-08 15:07:43] INFO: 📄 Fetched 100 document(s)
+[2025-07-08 15:07:43] INFO: 📎 Sample metadata:
+[2025-07-08 15:07:43] INFO: {
+  "Id": "additionalinfo_emp_231_1751964617301",
+  "empid": "emp_231",
+  "currentemployeerating": 3,
+  "objectname": "additionalinfo"
+}
+[2025-07-08 15:07:43] INFO: 📥 Retrieved Context: 100 items
+[2025-07-08 15:07:43] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:08:00] INFO: ✅ Gemini Answer Generated
+[2025-07-08 15:35:39] INFO: 💬 Incoming Query: what is the full name of derick
+[2025-07-08 15:35:42] INFO: ✅ Classified JSON:
+[2025-07-08 15:35:42] INFO: ✅ Classified JSON: {"originalQuery":"what is the full name of derick","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 15:35:42] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 15:35:43] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-08 15:35:43] INFO: 📌 layer: false
+[2025-07-08 15:35:43] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 15:35:43] INFO: 📎 Sample metadata:
+[2025-07-08 15:35:43] INFO: {
+  "manager": "aravind",
+  "Id": "employee_emp_753_1751968873419",
+  "salary": 72616,
+  "lastname": "quigley",
+  "firstname": "derick",
+  "departmenttype": "software engineer",
+  "empid": "emp_753",
+  "objectname": "employee"
+}
+[2025-07-08 15:35:43] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 15:35:43] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 15:35:44] INFO: ✅ Gemini Answer Generated
+[2025-07-08 16:00:20] INFO: 💬 Incoming Query: list the record of derick
+[2025-07-08 16:00:26] INFO: ✅ Classified JSON:
+[2025-07-08 16:00:26] INFO: ✅ Classified JSON: {"originalQuery":"list the record of derick","where":{"lastname":{"$eq":"derick"}},"layer":true,"whereDocument":[]}
+[2025-07-08 16:00:26] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 16:00:26] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 16:00:26] INFO: 📌 layer: true
+[2025-07-08 16:00:27] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 16:00:27] WARN: ⚠️ No empids found to expand results
+[2025-07-08 16:00:27] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 16:00:27] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 16:00:28] INFO: ✅ Gemini Answer Generated
+[2025-07-08 16:53:00] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 16:53:00] ERROR: ❌ Error in objectclassifyQuery: selected_modal is not defined
+[2025-07-08 16:53:00] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 16:53:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 16:53:01] INFO: 📌 Final WHERE: {}
+[2025-07-08 16:53:01] INFO: 📌 layer: false
+[2025-07-08 16:53:01] INFO: 📄 Fetched 100 document(s)
+[2025-07-08 16:53:01] INFO: 📥 Retrieved Context: 100 items
+[2025-07-08 16:53:01] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 16:53:04] INFO: ✅ Gemini Answer Generated
+[2025-07-08 16:56:34] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 16:56:34] ERROR: ❌ Error in objectclassifyQuery: select_modal is not defined
+[2025-07-08 16:56:34] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 16:56:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 16:56:36] INFO: 📌 Final WHERE: {}
+[2025-07-08 16:56:36] INFO: 📌 layer: false
+[2025-07-08 16:56:36] INFO: 📄 Fetched 100 document(s)
+[2025-07-08 16:56:36] INFO: 📥 Retrieved Context: 100 items
+[2025-07-08 16:56:36] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 16:56:38] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:01:14] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:01:14] ERROR: ❌ Error in objectclassifyQuery: select_modal is not defined
+[2025-07-08 17:01:14] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:01:14] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:01:15] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:01:15] INFO: 📌 layer: false
+[2025-07-08 17:01:15] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:01:15] INFO: 📥 Retrieved Context: 61 items
+[2025-07-08 17:01:15] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:01:19] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:03:16] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:03:16] ERROR: ❌ Error in objectclassifyQuery: select_modal is not defined
+[2025-07-08 17:03:16] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:03:16] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:03:18] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:03:18] INFO: 📌 layer: false
+[2025-07-08 17:03:18] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:03:18] INFO: 📥 Retrieved Context: 61 items
+[2025-07-08 17:03:18] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:03:21] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:05:24] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:05:24] ERROR: ❌ Error in objectclassifyQuery: generateCohereResponse is not defined
+[2025-07-08 17:05:24] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:05:24] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:05:24] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:05:24] INFO: 📌 layer: false
+[2025-07-08 17:05:24] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:05:24] INFO: 📥 Retrieved Context: 61 items
+[2025-07-08 17:05:24] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:05:27] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:11:17] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:11:20] ERROR: ❌ Error in objectclassifyQuery: res is not defined
+[2025-07-08 17:11:20] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:11:20] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:11:22] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:11:22] INFO: 📌 layer: false
+[2025-07-08 17:11:22] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:11:22] INFO: 📥 Retrieved Context: 61 items
+[2025-07-08 17:11:22] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:11:29] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:13:45] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:19:43] ERROR: ❌ Error in objectclassifyQuery: res is not defined
+[2025-07-08 17:19:43] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:19:43] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:19:45] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:19:45] INFO: 📌 layer: false
+[2025-07-08 17:19:45] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:21:20] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:21:22] ERROR: ❌ Error in objectclassifyQuery: Assignment to constant variable.
+[2025-07-08 17:21:22] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:21:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:21:23] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:21:23] INFO: 📌 layer: false
+[2025-07-08 17:21:23] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:21:23] INFO: 📥 Retrieved Context: 61 items
+[2025-07-08 17:21:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:21:29] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:22:25] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:23:59] ERROR: ❌ Error in objectclassifyQuery: Assignment to constant variable.
+[2025-07-08 17:23:59] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{},"whereDocument":["give the derick record"],"layer":false}
+[2025-07-08 17:23:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:24:01] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:24:01] INFO: 📌 layer: false
+[2025-07-08 17:24:01] INFO: 📄 Fetched 61 document(s)
+[2025-07-08 17:24:59] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:25:00] INFO: ✅ Classified JSON:
+[2025-07-08 17:25:00] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{"$and":[{"lastname":{"$eq":"derick"}},{"objectname":{"$eq":"employee"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 17:25:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:25:02] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 17:25:02] INFO: 📌 layer: true
+[2025-07-08 17:25:02] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 17:25:02] WARN: ⚠️ No empids found to expand results
+[2025-07-08 17:25:02] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 17:25:02] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:25:04] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:31:15] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:31:19] INFO: ✅ Classified JSON:
+[2025-07-08 17:31:19] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{"lastname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 17:31:19] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:31:20] INFO: 📌 Final WHERE: {
+  "lastname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 17:31:20] INFO: 📌 layer: false
+[2025-07-08 17:31:20] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 17:31:20] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 17:31:20] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:31:21] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:37:19] INFO: 💬 Incoming Query: give the derick record
+[2025-07-08 17:37:27] INFO: ✅ Classified JSON:
+[2025-07-08 17:37:27] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}},{"manager":{"$eq":"derick"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 17:37:27] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:37:27] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "manager": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-08 17:37:27] INFO: 📌 layer: true
+[2025-07-08 17:37:27] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-08 17:37:27] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
+[2025-07-08 17:37:27] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 17:37:27] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:37:35] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:38:00] INFO: 💬 Incoming Query: list all male records
+[2025-07-08 17:38:06] INFO: ✅ Classified JSON:
+[2025-07-08 17:38:06] INFO: ✅ Classified JSON: {"originalQuery":"list all male records","where":{"gendercode":{"$eq":"male"}},"layer":true,"whereDocument":[]}
+[2025-07-08 17:38:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:38:06] INFO: 📌 Final WHERE: {
+  "gendercode": {
+    "$eq": "male"
+  }
+}
+[2025-07-08 17:38:06] INFO: 📌 layer: true
+[2025-07-08 17:38:07] INFO: 🔁 Layer = true → Matched 4 base embeddings
+[2025-07-08 17:38:07] INFO: 📦 Fetched 15 expanded documents for empid(s): emp_753, emp_1314, emp_587, emp_1777
+[2025-07-08 17:38:07] INFO: 📥 Retrieved Context: 15 items
+[2025-07-08 17:38:07] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:38:16] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:38:44] INFO: 💬 Incoming Query: list male record
+[2025-07-08 17:38:49] INFO: ✅ Classified JSON:
+[2025-07-08 17:38:49] INFO: ✅ Classified JSON: {"originalQuery":"list male record","where":{"gendercode":{"$eq":"male"}},"layer":true,"whereDocument":[]}
+[2025-07-08 17:38:49] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:38:50] INFO: 📌 Final WHERE: {
+  "gendercode": {
+    "$eq": "male"
+  }
+}
+[2025-07-08 17:38:50] INFO: 📌 layer: true
+[2025-07-08 17:38:50] INFO: 🔁 Layer = true → Matched 4 base embeddings
+[2025-07-08 17:38:50] INFO: 📦 Fetched 15 expanded documents for empid(s): emp_753, emp_587, emp_1314, emp_1777
+[2025-07-08 17:38:50] INFO: 📥 Retrieved Context: 15 items
+[2025-07-08 17:38:50] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:38:55] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:39:24] INFO: 💬 Incoming Query: list the male record in staff
+[2025-07-08 17:39:29] INFO: ✅ Classified JSON:
+[2025-07-08 17:39:29] INFO: ✅ Classified JSON: {"originalQuery":"list the male record in staff","where":{"gendercode":{"$eq":"male"}},"layer":true,"whereDocument":[]}
+[2025-07-08 17:39:29] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:39:29] INFO: 📌 Final WHERE: {
+  "gendercode": {
+    "$eq": "male"
+  }
+}
+[2025-07-08 17:39:29] INFO: 📌 layer: true
+[2025-07-08 17:39:29] INFO: 🔁 Layer = true → Matched 4 base embeddings
+[2025-07-08 17:39:29] INFO: 📦 Fetched 15 expanded documents for empid(s): emp_1314, emp_587, emp_753, emp_1777
+[2025-07-08 17:39:29] INFO: 📥 Retrieved Context: 15 items
+[2025-07-08 17:39:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:39:34] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:39:53] INFO: 💬 Incoming Query: list the male record in employee
+[2025-07-08 17:40:00] INFO: ✅ Classified JSON:
+[2025-07-08 17:40:00] INFO: ✅ Classified JSON: {"originalQuery":"list the male record in employee","where":{"$and":[{"gendercode":{"$eq":"male"}},{"objectname":{"$eq":"employee"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 17:40:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:40:00] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "gendercode": {
+        "$eq": "male"
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 17:40:00] INFO: 📌 layer: true
+[2025-07-08 17:40:00] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 17:40:00] WARN: ⚠️ No empids found to expand results
+[2025-07-08 17:40:00] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 17:40:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:40:02] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:40:18] INFO: 💬 Incoming Query: list the male record in additional info
+[2025-07-08 17:40:22] INFO: ✅ Classified JSON:
+[2025-07-08 17:40:22] INFO: ✅ Classified JSON: {"originalQuery":"list the male record in additional info","where":{"$and":[{"gendercode":{"$eq":"male"}},{"objectname":{"$eq":"additionalinfo"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 17:40:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:40:23] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "gendercode": {
+        "$eq": "male"
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "additionalinfo"
+      }
+    }
+  ]
+}
+[2025-07-08 17:40:23] INFO: 📌 layer: false
+[2025-07-08 17:40:23] INFO: 📄 Fetched 4 document(s)
+[2025-07-08 17:40:23] INFO: 📥 Retrieved Context: 4 items
+[2025-07-08 17:40:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:40:25] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:43:40] INFO: 💬 Incoming Query: derick
+[2025-07-08 17:43:46] INFO: ✅ Classified JSON:
+[2025-07-08 17:43:46] INFO: ✅ Classified JSON: {"originalQuery":"derick","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}},{"manager":{"$eq":"derick"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 17:43:46] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:43:46] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "manager": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-08 17:43:46] INFO: 📌 layer: false
+[2025-07-08 17:43:46] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 17:43:46] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 17:43:46] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:43:49] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:45:27] INFO: 💬 Incoming Query: list all the records where the salary is less than 50500
+[2025-07-08 17:45:34] INFO: ✅ Classified JSON:
+[2025-07-08 17:45:34] INFO: ✅ Classified JSON: {"originalQuery":"list all the records where the salary is less than 50500","where":{"salary":{"$eq":"50500"}},"layer":false,"whereDocument":[]}
+[2025-07-08 17:45:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:45:34] INFO: 📌 Final WHERE: {
+  "salary": {
+    "$eq": "50500"
+  }
+}
+[2025-07-08 17:45:34] INFO: 📌 layer: false
+[2025-07-08 17:45:34] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 17:45:34] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 17:45:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:45:36] INFO: ✅ Gemini Answer Generated
+[2025-07-08 17:45:56] INFO: 💬 Incoming Query: list all the records where the salary is lesser than 50500
+[2025-07-08 17:46:13] INFO: ✅ Classified JSON:
+[2025-07-08 17:46:13] INFO: ✅ Classified JSON: {"originalQuery":"list all the records where the salary is lesser than 50500","where":{},"layer":true,"whereDocument":[]}
+[2025-07-08 17:46:13] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 17:46:14] INFO: 📌 Final WHERE: {}
+[2025-07-08 17:46:14] INFO: 📌 layer: true
+[2025-07-08 17:46:14] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-08 17:46:14] INFO: 📦 Fetched 21 expanded documents for empid(s): emp_890, emp_1314, emp_992, emp_1763, emp_587
+[2025-07-08 17:46:14] INFO: 📥 Retrieved Context: 21 items
+[2025-07-08 17:46:14] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 17:46:17] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:04:25] INFO: 💬 Incoming Query: list derick
+[2025-07-08 18:04:29] INFO: ✅ Classified JSON:
+[2025-07-08 18:04:29] INFO: ✅ Classified JSON: {"originalQuery":"list derick","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:04:29] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:04:30] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:04:30] INFO: 📌 layer: false
+[2025-07-08 18:04:30] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:04:30] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:04:30] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:04:33] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:04:46] INFO: 💬 Incoming Query: list derick in employee
+[2025-07-08 18:04:50] INFO: ✅ Classified JSON:
+[2025-07-08 18:04:50] INFO: ✅ Classified JSON: {"originalQuery":"list derick in employee","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:04:50] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:04:50] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:04:50] INFO: 📌 layer: false
+[2025-07-08 18:04:50] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:04:50] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:04:50] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:04:53] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:05:17] INFO: 💬 Incoming Query: list derick in additiona info
+[2025-07-08 18:05:28] INFO: ✅ Classified JSON:
+[2025-07-08 18:05:28] INFO: ✅ Classified JSON: {"originalQuery":"list derick in additiona info","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"additionalinfo"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 18:05:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:05:28] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "additionalinfo"
+      }
+    }
+  ]
+}
+[2025-07-08 18:05:28] INFO: 📌 layer: true
+[2025-07-08 18:05:28] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 18:05:28] WARN: ⚠️ No empids found to expand results
+[2025-07-08 18:05:28] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 18:05:28] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:05:30] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:06:04] INFO: 💬 Incoming Query: list derick in leave
+[2025-07-08 18:06:25] INFO: ✅ Classified JSON:
+[2025-07-08 18:06:25] INFO: ✅ Classified JSON: {"originalQuery":"list derick in leave","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"leaves"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 18:06:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:06:25] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "leaves"
+      }
+    }
+  ]
+}
+[2025-07-08 18:06:25] INFO: 📌 layer: true
+[2025-07-08 18:06:25] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 18:06:25] WARN: ⚠️ No empids found to expand results
+[2025-07-08 18:06:25] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 18:06:25] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:06:27] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:06:40] INFO: 💬 Incoming Query: list staff derick
+[2025-07-08 18:06:44] INFO: ✅ Classified JSON:
+[2025-07-08 18:06:44] INFO: ✅ Classified JSON: {"originalQuery":"list staff derick","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:06:44] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:06:44] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:06:44] INFO: 📌 layer: false
+[2025-07-08 18:06:44] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:06:44] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:06:44] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:06:47] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:07:02] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:07:05] INFO: ✅ Classified JSON:
+[2025-07-08 18:07:05] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$and":[{"firstname":{"$eq":"derick"}},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:07:05] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:07:06] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:07:06] INFO: 📌 layer: false
+[2025-07-08 18:07:06] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:07:06] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:07:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:07:09] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:12:51] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:12:53] ERROR: ❌ Error in objectclassifyQuery: Gemini API failed
+[2025-07-08 18:12:53] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{},"whereDocument":["list derick in staff"],"layer":false}
+[2025-07-08 18:12:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:12:53] INFO: 📌 Final WHERE: {}
+[2025-07-08 18:12:53] INFO: 📌 layer: false
+[2025-07-08 18:12:53] INFO: 📄 Fetched 50 document(s)
+[2025-07-08 18:12:53] INFO: 📥 Retrieved Context: 50 items
+[2025-07-08 18:12:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:12:58] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:13:30] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:13:33] INFO: ✅ Classified JSON:
+[2025-07-08 18:13:33] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:13:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:13:34] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:13:34] INFO: 📌 layer: false
+[2025-07-08 18:13:34] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:13:34] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:13:34] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:13:37] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:16:05] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:16:10] INFO: ✅ Classified JSON:
+[2025-07-08 18:16:10] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"firstname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 18:16:10] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:16:11] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 18:16:11] INFO: 📌 layer: false
+[2025-07-08 18:16:11] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:16:11] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:16:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:16:14] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:18:57] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:19:01] INFO: ✅ Classified JSON:
+[2025-07-08 18:19:01] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:19:01] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:19:02] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:19:02] INFO: 📌 layer: false
+[2025-07-08 18:19:02] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:19:02] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:19:02] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:19:04] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:20:49] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:20:53] INFO: ✅ Classified JSON:
+[2025-07-08 18:20:53] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:20:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:20:54] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:20:54] INFO: 📌 layer: false
+[2025-07-08 18:20:54] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:20:54] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:20:54] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:20:57] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:23:38] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:24:01] INFO: ✅ Classified JSON:
+[2025-07-08 18:24:01] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":null}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 18:24:01] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:24:01] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": null
+      }
+    }
+  ]
+}
+[2025-07-08 18:24:01] INFO: 📌 layer: true
+[2025-07-08 18:24:01] ERROR: ❌ askHandler Error: Expected operand value to be a string, number, boolean, or a list of those types
+[2025-07-08 18:24:50] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:24:59] INFO: ✅ Classified JSON:
+[2025-07-08 18:24:59] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"staff"}}]},"layer":true,"whereDocument":[]}
+[2025-07-08 18:24:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:25:00] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "staff"
+      }
+    }
+  ]
+}
+[2025-07-08 18:25:00] INFO: 📌 layer: true
+[2025-07-08 18:25:00] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-08 18:25:00] WARN: ⚠️ No empids found to expand results
+[2025-07-08 18:25:00] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 18:25:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:25:02] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:25:17] INFO: 💬 Incoming Query: list derick in employee
+[2025-07-08 18:25:22] INFO: ✅ Classified JSON:
+[2025-07-08 18:25:22] INFO: ✅ Classified JSON: {"originalQuery":"list derick in employee","where":{"$and":[{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:25:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:25:22] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "derick"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "derick"
+          }
+        }
+      ]
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:25:22] INFO: 📌 layer: false
+[2025-07-08 18:25:22] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:25:22] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:25:22] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:25:25] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:25:45] INFO: 💬 Incoming Query: list the records where the salary is less than 50200
+[2025-07-08 18:25:48] INFO: ✅ Classified JSON:
+[2025-07-08 18:25:48] INFO: ✅ Classified JSON: {"originalQuery":"list the records where the salary is less than 50200","where":{"$and":[{"salary":{"$lt":50200}},{"objectname":{"$eq":"employee"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:25:48] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:25:48] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "salary": {
+        "$lt": 50200
+      }
+    },
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    }
+  ]
+}
+[2025-07-08 18:25:48] INFO: 📌 layer: false
+[2025-07-08 18:25:49] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:25:49] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:25:49] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:25:51] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:28:25] INFO: 💬 Incoming Query: list the records where the salary is less than 50200
+[2025-07-08 18:28:26] INFO: ✅ Classified JSON:
+[2025-07-08 18:28:26] INFO: ✅ Classified JSON: {"originalQuery":"list the records where the salary is less than 50200","where":{"salary":{"$lt":50200}},"layer":false,"whereDocument":[]}
+[2025-07-08 18:28:26] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:28:27] INFO: 📌 Final WHERE: {
+  "salary": {
+    "$lt": 50200
+  }
+}
+[2025-07-08 18:28:27] INFO: 📌 layer: false
+[2025-07-08 18:28:27] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:28:27] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:28:27] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:28:29] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:28:40] INFO: 💬 Incoming Query: list the derick in staff
+[2025-07-08 18:28:47] INFO: ✅ Classified JSON:
+[2025-07-08 18:28:47] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in staff","where":{"firstname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 18:28:47] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:28:48] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 18:28:48] INFO: 📌 layer: false
+[2025-07-08 18:28:48] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:28:48] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:28:48] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:28:51] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:30:34] INFO: 💬 Incoming Query: list the derick in staff
+[2025-07-08 18:30:38] INFO: ✅ Classified JSON:
+[2025-07-08 18:30:38] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in staff","where":{"firstname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 18:30:38] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:30:38] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 18:30:38] INFO: 📌 layer: false
+[2025-07-08 18:30:38] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:30:38] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:30:38] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:30:41] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:32:43] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:32:53] INFO: ✅ Classified JSON:
+[2025-07-08 18:32:53] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"ahahah":"staff"},"layer":false,"whereDocument":[]}
+[2025-07-08 18:32:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:32:53] INFO: 📌 Final WHERE: {
+  "ahahah": "staff"
+}
+[2025-07-08 18:32:53] INFO: 📌 layer: false
+[2025-07-08 18:32:53] INFO: 📄 Fetched 0 document(s)
+[2025-07-08 18:32:53] INFO: 📥 Retrieved Context: 0 items
+[2025-07-08 18:32:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:32:55] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:33:36] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:33:43] INFO: ✅ Classified JSON:
+[2025-07-08 18:33:43] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"firstname":{"$eq":"derick"}},"layer":false,"whereDocument":[]}
+[2025-07-08 18:33:43] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:33:44] INFO: 📌 Final WHERE: {
+  "firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-08 18:33:44] INFO: 📌 layer: false
+[2025-07-08 18:33:44] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:33:44] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:33:44] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:33:47] INFO: ✅ Gemini Answer Generated
+[2025-07-08 18:37:31] INFO: 💬 Incoming Query: list derick in staff
+[2025-07-08 18:37:40] INFO: ✅ Classified JSON:
+[2025-07-08 18:37:40] INFO: ✅ Classified JSON: {"originalQuery":"list derick in staff","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"layer":false,"whereDocument":[]}
+[2025-07-08 18:37:40] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-08 18:37:40] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-08 18:37:40] INFO: 📌 layer: false
+[2025-07-08 18:37:40] INFO: 📄 Fetched 1 document(s)
+[2025-07-08 18:37:40] INFO: 📥 Retrieved Context: 1 items
+[2025-07-08 18:37:40] INFO: 📨 Sending prompt to Gemini...
+[2025-07-08 18:37:44] INFO: ✅ Gemini Answer Generated

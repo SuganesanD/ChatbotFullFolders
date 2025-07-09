@@ -19,7 +19,7 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 const cohere = new CohereClient();
 
 // Load .env config
-dotenv.config({ path: 'couchdb_creadentials.env' });
+dotenv.config({ path: './couchdb_credentials.env' });
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -38,7 +38,6 @@ const nano = Nano({
 const db = nano.db.use(process.env.COUCHDB_DB);
 
 // === Middlewares ===
-app.use(bodyParser.json());
 app.use(express.json());
 
 

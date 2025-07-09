@@ -1,0 +1,56 @@
+{
+  "selectedFieldsPerObject": {
+    "employee": [
+      "firstname",
+      "lastname",
+      "manager",
+      "salary"
+    ],
+    "additionalinfo": [
+      "currentemployeerating",
+      "gendercode"
+    ],
+    "leaves": [
+      "date"
+    ]
+  },
+  "availableFieldsPerObject": {
+    "employee": [
+      "firstname",
+      "lastname",
+      "empid",
+      "startdate",
+      "email",
+      "manager",
+      "employeestatus",
+      "employeetype",
+      "payzone",
+      "departmenttype",
+      "division",
+      "salary",
+      "additionalinfo_id",
+      "type"
+    ],
+    "additionalinfo": [
+      "dob",
+      "state",
+      "gendercode",
+      "locationcode",
+      "maritaldesc",
+      "performancescore",
+      "currentemployeerating",
+      "type"
+    ],
+    "leaves": [
+      "date",
+      "type",
+      "employee_id"
+    ]
+  },
+  "objectList": [
+    "employee",
+    "additionalinfo",
+    "leaves"
+  ],
+  "select_modal": "gemini"
+}
