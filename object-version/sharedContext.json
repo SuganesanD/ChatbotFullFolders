@@ -3,11 +3,10 @@
     "employee": [
       "firstname",
       "lastname",
-      "manager",
-      "salary"
+      "email",
+      "manager"
     ],
     "additionalinfo": [
-      "currentemployeerating",
       "gendercode"
     ],
     "leaves": [
@@ -46,6 +45,20 @@
       "type",
       "employee_id"
     ]
+  },
+  "selectedFieldDescriptions": {
+    "employee": {
+      "firstname": "This field represents the first name of employee",
+      "lastname": "This field represents the last name or family name of employee",
+      "email": "This field represents the mail id of employee",
+      "manager": "This field represents the manager name of the employee"
+    },
+    "additionalinfo": {
+      "gendercode": "This field represents the gender of the employee"
+    },
+    "leaves": {
+      "date": "This field represents the leave date of the employee"
+    }
   },
   "objectList": [
     "employee",

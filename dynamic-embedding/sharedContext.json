@@ -1,0 +1,54 @@
+{
+  "selectedFieldsPerObject": {
+    "SelectedFields": [
+      "employee_firstname",
+      "employee_payzone",
+      "employee_employeestatus",
+      "additionalinfo_performancescore",
+      "leaves_date"
+    ]
+  },
+  "availableFieldsPerObject": {
+    "employee_profile": [
+      "employee_firstname",
+      "employee_lastname",
+      "employee_empid",
+      "employee_startdate",
+      "employee_email",
+      "employee_manager",
+      "employee_employeestatus",
+      "employee_employeetype",
+      "employee_payzone",
+      "employee_departmenttype",
+      "employee_division",
+      "employee_salary",
+      "employee_additionalinfo_id",
+      "employee_type",
+      "additionalinfo_dob",
+      "additionalinfo_state",
+      "additionalinfo_gendercode",
+      "additionalinfo_locationcode",
+      "additionalinfo_maritaldesc",
+      "additionalinfo_performancescore",
+      "additionalinfo_currentemployeerating",
+      "additionalinfo_type",
+      "leaves_date",
+      "leaves_type",
+      "leaves_employee_id"
+    ]
+  },
+  "selectedFieldDescriptions": {
+    "Field Description": {
+      "employee_firstname": "This field refers to the first name of the employee",
+      "employee_payzone": "This field refers to the pay zone of the employee.",
+      "employee_employeestatus": "This field refers to the employee's status in the office.",
+      "additionalinfo_performancescore": "This field refers to the performace score of the employee",
+      "leaves_date": "This field refers to the leave date of the employee"
+    }
+  },
+  "relationshipDescription": "The employee object is the parent object and the additionalinfo object is the lookup object and the leaves object is the child of the employee object.",
+  "objectList": [
+    "employee_profile"
+  ],
+  "select_modal": "gemini"
+}

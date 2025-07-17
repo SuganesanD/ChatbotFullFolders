@@ -1,4 +1,3 @@
-const { response } = require('express');
 const { generateGeminiResponse } = require('../config/geminiClient');
 const { generateCohereResponse } = require('../config/cohereClient');
 const logger = require('../services/logger');
@@ -135,7 +134,6 @@ async function objectclassifyQuery(userQuery) {
       return {
         originalQuery: userQuery,
         where: {},
-        whereDocument: [userQuery],
         layer: false
       };
     }
@@ -143,7 +141,6 @@ async function objectclassifyQuery(userQuery) {
     // Fallback values for safety
     parsed.originalQuery = parsed.originalQuery || userQuery;
     parsed.where = parsed.where || {};
-    parsed.whereDocument = parsed.whereDocument || [];
     parsed.layer = parsed.layer ?? false;
 
     logger.info('✅ Classified JSON:', parsed);
@@ -154,7 +151,6 @@ async function objectclassifyQuery(userQuery) {
     return {
       originalQuery: userQuery,
       where: {},
-      whereDocument: [userQuery],
       layer: false
     };
   }

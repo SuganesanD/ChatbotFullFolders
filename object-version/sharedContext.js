@@ -8,18 +8,18 @@ const CONTEXT_PATH = path.join(__dirname, 'sharedContext.json');
 const sharedContext = {
   selectedFieldsPerObject: {},
   availableFieldsPerObject: {},
+  selectedFieldDescriptions: {},   // ✅ Added this line
   objectList: [],
-  select_modal:'',
-  
-  
+  select_modal: '',
 
   // Save current state to disk
   save() {
     const dataToSave = {
       selectedFieldsPerObject: this.selectedFieldsPerObject,
       availableFieldsPerObject: this.availableFieldsPerObject,
+      selectedFieldDescriptions: this.selectedFieldDescriptions, // ✅ Save descriptions
       objectList: this.objectList,
-      select_modal:this.select_modal
+      select_modal: this.select_modal
     };
 
     try {
@@ -37,8 +37,9 @@ const sharedContext = {
         const data = JSON.parse(fs.readFileSync(CONTEXT_PATH, 'utf-8'));
         this.selectedFieldsPerObject = data.selectedFieldsPerObject || {};
         this.availableFieldsPerObject = data.availableFieldsPerObject || {};
+        this.selectedFieldDescriptions = data.selectedFieldDescriptions || {}; // ✅ Load descriptions
         this.objectList = data.objectList || [];
-        this.select_modal=data.select_modal
+        this.select_modal = data.select_modal || '';
         console.log('📥 sharedContext loaded from disk.');
       } catch (err) {
         console.error('❌ Failed to load sharedContext:', err);

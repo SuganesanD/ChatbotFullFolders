@@ -262,204 +262,159 @@ const askUser = (question) => {
   }));
 };
 
-const generateGeminiPrompt = (obj, label) => {
-  const fields = Object.keys(obj).map(k => `- data.${k}`).join('\n');
+const generateGeminiPrompt = (obj) => {
+
+    console.log(obj);
+    
   return `
 You are a Node.js assistant.
 
-Your task is to generate a JavaScript template literal that summarizes an \${label} record using only the keys present in the provided object named \`data\`.
+Your task is to generate a **natural-language JavaScript template literal** summarizing a \${label} record using only the keys present in the \`data\` object.
 
-✅ Format Requirements:
-- Output a **single JavaScript template literal**, wrapped in **a single pair of backticks**
-- Do NOT use triple backticks
-- Include **only** keys that are actually present in the \`data\` object — do NOT add or invent fields
-- Use **exact key names** as they appear — do NOT rename or rephrase them
-- For each field, write it in this format:
-  \`key (short and neutral human-readable label): \${data.key}\`
-- The description inside parentheses must:
-  - Be very short and neutral
-  - Help clarify the purpose of the key
-  - NOT make assumptions or repeat the key verbatim
+✅ Output Requirements:
+- Output a **single template literal**, wrapped in one pair of backticks
+- Format it as a **single flowing paragraph**
+- Use only the keys present in \`data\`
+- Use exact key names: \${data.key} — no assumptions
+- Use **every key** from the \`data\` object — do **not skip or ignore any**
+- Combine values into a grammatically correct sentence
+- Keep the paragraph **meaningful and compact**
+- **Avoid unnecessary filler words** like “The following is”, “This shows”, “With”, etc.
+- Do **not** add labels like "(salary)", no parentheses, and no headings
+- Do **not** include markdown or explanations — just the JavaScript template literal
 
 ✅ Example:
-If \`data\` contains:
-\`\`\`json
-{
-  "email": "john@example.com",
-  "salary": 50000
+If data = {
+  "employee_firstname": "Jared",
+  "employee_lastname": "Feeney",
+  "employee_salary": 89956,
+  "employee_status": "Terminated",
+  "additionalinfo_gendercode": "female",
+  "leaves_date": "2025-05-08"
 }
-\`\`\`
 
-Then the output should be:
-\`email (email address): \${data.email}, salary (salary amount): \${data.salary}\`
-
-🛑 Do NOT:
-- Invent keys
-- Include markdown or explanation
-- Use the same word for key and description (e.g., "email (email)" ❌)
+Then output:
+\`\${data.employee_firstname} \${data.employee_lastname} is a \${data.additionalinfo_gendercode} employee who was \${data.employee_status}. Their salary was \$\${data.employee_salary}. Last recorded leave was on \${data.leaves_date}.\`
 
 Here is the object:
 const data = ${JSON.stringify(obj, null, 2)}
 
 Now return ONLY the template literal — no explanation, no markdown.
 `;
-
 };
+
 
 const generateEmployeeSummary = async (merged, isFirstRecord) => {
-  const sharedContext = require('./sharedContext'); 
+  const sharedContext = require('./sharedContext');
 
-  // Init globals
   global.templates = global.templates || {};
   global.keys = global.keys || {};
-  global.selectedFieldsPerObject = global.selectedFieldsPerObject || {};
-  global.availableFieldsPerObject = global.availableFieldsPerObject || {};
-  global.objectList = global.objectList || [];
   global.selectedFieldDescriptions = global.selectedFieldDescriptions || {};
 
-  function deepLowercaseKeysAndValues(obj) {
-    if (Array.isArray(obj)) {
-      return obj.map(deepLowercaseKeysAndValues);
-    } else if (obj && typeof obj === 'object') {
-      return Object.entries(obj).reduce((acc, [key, value]) => {
-        const lowerKey = key.toLowerCase();
-        acc[lowerKey] = deepLowercaseKeysAndValues(value);
-        return acc;
-      }, {});
-    } else if (typeof obj === 'string') {
-      return obj.toLowerCase();
-    } else {
-      return obj;
+  // 🔄 Flatten function with parent prefix
+  const flattenWithPrefix = (obj, prefix = '') => {
+    let result = {};
+    for (let key in obj) {
+      const value = obj[key];
+      const newKey = prefix ? `${prefix}_${key.toLowerCase()}` : key.toLowerCase();
+      if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        Object.assign(result, flattenWithPrefix(value, newKey));
+      } else if (Array.isArray(value)) {
+        if (value.length > 0 && typeof value[0] === 'object') {
+          Object.assign(result, flattenWithPrefix(value[0], newKey));
+        }
+      } else {
+        result[newKey] = typeof value === 'string' ? value.toLowerCase() : value;
+      }
     }
-  }
+    return result;
+  };
 
-  merged = deepLowercaseKeysAndValues(merged);
-
-  const subObjects = {};
-  for (const key of Object.keys(merged)) {
-    const val = merged[key];
-    if (Array.isArray(val) || (typeof val === 'object' && val !== null)) {
-      subObjects[key] = val;
-    }
-  }
-
-  const finalTemplates = [];
-  const finalMetadata = [];
-  const empId = merged.employee?.empid || 'unknown';
+  const flatData = flattenWithPrefix(merged);
+  const empId = merged.employee?.EmpID || 'unknown';
   const baseId = `${empId}_${Date.now()}`;
 
-  for (const [objectname, value] of Object.entries(subObjects)) {
-    const isArray = Array.isArray(value);
-    const sample = isArray ? value[0] : value;
+  let template = '';
+  let selectedKeys = [];
+  let fieldDescriptions = {};
 
-    if (isFirstRecord) {
-      let approved = '';
-      let rawTemplate = '';
-      while (approved !== 'ok') {
-        const prompt = generateGeminiPrompt(sample, objectname);
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
-        const result = await model.generateContent(prompt);
-        rawTemplate = result.response.text().trim();
+  if (isFirstRecord) {
+    // 🔮 Generate Gemini prompt
+    const prompt = generateGeminiPrompt(flatData);
 
-        rawTemplate = rawTemplate.replace(/^```[a-z]*\n?/i, '').replace(/```$/, '').trim();
-        if (rawTemplate.startsWith('"') && rawTemplate.endsWith('"')) {
-          rawTemplate = rawTemplate.slice(1, -1);
-        }
-        rawTemplate = rawTemplate.replace(/`/g, '\\`');
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    let result = await model.generateContent(prompt);
+    let rawTemplate = result.response.text().trim();
 
-        const renderFn = new Function('data', `return \`${rawTemplate}\`;`);
-        const preview = renderFn(sample);
+    rawTemplate = rawTemplate.replace(/^```[a-z]*\n?/i, '').replace(/```$/, '').trim();
+    if (rawTemplate.startsWith('"') && rawTemplate.endsWith('"')) {
+      rawTemplate = rawTemplate.slice(1, -1);
+    }
+    rawTemplate = rawTemplate.replace(/`/g, '\\`');
 
-        console.log(`\n📝 ${objectname.toUpperCase()} TEMPLATE:\n${rawTemplate}`);
-        console.log(`\n🔍 SAMPLE OUTPUT:\n${preview}`);
+    const renderFn = new Function('data', `return \`${rawTemplate}\`;`);
+    const preview = renderFn(flatData);
 
-        approved = await askUser("👉 Type 'ok' to accept template or press enter to regenerate: ");
-      }
+    console.log(`\n📝 TEMPLATE:\n${rawTemplate}`);
+    console.log(`\n🔍 SAMPLE OUTPUT:\n${preview}`);
 
-      const selectedKeysInput = await askUser(`👇 Enter comma-separated fields from:\n${Object.keys(sample).join(', ')}\nYour selection: `);
-      const validKeys = Object.keys(sample);
+    const approved = await askUser("👉 Type 'ok' to accept template or press enter to regenerate: ");
+    if (approved !== 'ok') return await generateEmployeeSummary(merged, isFirstRecord); // Regenerate
 
-      const selectedKeys = [];
-      const fieldDescriptions = {};
+    // 🧠 Ask for selected keys and descriptions
+    const selectedKeysInput = await askUser(`👇 Enter comma-separated fields from:\n${Object.keys(flatData).join(', ')}\nYour selection: `);
+    const validKeys = Object.keys(flatData);
 
-      for (const entry of selectedKeysInput.split(',')) {
-        const key = entry.trim().toLowerCase();
-        if (validKeys.includes(key)) {
-          console.log("📝 Enter description for each selected field")
-          const description = await askUser(` ${key}: `);
-          selectedKeys.push(key);
-          fieldDescriptions[key] = description.trim();
-        } else {
-          console.log(`⚠️ '${key}' is not a valid field name and will be ignored.`);
-        }
-      }
+    selectedKeys = [];
+    fieldDescriptions = {};
 
-      // ✅ Persist in sharedContext
-      sharedContext.selectedFieldsPerObject[objectname] = selectedKeys;
-      sharedContext.availableFieldsPerObject[objectname] = validKeys;
-      sharedContext.selectedFieldDescriptions = sharedContext.selectedFieldDescriptions || {};
-      sharedContext.selectedFieldDescriptions[objectname] = fieldDescriptions;
-
-      if (!sharedContext.objectList.includes(objectname)) {
-        sharedContext.objectList.push(objectname);
-      }
-      sharedContext.select_modal = select_modal;
-      sharedContext.save();
-
-      // ✅ Set to globals
-      global.keys[objectname] = selectedKeys;
-      global.templates[objectname] = rawTemplate;
-      global.selectedFieldsPerObject[objectname] = selectedKeys;
-      global.availableFieldsPerObject[objectname] = validKeys;
-      global.selectedFieldDescriptions[objectname] = fieldDescriptions;
-
-      if (!global.objectList.includes(objectname)) {
-        global.objectList.push(objectname);
+    for (const entry of selectedKeysInput.split(',')) {
+      const key = entry.trim().toLowerCase();
+      if (validKeys.includes(key)) {
+        const description = await askUser(`📝 Description for '${key}': `);
+        selectedKeys.push(key);
+        fieldDescriptions[key] = description.trim();
+      } else {
+        console.log(`⚠️ '${key}' is not a valid key.`);
       }
     }
+    const relationshipDescription = await askUser("🔗 Describe how the objects are related (relationship description): ");
+sharedContext.relationshipDescription = relationshipDescription.trim();
 
-    const template = global.templates[objectname];
-    const renderFn = new Function('data', `return \`${template}\`;`);
+    // 💾 Save to sharedContext
+    sharedContext.selectedFieldsPerObject["SelectedFields"] = selectedKeys;
+    sharedContext.selectedFieldDescriptions["Field Description"] = fieldDescriptions;
+    sharedContext.availableFieldsPerObject["employee_profile"] = validKeys;
+    sharedContext.select_modal = select_modal;
+    sharedContext.objectList = ["employee_profile"];
+    sharedContext.save();
 
-    const selectedKeys = global.keys[objectname] || [];
-
-    if (isArray) {
-      for (let index = 0; index < value.length; index++) {
-        const item = value[index];
-        const rendered = renderFn(item);
-        const metadata = {
-          empid: empId,
-          objectname,
-          type: item?.type || objectname,
-          Id: `${baseId}_${index}`
-        };
-
-        selectedKeys.forEach(k => {
-          if (item[k] !== undefined) metadata[k] = item[k];
-        });
-
-        finalTemplates.push(rendered);
-        finalMetadata.push(metadata);
-      }
-    } else {
-      const rendered = renderFn(value);
-      const metadata = {
-        empid: empId,
-        objectname,
-        Id: `${objectname}_${baseId}`
-      };
-
-      selectedKeys.forEach(k => {
-        if (value[k] !== undefined) metadata[k] = value[k];
-      });
-
-      finalTemplates.push(rendered);
-      finalMetadata.push(metadata);
-    }
+    // 🌍 Save to global
+    global.keys["employee_profile"] = selectedKeys;
+    global.selectedFieldDescriptions["employee_profile"] = fieldDescriptions;
+    global.templates["employee_profile"] = rawTemplate;
   }
 
-  return { templates: finalTemplates, metadatas: finalMetadata };
+  // 🛠 Use existing if not first record
+  template = global.templates["employee_profile"];
+  selectedKeys = global.keys["employee_profile"];
+  fieldDescriptions = global.selectedFieldDescriptions["employee_profile"];
+  const renderFn = new Function('data', `return \`${template}\`;`);
+  const finalTemplate = renderFn(flatData);
+
+  const metadata = {
+    empid: empId,
+    Id: `employee_profile_${baseId}`
+  };
+  selectedKeys.forEach(k => {
+    if (flatData[k] !== undefined) metadata[k] = flatData[k];
+  });
+
+  return { templates: [finalTemplate], metadatas: [metadata] };
 };
+
+
+
 
 const processAndEmbedEmployee = async (merged, isFirstRecord) => {
   const { templates, metadatas } = await generateEmployeeSummary(merged, isFirstRecord);

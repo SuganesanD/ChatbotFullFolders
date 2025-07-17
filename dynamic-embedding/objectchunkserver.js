@@ -12,6 +12,7 @@ const readline = require('readline');
 const { ChromaClient } = require('chromadb');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const { CohereClient } = require('cohere-ai');
+const { askHandler } = require('./controllers/chatbot.controller');
 
 
 
@@ -46,7 +47,7 @@ app.use(express.json());
 let select_modal = 'cohere'
 
 // === Routes ===
-app.use('/api/chatbot', chatbotRoutes);
+app.use('/api/chatbot/ask', askHandler);
 
 // === Health Check ===
 app.get('/', (req, res) => {
@@ -315,7 +316,7 @@ const generateEmployeeSummary = async (merged, isFirstRecord) => {
   global.selectedFieldsPerObject = global.selectedFieldsPerObject || {};
   global.availableFieldsPerObject = global.availableFieldsPerObject || {};
   global.objectList = global.objectList || [];
-  global.selectedFieldDescriptions = global.selectedFieldDescriptions || {};
+   global.relationshipDescription = global.relationshipDescription || "";
 
   function deepLowercaseKeysAndValues(obj) {
     if (Array.isArray(obj)) {
@@ -378,32 +379,22 @@ const generateEmployeeSummary = async (merged, isFirstRecord) => {
 
       const selectedKeysInput = await askUser(`👇 Enter comma-separated fields from:\n${Object.keys(sample).join(', ')}\nYour selection: `);
       const validKeys = Object.keys(sample);
+      const selectedKeys = selectedKeysInput
+        .split(',')
+        .map(k => k.trim().toLowerCase())
+        .filter(k => validKeys.includes(k));
 
-      const selectedKeys = [];
-      const fieldDescriptions = {};
+        const relationshipDescription = await askUser("🧩 Describe how the objects are related (relationship description): ");
 
-      for (const entry of selectedKeysInput.split(',')) {
-        const key = entry.trim().toLowerCase();
-        if (validKeys.includes(key)) {
-          console.log("📝 Enter description for each selected field")
-          const description = await askUser(` ${key}: `);
-          selectedKeys.push(key);
-          fieldDescriptions[key] = description.trim();
-        } else {
-          console.log(`⚠️ '${key}' is not a valid field name and will be ignored.`);
-        }
-      }
 
       // ✅ Persist in sharedContext
       sharedContext.selectedFieldsPerObject[objectname] = selectedKeys;
       sharedContext.availableFieldsPerObject[objectname] = validKeys;
-      sharedContext.selectedFieldDescriptions = sharedContext.selectedFieldDescriptions || {};
-      sharedContext.selectedFieldDescriptions[objectname] = fieldDescriptions;
-
       if (!sharedContext.objectList.includes(objectname)) {
         sharedContext.objectList.push(objectname);
       }
-      sharedContext.select_modal = select_modal;
+      sharedContext.select_modal=select_modal
+      sharedContext.relationshipDescription = relationshipDescription;
       sharedContext.save();
 
       // ✅ Set to globals
@@ -411,8 +402,7 @@ const generateEmployeeSummary = async (merged, isFirstRecord) => {
       global.templates[objectname] = rawTemplate;
       global.selectedFieldsPerObject[objectname] = selectedKeys;
       global.availableFieldsPerObject[objectname] = validKeys;
-      global.selectedFieldDescriptions[objectname] = fieldDescriptions;
-
+      global.relationshipDescription = relationshipDescription;
       if (!global.objectList.includes(objectname)) {
         global.objectList.push(objectname);
       }

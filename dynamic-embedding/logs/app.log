@@ -13745,110 +13745,1762 @@
 [2025-07-09 12:25:19] INFO: 📥 Retrieved Context: 3 items
 [2025-07-09 12:25:19] INFO: 📨 Sending prompt to Gemini...
 [2025-07-09 12:25:23] INFO: ✅ Gemini Answer Generated
-[2025-07-11 11:42:40] INFO: 💬 Incoming Query: list the firstname derick in employee object
-[2025-07-11 11:42:43] INFO: ✅ Classified JSON:
-[2025-07-11 11:42:43] INFO: ✅ Classified JSON: {"originalQuery":"list the firstname derick in employee object","where":{"employee":{"firstname":{"$eq":"derick"}}},"layer":false}
-[2025-07-11 11:42:43] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
-[2025-07-11 11:42:43] INFO: 📌 Final WHERE: {
+[2025-07-09 16:04:09] INFO: 💬 Incoming Query: list the derick
+[2025-07-09 16:04:09] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:04:09] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:04:09] INFO: 📌 layer: true
+[2025-07-09 16:04:09] ERROR: ❌ askHandler Error: Cannot read properties of undefined (reading 'every')
+[2025-07-09 16:06:36] INFO: 💬 Incoming Query: list the derick
+[2025-07-09 16:06:36] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:06:38] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:06:38] INFO: 📌 layer: true
+[2025-07-09 16:06:38] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:06:38] INFO: 📦 Fetched 18 expanded documents for empid(s): emp_2570, emp_753, emp_2494, emp_1135, emp_1642
+[2025-07-09 16:06:39] INFO: ✅ Classified JSON:
+[2025-07-09 16:06:39] INFO: ✅ Classified JSON: {"originalQuery":"list the derick","where":{},"layer":false}
+[2025-07-09 16:06:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:06:39] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:06:39] INFO: 📌 layer: false
+[2025-07-09 16:06:39] INFO: 📄 Fetched 100 document(s)
+[2025-07-09 16:06:39] INFO: 📥 Retrieved Context: 18 items
+[2025-07-09 16:06:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:06:40] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:41:38] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:41:38] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:41:39] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:41:39] INFO: 📌 layer: true
+[2025-07-09 16:41:39] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:41:39] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 16:41:41] INFO: ✅ Classified JSON:
+[2025-07-09 16:41:41] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 16:41:41] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:41:42] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:41:42] INFO: 📌 layer: false
+[2025-07-09 16:41:42] INFO: 📄 Fetched 100 document(s)
+[2025-07-09 16:41:42] INFO: 📥 Retrieved Context: 20 items
+[2025-07-09 16:41:42] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:41:43] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:43:53] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:43:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:43:53] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:43:53] INFO: 📌 layer: true
+[2025-07-09 16:43:53] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:43:53] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 16:43:55] INFO: ✅ Classified JSON:
+[2025-07-09 16:43:55] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 16:43:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:43:56] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:43:56] INFO: 📌 layer: false
+[2025-07-09 16:43:56] INFO: 📄 Fetched 100 document(s)
+[2025-07-09 16:43:56] INFO: 📥 Retrieved Context: 20 items
+[2025-07-09 16:43:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:43:57] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:50:20] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:50:20] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:50:22] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:50:22] INFO: 📌 layer: true
+[2025-07-09 16:50:22] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:50:22] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 16:50:23] INFO: ✅ Classified JSON:
+[2025-07-09 16:50:23] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 16:50:23] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:50:24] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:50:24] INFO: 📌 layer: false
+[2025-07-09 16:50:24] INFO: 📄 Fetched 100 document(s)
+[2025-07-09 16:50:24] INFO: 📥 Retrieved Context: 20 items
+[2025-07-09 16:50:24] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:50:25] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:52:58] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:52:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:52:59] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:52:59] INFO: 📌 layer: true
+[2025-07-09 16:52:59] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:52:59] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 16:53:00] ERROR: ❌ Error in objectclassifyQuery: Gemini API failed
+[2025-07-09 16:53:00] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 16:53:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:53:00] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:53:00] INFO: 📌 layer: false
+[2025-07-09 16:53:00] INFO: 📄 Fetched 100 document(s)
+[2025-07-09 16:53:00] INFO: 📥 Retrieved Context: 20 items
+[2025-07-09 16:53:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:53:01] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:54:58] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:54:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:54:59] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:54:59] INFO: 📌 layer: true
+[2025-07-09 16:54:59] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:54:59] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 16:55:00] ERROR: ❌ Error in objectclassifyQuery: Gemini API failed
+[2025-07-09 16:55:00] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 16:55:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:55:01] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:56:12] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:56:12] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:56:14] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:56:14] INFO: 📌 layer: true
+[2025-07-09 16:56:14] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:56:14] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 16:56:15] INFO: ✅ Classified JSON:
+[2025-07-09 16:56:15] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 16:56:15] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 16:56:15] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 16:57:50] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 16:57:50] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 16:57:52] INFO: 📌 Final WHERE: {}
+[2025-07-09 16:57:52] INFO: 📌 layer: true
+[2025-07-09 16:57:52] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 16:57:52] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:00:29] INFO: ✅ Classified JSON:
+[2025-07-09 17:00:29] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:00:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:00:29] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 17:02:00] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:02:40] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:02:42] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:02:42] INFO: 📌 layer: true
+[2025-07-09 17:02:50] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:02:54] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:06:24] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:06:31] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:06:33] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:06:33] INFO: 📌 layer: true
+[2025-07-09 17:06:38] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:06:40] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:12:17] INFO: 💬 Incoming Query: derick
+[2025-07-09 17:12:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:12:26] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:12:26] INFO: 📌 layer: true
+[2025-07-09 17:12:29] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:12:31] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_753, emp_2570, emp_2494, emp_1642, emp_587
+[2025-07-09 17:14:42] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:14:45] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:14:48] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:14:48] INFO: 📌 layer: true
+[2025-07-09 17:14:48] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:14:48] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:19:35] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:19:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:19:41] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:19:41] INFO: 📌 layer: true
+[2025-07-09 17:19:41] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:19:41] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:19:45] INFO: ✅ Classified JSON:
+[2025-07-09 17:19:45] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:19:45] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:19:46] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 17:29:09] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:29:32] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:29:34] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:29:34] INFO: 📌 layer: true
+[2025-07-09 17:29:34] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:29:34] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:29:59] INFO: ✅ Classified JSON:
+[2025-07-09 17:29:59] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:29:59] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:30:00] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 17:31:49] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:31:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:31:54] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:31:54] INFO: 📌 layer: true
+[2025-07-09 17:31:54] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:31:54] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:32:17] INFO: ✅ Classified JSON:
+[2025-07-09 17:32:17] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:32:17] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:32:17] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 17:34:30] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:34:34] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:34:36] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:34:36] INFO: 📌 layer: true
+[2025-07-09 17:34:36] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:34:36] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:34:42] INFO: ✅ Classified JSON:
+[2025-07-09 17:34:42] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:34:42] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:34:42] ERROR: ❌ Error in generateAnswer: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+[2025-07-09 17:36:08] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:36:11] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:36:16] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:36:16] INFO: 📌 layer: true
+[2025-07-09 17:36:16] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:36:16] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:36:34] INFO: ✅ Classified JSON:
+[2025-07-09 17:37:55] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:37:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:38:00] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:38:00] INFO: 📌 layer: true
+[2025-07-09 17:38:00] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:38:00] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:38:05] INFO: ✅ Classified JSON:
+[2025-07-09 17:38:05] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:38:05] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:38:15] INFO: ✅ Gemini Answer Generated
+[2025-07-09 17:42:10] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:42:16] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:42:18] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:42:18] INFO: 📌 layer: true
+[2025-07-09 17:42:18] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:42:18] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:42:35] INFO: ✅ Classified JSON:
+[2025-07-09 17:44:49] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:44:54] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:44:54] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:44:54] INFO: 📌 layer: true
+[2025-07-09 17:44:55] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:44:55] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:44:58] INFO: ✅ Classified JSON:
+[2025-07-09 17:44:58] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:44:58] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:45:13] INFO: ✅ Gemini Answer Generated
+[2025-07-09 17:47:51] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:47:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:47:55] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:47:55] INFO: 📌 layer: true
+[2025-07-09 17:47:55] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:47:55] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:47:57] INFO: ✅ Classified JSON:
+[2025-07-09 17:48:06] INFO: ✅ Classified JSON: {"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:48:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:48:14] INFO: ✅ Gemini Answer Generated
+[2025-07-09 17:52:02] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:52:05] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:52:07] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:52:07] INFO: 📌 layer: true
+[2025-07-09 17:52:07] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:52:07] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:52:11] INFO: ✅ Classified JSON:
+[2025-07-09 17:55:23] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:55:27] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:55:29] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:55:29] INFO: 📌 layer: true
+[2025-07-09 17:55:29] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:55:29] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:55:37] INFO: ✅ Classified JSON:
+[2025-07-09 17:57:42] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 17:57:46] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 17:57:47] INFO: 📌 Final WHERE: {}
+[2025-07-09 17:57:47] INFO: 📌 layer: true
+[2025-07-09 17:57:47] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 17:57:47] INFO: 📦 Fetched 20 expanded documents for empid(s): emp_2570, emp_2494, emp_753, emp_1642, emp_587
+[2025-07-09 17:57:54] INFO: ✅ Classified JSON:
+[2025-07-09 17:58:11] INFO: ✅ Classified JSON: {"$and":[{"firstname":"derick"},{"objectname":"employee"}],"originalQuery":"list derick record","where":{},"layer":false}
+[2025-07-09 17:58:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 17:58:24] INFO: ✅ Gemini Answer Generated
+[2025-07-09 18:00:33] INFO: 💬 Incoming Query: list derick record
+[2025-07-09 18:02:15] INFO: 💬 Incoming Query: list derick
+[2025-07-09 18:02:15] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:02:17] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:02:17] INFO: 📌 layer: true
+[2025-07-09 18:02:17] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:02:17] INFO: 📦 Fetched 15 expanded documents for empid(s): emp_2570, emp_753, emp_2494, emp_1642
+[2025-07-09 18:02:29] INFO: ✅ Classified JSON:
+[2025-07-09 18:02:29] INFO: ✅ Classified JSON: {"firstname":"derick","originalQuery":"list derick","where":{},"layer":false}
+[2025-07-09 18:02:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 18:02:35] INFO: ✅ Gemini Answer Generated
+[2025-07-09 18:13:33] INFO: 💬 Incoming Query: list the derick record in staff object
+[2025-07-09 18:13:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:13:34] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:13:34] INFO: 📌 layer: true
+[2025-07-09 18:13:34] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:13:34] INFO: 📦 Fetched 21 expanded documents for empid(s): emp_753, emp_2565, emp_587, emp_197, emp_1135
+[2025-07-09 18:13:37] INFO: ✅ Classified JSON:
+[2025-07-09 18:13:37] INFO: ✅ Classified JSON: {"$and":[{"objectname":"staff"},{"firstname":"derick"}],"originalQuery":"list the derick record in staff object","where":{},"layer":false}
+[2025-07-09 18:13:37] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 18:13:40] INFO: ✅ Gemini Answer Generated
+[2025-07-09 18:24:39] INFO: 💬 Incoming Query: list the gender of derick
+[2025-07-09 18:24:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:24:41] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:24:41] INFO: 📌 layer: true
+[2025-07-09 18:24:41] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:24:41] INFO: 📦 Fetched 15 expanded documents for empid(s): emp_2570, emp_753, emp_2494, emp_1642
+[2025-07-09 18:25:16] INFO: ✅ Classified JSON:
+[2025-07-09 18:25:16] INFO: ✅ Classified JSON: {"firstname":"derick","originalQuery":"list the gender of derick","where":{},"layer":false}
+[2025-07-09 18:25:16] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:25:16] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:25:16] INFO: 📌 layer: false
+[2025-07-09 18:25:16] INFO: 📄 Fetched 100 document(s)
+[2025-07-09 18:29:44] INFO: 💬 Incoming Query: list the leave dates of charlotte
+[2025-07-09 18:29:44] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:29:46] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:29:46] INFO: 📌 layer: true
+[2025-07-09 18:29:46] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:29:46] INFO: 📦 Fetched 13 expanded documents for empid(s): emp_1314, emp_197, emp_1642
+[2025-07-09 18:29:52] INFO: ✅ Classified JSON:
+[2025-07-09 18:29:52] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of charlotte","where":{"objectname":"leaves"},"layer":false}
+[2025-07-09 18:29:52] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:29:52] INFO: 📌 Final WHERE: {
+  "objectname": "leaves"
+}
+[2025-07-09 18:29:52] INFO: 📌 layer: false
+[2025-07-09 18:29:52] INFO: 📄 Fetched 53 document(s)
+[2025-07-09 18:31:07] INFO: 💬 Incoming Query: charlotte
+[2025-07-09 18:31:07] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:31:09] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:31:09] INFO: 📌 layer: true
+[2025-07-09 18:31:09] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:31:09] INFO: 📦 Fetched 18 expanded documents for empid(s): emp_1302, emp_2044, emp_1281, emp_1763
+[2025-07-09 18:31:11] INFO: ✅ Classified JSON:
+[2025-07-09 18:31:11] INFO: ✅ Classified JSON: {"originalQuery":"charlotte","where":{"firstname":"charlotte"},"layer":false}
+[2025-07-09 18:31:11] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:31:11] INFO: 📌 Final WHERE: {
+  "firstname": "charlotte"
+}
+[2025-07-09 18:31:11] INFO: 📌 layer: false
+[2025-07-09 18:31:11] INFO: 📄 Fetched 1 document(s)
+[2025-07-09 18:38:58] INFO: 💬 Incoming Query: list the charlotte 's leave dates
+[2025-07-09 18:38:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:38:59] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:38:59] INFO: 📌 layer: true
+[2025-07-09 18:38:59] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:38:59] INFO: 📦 Fetched 13 expanded documents for empid(s): emp_1314, emp_197, emp_1642
+[2025-07-09 18:39:10] INFO: ✅ Classified JSON:
+[2025-07-09 18:39:10] INFO: ✅ Classified JSON: {"originalQuery":"list the charlotte 's leave dates","where":{"$and":[{"objectname":"leaves"},{"type":"leave"}]},"layer":false}
+[2025-07-09 18:39:10] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:39:11] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": "leaves"
+    },
+    {
+      "type": "leave"
+    }
+  ]
+}
+[2025-07-09 18:39:11] INFO: 📌 layer: false
+[2025-07-09 18:39:11] INFO: 📄 Fetched 53 document(s)
+[2025-07-09 18:39:11] INFO: 📥 Retrieved Context: 13 items
+[2025-07-09 18:39:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 18:39:11] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:39:11] INFO: 📦 Fetched 13 expanded documents for empid(s): emp_1314, emp_197, emp_1642
+[2025-07-09 18:39:13] INFO: ✅ Gemini Answer Generated
+[2025-07-09 18:39:28] INFO: 💬 Incoming Query: charlotte
+[2025-07-09 18:39:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:39:29] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:39:29] INFO: 📌 layer: true
+[2025-07-09 18:39:29] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:39:29] INFO: 📦 Fetched 18 expanded documents for empid(s): emp_1302, emp_2044, emp_1281, emp_1763
+[2025-07-09 18:39:36] INFO: ✅ Classified JSON:
+[2025-07-09 18:39:36] INFO: ✅ Classified JSON: {"originalQuery":"charlotte","where":{"firstname":"charlotte"},"layer":false}
+[2025-07-09 18:39:36] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:39:36] INFO: 📌 Final WHERE: {
+  "firstname": "charlotte"
+}
+[2025-07-09 18:39:36] INFO: 📌 layer: false
+[2025-07-09 18:39:36] INFO: 📄 Fetched 1 document(s)
+[2025-07-09 18:39:36] INFO: 📥 Retrieved Context: 18 items
+[2025-07-09 18:39:36] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 18:39:36] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-09 18:39:36] INFO: 📦 Fetched 5 expanded documents for empid(s): emp_2044
+[2025-07-09 18:39:46] INFO: ✅ Gemini Answer Generated
+[2025-07-09 18:46:04] INFO: 💬 Incoming Query: charlotte leave date
+[2025-07-09 18:46:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:46:05] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:46:05] INFO: 📌 layer: true
+[2025-07-09 18:46:05] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:46:05] INFO: 📦 Fetched 13 expanded documents for empid(s): emp_1314, emp_197, emp_1642
+[2025-07-09 18:46:05] ERROR: ❌ Error in objectclassifyQuery: "
+You're absolutely right! My apologies. While ChromaDB's 'where' filter *can* often implicitly handle equality for "fieldName": "value", explicitly using the "$eq" operator is safer, more consistent, and often preferred to avoid any ambiguity, especially when dealing with various data types or when migrating from other query syntaxes.
+
+This is a crucial correction for the 'where' clause generation. I will update the prompt to ensure that all simple equality comparisons in the ChromaDB 'where' clause explicitly use the "$eq" operator.
+
+Here's the revised prompt:
+
+" is not a function
+[2025-07-09 18:46:54] INFO: 💬 Incoming Query: charlotte leave date
+[2025-07-09 18:46:54] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:46:55] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:46:55] INFO: 📌 layer: true
+[2025-07-09 18:46:55] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:46:55] INFO: 📦 Fetched 13 expanded documents for empid(s): emp_1314, emp_197, emp_1642
+[2025-07-09 18:47:30] INFO: 💬 Incoming Query: list the charlotte record
+[2025-07-09 18:47:30] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:47:32] INFO: 📌 Final WHERE: {}
+[2025-07-09 18:47:32] INFO: 📌 layer: true
+[2025-07-09 18:47:32] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-09 18:47:32] INFO: 📦 Fetched 21 expanded documents for empid(s): emp_1302, emp_1281, emp_61, emp_2044, emp_311
+[2025-07-09 18:47:36] INFO: ✅ Classified JSON:
+[2025-07-09 18:47:36] INFO: ✅ Classified JSON: {"originalQuery":"charlotte leave date","where":{"$and":[{"objectname":{"$eq":"leaves"}},{"type":{"$eq":"leave"}},{"$or":[{"firstname":{"$eq":"charlotte"}},{"lastname":{"$eq":"charlotte"}},{"manager":{"$eq":"charlotte"}}]}]},"layer":false}
+[2025-07-09 18:47:36] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:47:36] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "leaves"
+      }
+    },
+    {
+      "type": {
+        "$eq": "leave"
+      }
+    },
+    {
+      "$or": [
+        {
+          "firstname": {
+            "$eq": "charlotte"
+          }
+        },
+        {
+          "lastname": {
+            "$eq": "charlotte"
+          }
+        },
+        {
+          "manager": {
+            "$eq": "charlotte"
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-09 18:47:36] INFO: 📌 layer: false
+[2025-07-09 18:47:36] INFO: 📄 Fetched 0 document(s)
+[2025-07-09 18:47:36] INFO: 📥 Retrieved Context: 13 items
+[2025-07-09 18:47:36] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 18:47:36] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-09 18:47:36] WARN: ⚠️ No empids found to expand results
+[2025-07-09 18:47:37] INFO: ✅ Classified JSON:
+[2025-07-09 18:47:37] INFO: ✅ Classified JSON: {"originalQuery":"list the charlotte record","where":{"$and":[{"objectname":{"$eq":"employee"}},{"firstname":{"$eq":"charlotte"}}]},"layer":false}
+[2025-07-09 18:47:37] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-09 18:47:38] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "objectname": {
+        "$eq": "employee"
+      }
+    },
+    {
+      "firstname": {
+        "$eq": "charlotte"
+      }
+    }
+  ]
+}
+[2025-07-09 18:47:38] INFO: 📌 layer: false
+[2025-07-09 18:47:38] INFO: 📄 Fetched 1 document(s)
+[2025-07-09 18:47:38] INFO: 📥 Retrieved Context: 21 items
+[2025-07-09 18:47:38] INFO: 📨 Sending prompt to Gemini...
+[2025-07-09 18:47:38] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-09 18:47:38] INFO: 📦 Fetched 5 expanded documents for empid(s): emp_2044
+[2025-07-09 18:47:38] INFO: ✅ Gemini Answer Generated
+[2025-07-09 18:47:42] INFO: ✅ Gemini Answer Generated
+[2025-07-11 15:26:26] INFO: 💬 Incoming Query: list the derick record in the employee object
+[2025-07-11 15:26:28] INFO: ✅ Classified JSON:
+[2025-07-11 15:26:28] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record in the employee object","where":{"objectname":{"$eq":"employee"}},"layer":false}
+[2025-07-11 15:26:28] ERROR: ❌ askHandler Error: data is not defined
+[2025-07-11 15:29:47] INFO: 💬 Incoming Query: list the derick record in the employee object
+[2025-07-11 15:29:51] INFO: ✅ Classified JSON:
+[2025-07-11 15:29:51] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record in the employee object","where":{"employee_profile:employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-11 15:29:51] ERROR: ❌ askHandler Error: data is not defined
+[2025-07-11 15:43:43] INFO: 💬 Incoming Query: list the derick in employee object
+[2025-07-11 15:43:46] INFO: ✅ Classified JSON:
+[2025-07-11 15:43:46] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in employee object","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-11 15:43:46] ERROR: ❌ askHandler Error: data is not defined
+[2025-07-11 15:45:27] INFO: 💬 Incoming Query: list the derick
+[2025-07-11 15:45:29] INFO: ✅ Classified JSON:
+[2025-07-11 15:45:29] INFO: ✅ Classified JSON: {"originalQuery":"list the derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-11 15:45:29] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:45:29] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-11 15:45:29] INFO: 📌 layer: false
+[2025-07-11 15:45:29] INFO: 📄 Fetched 3 document(s)
+[2025-07-11 15:45:29] INFO: 📥 Retrieved Context: 3 items
+[2025-07-11 15:45:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 15:45:29] INFO: 🔁 Layer = true → Matched 3 base embeddings
+[2025-07-11 15:45:29] INFO: 📦 Fetched 3 expanded documents for empid(s): EMP_2149, EMP_2249, EMP_753
+[2025-07-11 15:45:37] INFO: ✅ Gemini Answer Generated
+[2025-07-11 15:46:27] INFO: 💬 Incoming Query: list the additonal info derick
+[2025-07-11 15:46:32] INFO: ✅ Classified JSON:
+[2025-07-11 15:46:32] INFO: ✅ Classified JSON: {"originalQuery":"list the additonal info derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-11 15:46:32] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:46:33] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-11 15:46:33] INFO: 📌 layer: false
+[2025-07-11 15:46:33] INFO: 📄 Fetched 3 document(s)
+[2025-07-11 15:46:33] INFO: 📥 Retrieved Context: 3 items
+[2025-07-11 15:46:33] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 15:46:33] INFO: 🔁 Layer = true → Matched 3 base embeddings
+[2025-07-11 15:46:33] INFO: 📦 Fetched 3 expanded documents for empid(s): EMP_2249, EMP_2149, EMP_753
+[2025-07-11 15:46:37] INFO: ✅ Gemini Answer Generated
+[2025-07-11 15:47:03] INFO: 💬 Incoming Query: what is the leave dates of quigley
+[2025-07-11 15:47:06] INFO: ✅ Classified JSON:
+[2025-07-11 15:47:06] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave dates of quigley","where":{"employee_firstname":{"$eq":"quigley"}},"layer":false}
+[2025-07-11 15:47:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:47:07] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "quigley"
+  }
+}
+[2025-07-11 15:47:07] INFO: 📌 layer: false
+[2025-07-11 15:47:07] INFO: 📄 Fetched 0 document(s)
+[2025-07-11 15:47:07] INFO: 📥 Retrieved Context: 0 items
+[2025-07-11 15:47:07] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 15:47:07] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-11 15:47:07] WARN: ⚠️ No empids found to expand results
+[2025-07-11 15:47:08] INFO: ✅ Gemini Answer Generated
+[2025-07-11 15:50:20] INFO: 💬 Incoming Query: what is the leave dates of derick
+[2025-07-11 15:50:20] ERROR: ❌ Error in objectclassifyQuery: arr.map is not a function
+[2025-07-11 15:50:20] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave dates of derick","where":{},"layer":false}
+[2025-07-11 15:50:20] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:50:21] INFO: 📌 Final WHERE: {}
+[2025-07-11 15:50:21] INFO: 📌 layer: false
+[2025-07-11 15:50:21] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 15:50:21] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 15:50:21] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 15:50:21] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 15:50:21] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249, EMP_1168, EMP_1627
+[2025-07-11 15:50:24] INFO: ✅ Gemini Answer Generated
+[2025-07-11 15:54:59] INFO: 💬 Incoming Query: list the leave dates of derick
+[2025-07-11 15:54:59] ERROR: ❌ Error in objectclassifyQuery: arr.map is not a function
+[2025-07-11 15:54:59] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of derick","where":{},"layer":false}
+[2025-07-11 15:54:59] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:55:00] INFO: 📌 Final WHERE: {}
+[2025-07-11 15:55:00] INFO: 📌 layer: false
+[2025-07-11 15:55:00] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 15:55:00] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 15:55:00] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 15:55:00] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 15:55:00] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249, EMP_1168, EMP_1627
+[2025-07-11 15:55:03] INFO: ✅ Gemini Answer Generated
+[2025-07-11 15:56:51] INFO: 💬 Incoming Query: list the male employee
+[2025-07-11 15:56:54] INFO: ✅ Classified JSON:
+[2025-07-11 15:56:54] INFO: ✅ Classified JSON: {"originalQuery":"list the male employee","where":{"employee":{"gender":{"$eq":"male"}}},"layer":false}
+[2025-07-11 15:56:54] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:56:55] INFO: 📌 Final WHERE: {
   "employee": {
-    "firstname": {
-      "$eq": "derick"
+    "gender": {
+      "$eq": "male"
     }
   }
 }
-[2025-07-11 11:42:43] INFO: 📌 layer: false
-[2025-07-11 11:42:43] ERROR: ❌ askHandler Error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got firstname
-[2025-07-11 11:43:15] INFO: 💬 Incoming Query: list the lastname derick in employee objectname
-[2025-07-11 11:43:18] INFO: ✅ Classified JSON:
-[2025-07-11 11:43:18] INFO: ✅ Classified JSON: {"originalQuery":"list the lastname derick in employee objectname","where":{"lastname":{"$eq":"derick"}},"layer":false}
-[2025-07-11 11:43:18] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
-[2025-07-11 11:43:19] INFO: 📌 Final WHERE: {
-  "lastname": {
+[2025-07-11 15:56:55] INFO: 📌 layer: false
+[2025-07-11 15:56:55] ERROR: ❌ askHandler Error: Expected operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, but got gender
+[2025-07-11 15:57:51] INFO: 💬 Incoming Query: list the male
+[2025-07-11 15:57:55] INFO: ✅ Classified JSON:
+[2025-07-11 15:57:55] INFO: ✅ Classified JSON: {"originalQuery":"list the male","where":{"gender":{"$eq":"male"}},"layer":false}
+[2025-07-11 15:57:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 15:57:56] INFO: 📌 Final WHERE: {
+  "gender": {
+    "$eq": "male"
+  }
+}
+[2025-07-11 15:57:56] INFO: 📌 layer: false
+[2025-07-11 15:57:56] INFO: 📄 Fetched 0 document(s)
+[2025-07-11 15:57:56] INFO: 📥 Retrieved Context: 0 items
+[2025-07-11 15:57:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 15:57:56] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-11 15:57:56] WARN: ⚠️ No empids found to expand results
+[2025-07-11 15:57:57] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:14:58] INFO: 💬 Incoming Query: what is the leave date of staff derick
+[2025-07-11 18:14:58] ERROR: ❌ Error in objectclassifyQuery: sampleFields is not defined
+[2025-07-11 18:14:58] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave date of staff derick","where":{},"layer":false}
+[2025-07-11 18:14:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:14:59] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:14:59] INFO: 📌 layer: false
+[2025-07-11 18:14:59] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:14:59] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:14:59] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:14:59] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:14:59] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249, EMP_1168, EMP_1533
+[2025-07-11 18:15:02] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:16:13] INFO: 💬 Incoming Query: what is the leave date of staff derick
+[2025-07-11 18:16:13] ERROR: ❌ Error in objectclassifyQuery: selectedFields is not defined
+[2025-07-11 18:16:13] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave date of staff derick","where":{},"layer":false}
+[2025-07-11 18:16:13] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:16:14] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:16:14] INFO: 📌 layer: false
+[2025-07-11 18:16:14] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:16:14] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:16:14] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:16:14] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:16:14] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249, EMP_1168, EMP_1533
+[2025-07-11 18:16:17] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:17:02] INFO: 💬 Incoming Query: what is the leave dates of staff derick
+[2025-07-11 18:17:02] ERROR: ❌ Error in objectclassifyQuery: selected.slice is not a function
+[2025-07-11 18:17:02] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave dates of staff derick","where":{},"layer":false}
+[2025-07-11 18:17:02] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:17:03] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:17:03] INFO: 📌 layer: false
+[2025-07-11 18:17:03] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:17:03] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:17:03] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:17:03] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:17:03] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_1168, EMP_2249, EMP_1627
+[2025-07-11 18:17:08] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:18:10] INFO: 💬 Incoming Query: what is the leave date of staff derick
+[2025-07-11 18:18:10] ERROR: ❌ Error in objectclassifyQuery: selectedFields is not defined
+[2025-07-11 18:18:10] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave date of staff derick","where":{},"layer":false}
+[2025-07-11 18:18:10] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:18:11] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:18:11] INFO: 📌 layer: false
+[2025-07-11 18:18:11] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:18:11] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:18:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:18:11] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:18:11] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249, EMP_1168, EMP_1533
+[2025-07-11 18:18:15] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:18:56] INFO: 💬 Incoming Query: what is the leave date of staff derick
+[2025-07-11 18:18:56] ERROR: ❌ Error in objectclassifyQuery: selectedFields is not defined
+[2025-07-11 18:18:56] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave date of staff derick","where":{},"layer":false}
+[2025-07-11 18:18:56] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:18:57] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:18:57] INFO: 📌 layer: false
+[2025-07-11 18:18:57] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:18:57] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:18:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:18:57] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:18:57] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249, EMP_1168, EMP_1533
+[2025-07-11 18:19:00] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:19:39] INFO: 💬 Incoming Query: what is the leave date of staff derick
+[2025-07-11 18:19:44] INFO: ✅ Classified JSON:
+[2025-07-11 18:19:44] INFO: ✅ Classified JSON: {"originalQuery":"what is the leave date of staff derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":true}
+[2025-07-11 18:19:44] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:19:45] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
     "$eq": "derick"
   }
 }
-[2025-07-11 11:43:19] INFO: 📌 layer: false
-[2025-07-11 11:43:19] INFO: 📄 Fetched 0 document(s)
-[2025-07-11 11:43:19] INFO: 📥 Retrieved Context: 0 items
-[2025-07-11 11:43:19] INFO: 📨 Sending prompt to Gemini...
-[2025-07-11 11:43:20] INFO: ✅ Gemini Answer Generated
-[2025-07-11 11:43:42] INFO: 💬 Incoming Query: list the gendercode derick in additional info objectname
-[2025-07-11 11:44:00] INFO: ✅ Classified JSON:
-[2025-07-11 11:44:00] INFO: ✅ Classified JSON: {"originalQuery":"list the gendercode derick in additional info objectname","where":{"firstname":{"$eq":"derick"}},"layer":true}
-[2025-07-11 11:44:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
-[2025-07-11 11:44:00] INFO: 📌 Final WHERE: {
-  "firstname": {
+[2025-07-11 18:19:45] INFO: 📌 layer: true
+[2025-07-11 18:19:45] INFO: 🔁 Layer = true → Matched 3 base embeddings
+[2025-07-11 18:19:45] INFO: 📦 Fetched 3 expanded documents for empid(s): EMP_2149, EMP_753, EMP_2249
+[2025-07-11 18:19:45] INFO: 📥 Retrieved Context: 3 items
+[2025-07-11 18:19:45] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:19:47] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:20:20] INFO: 💬 Incoming Query: list all the male employee
+[2025-07-11 18:20:25] INFO: ✅ Classified JSON:
+[2025-07-11 18:20:25] INFO: ✅ Classified JSON: {"originalQuery":"list all the male employee","where":{"additionalinfo_gendercode":{"$eq":"male"}},"layer":true}
+[2025-07-11 18:20:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:20:26] INFO: 📌 Final WHERE: {
+  "additionalinfo_gendercode": {
+    "$eq": "male"
+  }
+}
+[2025-07-11 18:20:26] INFO: 📌 layer: true
+[2025-07-11 18:20:26] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:20:26] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_183, EMP_1734, EMP_1693, EMP_211, EMP_2437
+[2025-07-11 18:20:26] INFO: 📥 Retrieved Context: 5 items
+[2025-07-11 18:20:26] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:20:28] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:21:01] INFO: 💬 Incoming Query: what is the rating of derick
+[2025-07-11 18:21:06] INFO: ✅ Classified JSON:
+[2025-07-11 18:21:06] INFO: ✅ Classified JSON: {"originalQuery":"what is the rating of derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-11 18:21:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:21:06] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
     "$eq": "derick"
   }
 }
-[2025-07-11 11:44:00] INFO: 📌 layer: true
-[2025-07-11 11:44:00] INFO: 🔁 Layer = true → Matched 1 base embeddings
-[2025-07-11 11:44:00] INFO: 📦 Fetched 4 expanded documents for empid(s): emp_753
-[2025-07-11 11:44:00] INFO: 📥 Retrieved Context: 4 items
-[2025-07-11 11:44:00] INFO: 📨 Sending prompt to Gemini...
-[2025-07-11 11:44:03] INFO: ✅ Gemini Answer Generated
-[2025-07-11 12:00:48] INFO: 💬 Incoming Query: give the derick record in the employee object
-[2025-07-11 12:00:53] INFO: ✅ Classified JSON:
-[2025-07-11 12:00:53] INFO: ✅ Classified JSON: {"originalQuery":"give the derick record in the employee object","where":{"objectname":"employee","$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"layer":false}
-[2025-07-11 12:00:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
-[2025-07-11 12:00:54] INFO: 📌 Final WHERE: {
-  "objectname": "employee",
+[2025-07-11 18:21:06] INFO: 📌 layer: false
+[2025-07-11 18:21:06] INFO: 📄 Fetched 3 document(s)
+[2025-07-11 18:21:06] INFO: 📥 Retrieved Context: 3 items
+[2025-07-11 18:21:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:21:06] INFO: 🔁 Layer = true → Matched 3 base embeddings
+[2025-07-11 18:21:06] INFO: 📦 Fetched 3 expanded documents for empid(s): EMP_2149, EMP_2249, EMP_753
+[2025-07-11 18:21:08] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:21:34] INFO: 💬 Incoming Query: list the record who have rating more than 4
+[2025-07-11 18:21:39] INFO: ✅ Classified JSON:
+[2025-07-11 18:21:39] INFO: ✅ Classified JSON: {"originalQuery":"list the record who have rating more than 4","where":{},"layer":false}
+[2025-07-11 18:21:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:21:39] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:21:39] INFO: 📌 layer: false
+[2025-07-11 18:21:39] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:21:39] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:21:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:21:39] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:21:39] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2904, EMP_551, EMP_2305, EMP_408, EMP_2328
+[2025-07-11 18:21:55] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:46:54] INFO: 💬 Incoming Query: list the leave dates of dercik in staff object
+[2025-07-11 18:47:01] INFO: ✅ Classified JSON:
+[2025-07-11 18:47:01] INFO: ✅ Classified JSON: {"originalQuery":"list the leave dates of dercik in staff object","where":{"employee_firstname":{"$eq":"dercik"}},"layer":true}
+[2025-07-11 18:47:01] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:47:02] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "dercik"
+  }
+}
+[2025-07-11 18:47:02] INFO: 📌 layer: true
+[2025-07-11 18:47:02] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-11 18:47:02] WARN: ⚠️ No empids found to expand results
+[2025-07-11 18:50:29] INFO: 💬 Incoming Query: list the leave date of decrik in staff object
+[2025-07-11 18:50:41] INFO: ✅ Classified JSON:
+[2025-07-11 18:50:41] INFO: ✅ Classified JSON: {"originalQuery":"list the leave date of decrik in staff object","where":{},"layer":true}
+[2025-07-11 18:50:41] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:50:41] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:50:41] INFO: 📌 layer: true
+[2025-07-11 18:50:41] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:50:41] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2149, EMP_363, EMP_599, EMP_475, EMP_1533
+[2025-07-11 18:50:41] INFO: 📥 Retrieved Context: 5 items
+[2025-07-11 18:50:41] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:50:48] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:51:58] INFO: 💬 Incoming Query: list the status of carlotte in additional info object
+[2025-07-11 18:52:04] INFO: ✅ Classified JSON:
+[2025-07-11 18:52:04] INFO: ✅ Classified JSON: {"originalQuery":"list the status of carlotte in additional info object","where":{},"layer":false}
+[2025-07-11 18:52:04] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:52:05] INFO: 📌 Final WHERE: {}
+[2025-07-11 18:52:05] INFO: 📌 layer: false
+[2025-07-11 18:52:05] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:52:05] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:52:05] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:52:05] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:52:05] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2981, EMP_1189, EMP_2598, EMP_474, EMP_2044
+[2025-07-11 18:52:13] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:52:58] INFO: 💬 Incoming Query: what is the current rating of garnet?
+[2025-07-11 18:53:03] INFO: ✅ Classified JSON:
+[2025-07-11 18:53:03] INFO: ✅ Classified JSON: {"originalQuery":"what is the current rating of garnet?","where":{"employee_firstname":{"$eq":"garnet"}},"layer":false}
+[2025-07-11 18:53:03] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:53:04] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "garnet"
+  }
+}
+[2025-07-11 18:53:04] INFO: 📌 layer: false
+[2025-07-11 18:53:04] INFO: 📄 Fetched 2 document(s)
+[2025-07-11 18:53:04] INFO: 📥 Retrieved Context: 2 items
+[2025-07-11 18:53:04] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:53:04] INFO: 🔁 Layer = true → Matched 2 base embeddings
+[2025-07-11 18:53:04] INFO: 📦 Fetched 2 expanded documents for empid(s): EMP_2319, EMP_2904
+[2025-07-11 18:53:06] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:54:31] INFO: 💬 Incoming Query: list all the female record
+[2025-07-11 18:54:37] INFO: ✅ Classified JSON:
+[2025-07-11 18:54:37] INFO: ✅ Classified JSON: {"originalQuery":"list all the female record","where":{"additionalinfo_gendercode":{"$eq":"female"}},"layer":false}
+[2025-07-11 18:54:37] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:54:37] INFO: 📌 Final WHERE: {
+  "additionalinfo_gendercode": {
+    "$eq": "female"
+  }
+}
+[2025-07-11 18:54:37] INFO: 📌 layer: false
+[2025-07-11 18:54:37] INFO: 📄 Fetched 100 document(s)
+[2025-07-11 18:54:37] INFO: 📥 Retrieved Context: 100 items
+[2025-07-11 18:54:37] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:54:37] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 18:54:37] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_1113, EMP_10, EMP_2818, EMP_2120, EMP_2537
+[2025-07-11 18:55:41] INFO: 💬 Incoming Query: list the performance of garlet
+[2025-07-11 18:55:46] INFO: ✅ Classified JSON:
+[2025-07-11 18:55:46] INFO: ✅ Classified JSON: {"originalQuery":"list the performance of garlet","where":{"employee_firstname":{"$eq":"garlet"}},"layer":false}
+[2025-07-11 18:55:46] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 18:55:46] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "garlet"
+  }
+}
+[2025-07-11 18:55:46] INFO: 📌 layer: false
+[2025-07-11 18:55:46] INFO: 📄 Fetched 0 document(s)
+[2025-07-11 18:55:46] INFO: 📥 Retrieved Context: 0 items
+[2025-07-11 18:55:46] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 18:55:46] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-11 18:55:46] WARN: ⚠️ No empids found to expand results
+[2025-07-11 18:55:47] INFO: ✅ Gemini Answer Generated
+[2025-07-11 18:55:48] INFO: ✅ Gemini Answer Generated
+[2025-07-11 19:00:19] INFO: 💬 Incoming Query: list all the unmarried record
+[2025-07-11 19:00:25] INFO: ✅ Classified JSON:
+[2025-07-11 19:00:25] INFO: ✅ Classified JSON: {"originalQuery":"list all the unmarried record","where":{"additionalinfo_maritaldesc":{"$eq":"unmarried"}},"layer":false}
+[2025-07-11 19:00:25] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 19:00:25] INFO: 📌 Final WHERE: {
+  "additionalinfo_maritaldesc": {
+    "$eq": "unmarried"
+  }
+}
+[2025-07-11 19:00:25] INFO: 📌 layer: false
+[2025-07-11 19:00:25] INFO: 📄 Fetched 0 document(s)
+[2025-07-11 19:00:25] INFO: 📥 Retrieved Context: 0 items
+[2025-07-11 19:00:25] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 19:00:25] INFO: 🔁 Layer = true → Matched 0 base embeddings
+[2025-07-11 19:00:25] WARN: ⚠️ No empids found to expand results
+[2025-07-11 19:00:27] INFO: ✅ Gemini Answer Generated
+[2025-07-11 19:00:52] INFO: 💬 Incoming Query: list all the single records
+[2025-07-11 19:00:55] INFO: ✅ Classified JSON:
+[2025-07-11 19:00:55] INFO: ✅ Classified JSON: {"originalQuery":"list all the single records","where":{"additionalinfo_maritaldesc":{"$eq":"single"}},"layer":false}
+[2025-07-11 19:00:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-11 19:00:56] INFO: 📌 Final WHERE: {
+  "additionalinfo_maritaldesc": {
+    "$eq": "single"
+  }
+}
+[2025-07-11 19:00:56] INFO: 📌 layer: false
+[2025-07-11 19:00:56] INFO: 📄 Fetched 19 document(s)
+[2025-07-11 19:00:56] INFO: 📥 Retrieved Context: 19 items
+[2025-07-11 19:00:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-11 19:00:56] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-11 19:00:56] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2234, EMP_581, EMP_1353, EMP_419, EMP_1117
+[2025-07-11 19:01:13] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:20:08] INFO: 💬 Incoming Query: list the staff derick
+[2025-07-14 12:20:13] INFO: ✅ Classified JSON:
+[2025-07-14 12:20:13] INFO: ✅ Classified JSON: {"originalQuery":"list the staff derick","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}},{"employee_manager":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 12:20:13] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:20:14] INFO: 📌 Final WHERE: {
   "$or": [
     {
-      "firstname": {
+      "employee_firstname": {
         "$eq": "derick"
       }
     },
     {
-      "lastname": {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_manager": {
         "$eq": "derick"
       }
     }
   ]
 }
-[2025-07-11 12:00:54] INFO: 📌 layer: false
-[2025-07-11 12:00:54] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
-[2025-07-11 12:07:12] INFO: 💬 Incoming Query: give the derick employee in employee
-[2025-07-11 12:07:15] INFO: ✅ Classified JSON:
-[2025-07-11 12:07:15] INFO: ✅ Classified JSON: {"originalQuery":"give the derick employee in employee","where":{"$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"layer":false}
-[2025-07-11 12:07:15] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
-[2025-07-11 12:07:16] INFO: 📌 Final WHERE: {
+[2025-07-14 12:20:14] INFO: 📌 layer: false
+[2025-07-14 12:20:14] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 12:20:14] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 12:20:14] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:20:14] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-14 12:20:14] INFO: 📦 Fetched 1 expanded documents for empid(s): EMP_753
+[2025-07-14 12:20:20] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:20:35] INFO: 💬 Incoming Query: list the derick in the staff object
+[2025-07-14 12:20:39] INFO: ✅ Classified JSON:
+[2025-07-14 12:20:39] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in the staff object","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}},{"employee_manager":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 12:20:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:20:39] INFO: 📌 Final WHERE: {
   "$or": [
     {
-      "firstname": {
+      "employee_firstname": {
         "$eq": "derick"
       }
     },
     {
-      "lastname": {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_manager": {
         "$eq": "derick"
       }
     }
   ]
 }
-[2025-07-11 12:07:16] INFO: 📌 layer: false
-[2025-07-11 12:07:16] INFO: 📄 Fetched 1 document(s)
-[2025-07-11 12:07:16] INFO: 📥 Retrieved Context: 1 items
-[2025-07-11 12:07:16] INFO: 📨 Sending prompt to Gemini...
-[2025-07-11 12:07:19] INFO: ✅ Gemini Answer Generated
-[2025-07-11 12:15:35] INFO: 💬 Incoming Query: give the derick employee in employee
-[2025-07-11 12:15:37] INFO: ✅ Classified JSON:
-[2025-07-11 12:15:37] INFO: ✅ Classified JSON: {"originalQuery":"give the derick employee in employee","where":{"objectname":"employee","$or":[{"firstname":{"$eq":"derick"}},{"lastname":{"$eq":"derick"}}]},"layer":false}
-[2025-07-11 12:15:37] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
-[2025-07-11 12:15:38] INFO: 📌 Final WHERE: {
-  "objectname": "employee",
+[2025-07-14 12:20:39] INFO: 📌 layer: false
+[2025-07-14 12:20:39] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 12:20:39] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 12:20:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:20:39] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-14 12:20:39] INFO: 📦 Fetched 1 expanded documents for empid(s): EMP_753
+[2025-07-14 12:20:44] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:24:25] INFO: 💬 Incoming Query: list the derick record
+[2025-07-14 12:24:30] INFO: ✅ Classified JSON:
+[2025-07-14 12:24:30] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}},{"employee_manager":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 12:24:30] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:24:30] INFO: 📌 Final WHERE: {
   "$or": [
     {
-      "firstname": {
+      "employee_firstname": {
         "$eq": "derick"
       }
     },
     {
-      "lastname": {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_manager": {
         "$eq": "derick"
       }
     }
   ]
 }
-[2025-07-11 12:15:38] INFO: 📌 layer: false
-[2025-07-11 12:15:38] ERROR: ❌ askHandler Error: Expected 'where' to have exactly one operator, but got 2
+[2025-07-14 12:24:30] INFO: 📌 layer: false
+[2025-07-14 12:24:30] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 12:24:30] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 12:24:30] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:24:30] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-14 12:24:30] INFO: 📦 Fetched 1 expanded documents for empid(s): EMP_753
+[2025-07-14 12:24:34] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:24:50] INFO: 💬 Incoming Query: list the derick record in the manager object
+[2025-07-14 12:24:58] INFO: ✅ Classified JSON:
+[2025-07-14 12:24:58] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record in the manager object","where":{},"layer":false}
+[2025-07-14 12:24:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:24:59] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:24:59] INFO: 📌 layer: false
+[2025-07-14 12:24:59] INFO: 📄 Fetched 62 document(s)
+[2025-07-14 12:24:59] INFO: 📥 Retrieved Context: 62 items
+[2025-07-14 12:24:59] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:24:59] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:24:59] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_753, EMP_1533, EMP_1120, EMP_2565, EMP_1919
+[2025-07-14 12:25:01] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:25:41] INFO: 💬 Incoming Query: list the derick in the employee object
+[2025-07-14 12:25:45] INFO: ✅ Classified JSON:
+[2025-07-14 12:25:45] INFO: ✅ Classified JSON: {"originalQuery":"list the derick in the employee object","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}},{"employee_manager":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 12:25:45] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:25:46] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_manager": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-14 12:25:46] INFO: 📌 layer: false
+[2025-07-14 12:25:46] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 12:25:46] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 12:25:46] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:25:46] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-14 12:25:46] INFO: 📦 Fetched 1 expanded documents for empid(s): EMP_753
+[2025-07-14 12:25:49] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:26:33] INFO: 💬 Incoming Query: list the quigley record in the additionalinfo object
+[2025-07-14 12:26:39] INFO: ✅ Classified JSON:
+[2025-07-14 12:26:39] INFO: ✅ Classified JSON: {"originalQuery":"list the quigley record in the additionalinfo object","where":{},"layer":false}
+[2025-07-14 12:26:39] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:26:39] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:26:39] INFO: 📌 layer: false
+[2025-07-14 12:26:39] INFO: 📄 Fetched 62 document(s)
+[2025-07-14 12:26:39] INFO: 📥 Retrieved Context: 62 items
+[2025-07-14 12:26:39] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:26:39] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:26:39] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_753, EMP_1202, EMP_890, EMP_1591, EMP_2234
+[2025-07-14 12:26:43] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:27:06] INFO: 💬 Incoming Query: list all the male record
+[2025-07-14 12:27:11] INFO: ✅ Classified JSON:
+[2025-07-14 12:27:11] INFO: ✅ Classified JSON: {"originalQuery":"list all the male record","where":{},"layer":false}
+[2025-07-14 12:27:11] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:27:12] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:27:12] INFO: 📌 layer: false
+[2025-07-14 12:27:12] INFO: 📄 Fetched 62 document(s)
+[2025-07-14 12:27:12] INFO: 📥 Retrieved Context: 62 items
+[2025-07-14 12:27:12] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:27:12] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:27:12] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_1120, EMP_2234, EMP_1919, EMP_73, EMP_890
+[2025-07-14 12:27:23] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:27:44] INFO: 💬 Incoming Query: list all the single record
+[2025-07-14 12:27:49] INFO: ✅ Classified JSON:
+[2025-07-14 12:27:49] INFO: ✅ Classified JSON: {"originalQuery":"list all the single record","where":{"additionalinfo_maritaldesc":{"$eq":"single"}},"layer":false}
+[2025-07-14 12:27:49] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:27:49] INFO: 📌 Final WHERE: {
+  "additionalinfo_maritaldesc": {
+    "$eq": "single"
+  }
+}
+[2025-07-14 12:27:49] INFO: 📌 layer: false
+[2025-07-14 12:27:49] INFO: 📄 Fetched 19 document(s)
+[2025-07-14 12:27:49] INFO: 📥 Retrieved Context: 19 items
+[2025-07-14 12:27:49] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:27:49] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:27:49] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2234, EMP_581, EMP_1353, EMP_1117, EMP_12
+[2025-07-14 12:27:54] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:28:13] INFO: 💬 Incoming Query: list all the single in leave object
+[2025-07-14 12:28:18] INFO: ✅ Classified JSON:
+[2025-07-14 12:28:18] INFO: ✅ Classified JSON: {"originalQuery":"list all the single in leave object","where":{},"layer":false}
+[2025-07-14 12:28:18] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:28:19] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:28:19] INFO: 📌 layer: false
+[2025-07-14 12:28:19] INFO: 📄 Fetched 62 document(s)
+[2025-07-14 12:28:19] INFO: 📥 Retrieved Context: 62 items
+[2025-07-14 12:28:19] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:28:19] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:28:19] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_1518, EMP_1740, EMP_629, EMP_419, EMP_2570
+[2025-07-14 12:28:37] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:38:26] INFO: 💬 Incoming Query: list the derick record
+[2025-07-14 12:38:31] INFO: ✅ Classified JSON:
+[2025-07-14 12:38:31] INFO: ✅ Classified JSON: {"originalQuery":"list the derick record","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 12:38:31] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:38:32] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-14 12:38:32] INFO: 📌 layer: false
+[2025-07-14 12:38:32] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 12:38:32] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 12:38:32] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:38:32] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-14 12:38:32] INFO: 📦 Fetched 1 expanded documents for empid(s): EMP_753
+[2025-07-14 12:38:35] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:38:54] INFO: 💬 Incoming Query: list all single record
+[2025-07-14 12:39:00] INFO: ✅ Classified JSON:
+[2025-07-14 12:39:00] INFO: ✅ Classified JSON: {"originalQuery":"list all single record","where":{},"layer":false}
+[2025-07-14 12:39:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:39:01] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:39:01] INFO: 📌 layer: false
+[2025-07-14 12:39:01] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 12:39:01] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 12:39:01] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:39:01] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:39:01] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2234, EMP_1518, EMP_581, EMP_12, EMP_1314
+[2025-07-14 12:39:12] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:39:18] INFO: 💬 Incoming Query: list all male record
+[2025-07-14 12:39:22] INFO: ✅ Classified JSON:
+[2025-07-14 12:39:22] INFO: ✅ Classified JSON: {"originalQuery":"list all male record","where":{"additionalinfo_gendercode":{"$eq":"male"}},"layer":false}
+[2025-07-14 12:39:22] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:39:23] INFO: 📌 Final WHERE: {
+  "additionalinfo_gendercode": {
+    "$eq": "male"
+  }
+}
+[2025-07-14 12:39:23] INFO: 📌 layer: false
+[2025-07-14 12:39:23] INFO: 📄 Fetched 46 document(s)
+[2025-07-14 12:39:23] INFO: 📥 Retrieved Context: 46 items
+[2025-07-14 12:39:23] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:39:23] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:39:23] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_1231, EMP_2234, EMP_629, EMP_1120, EMP_73
+[2025-07-14 12:39:48] INFO: 💬 Incoming Query: list all the male in employee object
+[2025-07-14 12:39:56] INFO: ✅ Classified JSON:
+[2025-07-14 12:39:56] INFO: ✅ Classified JSON: {"originalQuery":"list all the male in employee object","where":{},"layer":false}
+[2025-07-14 12:39:56] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:39:56] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:39:56] INFO: 📌 layer: false
+[2025-07-14 12:39:56] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 12:39:56] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 12:39:56] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:39:56] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:39:56] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_890, EMP_73, EMP_1231, EMP_1517, EMP_1919
+[2025-07-14 12:40:00] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:40:00] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:40:29] INFO: 💬 Incoming Query: list all the employee whose rating is 3 and above
+[2025-07-14 12:40:57] INFO: ✅ Classified JSON:
+[2025-07-14 12:40:57] INFO: ✅ Classified JSON: {"originalQuery":"list all the employee whose rating is 3 and above","where":{},"layer":false}
+[2025-07-14 12:40:57] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:40:57] INFO: 📌 Final WHERE: {}
+[2025-07-14 12:40:57] INFO: 📌 layer: false
+[2025-07-14 12:40:57] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 12:40:57] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 12:40:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:40:57] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:40:57] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_2732, EMP_1302, EMP_953, EMP_1385, EMP_163
+[2025-07-14 12:41:08] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:41:49] INFO: 💬 Incoming Query: list all the record with 3 and above
+[2025-07-14 12:41:53] INFO: ✅ Classified JSON:
+[2025-07-14 12:41:53] INFO: ✅ Classified JSON: {"originalQuery":"list all the record with 3 and above","where":{"additionalinfo_currentemployeerating":{"$gte":3}},"layer":false}
+[2025-07-14 12:41:53] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:41:53] INFO: 📌 Final WHERE: {
+  "additionalinfo_currentemployeerating": {
+    "$gte": 3
+  }
+}
+[2025-07-14 12:41:53] INFO: 📌 layer: false
+[2025-07-14 12:41:53] INFO: 📄 Fetched 65 document(s)
+[2025-07-14 12:41:53] INFO: 📥 Retrieved Context: 65 items
+[2025-07-14 12:41:53] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:41:53] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:41:53] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_1302, EMP_1097, EMP_2732, EMP_163, EMP_1740
+[2025-07-14 12:42:53] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:42:59] INFO: 💬 Incoming Query: list the record with leave date 2024-06-23
+[2025-07-14 12:43:02] INFO: ✅ Classified JSON:
+[2025-07-14 12:43:02] INFO: ✅ Classified JSON: {"originalQuery":"list the record with leave date 2024-06-23","where":{"leaves_date":{"$eq":"2024-06-23"}},"layer":false}
+[2025-07-14 12:43:02] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:43:03] INFO: 📌 Final WHERE: {
+  "leaves_date": {
+    "$eq": "2024-06-23"
+  }
+}
+[2025-07-14 12:43:03] INFO: 📌 layer: false
+[2025-07-14 12:43:03] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 12:43:03] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 12:43:03] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:43:03] INFO: 🔁 Layer = true → Matched 1 base embeddings
+[2025-07-14 12:43:03] INFO: 📦 Fetched 1 expanded documents for empid(s): EMP_2494
+[2025-07-14 12:43:05] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:44:14] INFO: 💬 Incoming Query: list the record with salary  more than 50 thousand
+[2025-07-14 12:44:17] INFO: ✅ Classified JSON:
+[2025-07-14 12:44:17] INFO: ✅ Classified JSON: {"originalQuery":"list the record with salary more than 50 thousand","where":{"employee_salary":{"$gt":"50000"}},"layer":false}
+[2025-07-14 12:44:17] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:44:17] INFO: 📌 Final WHERE: {
+  "employee_salary": {
+    "$gt": "50000"
+  }
+}
+[2025-07-14 12:44:17] INFO: 📌 layer: false
+[2025-07-14 12:44:17] ERROR: ❌ askHandler Error: Expected operand value to be a number for $gt, but got string
+[2025-07-14 12:47:24] INFO: 💬 Incoming Query: list the record with salary more than 50 thousand
+[2025-07-14 12:47:28] INFO: ✅ Classified JSON:
+[2025-07-14 12:47:28] INFO: ✅ Classified JSON: {"originalQuery":"list the record with salary more than 50 thousand","where":{"employee_salary":{"$gt":50000}},"layer":false}
+[2025-07-14 12:47:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:47:28] INFO: 📌 Final WHERE: {
+  "employee_salary": {
+    "$gt": 50000
+  }
+}
+[2025-07-14 12:47:28] INFO: 📌 layer: false
+[2025-07-14 12:47:28] INFO: 📄 Fetched 77 document(s)
+[2025-07-14 12:47:28] INFO: 📥 Retrieved Context: 77 items
+[2025-07-14 12:47:28] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:47:29] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:47:29] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_73, EMP_1353, EMP_629, EMP_1763, EMP_890
+[2025-07-14 12:47:45] INFO: ✅ Gemini Answer Generated
+[2025-07-14 12:48:06] INFO: 💬 Incoming Query: list the record getting more than 80 thousand and above
+[2025-07-14 12:48:11] INFO: ✅ Classified JSON:
+[2025-07-14 12:48:11] INFO: ✅ Classified JSON: {"originalQuery":"list the record getting more than 80 thousand and above","where":{"employee_salary":{"$gte":80000}},"layer":false}
+[2025-07-14 12:48:11] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 12:48:11] INFO: 📌 Final WHERE: {
+  "employee_salary": {
+    "$gte": 80000
+  }
+}
+[2025-07-14 12:48:11] INFO: 📌 layer: false
+[2025-07-14 12:48:11] INFO: 📄 Fetched 42 document(s)
+[2025-07-14 12:48:11] INFO: 📥 Retrieved Context: 42 items
+[2025-07-14 12:48:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 12:48:11] INFO: 🔁 Layer = true → Matched 5 base embeddings
+[2025-07-14 12:48:11] INFO: 📦 Fetched 5 expanded documents for empid(s): EMP_1160, EMP_231, EMP_1353, EMP_328, EMP_2494
+[2025-07-14 12:48:20] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:00:40] INFO: 💬 Incoming Query: list the record who are getting less than 30 thousand
+[2025-07-14 15:00:44] INFO: ✅ Classified JSON:
+[2025-07-14 15:00:44] INFO: ✅ Classified JSON: {"originalQuery":"list the record who are getting less than 30 thousand","where":{"employee_salary":{"$lt":30000}},"layer":false}
+[2025-07-14 15:00:44] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:00:45] INFO: 📌 Final WHERE: {
+  "employee_salary": {
+    "$lt": 30000
+  }
+}
+[2025-07-14 15:00:45] INFO: 📌 layer: false
+[2025-07-14 15:00:45] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 15:00:45] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 15:00:45] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:00:47] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:01:14] INFO: 💬 Incoming Query: list the record who are getting less than 40 thousand
+[2025-07-14 15:01:18] INFO: ✅ Classified JSON:
+[2025-07-14 15:01:18] INFO: ✅ Classified JSON: {"originalQuery":"list the record who are getting less than 40 thousand","where":{"employee_salary":{"$lt":40000}},"layer":false}
+[2025-07-14 15:01:18] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:01:19] INFO: 📌 Final WHERE: {
+  "employee_salary": {
+    "$lt": 40000
+  }
+}
+[2025-07-14 15:01:19] INFO: 📌 layer: false
+[2025-07-14 15:01:19] INFO: 📄 Fetched 12 document(s)
+[2025-07-14 15:01:19] INFO: 📥 Retrieved Context: 12 items
+[2025-07-14 15:01:19] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:01:23] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:02:49] INFO: 💬 Incoming Query: give the full details of the record who containing kayley.schroeder@example.com as mail
+[2025-07-14 15:02:57] INFO: ✅ Classified JSON:
+[2025-07-14 15:02:57] INFO: ✅ Classified JSON: {"originalQuery":"give the full details of the record who containing kayley.schroeder@example.com as mail","where":{},"layer":false}
+[2025-07-14 15:02:57] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:02:57] INFO: 📌 Final WHERE: {}
+[2025-07-14 15:02:57] INFO: 📌 layer: false
+[2025-07-14 15:02:57] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 15:02:57] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 15:02:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:03:01] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:04:35] INFO: 💬 Incoming Query: give me the full details of record who has  5 as rating in employee
+[2025-07-14 15:04:47] INFO: ✅ Classified JSON:
+[2025-07-14 15:04:47] INFO: ✅ Classified JSON: {"originalQuery":"give me the full details of record who has 5 as rating in employee","where":{},"layer":true}
+[2025-07-14 15:04:47] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:04:47] INFO: 📌 Final WHERE: {}
+[2025-07-14 15:04:47] INFO: 📌 layer: true
+[2025-07-14 15:07:05] INFO: 💬 Incoming Query: give the record who have 5 as rating
+[2025-07-14 15:07:09] INFO: ✅ Classified JSON:
+[2025-07-14 15:07:09] INFO: ✅ Classified JSON: {"originalQuery":"give the record who have 5 as rating","where":{"additionalinfo_currentemployeerating":{"$eq":5}},"layer":false}
+[2025-07-14 15:07:09] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:07:10] INFO: 📌 Final WHERE: {
+  "additionalinfo_currentemployeerating": {
+    "$eq": 5
+  }
+}
+[2025-07-14 15:07:10] INFO: 📌 layer: false
+[2025-07-14 15:07:10] INFO: 📄 Fetched 22 document(s)
+[2025-07-14 15:07:10] INFO: 📥 Retrieved Context: 22 items
+[2025-07-14 15:07:10] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:07:19] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:08:36] INFO: 💬 Incoming Query: give the record where the rating is 5 in the school object
+[2025-07-14 15:08:41] INFO: ✅ Classified JSON:
+[2025-07-14 15:08:41] INFO: ✅ Classified JSON: {"originalQuery":"give the record where the rating is 5 in the school object","where":{},"layer":false}
+[2025-07-14 15:08:41] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:08:41] INFO: 📌 Final WHERE: {}
+[2025-07-14 15:08:41] INFO: 📌 layer: false
+[2025-07-14 15:08:42] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 15:08:42] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 15:08:42] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:08:45] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:16:22] INFO: 💬 Incoming Query: list the derick quigley  record
+[2025-07-14 15:16:26] INFO: ✅ Classified JSON:
+[2025-07-14 15:16:26] INFO: ✅ Classified JSON: {"originalQuery":"list the derick quigley record","where":{"$and":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"quigley"}}]},"layer":false}
+[2025-07-14 15:16:26] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:16:26] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "quigley"
+      }
+    }
+  ]
+}
+[2025-07-14 15:16:26] INFO: 📌 layer: false
+[2025-07-14 15:16:26] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 15:16:26] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 15:16:26] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:16:29] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:16:54] INFO: 💬 Incoming Query: list the derickquigley record
+[2025-07-14 15:16:58] INFO: ✅ Classified JSON:
+[2025-07-14 15:16:58] INFO: ✅ Classified JSON: {"originalQuery":"list the derickquigley record","where":{"$or":[{"employee_firstname":{"$eq":"derickquigley"}},{"employee_lastname":{"$eq":"derickquigley"}}]},"layer":false}
+[2025-07-14 15:16:58] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:16:59] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derickquigley"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derickquigley"
+      }
+    }
+  ]
+}
+[2025-07-14 15:16:59] INFO: 📌 layer: false
+[2025-07-14 15:16:59] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 15:16:59] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 15:16:59] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:17:01] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:18:01] INFO: 💬 Incoming Query: list the derick quigley in the additional info
+[2025-07-14 15:18:10] INFO: ✅ Classified JSON:
+[2025-07-14 15:18:10] INFO: ✅ Classified JSON: {"originalQuery":"list the derick quigley in the additional info","where":{},"layer":false}
+[2025-07-14 15:18:10] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:18:11] INFO: 📌 Final WHERE: {}
+[2025-07-14 15:18:11] INFO: 📌 layer: false
+[2025-07-14 15:18:11] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 15:18:11] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 15:18:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:18:15] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:19:23] INFO: 💬 Incoming Query: list the staff derick record
+[2025-07-14 15:19:29] INFO: ✅ Classified JSON:
+[2025-07-14 15:19:29] INFO: ✅ Classified JSON: {"originalQuery":"list the staff derick record","where":{},"layer":false}
+[2025-07-14 15:19:29] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:19:29] INFO: 📌 Final WHERE: {}
+[2025-07-14 15:19:29] INFO: 📌 layer: false
+[2025-07-14 15:19:29] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 15:19:29] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 15:19:29] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:19:33] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:19:44] INFO: 💬 Incoming Query: list the employee derik
+[2025-07-14 15:19:49] INFO: ✅ Classified JSON:
+[2025-07-14 15:19:49] INFO: ✅ Classified JSON: {"originalQuery":"list the employee derik","where":{"$or":[{"employee_firstname":{"$eq":"derik"}},{"employee_lastname":{"$eq":"derik"}}]},"layer":false}
+[2025-07-14 15:19:49] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:19:49] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derik"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derik"
+      }
+    }
+  ]
+}
+[2025-07-14 15:19:49] INFO: 📌 layer: false
+[2025-07-14 15:19:49] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 15:19:49] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 15:19:49] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:19:51] INFO: ✅ Gemini Answer Generated
+[2025-07-14 15:20:02] INFO: 💬 Incoming Query: list the employee derick
+[2025-07-14 15:20:06] INFO: ✅ Classified JSON:
+[2025-07-14 15:20:06] INFO: ✅ Classified JSON: {"originalQuery":"list the employee derick","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 15:20:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 15:20:06] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-14 15:20:06] INFO: 📌 layer: false
+[2025-07-14 15:20:06] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 15:20:06] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 15:20:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 15:20:09] INFO: ✅ Gemini Answer Generated
+[2025-07-14 16:41:47] INFO: 💬 Incoming Query: list the number of leaves the derick take
+[2025-07-14 16:41:55] INFO: ✅ Classified JSON:
+[2025-07-14 16:41:55] INFO: ✅ Classified JSON: {"originalQuery":"list the number of leaves the derick take","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 16:41:55] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 16:41:56] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-14 16:41:56] INFO: 📌 layer: false
+[2025-07-14 16:41:57] INFO: 📄 Fetched 1 document(s)
+[2025-07-14 16:41:57] INFO: 📥 Retrieved Context: 1 items
+[2025-07-14 16:41:57] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 16:41:58] INFO: ✅ Gemini Answer Generated
+[2025-07-14 16:45:07] INFO: 💬 Incoming Query: list all the leave dates
+[2025-07-14 16:45:14] INFO: ✅ Classified JSON:
+[2025-07-14 16:45:14] INFO: ✅ Classified JSON: {"originalQuery":"list all the leave dates","where":{},"layer":false}
+[2025-07-14 16:45:14] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 16:45:14] INFO: 📌 Final WHERE: {}
+[2025-07-14 16:45:14] INFO: 📌 layer: false
+[2025-07-14 16:45:14] INFO: 📄 Fetched 100 document(s)
+[2025-07-14 16:45:14] INFO: 📥 Retrieved Context: 100 items
+[2025-07-14 16:45:14] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 16:45:23] INFO: ✅ Gemini Answer Generated
+[2025-07-14 19:19:27] INFO: 💬 Incoming Query: what is the gender of derick
+[2025-07-14 19:19:31] INFO: ✅ Classified JSON:
+[2025-07-14 19:19:31] INFO: ✅ Classified JSON: {"originalQuery":"what is the gender of derick","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}}]},"layer":true}
+[2025-07-14 19:19:31] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 19:19:32] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-14 19:19:32] INFO: 📌 layer: true
+[2025-07-14 19:19:32] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 19:19:32] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 19:19:32] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 19:19:34] INFO: ✅ Gemini Answer Generated
+[2025-07-14 19:20:18] INFO: 💬 Incoming Query: what is the gender or derick quigley brown
+[2025-07-14 19:20:26] INFO: ✅ Classified JSON:
+[2025-07-14 19:20:26] INFO: ✅ Classified JSON: {"originalQuery":"what is the gender or derick quigley brown","where":{"$or":[{"employee_firstname":{"$eq":"derick quigley brown"}},{"employee_lastname":{"$eq":"derick quigley brown"}}]},"layer":true}
+[2025-07-14 19:20:26] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 19:20:26] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick quigley brown"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick quigley brown"
+      }
+    }
+  ]
+}
+[2025-07-14 19:20:26] INFO: 📌 layer: true
+[2025-07-14 19:20:26] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 19:20:26] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 19:20:26] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 19:20:28] INFO: ✅ Gemini Answer Generated
+[2025-07-14 19:20:49] INFO: 💬 Incoming Query: what is the gender or derick quigley
+[2025-07-14 19:21:00] INFO: ✅ Classified JSON:
+[2025-07-14 19:21:00] INFO: ✅ Classified JSON: {"originalQuery":"what is the gender or derick quigley","where":{"$and":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"quigley"}}]},"layer":true}
+[2025-07-14 19:21:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 19:21:00] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "quigley"
+      }
+    }
+  ]
+}
+[2025-07-14 19:21:00] INFO: 📌 layer: true
+[2025-07-14 19:21:01] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 19:21:01] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 19:21:01] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 19:21:02] INFO: ✅ Gemini Answer Generated
+[2025-07-14 19:21:28] INFO: 💬 Incoming Query: what is the status of derick
+[2025-07-14 19:21:33] INFO: ✅ Classified JSON:
+[2025-07-14 19:21:33] INFO: ✅ Classified JSON: {"originalQuery":"what is the status of derick","where":{"$or":[{"employee_firstname":{"$eq":"derick"}},{"employee_lastname":{"$eq":"derick"}}]},"layer":false}
+[2025-07-14 19:21:33] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 19:21:33] INFO: 📌 Final WHERE: {
+  "$or": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "employee_lastname": {
+        "$eq": "derick"
+      }
+    }
+  ]
+}
+[2025-07-14 19:21:33] INFO: 📌 layer: false
+[2025-07-14 19:21:33] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 19:21:33] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 19:21:33] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 19:21:35] INFO: ✅ Gemini Answer Generated
+[2025-07-14 19:22:43] INFO: 💬 Incoming Query: list all the male who are getting less than 30 thousand 2 hundred and twenty five rupees under aravind
+[2025-07-14 19:22:51] INFO: ✅ Classified JSON:
+[2025-07-14 19:22:51] INFO: ✅ Classified JSON: {"originalQuery":"list all the male who are getting less than 30 thousand 2 hundred and twenty five rupees under aravind","where":{"$and":[{"additionalinfo_gendercode":{"$eq":"male"}},{"employee_salary":{"$lt":30225}},{"$or":[{"employee_firstname":{"$eq":"aravind"}},{"employee_lastname":{"$eq":"aravind"}}]}]},"layer":true}
+[2025-07-14 19:22:51] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-14 19:22:52] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "additionalinfo_gendercode": {
+        "$eq": "male"
+      }
+    },
+    {
+      "employee_salary": {
+        "$lt": 30225
+      }
+    },
+    {
+      "$or": [
+        {
+          "employee_firstname": {
+            "$eq": "aravind"
+          }
+        },
+        {
+          "employee_lastname": {
+            "$eq": "aravind"
+          }
+        }
+      ]
+    }
+  ]
+}
+[2025-07-14 19:22:52] INFO: 📌 layer: true
+[2025-07-14 19:22:52] INFO: 📄 Fetched 0 document(s)
+[2025-07-14 19:22:52] INFO: 📥 Retrieved Context: 0 items
+[2025-07-14 19:22:52] INFO: 📨 Sending prompt to Gemini...
+[2025-07-14 19:22:54] INFO: ✅ Gemini Answer Generated
+[2025-07-15 13:10:32] INFO: 💬 Incoming Query: list all the records in the zone b
+[2025-07-15 13:10:35] INFO: ✅ Classified JSON:
+[2025-07-15 13:10:35] INFO: ✅ Classified JSON: {"originalQuery":"list all the records in the zone b","where":{"employee_payzone":{"$eq":"b"}},"layer":false}
+[2025-07-15 13:10:35] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-15 13:10:36] INFO: 📌 Final WHERE: {
+  "employee_payzone": {
+    "$eq": "b"
+  }
+}
+[2025-07-15 13:10:36] INFO: 📌 layer: false
+[2025-07-15 13:10:36] INFO: 📄 Fetched 0 document(s)
+[2025-07-15 13:10:36] INFO: 📥 Retrieved Context: 0 items
+[2025-07-15 13:10:36] INFO: 📨 Sending prompt to Gemini...
+[2025-07-15 13:10:38] INFO: ✅ Gemini Answer Generated
+[2025-07-15 13:11:08] INFO: 💬 Incoming Query: list all the records in the payzone zone b
+[2025-07-15 13:11:10] INFO: ✅ Classified JSON:
+[2025-07-15 13:11:10] INFO: ✅ Classified JSON: {"originalQuery":"list all the records in the payzone zone b","where":{"employee_payzone":{"$eq":"zone b"}},"layer":false}
+[2025-07-15 13:11:10] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-15 13:11:11] INFO: 📌 Final WHERE: {
+  "employee_payzone": {
+    "$eq": "zone b"
+  }
+}
+[2025-07-15 13:11:11] INFO: 📌 layer: false
+[2025-07-15 13:11:11] INFO: 📄 Fetched 100 document(s)
+[2025-07-15 13:11:11] INFO: 📥 Retrieved Context: 100 items
+[2025-07-15 13:11:11] INFO: 📨 Sending prompt to Gemini...
+[2025-07-15 13:11:15] INFO: ✅ Gemini Answer Generated
+[2025-07-15 13:13:21] INFO: 💬 Incoming Query: list the record who fully meets
+[2025-07-15 13:13:27] INFO: ✅ Classified JSON:
+[2025-07-15 13:13:27] INFO: ✅ Classified JSON: {"originalQuery":"list the record who fully meets","where":{},"layer":false}
+[2025-07-15 13:13:27] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-15 13:13:27] INFO: 📌 Final WHERE: {}
+[2025-07-15 13:13:27] INFO: 📌 layer: false
+[2025-07-15 13:13:27] INFO: 📄 Fetched 100 document(s)
+[2025-07-15 13:13:27] INFO: 📥 Retrieved Context: 100 items
+[2025-07-15 13:13:27] INFO: 📨 Sending prompt to Gemini...
+[2025-07-15 13:14:04] INFO: 💬 Incoming Query: list the rcords with performance score fully meets
+[2025-07-15 13:14:08] INFO: ✅ Classified JSON:
+[2025-07-15 13:14:08] INFO: ✅ Classified JSON: {"originalQuery":"list the rcords with performance score fully meets","where":{"additionalinfo_performancescore":{"$eq":"fully meets"}},"layer":false}
+[2025-07-15 13:14:08] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-15 13:14:08] INFO: ✅ Gemini Answer Generated
+[2025-07-15 13:14:09] INFO: 📌 Final WHERE: {
+  "additionalinfo_performancescore": {
+    "$eq": "fully meets"
+  }
+}
+[2025-07-15 13:14:09] INFO: 📌 layer: false
+[2025-07-15 13:14:09] INFO: 📄 Fetched 100 document(s)
+[2025-07-15 13:14:09] INFO: 📥 Retrieved Context: 100 items
+[2025-07-15 13:14:09] INFO: 📨 Sending prompt to Gemini...
+[2025-07-15 13:15:46] INFO: ✅ Gemini Answer Generated
+[2025-07-15 14:13:38] INFO: 💬 Incoming Query: list the record on and above 1996-08-07
+[2025-07-15 14:13:43] INFO: ✅ Classified JSON:
+[2025-07-15 14:13:43] INFO: ✅ Classified JSON: {"originalQuery":"list the record on and above 1996-08-07","where":{"leaves_date":{"$gte":"1996-08-07"}},"layer":false}
+[2025-07-15 14:13:43] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-15 14:13:44] INFO: 📌 Final WHERE: {
+  "leaves_date": {
+    "$gte": "1996-08-07"
+  }
+}
+[2025-07-15 14:13:44] INFO: 📌 layer: false
+[2025-07-15 14:13:44] ERROR: ❌ askHandler Error: Expected operand value to be a number for $gte, but got string
+[2025-07-16 12:49:09] INFO: 💬 Incoming Query: what is the gender of derick?
+[2025-07-16 12:49:15] INFO: ✅ Classified JSON:
+[2025-07-16 12:49:15] INFO: ✅ Classified JSON: {"originalQuery":"what is the gender of derick?","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-16 12:49:15] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:49:16] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-16 12:49:16] INFO: 📌 layer: false
+[2025-07-16 12:49:16] INFO: 📄 Fetched 3 document(s)
+[2025-07-16 12:49:16] INFO: 📥 Retrieved Context: 3 items
+[2025-07-16 12:49:16] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:49:18] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:50:02] INFO: 💬 Incoming Query: list the record in zone a
+[2025-07-16 12:50:07] INFO: ✅ Classified JSON:
+[2025-07-16 12:50:07] INFO: ✅ Classified JSON: {"originalQuery":"list the record in zone a","where":{"employee_payzone":{"$eq":"zone a"}},"layer":false}
+[2025-07-16 12:50:07] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:50:08] INFO: 📌 Final WHERE: {
+  "employee_payzone": {
+    "$eq": "zone a"
+  }
+}
+[2025-07-16 12:50:08] INFO: 📌 layer: false
+[2025-07-16 12:50:08] INFO: 📄 Fetched 100 document(s)
+[2025-07-16 12:50:08] INFO: 📥 Retrieved Context: 100 items
+[2025-07-16 12:50:08] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:50:17] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:50:23] INFO: 💬 Incoming Query: list the record of derick in employee object
+[2025-07-16 12:50:27] INFO: ✅ Classified JSON:
+[2025-07-16 12:50:27] INFO: ✅ Classified JSON: {"originalQuery":"list the record of derick in employee object","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-16 12:50:27] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:50:27] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-16 12:50:27] INFO: 📌 layer: false
+[2025-07-16 12:50:27] INFO: 📄 Fetched 3 document(s)
+[2025-07-16 12:50:27] INFO: 📥 Retrieved Context: 3 items
+[2025-07-16 12:50:27] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:50:38] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:50:54] INFO: 💬 Incoming Query: list the record of derick in staff object
+[2025-07-16 12:51:01] INFO: ✅ Classified JSON:
+[2025-07-16 12:51:01] INFO: ✅ Classified JSON: {"originalQuery":"list the record of derick in staff object","where":{},"layer":false}
+[2025-07-16 12:51:01] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:51:02] INFO: 📌 Final WHERE: {}
+[2025-07-16 12:51:02] INFO: 📌 layer: false
+[2025-07-16 12:51:02] INFO: 📄 Fetched 100 document(s)
+[2025-07-16 12:51:02] INFO: 📥 Retrieved Context: 100 items
+[2025-07-16 12:51:02] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:51:07] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:52:34] INFO: 💬 Incoming Query: list the record where the payzone is zone a
+[2025-07-16 12:52:37] INFO: ✅ Classified JSON:
+[2025-07-16 12:52:37] INFO: ✅ Classified JSON: {"originalQuery":"list the record where the payzone is zone a","where":{"employee_payzone":{"$eq":"zone a"}},"layer":false}
+[2025-07-16 12:52:37] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:52:38] INFO: 📌 Final WHERE: {
+  "employee_payzone": {
+    "$eq": "zone a"
+  }
+}
+[2025-07-16 12:52:38] INFO: 📌 layer: false
+[2025-07-16 12:52:38] INFO: 📄 Fetched 100 document(s)
+[2025-07-16 12:52:38] INFO: 📥 Retrieved Context: 100 items
+[2025-07-16 12:52:38] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:52:47] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:53:54] INFO: 💬 Incoming Query: list the record of derick where the performance is exceeds
+[2025-07-16 12:54:00] INFO: ✅ Classified JSON:
+[2025-07-16 12:54:00] INFO: ✅ Classified JSON: {"originalQuery":"list the record of derick where the performance is exceeds","where":{"$and":[{"employee_firstname":{"$eq":"derick"}},{"additionalinfo_performancescore":{"$eq":"exceeds"}}]},"layer":true}
+[2025-07-16 12:54:00] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:54:01] INFO: 📌 Final WHERE: {
+  "$and": [
+    {
+      "employee_firstname": {
+        "$eq": "derick"
+      }
+    },
+    {
+      "additionalinfo_performancescore": {
+        "$eq": "exceeds"
+      }
+    }
+  ]
+}
+[2025-07-16 12:54:01] INFO: 📌 layer: true
+[2025-07-16 12:54:01] INFO: 📄 Fetched 0 document(s)
+[2025-07-16 12:54:01] INFO: 📥 Retrieved Context: 0 items
+[2025-07-16 12:54:01] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:54:03] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:58:20] INFO: 💬 Incoming Query: what are the zone available in employee
+[2025-07-16 12:58:27] INFO: ✅ Classified JSON:
+[2025-07-16 12:58:27] INFO: ✅ Classified JSON: {"originalQuery":"what are the zone available in employee","where":{},"layer":false}
+[2025-07-16 12:58:27] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:58:27] INFO: 📌 Final WHERE: {}
+[2025-07-16 12:58:27] INFO: 📌 layer: false
+[2025-07-16 12:58:28] INFO: 📄 Fetched 100 document(s)
+[2025-07-16 12:58:28] INFO: 📥 Retrieved Context: 100 items
+[2025-07-16 12:58:28] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 12:58:35] INFO: ✅ Gemini Answer Generated
+[2025-07-16 12:59:49] INFO: 💬 Incoming Query: zone b employee
+[2025-07-16 12:59:54] INFO: ✅ Classified JSON:
+[2025-07-16 12:59:54] INFO: ✅ Classified JSON: {"originalQuery":"zone b employee","where":{"employee_payzone":{"$eq":"zone b"}},"layer":false}
+[2025-07-16 12:59:54] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 12:59:54] INFO: 📌 Final WHERE: {
+  "employee_payzone": {
+    "$eq": "zone b"
+  }
+}
+[2025-07-16 12:59:54] INFO: 📌 layer: false
+[2025-07-16 12:59:55] INFO: 📄 Fetched 100 document(s)
+[2025-07-16 12:59:55] INFO: 📥 Retrieved Context: 100 items
+[2025-07-16 12:59:55] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 13:00:04] INFO: ✅ Gemini Answer Generated
+[2025-07-16 14:51:59] INFO: 💬 Incoming Query: list the zones available
+[2025-07-16 14:52:02] INFO: ✅ Classified JSON:
+[2025-07-16 14:52:02] INFO: ✅ Classified JSON: {"originalQuery":"list the zones available","where":{},"layer":false}
+[2025-07-16 14:52:02] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 14:52:03] INFO: 📌 Final WHERE: {}
+[2025-07-16 14:52:03] INFO: 📌 layer: false
+[2025-07-16 14:52:03] INFO: 📄 Fetched 100 document(s)
+[2025-07-16 14:52:03] INFO: 📥 Retrieved Context: 100 items
+[2025-07-16 14:52:03] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 14:52:09] INFO: ✅ Gemini Answer Generated
+[2025-07-16 15:19:21] INFO: 💬 Incoming Query: list the zones available in derick record
+[2025-07-16 15:19:28] INFO: ✅ Classified JSON:
+[2025-07-16 15:19:28] INFO: ✅ Classified JSON: {"originalQuery":"list the zones available in derick record","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-16 15:19:28] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-16 15:19:28] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-16 15:19:28] INFO: 📌 layer: false
+[2025-07-16 15:19:28] INFO: 📄 Fetched 3 document(s)
+[2025-07-16 15:19:28] INFO: 📥 Retrieved Context: 3 items
+[2025-07-16 15:19:28] INFO: 📨 Sending prompt to Gemini...
+[2025-07-16 15:19:31] INFO: ✅ Gemini Answer Generated
+[2025-07-17 12:36:39] INFO: 💬 Incoming Query: list the salary of dertick
+[2025-07-17 12:36:44] INFO: ✅ Classified JSON:
+[2025-07-17 12:36:44] INFO: ✅ Classified JSON: {"originalQuery":"list the salary of dertick","where":{"employee_firstname":{"$eq":"dertick"}},"layer":false}
+[2025-07-17 12:36:44] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 12:36:44] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "dertick"
+  }
+}
+[2025-07-17 12:36:44] INFO: 📌 layer: false
+[2025-07-17 12:36:45] INFO: 📄 Fetched 0 document(s)
+[2025-07-17 12:36:45] INFO: 📥 Retrieved Context: 0 items
+[2025-07-17 12:36:45] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 12:36:46] INFO: ✅ Gemini Answer Generated
+[2025-07-17 12:38:11] INFO: 💬 Incoming Query: list the full information of derick
+[2025-07-17 12:38:16] INFO: ✅ Classified JSON:
+[2025-07-17 12:38:16] INFO: ✅ Classified JSON: {"originalQuery":"list the full information of derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-17 12:38:16] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 12:38:17] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-17 12:38:17] INFO: 📌 layer: false
+[2025-07-17 12:38:17] INFO: 📄 Fetched 3 document(s)
+[2025-07-17 12:38:17] INFO: 📥 Retrieved Context: 3 items
+[2025-07-17 12:38:17] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 12:38:25] INFO: ✅ Gemini Answer Generated
+[2025-07-17 12:39:02] INFO: 💬 Incoming Query: list the records available in the payzone zone a
+[2025-07-17 12:39:05] INFO: ✅ Classified JSON:
+[2025-07-17 12:39:05] INFO: ✅ Classified JSON: {"originalQuery":"list the records available in the payzone zone a","where":{"employee_payzone":{"$eq":"zone a"}},"layer":false}
+[2025-07-17 12:39:05] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 12:39:06] INFO: 📌 Final WHERE: {
+  "employee_payzone": {
+    "$eq": "zone a"
+  }
+}
+[2025-07-17 12:39:06] INFO: 📌 layer: false
+[2025-07-17 12:39:06] INFO: 📄 Fetched 100 document(s)
+[2025-07-17 12:39:06] INFO: 📥 Retrieved Context: 100 items
+[2025-07-17 12:39:06] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 12:39:22] INFO: ✅ Gemini Answer Generated
+[2025-07-17 12:40:10] INFO: 💬 Incoming Query: list the record of derick
+[2025-07-17 12:40:14] INFO: ✅ Classified JSON:
+[2025-07-17 12:40:14] INFO: ✅ Classified JSON: {"originalQuery":"list the record of derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-17 12:40:14] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 12:40:14] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-17 12:40:14] INFO: 📌 layer: false
+[2025-07-17 12:40:14] INFO: 📄 Fetched 3 document(s)
+[2025-07-17 12:40:14] INFO: 📥 Retrieved Context: 3 items
+[2025-07-17 12:40:14] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 12:40:27] INFO: ✅ Gemini Answer Generated
+[2025-07-17 12:40:46] INFO: 💬 Incoming Query: list the records of derick quigley
+[2025-07-17 12:40:49] INFO: ✅ Classified JSON:
+[2025-07-17 12:40:49] INFO: ✅ Classified JSON: {"originalQuery":"list the records of derick quigley","where":{"employee_firstname":{"$eq":"derick quigley"}},"layer":false}
+[2025-07-17 12:40:49] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 12:40:50] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick quigley"
+  }
+}
+[2025-07-17 12:40:50] INFO: 📌 layer: false
+[2025-07-17 12:40:50] INFO: 📄 Fetched 0 document(s)
+[2025-07-17 12:40:50] INFO: 📥 Retrieved Context: 0 items
+[2025-07-17 12:40:50] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 12:40:52] INFO: ✅ Gemini Answer Generated
+[2025-07-17 12:41:05] INFO: 💬 Incoming Query: list the records of derick
+[2025-07-17 12:41:08] INFO: ✅ Classified JSON:
+[2025-07-17 12:41:08] INFO: ✅ Classified JSON: {"originalQuery":"list the records of derick","where":{"employee_firstname":{"$eq":"derick"}},"layer":false}
+[2025-07-17 12:41:08] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 12:41:09] INFO: 📌 Final WHERE: {
+  "employee_firstname": {
+    "$eq": "derick"
+  }
+}
+[2025-07-17 12:41:09] INFO: 📌 layer: false
+[2025-07-17 12:41:09] INFO: 📄 Fetched 3 document(s)
+[2025-07-17 12:41:09] INFO: 📥 Retrieved Context: 3 items
+[2025-07-17 12:41:09] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 12:41:25] INFO: ✅ Gemini Answer Generated
+[2025-07-17 14:28:01] INFO: 💬 Incoming Query: give me the top five higest salary records
+[2025-07-17 14:28:06] INFO: ✅ Classified JSON:
+[2025-07-17 14:28:06] INFO: ✅ Classified JSON: {"originalQuery":"give me the top five higest salary records","where":{},"layer":false}
+[2025-07-17 14:28:06] INFO: 🔀 Routing Function: fetchEmbeddingsAndQuery
+[2025-07-17 14:28:07] INFO: 📌 Final WHERE: {}
+[2025-07-17 14:28:07] INFO: 📌 layer: false
+[2025-07-17 14:28:07] INFO: 📄 Fetched 100 document(s)
+[2025-07-17 14:28:07] INFO: 📥 Retrieved Context: 100 items
+[2025-07-17 14:28:07] INFO: 📨 Sending prompt to Gemini...
+[2025-07-17 14:28:24] INFO: ✅ Gemini Answer Generated
