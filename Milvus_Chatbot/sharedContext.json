@@ -2,9 +2,6 @@
   "selectedFieldsPerObject": {
     "SelectedFields": [
       "employee_firstname",
-      "employee_lastname",
-      "employee_salary",
-      "additionalinfo_currentemployeerating",
       "leaves_date"
     ]
   },
@@ -39,14 +36,11 @@
   },
   "selectedFieldDescriptions": {
     "Field Description": {
-      "employee_firstname": "This field refers to the first name of the employee",
-      "employee_lastname": "This field refers to the last name of the employee",
-      "employee_salary": "This field refers to the salary of the employee",
-      "additionalinfo_currentemployeerating": "This field refers to the rating of the employee",
-      "leaves_date": "This field refers to the leave date of the  employee"
+      "employee_firstname": "edfxs",
+      "leaves_date": "sdfxsdf"
     }
   },
-  "relationshipDescription": "The employee object is the parent object and the additionalinfo object is the lookup and the leaves object is the children for the employee",
+  "relationshipDescription": "xsdfxsd",
   "objectList": [
     "employee_profile"
   ],
