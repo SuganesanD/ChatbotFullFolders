@@ -24,7 +24,7 @@ export class CouchdbService {
   private readonly password = 'Welcome#2'; // Replace with your CouchDB password
 
   private apiUrl1 = 'http://localhost:3000/query';
-  private apiUrl3 = 'http://localhost:3000/api/chatbot/ask'
+  private apiUrl3 = 'http://localhost:3000/api/chatbot'
   private apiUrl2 = 'http://localhost:3000/isImageRender';
 
 

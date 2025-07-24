@@ -140,14 +140,52 @@ function fillTemplate(template, record) {
     return filledText;
 }
 
+// Helper function to create and verify vector index
+async function createAndVerifyVectorIndex(client, collectionName) {
+    console.log(`Creating vector index on 'embedding' with IVF_FLAT...`);
+    const indexRes = await client.createIndex({
+        collection_name: collectionName,
+        field_name: "embedding",
+        index_name: "embedding_index",
+        index_type: "IVF_FLAT",
+        metric_type: "COSINE",
+        params: { nlist: 4 } // Add params with nlist
+    });
+    console.log(`Create index response:`, JSON.stringify(indexRes, null, 2));
+
+    let attempts = 0;
+    const maxAttempts = 60; // 60 seconds timeout
+    const delayMs = 1000;
+    while (attempts < maxAttempts) {
+        try {
+            const res = await client.describeIndex({
+                collection_name: collectionName,
+                index_name: "embedding_index"
+            });
+            console.log(`Index description:`, JSON.stringify(res, null, 2));
+            if (res.status?.error_code === "Success" && res.index_descriptions?.[0]) {
+                console.log(`Vector index on 'embedding' is built or recognized.`);
+                return true;
+            }
+            console.log(`Index not ready (attempt ${attempts + 1}):`, res.status);
+        } catch (error) {
+            console.log(`Attempt ${attempts + 1}: describeIndex failed - ${error.message}`);
+        }
+        await sleep(delayMs);
+        attempts++;
+    }
+    throw new Error(`Index on 'embedding' not found or not ready after ${maxAttempts} attempts.`);
+}
+
+
 async function ingestData() {
-    const MAX_RETRIES = 3; // Max attempts for the entire process if indexing fails
-    let attempt = 0;
+    const MAX_PROCESS_RETRIES = 3; // Max attempts for the entire ingestion process
+    let processAttempt = 0;
     const POLLING_INTERVAL_MS = 1000; // Common polling interval
 
-    while (attempt < MAX_RETRIES) {
-        attempt++;
-        console.log(`\n--- Ingestion Attempt ${attempt} of ${MAX_RETRIES} ---`);
+    while (processAttempt < MAX_PROCESS_RETRIES) {
+        processAttempt++;
+        console.log(`\n--- Overall Ingestion Attempt ${processAttempt} of ${MAX_PROCESS_RETRIES} ---`);
         try {
             console.log('Loading sample data from sampleRecords.json...');
             const rawData = fs.readFileSync(path.join(__dirname, 'sampleRecords.json'));
@@ -218,49 +256,76 @@ async function ingestData() {
                 process.exit(1);
             }
 
-            console.log(`Checking if collection '${COLLECTION_NAME}' exists...`);
-            const hasCollection = await milvusClient.hasCollection({ collection_name: COLLECTION_NAME });
+            // --- Robust Collection Creation and Existence Polling ---
+            let collectionSuccessfullyCreated = false;
+            const MAX_COLLECTION_CREATION_ATTEMPTS = 5; // Retries for creating and confirming collection
+            const MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS = 30; // Max 30 seconds for existence polling
 
-            if (hasCollection.value) {
-                console.log(`Collection '${COLLECTION_NAME}' already exists. Dropping it to create a fresh one.`);
-                await milvusClient.dropCollection({ collection_name: COLLECTION_NAME });
-                console.log(`Collection '${COLLECTION_NAME}' dropped.`);
-            }
-
-            console.log(`Creating collection '${COLLECTION_NAME}' with dynamic schema...`);
-            console.log("Final COLLECTION_SCHEMA being sent to Milvus:", JSON.stringify(COLLECTION_SCHEMA, null, 2));
-            await milvusClient.createCollection({
-                collection_name: COLLECTION_SCHEMA.collectionName,
-                fields: COLLECTION_SCHEMA.fields,
-                description: COLLECTION_SCHEMA.description,
-                enableDynamicField: COLLECTION_SCHEMA.enableDynamicField
-            });
-            console.log(`Collection '${COLLECTION_NAME}' created successfully.`);
-
-            // --- NEW: Poll until the collection is confirmed to exist ---
-            console.log(`Verifying collection '${COLLECTION_NAME}' exists and is stable...`);
-            const MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS = 10; // Max 10 seconds
-            let collectionConfirmedToExist = false;
-            for (let i = 0; i < MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS; i++) {
+            for (let createAttempt = 0; createAttempt < MAX_COLLECTION_CREATION_ATTEMPTS; createAttempt++) {
+                console.log(`\nAttempt ${createAttempt + 1} to create and verify collection '${COLLECTION_NAME}'...`);
                 try {
-                    const checkExistence = await milvusClient.hasCollection({ collection_name: COLLECTION_NAME });
-                    if (checkExistence.value) {
-                        console.log(`Collection '${COLLECTION_NAME}' confirmed to exist.`);
-                        collectionConfirmedToExist = true;
-                        break;
-                    } else {
-                        console.log(`Collection '${COLLECTION_NAME}' not yet confirmed to exist. Retrying...`);
+                    console.log(`Checking if collection '${COLLECTION_NAME}' exists...`);
+                    const hasCollection = await milvusClient.hasCollection({ collection_name: COLLECTION_NAME });
+
+                    if (hasCollection.value) {
+                        console.log(`Collection '${COLLECTION_NAME}' already exists. Dropping it to create a fresh one.`);
+                        await milvusClient.dropCollection({ collection_name: COLLECTION_NAME });
+                        await sleep(2000); // Small delay after dropping
+                        console.log(`Collection '${COLLECTION_NAME}' dropped.`);
                     }
-                } catch (checkError) {
-                    console.warn(`Warning during collection existence check: ${checkError.message}. Retrying...`);
+
+                    console.log(`Creating collection '${COLLECTION_NAME}' with dynamic schema...`);
+                    console.log("Final COLLECTION_SCHEMA being sent to Milvus:", JSON.stringify(COLLECTION_SCHEMA, null, 2));
+                    await milvusClient.createCollection({
+                        collection_name: COLLECTION_SCHEMA.collectionName,
+                        fields: COLLECTION_SCHEMA.fields,
+                        description: COLLECTION_SCHEMA.description,
+                        enableDynamicField: COLLECTION_SCHEMA.enableDynamicField
+                    });
+                    console.log(`Collection '${COLLECTION_NAME}' creation command sent successfully.`);
+                    await sleep(2000); // Small delay after creation command
+
+                    // Poll until the collection is confirmed to exist
+                    let collectionConfirmedToExist = false;
+                    for (let i = 0; i < MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS; i++) {
+                        try {
+                            const checkExistence = await milvusClient.hasCollection({ collection_name: COLLECTION_NAME });
+                            if (checkExistence.value) {
+                                console.log(`Collection '${COLLECTION_NAME}' confirmed to exist.`);
+                                collectionConfirmedToExist = true;
+                                break;
+                            } else {
+                                console.log(`Collection '${COLLECTION_NAME}' not yet confirmed to exist. Retrying hasCollection... (${i + 1}/${MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS})`);
+                            }
+                        } catch (checkError) {
+                            console.warn(`Warning during collection existence check: ${checkError.message}. Retrying hasCollection...`);
+                        }
+                        await sleep(POLLING_INTERVAL_MS);
+                    }
+
+                    if (collectionConfirmedToExist) {
+                        collectionSuccessfullyCreated = true;
+                        console.log(`Collection '${COLLECTION_NAME}' successfully created and verified.`);
+                        break; // Exit collection creation retry loop
+                    } else {
+                        throw new Error(`Collection '${COLLECTION_NAME}' could not be confirmed to exist after creation command.`);
+                    }
+
+                } catch (error) {
+                    console.error(`Error in collection creation/verification attempt ${createAttempt + 1}: ${error.message}`);
+                    if (createAttempt < MAX_COLLECTION_CREATION_ATTEMPTS - 1) {
+                        console.log("Retrying collection creation after 5 seconds...");
+                        await sleep(5000); // Wait before retrying the entire creation process
+                    } else {
+                        throw new Error(`Failed to create and verify collection '${COLLECTION_NAME}' after ${MAX_COLLECTION_CREATION_ATTEMPTS} attempts.`);
+                    }
                 }
-                await sleep(POLLING_INTERVAL_MS);
             }
 
-            if (!collectionConfirmedToExist) {
-                throw new Error(`Collection '${COLLECTION_NAME}' could not be confirmed to exist after creation.`);
+            if (!collectionSuccessfullyCreated) {
+                throw new Error("Collection creation failed after multiple attempts.");
             }
-            // --- END NEW ---
+            // --- End Robust Collection Creation and Existence Polling ---
 
             console.log(`Generating documentText, embeddings and inserting ${records.length} entities...`);
             const entities = [];
@@ -293,116 +358,36 @@ async function ingestData() {
 
             console.log(`Flushing collection '${COLLECTION_NAME}'...`);
             await milvusClient.flushSync({ collection_names: [COLLECTION_NAME] });
-            console.log(`Collection '${COLLECTION_NAME}' flushed.`);
+            
+            // --- Verify Flush Completion ---
+            const stats = await milvusClient.getCollectionStatistics({ collection_name: COLLECTION_NAME });
+            console.log(`Collection stats after flush:`, stats);
+            // Corrected access to row_count from stats.stats array
+            const actualRowCount = stats.stats.find(s => s.key === 'row_count')?.value;
 
-            console.log("Waiting 10 seconds after flush before creating indexes...");
-            await sleep(10000);
-
-            // --- Robust Vector Index Creation and Polling ---
-            let vectorIndexCreatedAndReady = false;
-            const MAX_INDEX_CREATION_RETRIES = 3; // Retries for just the index creation/polling part
-            const MAX_DESCRIBE_INDEX_POLLING_ATTEMPTS = 30; // Max attempts to describe index (30 seconds)
-            const MAX_BUILD_POLLING_ATTEMPTS = 120; // Max attempts to poll for build progress (2 minutes)
-
-            for (let indexAttempt = 0; indexAttempt < MAX_INDEX_CREATION_RETRIES; indexAttempt++) {
-                console.log(`Attempt ${indexAttempt + 1} to create and verify vector index...`);
-                try {
-                    console.log(`Creating vector index on 'embedding' with IVF_FLAT...`);
-                    await milvusClient.createIndex({
-                        collection_name: COLLECTION_NAME,
-                        field_name: "embedding",
-                        index_type: "IVF_FLAT", // Changed index type to IVF_FLAT
-                        metric_type: "COSINE",
-                        params: JSON.stringify({ nlist: 128 }) // Added nlist parameter for IVF_FLAT
-                    });
-                    console.log(`Vector index creation command sent successfully.`);
-
-                    // --- Poll until describeIndex returns success (index definition is recognized) ---
-                    let indexDescriptionFound = false;
-                    for (let i = 0; i < MAX_DESCRIBE_INDEX_POLLING_ATTEMPTS; i++) {
-                        try {
-                            const describeIndexResult = await milvusClient.describeIndex({
-                                collection_name: COLLECTION_NAME,
-                                field_name: "embedding"
-                            });
-
-                            if (describeIndexResult && describeIndexResult.status && describeIndexResult.status.error_code === 'Success' && describeIndexResult.index_descriptions.length > 0) {
-                                console.log(`Index description found. Index name: ${describeIndexResult.index_descriptions[0]?.index_name}`);
-                                indexDescriptionFound = true;
-                                break; // Exit describeIndex polling loop
-                            } else {
-                                console.log(`Index description not yet available or error: ${JSON.stringify(describeIndexResult?.status || 'Unknown Status')}. Retrying describeIndex...`);
-                            }
-                        } catch (describeError) {
-                            console.warn(`Warning during describeIndex polling: ${describeError.message}. Retrying...`);
-                        }
-                        await sleep(POLLING_INTERVAL_MS);
-                    }
-
-                    if (!indexDescriptionFound) {
-                        throw new Error(`Index description for 'embedding' not found after ${MAX_DESCRIBE_INDEX_POLLING_ATTEMPTS} attempts.`);
-                    }
-                    // --- End Poll until describeIndex returns success ---
-
-                    console.log(`Waiting for vector index on 'embedding' to be built (polling progress)...`);
-                    let indexBuiltThisAttempt = false;
-
-                    for (let i = 0; i < MAX_BUILD_POLLING_ATTEMPTS; i++) {
-                        try {
-                            const indexStatus = await milvusClient.getIndexBuildProgress({
-                                collection_name: COLLECTION_NAME,
-                                field_name: "embedding"
-                            });
-
-                            if (indexStatus && indexStatus.total_rows > 0 && indexStatus.indexed_rows >= indexStatus.total_rows) {
-                                console.log(`Vector index on 'embedding' is built! (Indexed: ${indexStatus.indexed_rows}, Total: ${indexStatus.total_rows})`);
-                                indexBuiltThisAttempt = true;
-                                vectorIndexCreatedAndReady = true; // Mark overall success
-                                break; // Exit build polling loop
-                            } else if (indexStatus && indexStatus.total_rows === 0 && indexStatus.indexed_rows === 0) {
-                                console.log(`Index build progress: No rows reported for indexing yet. (Indexed: 0, Total: 0). This might mean data segments are not yet visible to indexer.`);
-                            } else {
-                                console.log(`Index build in progress... (Indexed: ${indexStatus.indexed_rows || 0}, Total: ${indexStatus.total_rows || 'N/A'})`);
-                            }
-                        } catch (buildError) {
-                            console.warn(`Warning during index build progress polling: ${buildError.message}. Retrying...`);
-                        }
-                        await sleep(POLLING_INTERVAL_MS);
-                    }
-
-                    if (indexBuiltThisAttempt) {
-                        break; // Exit index creation retry loop as it's built
-                    } else {
-                        throw new Error(`Vector index on 'embedding' did not build within polling timeout for this attempt.`);
-                    }
-
-                } catch (error) {
-                    console.error(`Error in vector index creation/polling attempt ${indexAttempt + 1}: ${error.message}`);
-                    if (indexAttempt < MAX_INDEX_CREATION_RETRIES - 1) {
-                        console.log("Retrying vector index creation after 10 seconds...");
-                        await sleep(10000); // Wait before retrying index creation
-                        // Drop collection to ensure clean state for retry
-                        console.log(`Dropping collection '${COLLECTION_NAME}' for clean retry...`);
-                        await milvusClient.dropCollection({ collection_name: COLLECTION_NAME });
-                    }
-                }
+            if (actualRowCount !== String(records.length)) {
+                throw new Error(`Flush incomplete: Expected ${records.length} rows, got ${actualRowCount || 'undefined'}`);
             }
+            console.log(`Collection '${COLLECTION_NAME}' flushed with ${actualRowCount} rows.`);
+            // --- END Verify Flush Completion ---
 
-            if (!vectorIndexCreatedAndReady) {
-                throw new Error(`Failed to create and verify vector index on 'embedding' after ${MAX_INDEX_CREATION_RETRIES} attempts.`);
-            }
-            // --- End Robust Vector Index Creation and Polling ---
+            console.log("Waiting 5 seconds after flush before creating indexes...");
+            await sleep(5000); 
 
+            // --- Robust Vector Index Creation and Polling using helper ---
+            await createAndVerifyVectorIndex(milvusClient, COLLECTION_NAME);
+            // --- END Robust Vector Index Creation and Polling ---
 
             // Create scalar indexes dynamically based on inferred data type
             for (const field of scalarIndexCandidates) {
                 let indexType;
+                // --- Use BITMAP for numbers/booleans for small datasets ---
                 if (field.data_type === DataType.VarChar) {
                     indexType = "INVERTED";
-                } else if (field.data_type === DataType.Int64 || field.data_type === DataType.Float || field.data_type === DataType.Double || field.data_type === DataType.Bool) {
-                    indexType = "STL_SORT";
+                } else if ([DataType.Int64, DataType.Float, DataType.Double, DataType.Bool].includes(field.data_type)) {
+                    indexType = "BITMAP"; // More optimal for small datasets and low cardinality
                 } else {
-                    console.warn(`Skipping scalar index for '${field.name}': Unsupported data type for scalar indexing or no optimal index type defined.`);
+                    console.warn(`Skipping scalar index for '${field.name}': Unsupported data type.`);
                     continue;
                 }
 
@@ -416,8 +401,8 @@ async function ingestData() {
                     await milvusClient.createIndex({
                         collection_name: COLLECTION_NAME,
                         field_name: field.name,
-                        index_type: indexType,
-                        metric_type: "L2"
+                        index_type: indexType
+                        // --- Removed metric_type for scalar indexes ---
                     });
                     console.log(`Scalar index on '${field.name}' created successfully.`);
                 } catch (error) {
@@ -426,7 +411,6 @@ async function ingestData() {
             }
 
             console.log(`Loading collection '${COLLECTION_NAME}' into memory for search...`);
-            await sleep(5000); // Small buffer before load
             await milvusClient.loadCollection({ collection_name: COLLECTION_NAME });
             console.log(`Collection '${COLLECTION_NAME}' loaded.`);
             
@@ -434,9 +418,9 @@ async function ingestData() {
             return; 
 
         } catch (error) {
-            console.error(`\n--- Ingestion Attempt ${attempt} Failed ---`);
+            console.error(`\n--- Ingestion Attempt ${processAttempt} Failed ---`);
             console.error(error.message);
-            if (attempt < MAX_RETRIES) {
+            if (processAttempt < MAX_PROCESS_RETRIES) {
                 console.log(`Retrying full ingestion process in 15 seconds...`);
                 await sleep(15000); // Longer wait before retrying the entire process
             } else {
