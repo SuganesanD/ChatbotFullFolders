@@ -37,8 +37,8 @@ try {
     });
     chatModel = new ChatGoogleGenerativeAI({
         apiKey: GOOGLE_API_KEY,
-        model: "gemini-1.5-flash", // gemini-1.5-flash is good for tool calling
-        temperature: 0.7,
+        model: "gemini-2.5-flash", // gemini-1.5-flash is good for tool calling
+        temperature: 0.3,
     });
     console.log("Milvus, Embeddings, and Chat Model clients initialized.");
 
@@ -121,7 +121,7 @@ app.post('/api/chatbot', async (req, res) => {
             input: query,
             chat_history: currentChatHistory, // Pass the chat history to the agent
         });
-
+   
         const botResponseText = result.output;
         console.log("Agent's final response:", botResponseText);
 

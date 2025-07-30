@@ -1,0 +1,103 @@
+{
+  "_field_descriptions": {
+    "id": "A unique identifier for each school. This serves as the **Primary Key** for the 'School' Milvus collection and is used as a 'soft' foreign key in the 'Student' collection.",
+    "name": "The official, common name of the school (e.g., 'Delhi Public School'). This is a primary identifier for human-readable queries.",
+    "location": "The city or general geographical area where the school is physically located (e.g., 'New Delhi', 'Gurugram').",
+    "description": "A comprehensive textual description outlining the school's ethos, facilities, academic focus, extracurricular activities, and overall character. This text is used to generate a vector embedding for semantic search. The corresponding vector field in Milvus would be named `embedding`.",
+    "created_at": "The Unix timestamp (seconds since epoch) indicating when the school record was created or added to the system.",
+    "is_active": "A boolean flag indicating whether the school is currently operational and active (true) or closed/inactive (false).",
+    "tags": "An array of strings representing keywords or categories associated with the school (e.g., 'IB Curriculum', 'Sports Focus', 'Boarding School')."
+  },
+  "records": [
+      {
+        "id": "SCH001",
+        "name": "Delhi Public School, R.K. Puram",
+        "location": "New Delhi",
+        "description": "A highly prestigious co-educational school in Delhi, renowned for its strong academic results, diverse extracurricular programs, and emphasis on leadership and critical thinking. It boasts excellent faculty and a wide range of facilities.",
+        "created_at": 1640995200,
+        "is_active": true,
+        "tags": ["CBSE", "Co-Ed", "Academic Excellence", "Sports"]
+      },
+    {
+      "id": "SCH002",
+      "name": "The Heritage School, Gurugram",
+      "location": "Gurugram",
+      "description": "An innovative school in Gurugram focusing on experiential learning and holistic development. It offers a child-centric curriculum that encourages curiosity, creativity, and independent thought through project-based learning.",
+      "created_at": 1656633600,
+      "is_active": true,
+      "tags": ["IB", "Experiential Learning", "Holistic Development", "Green Campus"]
+    },
+    {
+      "id": "SCH003",
+      "name": "Vasant Valley School, Delhi",
+      "location": "New Delhi",
+      "description": "Known for its progressive educational philosophy, Vasant Valley School fosters an inclusive environment that encourages students to explore their interests, engage in social responsibility, and develop strong ethical values alongside academic excellence.",
+      "created_at": 1625097600,
+      "is_active": true,
+      "tags": ["Progressive", "Inclusive", "Arts Focus", "Community Service"]
+    },
+    {
+      "id": "SCH004",
+      "name": "Amity International School, Noida",
+      "location": "Noida",
+      "description": "Part of a large educational group, Amity International School in Noida provides a modern learning environment with advanced technology integration. It emphasizes research, innovation, and global citizenship in its diverse student body.",
+      "created_at": 1672531200,
+      "is_active": true,
+      "tags": ["CBSE", "Technology", "Innovation", "Global Citizenship"]
+    },
+    {
+      "id": "SCH005",
+      "name": "Shiv Nadar School, Faridabad",
+      "location": "Faridabad",
+      "description": "A contemporary school offering an integrated curriculum designed to promote intellectual curiosity and problem-solving skills. It focuses on interdisciplinary learning, arts, and sports, preparing students for future challenges.",
+      "created_at": 1680307200,
+      "is_active": true,
+      "tags": ["Integrated Curriculum", "Interdisciplinary", "Arts", "Sports"]
+    },
+    {
+      "id": "SCH006",
+      "name": "National Public School, Indiranagar",
+      "location": "Bengaluru",
+      "description": "A leading school in Bengaluru recognized for its rigorous academic curriculum and consistent high performance. It provides a structured learning environment, comprehensive co-curricular activities, and aims for all-round student development.",
+      "created_at": 1614556800,
+      "is_active": true,
+      "tags": ["ICSE", "Academic Rigor", "Co-curricular", "Holistic"]
+    },
+    {
+      "id": "SCH007",
+      "name": "The Cathedral and John Connon School",
+      "location": "Mumbai",
+      "description": "One of India's oldest and most prestigious schools, located in the heart of Mumbai. It is known for its rich history, strong alumni network, and emphasis on character building, leadership, and a balanced education in a competitive environment.",
+      "created_at": 1577836800,
+      "is_active": true,
+      "tags": ["ICSE", "Heritage", "Leadership", "Balanced Education"]
+    },
+    {
+      "id": "SCH008",
+      "name": "Ryan International School, Malad",
+      "location": "Mumbai",
+      "description": "Ryan International School offers a comprehensive educational experience with a focus on global exposure and cultural diversity. It provides extensive facilities for sports, performing arts, and community service, fostering well-rounded individuals.",
+      "created_at": 1664582400,
+      "is_active": true,
+      "tags": ["CBSE", "Global Exposure", "Performing Arts", "Community Service"]
+    },
+    {
+      "id": "SCH009",
+      "name": "Seth M.R. Jaipuria School, Lucknow",
+      "location": "Lucknow",
+      "description": "A prominent school in Lucknow known for its strong academic foundation and value-based education. It encourages students to excel in various fields, offering a supportive environment for both intellectual and personal growth.",
+      "created_at": 1609459200,
+      "is_active": true,
+      "tags": ["CBSE", "Value-Based", "Academic Foundation", "Personal Growth"]
+    },
+    {
+      "id": "SCH010",
+      "name": "G.D. Goenka Public School, Ghaziabad",
+      "location": "Ghaziabad",
+      "description": "G.D. Goenka Public School in Ghaziabad provides a modern and stimulating learning environment. It focuses on integrating technology into education, fostering critical thinking, and promoting a spirit of inquiry and innovation among students.",
+      "created_at": 1693526400,
+      "is_active": true,
+      "tags": ["CBSE", "Modern Learning", "Technology Integration", "Critical Thinking"]
+    }
+  ]
+}

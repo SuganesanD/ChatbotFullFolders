@@ -1,4 +1,3 @@
-// data/ingestData.js
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
@@ -149,12 +148,12 @@ async function createAndVerifyVectorIndex(client, collectionName) {
         index_name: "embedding_index",
         index_type: "IVF_FLAT",
         metric_type: "COSINE",
-        params: { nlist: 4 } // Add params with nlist
+        params: { nlist: 4 }
     });
     console.log(`Create index response:`, JSON.stringify(indexRes, null, 2));
 
     let attempts = 0;
-    const maxAttempts = 60; // 60 seconds timeout
+    const maxAttempts = 60;
     const delayMs = 1000;
     while (attempts < maxAttempts) {
         try {
@@ -177,11 +176,10 @@ async function createAndVerifyVectorIndex(client, collectionName) {
     throw new Error(`Index on 'embedding' not found or not ready after ${maxAttempts} attempts.`);
 }
 
-
 async function ingestData() {
-    const MAX_PROCESS_RETRIES = 3; // Max attempts for the entire ingestion process
+    const MAX_PROCESS_RETRIES = 3;
     let processAttempt = 0;
-    const POLLING_INTERVAL_MS = 1000; // Common polling interval
+    const POLLING_INTERVAL_MS = 1000;
 
     while (processAttempt < MAX_PROCESS_RETRIES) {
         processAttempt++;
@@ -189,63 +187,93 @@ async function ingestData() {
         try {
             console.log('Loading sample data from sampleRecords.json...');
             const rawData = fs.readFileSync(path.join(__dirname, 'sampleRecords.json'));
-            const records = JSON.parse(rawData);
+            const fullJsonData = JSON.parse(rawData);
+            const records = fullJsonData.records;
+            const fieldDescriptions = fullJsonData._field_descriptions;
 
-            if (records.length === 0) {
-                console.warn("No records found in sampleRecords.json. Exiting ingestion.");
+            if (!records || records.length === 0) {
+                console.warn("No records found in sampleRecords.json or 'records' key is missing. Exiting ingestion.");
                 return;
+            }
+            if (!fieldDescriptions) {
+                console.warn("'_field_descriptions' key not found in sampleRecords.json. Schema will use generic descriptions.");
             }
 
             const firstRecord = records[0];
             const inferredFields = [];
             const scalarIndexCandidates = [];
 
-            inferredFields.push({
-                name: "docId", data_type: DataType.VarChar, max_length: 128, is_primary_key: true, auto_id: false,
-                description: "Unique identifier for each document in Milvus, inferred from data."
-            });
-            inferredFields.push({
-                name: "embedding", data_type: DataType.FloatVector, dim: 768,
-                description: "Vector embedding of the documentText, generated from a summary template."
-            });
-            inferredFields.push({
-                name: "documentText", data_type: DataType.VarChar, max_length: 8192,
-                description: "A dynamically generated summary paragraph for each record, used for semantic search."
-            });
+            // Build schema using fieldDescriptions
+            for (const fieldName in fieldDescriptions) {
+                const description = fieldDescriptions[fieldName] || `Inferred field: ${fieldName}`;
+                const value = firstRecord[fieldName];
 
-            for (const key in firstRecord) {
-                if (key === "docId" || key === "documentText") continue;
-                const value = firstRecord[key];
-                let milvusDataType = inferMilvusDataType(value);
+                let milvusDataType;
+                let fieldDefinition = {
+                    name: fieldName,
+                    description: description // Use description directly
+                };
 
-                console.log(`[Schema Inference] Processing field: '${key}'`);
-                console.log(`[Schema Inference]   JS value: '${value}' (type: ${typeof value})`);
-                console.log(`[Schema Inference]   Inferred Milvus DataType: ${milvusDataType}`);
+                // Special handling for known fields
+                if (fieldName === "docId") {
+                    milvusDataType = DataType.VarChar;
+                    fieldDefinition.is_primary_key = true;
+                    fieldDefinition.max_length = 128;
+                    fieldDefinition.auto_id = false;
+                } else if (fieldName === "embedding") {
+                    milvusDataType = DataType.FloatVector;
+                    fieldDefinition.dim = 768;
+                } else if (fieldName === "documentText") {
+                    milvusDataType = DataType.VarChar;
+                    fieldDefinition.max_length = 8192;
+                } else {
+                    milvusDataType = inferMilvusDataType(value);
+                    if (milvusDataType === DataType.VarChar) {
+                        fieldDefinition.max_length = 8192;
+                    }
+                    if (value === null) {
+                        fieldDefinition.is_nullable = true;
+                    }
+                }
+
+                fieldDefinition.data_type = milvusDataType;
 
                 if (!Object.values(DataType).includes(milvusDataType)) {
-                    console.error(`[Schema Inference ERROR] Inferred Milvus DataType for field '${key}' is invalid: ${milvusDataType}. Defaulting to DataType.VarChar.`);
-                    milvusDataType = DataType.VarChar;
-                }
-
-                const fieldDefinition = {
-                    name: key, data_type: milvusDataType,
-                    description: `Inferred field: ${key} (type: ${typeof value}, Milvus type: ${milvusDataType}).`
-                };
-                if (milvusDataType === DataType.VarChar) {
+                    console.error(`[Schema Inference ERROR] Inferred Milvus DataType for field '${fieldName}' is invalid: ${milvusDataType}. Defaulting to DataType.VarChar.`);
+                    fieldDefinition.data_type = DataType.VarChar;
                     fieldDefinition.max_length = 8192;
                 }
-                if (value === null) {
-                    fieldDefinition.is_nullable = true;
-                }
+
                 inferredFields.push(fieldDefinition);
-                if (key !== "docId" && key !== "embedding" && key !== "documentText") {
-                    scalarIndexCandidates.push({ name: key, data_type: milvusDataType });
+
+                if (fieldName !== "docId" && fieldName !== "embedding" && fieldName !== "documentText") {
+                    scalarIndexCandidates.push({ name: fieldName, data_type: milvusDataType });
                 }
             }
 
+            // Ensure required fields are present
+            const ensureField = (name, type, dim, maxLength, isPrimaryKey, autoId, desc) => {
+                if (!inferredFields.some(f => f.name === name)) {
+                    const fieldDef = {
+                        name: name,
+                        data_type: type,
+                        description: fieldDescriptions[name] || desc
+                    };
+                    if (dim) fieldDef.dim = dim;
+                    if (maxLength) fieldDef.max_length = maxLength;
+                    if (isPrimaryKey !== undefined) fieldDef.is_primary_key = isPrimaryKey;
+                    if (autoId !== undefined) fieldDef.auto_id = autoId;
+                    inferredFields.push(fieldDef);
+                }
+            };
+
+            ensureField("docId", DataType.VarChar, null, 128, true, false, "Unique identifier for each document/record.");
+            ensureField("embedding", DataType.FloatVector, 768, null, false, false, "The vector embedding of the document content, used for semantic search.");
+            ensureField("documentText", DataType.VarChar, null, 8192, false, false, "A dynamically generated summary paragraph for each record, used for semantic search.");
+
             const COLLECTION_SCHEMA = {
                 collectionName: COLLECTION_NAME,
-                description: "Dynamically generated collection for user-provided records with LLM-approved summary text.",
+                description: "Collection for student leave records and school information with detailed field descriptions.",
                 fields: inferredFields,
                 enableDynamicField: true
             };
@@ -256,10 +284,10 @@ async function ingestData() {
                 process.exit(1);
             }
 
-            // --- Robust Collection Creation and Existence Polling ---
+            // Robust Collection Creation and Existence Polling
             let collectionSuccessfullyCreated = false;
-            const MAX_COLLECTION_CREATION_ATTEMPTS = 5; // Retries for creating and confirming collection
-            const MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS = 30; // Max 30 seconds for existence polling
+            const MAX_COLLECTION_CREATION_ATTEMPTS = 5;
+            const MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS = 30;
 
             for (let createAttempt = 0; createAttempt < MAX_COLLECTION_CREATION_ATTEMPTS; createAttempt++) {
                 console.log(`\nAttempt ${createAttempt + 1} to create and verify collection '${COLLECTION_NAME}'...`);
@@ -270,7 +298,7 @@ async function ingestData() {
                     if (hasCollection.value) {
                         console.log(`Collection '${COLLECTION_NAME}' already exists. Dropping it to create a fresh one.`);
                         await milvusClient.dropCollection({ collection_name: COLLECTION_NAME });
-                        await sleep(2000); // Small delay after dropping
+                        await sleep(2000);
                         console.log(`Collection '${COLLECTION_NAME}' dropped.`);
                     }
 
@@ -283,9 +311,8 @@ async function ingestData() {
                         enableDynamicField: COLLECTION_SCHEMA.enableDynamicField
                     });
                     console.log(`Collection '${COLLECTION_NAME}' creation command sent successfully.`);
-                    await sleep(2000); // Small delay after creation command
+                    await sleep(2000);
 
-                    // Poll until the collection is confirmed to exist
                     let collectionConfirmedToExist = false;
                     for (let i = 0; i < MAX_COLLECTION_EXISTENCE_POLLING_ATTEMPTS; i++) {
                         try {
@@ -306,16 +333,15 @@ async function ingestData() {
                     if (collectionConfirmedToExist) {
                         collectionSuccessfullyCreated = true;
                         console.log(`Collection '${COLLECTION_NAME}' successfully created and verified.`);
-                        break; // Exit collection creation retry loop
+                        break;
                     } else {
                         throw new Error(`Collection '${COLLECTION_NAME}' could not be confirmed to exist after creation command.`);
                     }
-
                 } catch (error) {
                     console.error(`Error in collection creation/verification attempt ${createAttempt + 1}: ${error.message}`);
                     if (createAttempt < MAX_COLLECTION_CREATION_ATTEMPTS - 1) {
                         console.log("Retrying collection creation after 5 seconds...");
-                        await sleep(5000); // Wait before retrying the entire creation process
+                        await sleep(5000);
                     } else {
                         throw new Error(`Failed to create and verify collection '${COLLECTION_NAME}' after ${MAX_COLLECTION_CREATION_ATTEMPTS} attempts.`);
                     }
@@ -325,7 +351,6 @@ async function ingestData() {
             if (!collectionSuccessfullyCreated) {
                 throw new Error("Collection creation failed after multiple attempts.");
             }
-            // --- End Robust Collection Creation and Existence Polling ---
 
             console.log(`Generating documentText, embeddings and inserting ${records.length} entities...`);
             const entities = [];
@@ -343,7 +368,7 @@ async function ingestData() {
                     documentText: record.documentText
                 };
                 for (const key in record) {
-                    if (key !== "docId" && key !== "documentText") {
+                    if (key !== "docId" && key !== "documentText" && key !== "embedding") {
                         entity[key] = record[key] === null ? "" : record[key];
                     }
                 }
@@ -358,34 +383,27 @@ async function ingestData() {
 
             console.log(`Flushing collection '${COLLECTION_NAME}'...`);
             await milvusClient.flushSync({ collection_names: [COLLECTION_NAME] });
-            
-            // --- Verify Flush Completion ---
+
             const stats = await milvusClient.getCollectionStatistics({ collection_name: COLLECTION_NAME });
             console.log(`Collection stats after flush:`, stats);
-            // Corrected access to row_count from stats.stats array
             const actualRowCount = stats.stats.find(s => s.key === 'row_count')?.value;
 
             if (actualRowCount !== String(records.length)) {
                 throw new Error(`Flush incomplete: Expected ${records.length} rows, got ${actualRowCount || 'undefined'}`);
             }
             console.log(`Collection '${COLLECTION_NAME}' flushed with ${actualRowCount} rows.`);
-            // --- END Verify Flush Completion ---
 
             console.log("Waiting 5 seconds after flush before creating indexes...");
-            await sleep(5000); 
+            await sleep(5000);
 
-            // --- Robust Vector Index Creation and Polling using helper ---
             await createAndVerifyVectorIndex(milvusClient, COLLECTION_NAME);
-            // --- END Robust Vector Index Creation and Polling ---
 
-            // Create scalar indexes dynamically based on inferred data type
             for (const field of scalarIndexCandidates) {
                 let indexType;
-                // --- Use BITMAP for numbers/booleans for small datasets ---
                 if (field.data_type === DataType.VarChar) {
                     indexType = "INVERTED";
                 } else if ([DataType.Int64, DataType.Float, DataType.Double, DataType.Bool].includes(field.data_type)) {
-                    indexType = "BITMAP"; // More optimal for small datasets and low cardinality
+                    indexType = "BITMAP";
                 } else {
                     console.warn(`Skipping scalar index for '${field.name}': Unsupported data type.`);
                     continue;
@@ -402,7 +420,6 @@ async function ingestData() {
                         collection_name: COLLECTION_NAME,
                         field_name: field.name,
                         index_type: indexType
-                        // --- Removed metric_type for scalar indexes ---
                     });
                     console.log(`Scalar index on '${field.name}' created successfully.`);
                 } catch (error) {
@@ -413,16 +430,15 @@ async function ingestData() {
             console.log(`Loading collection '${COLLECTION_NAME}' into memory for search...`);
             await milvusClient.loadCollection({ collection_name: COLLECTION_NAME });
             console.log(`Collection '${COLLECTION_NAME}' loaded.`);
-            
-            // If we reach here, the entire ingestion process for this attempt was successful
-            return; 
+
+            return;
 
         } catch (error) {
             console.error(`\n--- Ingestion Attempt ${processAttempt} Failed ---`);
             console.error(error.message);
             if (processAttempt < MAX_PROCESS_RETRIES) {
                 console.log(`Retrying full ingestion process in 15 seconds...`);
-                await sleep(15000); // Longer wait before retrying the entire process
+                await sleep(15000);
             } else {
                 console.error("All ingestion attempts failed. Please check Milvus logs and configuration.");
                 process.exit(1);

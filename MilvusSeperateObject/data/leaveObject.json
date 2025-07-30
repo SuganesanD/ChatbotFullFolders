@@ -1,0 +1,133 @@
+{
+  "_field_descriptions": {
+    "id": "A unique identifier for each leave record. This serves as the **Primary Key** for the 'Leave' Milvus collection.",
+    "student_id": "The unique identifier of the student who requested the leave. This field acts as the **'soft' foreign key**, linking a leave record to its corresponding student record in the 'Student' collection.",
+    "type": "The category of leave requested (e.g., 'Sick Leave', 'Personal Leave', 'Vacation Leave', 'Emergency Leave').",
+    "startDate": "The start date of the leave in YYYY-MM-DD format.",
+    "endDate": "The end date of the leave in YYYY-MM-DD format. Can be the same as startDate for single-day leaves.",
+    "reason": "A brief description of the reason for the leave.",
+    "status": "The current status of the leave application (e.g., 'Pending', 'Approved', 'Rejected', 'Canceled').",
+    "created_at": "The Unix timestamp (seconds since epoch) indicating when the leave record was created or submitted.",
+    "is_emergency": "A boolean flag indicating whether the leave request is considered an emergency (true) or not (false)."
+  },
+  "records": [
+    { "id": "LVE001", "student_id": "STU001", "type": "Sick Leave", "startDate": "2025-07-28", "endDate": "2025-07-29", "reason": "Fever and cold symptoms.", "status": "Approved", "created_at": 1722297600, "is_emergency": false },
+    { "id": "LVE002", "student_id": "STU001", "type": "Personal Leave", "startDate": "2025-08-10", "endDate": "2025-08-10", "reason": "Family engagement.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+    { "id": "LVE003", "student_id": "STU001", "type": "Vacation Leave", "startDate": "2025-06-15", "endDate": "2025-06-20", "reason": "Family trip to Shimla.", "status": "Approved", "created_at": 1718323200, "is_emergency": false },
+    { "id": "LVE004", "student_id": "STU001", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Sudden dental emergency.", "status": "Approved", "created_at": 1722384000, "is_emergency": true },
+    { "id": "LVE005", "student_id": "STU001", "type": "Personal Leave", "startDate": "2025-09-01", "endDate": "2025-09-01", "reason": "University entrance exam coaching.", "status": "Approved", "created_at": 1724976000, "is_emergency": false },
+
+    { "id": "LVE006", "student_id": "STU002", "type": "Sick Leave", "startDate": "2025-07-05", "endDate": "2025-07-06", "reason": "Viral infection.", "status": "Approved", "created_at": 1720185600, "is_emergency": false },
+    { "id": "LVE007", "student_id": "STU002", "type": "Vacation Leave", "startDate": "2025-10-25", "endDate": "2025-10-30", "reason": "Diwali break travel.", "status": "Pending", "created_at": 1729814400, "is_emergency": false },
+    { "id": "LVE008", "student_id": "STU002", "type": "Personal Leave", "startDate": "2025-08-22", "endDate": "2025-08-22", "reason": "Cultural performance.", "status": "Approved", "created_at": 1724284800, "is_emergency": false },
+
+    { "id": "LVE009", "student_id": "STU003", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Unexpected family emergency.", "status": "Pending", "created_at": 1722384000, "is_emergency": true },
+    { "id": "LVE010", "student_id": "STU003", "type": "Personal Leave", "startDate": "2025-09-05", "endDate": "2025-09-05", "reason": "Gaming competition.", "status": "Approved", "created_at": 1725417600, "is_emergency": false },
+    { "id": "LVE011", "student_id": "STU003", "type": "Sick Leave", "startDate": "2025-07-12", "endDate": "2025-07-13", "reason": "Food poisoning recovery.", "status": "Approved", "created_at": 1720704000, "is_emergency": false },
+    { "id": "LVE012", "student_id": "STU003", "type": "Vacation Leave", "startDate": "2025-12-24", "endDate": "2025-12-28", "reason": "Winter break family visit.", "status": "Approved", "created_at": 1735075200, "is_emergency": false },
+
+    { "id": "LVE013", "student_id": "STU004", "type": "Sick Leave", "startDate": "2025-07-20", "endDate": "2025-07-21", "reason": "Stomach flu.", "status": "Approved", "created_at": 1721472000, "is_emergency": false },
+    { "id": "LVE014", "student_id": "STU004", "type": "Personal Leave", "startDate": "2025-08-15", "endDate": "2025-08-15", "reason": "Environmental workshop.", "status": "Approved", "created_at": 1723766400, "is_emergency": false },
+    { "id": "LVE015", "student_id": "STU004", "type": "Vacation Leave", "startDate": "2025-11-01", "endDate": "2025-11-05", "reason": "Family trip to a national park.", "status": "Pending", "created_at": 1730419200, "is_emergency": false },
+
+    { "id": "LVE016", "student_id": "STU005", "type": "Sick Leave", "startDate": "2025-07-18", "endDate": "2025-07-19", "reason": "Sore throat and cough.", "status": "Approved", "created_at": 1721299200, "is_emergency": false },
+    { "id": "LVE017", "student_id": "STU005", "type": "Personal Leave", "startDate": "2025-08-08", "endDate": "2025-08-08", "reason": "Youth journalism conference.", "status": "Approved", "created_at": 1723161600, "is_emergency": false },
+
+    { "id": "LVE018", "student_id": "STU006", "type": "Sick Leave", "startDate": "2025-07-10", "endDate": "2025-07-11", "reason": "Viral fever.", "status": "Approved", "created_at": 1720531200, "is_emergency": false },
+    { "id": "LVE019", "student_id": "STU006", "type": "Personal Leave", "startDate": "2025-09-15", "endDate": "2025-09-15", "reason": "Entrepreneurship bootcamp.", "status": "Approved", "created_at": 1726368000, "is_emergency": false },
+    { "id": "LVE020", "student_id": "STU006", "type": "Vacation Leave", "startDate": "2025-12-01", "endDate": "2025-12-03", "reason": "Attending a startup expo.", "status": "Pending", "created_at": 1733097600, "is_emergency": false },
+
+    { "id": "LVE021", "student_id": "STU007", "type": "Sick Leave", "startDate": "2025-07-25", "endDate": "2025-07-26", "reason": "Migraine.", "status": "Approved", "created_at": 1722038400, "is_emergency": false },
+    { "id": "LVE022", "student_id": "STU007", "type": "Personal Leave", "startDate": "2025-08-01", "endDate": "2025-08-01", "reason": "Literary festival.", "status": "Approved", "created_at": 1722470400, "is_emergency": false },
+    { "id": "LVE023", "student_id": "STU007", "type": "Vacation Leave", "startDate": "2025-10-18", "endDate": "2025-10-22", "reason": "Visiting relatives for Dussehra.", "status": "Approved", "created_at": 1729209600, "is_emergency": false },
+    { "id": "LVE024", "student_id": "STU007", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Unforeseen family matter.", "status": "Pending", "created_at": 1722384000, "is_emergency": true },
+
+    { "id": "LVE025", "student_id": "STU008", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Minor sports injury.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+    { "id": "LVE026", "student_id": "STU008", "type": "Personal Leave", "startDate": "2025-09-10", "endDate": "2025-09-10", "reason": "Football tryouts.", "status": "Approved", "created_at": 1725849600, "is_emergency": false },
+
+    { "id": "LVE027", "student_id": "STU009", "type": "Personal Leave", "startDate": "2025-08-05", "endDate": "2025-08-05", "reason": "Art workshop.", "status": "Approved", "created_at": 1722816000, "is_emergency": false },
+    { "id": "LVE028", "student_id": "STU009", "type": "Sick Leave", "startDate": "2025-07-15", "endDate": "2025-07-15", "reason": "Eye infection.", "status": "Approved", "created_at": 1721040000, "is_emergency": false },
+
+    { "id": "LVE029", "student_id": "STU010", "type": "Sick Leave", "startDate": "2025-07-10", "endDate": "2025-07-11", "reason": "High fever.", "status": "Approved", "created_at": 1720531200, "is_emergency": false },
+    { "id": "LVE030", "student_id": "STU010", "type": "Personal Leave", "startDate": "2025-09-20", "endDate": "2025-09-20", "reason": "Science competition.", "status": "Pending", "created_at": 1726713600, "is_emergency": false },
+    { "id": "LVE031", "student_id": "STU010", "type": "Vacation Leave", "startDate": "2025-11-05", "endDate": "2025-11-10", "reason": "Trip to family farm.", "status": "Approved", "created_at": 1730937600, "is_emergency": false },
+    { "id": "LVE032", "student_id": "STU010", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Sudden health issue.", "status": "Pending", "created_at": 1722384000, "is_emergency": true },
+    { "id": "LVE033", "student_id": "STU010", "type": "Sick Leave", "startDate": "2025-07-01", "endDate": "2025-07-02", "reason": "Stomach bug.", "status": "Approved", "created_at": 1719840000, "is_emergency": false },
+
+    { "id": "LVE034", "student_id": "STU011", "type": "Personal Leave", "startDate": "2025-08-28", "endDate": "2025-08-28", "reason": "Music recital.", "status": "Approved", "created_at": 1724716800, "is_emergency": false },
+    { "id": "LVE035", "student_id": "STU011", "type": "Sick Leave", "startDate": "2025-07-22", "endDate": "2025-07-22", "reason": "Cold symptoms.", "status": "Approved", "created_at": 1721558400, "is_emergency": false },
+
+    { "id": "LVE036", "student_id": "STU012", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Family emergency.", "status": "Pending", "created_at": 1722384000, "is_emergency": true },
+    { "id": "LVE037", "student_id": "STU012", "type": "Personal Leave", "startDate": "2025-09-12", "endDate": "2025-09-12", "reason": "Robotics competition.", "status": "Approved", "created_at": 1726022400, "is_emergency": false },
+    { "id": "LVE038", "student_id": "STU012", "type": "Sick Leave", "startDate": "2025-07-08", "endDate": "2025-07-08", "reason": "Minor injury.", "status": "Approved", "created_at": 1720358400, "is_emergency": false },
+
+    { "id": "LVE039", "student_id": "STU013", "type": "Vacation Leave", "startDate": "2025-10-01", "endDate": "2025-10-06", "reason": "Historical site visit.", "status": "Approved", "created_at": 1727712000, "is_emergency": false },
+    { "id": "LVE040", "student_id": "STU013", "type": "Personal Leave", "startDate": "2025-08-03", "endDate": "2025-08-03", "reason": "Archeology club excursion.", "status": "Approved", "created_at": 1722643200, "is_emergency": false },
+
+    { "id": "LVE041", "student_id": "STU014", "type": "Sick Leave", "startDate": "2025-07-16", "endDate": "2025-07-16", "reason": "Dental appointment.", "status": "Approved", "created_at": 1721126400, "is_emergency": false },
+    { "id": "LVE042", "student_id": "STU014", "type": "Personal Leave", "startDate": "2025-09-25", "endDate": "2025-09-25", "reason": "Moot court practice.", "status": "Pending", "created_at": 1727145600, "is_emergency": false },
+
+    { "id": "LVE043", "student_id": "STU015", "type": "Vacation Leave", "startDate": "2025-11-10", "endDate": "2025-11-15", "reason": "Family trip for a wedding.", "status": "Approved", "created_at": 1731369600, "is_emergency": false },
+    { "id": "LVE044", "student_id": "STU015", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Flu symptoms.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+    { "id": "LVE045", "student_id": "STU015", "type": "Personal Leave", "startDate": "2025-08-02", "endDate": "2025-08-02", "reason": "Eco-club event.", "status": "Approved", "created_at": 1722556800, "is_emergency": false },
+
+    { "id": "LVE046", "student_id": "STU016", "type": "Sick Leave", "startDate": "2025-07-03", "endDate": "2025-07-04", "reason": "Cold and cough.", "status": "Approved", "created_at": 1720099200, "is_emergency": false },
+    { "id": "LVE047", "student_id": "STU016", "type": "Personal Leave", "startDate": "2025-09-05", "endDate": "2025-09-05", "reason": "Swimming competition.", "status": "Approved", "created_at": 1725417600, "is_emergency": false },
+
+    { "id": "LVE048", "student_id": "STU017", "type": "Vacation Leave", "startDate": "2025-08-20", "endDate": "2025-08-25", "reason": "Trip to family farm.", "status": "Approved", "created_at": 1724198400, "is_emergency": false },
+    { "id": "LVE049", "student_id": "STU017", "type": "Sick Leave", "startDate": "2025-07-19", "endDate": "2025-07-20", "reason": "Viral fever.", "status": "Approved", "created_at": 1721385600, "is_emergency": false },
+    { "id": "LVE050", "student_id": "STU017", "type": "Personal Leave", "startDate": "2025-09-02", "endDate": "2025-09-02", "reason": "School play rehearsal.", "status": "Approved", "created_at": 1725062400, "is_emergency": false },
+
+    { "id": "LVE051", "student_id": "STU018", "type": "Personal Leave", "startDate": "2025-08-15", "endDate": "2025-08-15", "reason": "Independence Day celebration.", "status": "Approved", "created_at": 1723766400, "is_emergency": false },
+    { "id": "LVE052", "student_id": "STU018", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Routine check-up.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+
+    { "id": "LVE053", "student_id": "STU019", "type": "Vacation Leave", "startDate": "2025-07-08", "endDate": "2025-07-10", "reason": "Short family trip.", "status": "Approved", "created_at": 1720358400, "is_emergency": false },
+    { "id": "LVE054", "student_id": "STU019", "type": "Sick Leave", "startDate": "2025-06-25", "endDate": "2025-06-25", "reason": "Minor injury.", "status": "Approved", "created_at": 1719235200, "is_emergency": false },
+    { "id": "LVE055", "student_id": "STU019", "type": "Personal Leave", "startDate": "2025-09-18", "endDate": "2025-09-18", "reason": "Language exchange program.", "status": "Pending", "created_at": 1726627200, "is_emergency": false },
+
+    { "id": "LVE056", "student_id": "STU020", "type": "Personal Leave", "startDate": "2025-08-03", "endDate": "2025-08-03", "reason": "Photography workshop.", "status": "Approved", "created_at": 1722643200, "is_emergency": false },
+    { "id": "LVE057", "student_id": "STU020", "type": "Sick Leave", "startDate": "2025-07-16", "endDate": "2025-07-16", "reason": "Fever.", "status": "Approved", "created_at": 1721126400, "is_emergency": false },
+
+    { "id": "LVE058", "student_id": "STU021", "type": "Vacation Leave", "startDate": "2025-10-10", "endDate": "2025-10-15", "reason": "Autumn break trip.", "status": "Pending", "created_at": 1728518400, "is_emergency": false },
+    { "id": "LVE059", "student_id": "STU021", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-30", "reason": "Sudden illness.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+    { "id": "LVE060", "student_id": "STU021", "type": "Personal Leave", "startDate": "2025-08-25", "endDate": "2025-08-25", "reason": "Tech exhibition visit.", "status": "Approved", "created_at": 1724457600, "is_emergency": false },
+
+    { "id": "LVE061", "student_id": "STU022", "type": "Personal Leave", "startDate": "2025-08-28", "endDate": "2025-08-28", "reason": "Art competition.", "status": "Approved", "created_at": 1724716800, "is_emergency": false },
+    { "id": "LVE062", "student_id": "STU022", "type": "Sick Leave", "startDate": "2025-07-09", "endDate": "2025-07-10", "reason": "Migraine attack.", "status": "Approved", "created_at": 1720444800, "is_emergency": false },
+
+    { "id": "LVE063", "student_id": "STU023", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Unforeseen family emergency.", "status": "Approved", "created_at": 1722384000, "is_emergency": true },
+    { "id": "LVE064", "student_id": "STU023", "type": "Personal Leave", "startDate": "2025-09-08", "endDate": "2025-09-08", "reason": "Leadership workshop.", "status": "Approved", "created_at": 1725676800, "is_emergency": false },
+    { "id": "LVE065", "student_id": "STU023", "type": "Sick Leave", "startDate": "2025-07-07", "endDate": "2025-07-07", "reason": "Routine medical check-up.", "status": "Approved", "created_at": 1720272000, "is_emergency": false },
+
+    { "id": "LVE066", "student_id": "STU024", "type": "Vacation Leave", "startDate": "2025-11-15", "endDate": "2025-11-20", "reason": "Family visit to grandparents.", "status": "Pending", "created_at": 1731888000, "is_emergency": false },
+    { "id": "LVE067", "student_id": "STU024", "type": "Personal Leave", "startDate": "2025-08-02", "endDate": "2025-08-02", "reason": "Marine biology lecture.", "status": "Approved", "created_at": 1722556800, "is_emergency": false },
+    { "id": "LVE068", "student_id": "STU024", "type": "Sick Leave", "startDate": "2025-07-14", "endDate": "2025-07-15", "reason": "Cold and weakness.", "status": "Approved", "created_at": 1720953600, "is_emergency": false },
+
+    { "id": "LVE069", "student_id": "STU025", "type": "Personal Leave", "startDate": "2025-08-01", "endDate": "2025-08-01", "reason": "Debate competition preparation.", "status": "Approved", "created_at": 1722470400, "is_emergency": false },
+    { "id": "LVE070", "student_id": "STU025", "type": "Sick Leave", "startDate": "2025-07-04", "endDate": "2025-07-05", "reason": "Food poisoning.", "status": "Approved", "created_at": 1720012800, "is_emergency": false },
+    { "id": "LVE071", "student_id": "STU025", "type": "Vacation Leave", "startDate": "2025-10-01", "endDate": "2025-10-05", "reason": "Short family getaway.", "status": "Pending", "created_at": 1727712000, "is_emergency": false },
+
+    { "id": "LVE072", "student_id": "STU026", "type": "Personal Leave", "startDate": "2025-08-12", "endDate": "2025-08-12", "reason": "Chemistry workshop.", "status": "Approved", "created_at": 1723420800, "is_emergency": false },
+    { "id": "LVE073", "student_id": "STU026", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Minor cold.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+
+    { "id": "LVE074", "student_id": "STU027", "type": "Vacation Leave", "startDate": "2025-09-01", "endDate": "2025-09-03", "reason": "Music concert attendance.", "status": "Approved", "created_at": 1724976000, "is_emergency": false },
+    { "id": "LVE075", "student_id": "STU027", "type": "Personal Leave", "startDate": "2025-08-19", "endDate": "2025-08-19", "reason": "Band practice.", "status": "Approved", "created_at": 1724025600, "is_emergency": false },
+    { "id": "LVE076", "student_id": "STU027", "type": "Sick Leave", "startDate": "2025-07-17", "endDate": "2025-07-17", "reason": "Stomach upset.", "status": "Approved", "created_at": 1721212800, "is_emergency": false },
+    { "id": "LVE077", "student_id": "STU027", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Unexpected family event.", "status": "Pending", "created_at": 1722384000, "is_emergency": true },
+
+    { "id": "LVE078", "student_id": "STU028", "type": "Vacation Leave", "startDate": "2025-11-25", "endDate": "2025-11-29", "reason": "Family function out of town.", "status": "Pending", "created_at": 1732665600, "is_emergency": false },
+    { "id": "LVE079", "student_id": "STU028", "type": "Personal Leave", "startDate": "2025-08-06", "endDate": "2025-08-06", "reason": "Writing workshop.", "status": "Approved", "created_at": 1722902400, "is_emergency": false },
+    { "id": "LVE080", "student_id": "STU028", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Headache.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+
+    { "id": "LVE081", "student_id": "STU029", "type": "Vacation Leave", "startDate": "2025-12-10", "endDate": "2025-12-15", "reason": "Sports camp.", "status": "Approved", "created_at": 1734048000, "is_emergency": false },
+    { "id": "LVE082", "student_id": "STU029", "type": "Personal Leave", "startDate": "2025-08-20", "endDate": "2025-08-20", "reason": "Badminton tournament.", "status": "Approved", "created_at": 1724112000, "is_emergency": false },
+    { "id": "LVE083", "student_id": "STU029", "type": "Sick Leave", "startDate": "2025-07-01", "endDate": "2025-07-02", "reason": "Muscle strain.", "status": "Approved", "created_at": 1719840000, "is_emergency": false },
+    { "id": "LVE084", "student_id": "STU029", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Sudden family obligation.", "status": "Approved", "created_at": 1722384000, "is_emergency": true },
+    { "id": "LVE085", "student_id": "STU029", "type": "Personal Leave", "startDate": "2025-09-10", "endDate": "2025-09-10", "reason": "School sports day.", "status": "Pending", "created_at": 1725849600, "is_emergency": false },
+
+    { "id": "LVE086", "student_id": "STU030", "type": "Vacation Leave", "startDate": "2025-09-05", "endDate": "2025-09-08", "reason": "Visiting university campuses.", "status": "Approved", "created_at": 1725417600, "is_emergency": false },
+    { "id": "LVE087", "student_id": "STU030", "type": "Personal Leave", "startDate": "2025-08-14", "endDate": "2025-08-14", "reason": "Investment club meeting.", "status": "Approved", "created_at": 1723680000, "is_emergency": false },
+    { "id": "LVE088", "student_id": "STU030", "type": "Sick Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Fever.", "status": "Pending", "created_at": 1722384000, "is_emergency": false },
+    { "id": "LVE089", "student_id": "STU030", "type": "Emergency Leave", "startDate": "2025-07-29", "endDate": "2025-07-29", "reason": "Urgent family matter.", "status": "Approved", "created_at": 1722384000, "is_emergency": true }
+  ]
+}
