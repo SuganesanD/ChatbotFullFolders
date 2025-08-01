@@ -198,7 +198,7 @@
       "leaveStatus": "Approved",
       "leaveReasonText": "Flu symptoms.",
       "leaveApprovedByStaffId": "S004",
-      "leaveIsEmergency": true,
+      "leaveIsEmergency": true,  
       "leaveSubmissionTimestamp": 1725091200,
       "studentId": "STU004",
       "studentName": "Kevin White",
