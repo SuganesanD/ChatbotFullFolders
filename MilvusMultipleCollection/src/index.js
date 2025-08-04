@@ -78,7 +78,7 @@ async function loadAllCollectionsInDatabase() {
 
         console.log(`Listing all collections in database '${DATABASE_NAME}'...`);
         const listCollectionsResponse = await milvusClient.showCollections({});
-        console.log('Raw showCollections response:', JSON.stringify(listCollectionsResponse, null, 2));
+       
 
         if (listCollectionsResponse.status.error_code !== 'Success') {
             throw new Error(`Failed to list collections: ${listCollectionsResponse.status.reason}`);

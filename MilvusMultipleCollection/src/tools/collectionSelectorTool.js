@@ -52,6 +52,8 @@ class CollectionSelectorTool extends Tool {
                 try {
                     // Attempt to fetch the actual collection description from Milvus schema
                     const descResponse = await milvusClient.describeCollection({ collection_name: currentCollectionName });
+            
+                    
                     if (descResponse.status?.error_code === 'Success' && descResponse.schema?.description) {
                         description = descResponse.schema.description;
                     }
@@ -65,6 +67,9 @@ class CollectionSelectorTool extends Tool {
                     description: description
                 });
             }
+
+            console.log("collectionwith description:" ,collectionsWithDescriptions);
+            
 
             // Return the result as a JSON string
             return JSON.stringify(collectionsWithDescriptions);

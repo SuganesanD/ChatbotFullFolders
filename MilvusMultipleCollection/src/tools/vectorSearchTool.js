@@ -19,15 +19,6 @@ const embeddings = new GoogleGenerativeAIEmbeddings({
     model: "embedding-001", // Must match the model used for ingestion (dim: 768)
 });
 
-/**
- * VectorSearchTool extends LangChain's Tool class to provide an interface
- * for performing vector similarity searches (semantic search) and hybrid searches
- * in a Milvus collection using `milvusClient.search()`.
- *
- * It converts a natural language query to an embedding and performs a vector search.
- * It can also optionally apply scalar filtering for hybrid search.
- * This tool is best for finding semantically similar records or for broad queries.
- */
 class VectorSearchTool extends Tool {
     name = "vector_search_tool";
 
@@ -52,7 +43,6 @@ class VectorSearchTool extends Tool {
 
     The 'filter' string must adhere to Milvus boolean expression syntax.
     Boolean values in filters should be 'true' or 'false' (lowercase).
-    Note: The specified collection must be loaded into Milvus memory externally before calling this tool, and released externally after use.
     `;
 
     schema = z.object({
@@ -81,12 +71,7 @@ class VectorSearchTool extends Tool {
                 collection_name: collection_name, // Use dynamic collection_name
                 vectors: [queryEmbedding],
                 limit: topK,
-                output_fields: outputFields || [
-                    "docId", "documentText", "leaveId", "leaveType", "leaveStatus",
-                    "studentName", "studentGradeLevel", "schoolName", "leaveReasonText",
-                    "leaveStartDateUnix", "leaveEndDateUnix", "leaveIsEmergency",
-                    "schoolEstablishedYear", "salary"
-                ],
+                output_fields: outputFields ,
                 search_params: {
                     anns_field: "embedding",
                     metric_type: "COSINE",

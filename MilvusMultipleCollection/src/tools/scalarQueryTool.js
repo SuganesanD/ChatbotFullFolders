@@ -2,28 +2,33 @@ const { Tool } = require('@langchain/core/tools');
 const { milvusClient } = require('../../src/config/milvusClient');
 const { z } = require('zod');
 
+const BATCH_SIZE = 10000; // Define a reasonable batch size for pagination
+
 class ScalarQueryTool extends Tool {
     constructor() {
         super();
         this.name = "scalar_query_tool";
         this.description = "Useful for filtering, retrieving, and counting records in a specific Milvus collection. " +
+                           "This tool is designed to retrieve ALL records that strictly match the provided 'filter' expression, " +
+                           "or all records if the filter is for a general retrieval. " +
+                           "It internally paginates results to fetch complete datasets. " +
                            "Input should be a JSON object with 'collection_name' (string, mandatory), " +
-                           "'filter' (string, optional, Milvus DSL format, e.g., 'field == \"value\"' or 'field LIKE \"%value%\"'), " +
+                           "'filter' (string, optional, Milvus DSL format, e.g., 'field == \"value\"' or 'field LIKE \"%value%\"'). " +
+                           "For queries without specific conditions (e.g., 'list all records'), use a filter like '(docId != \"\")'. " +
                            "'output_fields' (array of strings, optional, fields to return), " +
                            "'operation' (string, optional, 'count' to get total count matching filter). " +
-                           "If 'operation' is 'count', 'output_fields' is ignored. " +
+                           "If 'operation' is 'count', 'output_fields' is ignored, and only the count of matching records is returned. " +
                            "Always specify the 'collection_name' that was identified as most relevant by the collection_selector_tool. " +
                            "For VARCHAR fields in text-based queries, always use LIKE with wildcards ('%'). " +
                            "For multiple conditions, each individual condition must be enclosed in its own set of parentheses when using and/or/not (use in lowercase). " +
                            "Example: {\"collection_name\": \"my_collection\", \"filter\": \"(name LIKE \\\"%john%\\\") and (age > 30)\", \"output_fields\": [\"name\", \"age\"]}. " +
-                           "For counting: {\"collection_name\": \"my_collection\", \"filter\": \"(status == \\\"active\\\")\", \"operation\": \"count\"}. " +
-                           "Note: The collection must be loaded into Milvus memory externally before calling this tool, and released externally after use.";
+                           "For counting: {\"collection_name\": \"my_collection\", \"filter\": \"(status == \\\"active\\\")\", \"operation\": \"count\"}. " ;
     }
 
     // Define the schema for the tool's input
     schema = z.object({
         collection_name: z.string().describe("The name of the Milvus collection to query."),
-        filter: z.string().optional().describe("Milvus DSL filter expression (e.g., 'field == \"value\"' or 'field LIKE \"%value%\"')."),
+        filter: z.string().optional().describe("Milvus DSL filter expression (e.g., 'field == \"value\"' or 'field LIKE \"%value%\"'). For all records, use '(docId != \"\")'."),
         output_fields: z.array(z.string()).optional().describe("Array of field names to return in the results."),
         operation: z.enum(["count"]).optional().describe("Set to 'count' to return only the count of matching records."),
     });
@@ -43,37 +48,58 @@ class ScalarQueryTool extends Tool {
         }
 
         try {
-            // Loading is handled externally by the agent or server.js
             console.log(`[ScalarQueryTool] Querying collection '${collection_name}'... (assuming it is already loaded)`);
 
-            let result;
-            if (operation === "count") {
-                console.log(`[ScalarQueryTool] Counting records in '${collection_name}' with filter: '${filter}'`);
-                // For a filtered count, Milvus's query operation with a limit and then checking length is one way.
-                // A more direct filtered count might require a specific Milvus API or iterating results.
-                // For simplicity here, if operation is 'count', we'll get the collection statistics.
-                const stats = await milvusClient.getCollectionStatistics({ collection_name: collection_name });
-                const actualRowCount = stats.data.row_count; // Correct access as per Milvus advice
-                result = { count: actualRowCount }; // Return the total count of the collection
-                console.warn("[ScalarQueryTool] Note: 'count' operation currently returns total collection row count. For filtered counts, a more complex query or iteration might be needed.");
-            } else {
-                console.log(`[ScalarQueryTool] Querying collection '${collection_name}' with filter: '${filter}', output_fields: ${JSON.stringify(output_fields)}`);
-                const queryRes = await milvusClient.query({
+            const allResults = [];
+            let offset = 0;
+            let hasMore = true;
+
+            // Determine output fields for the query based on operation type
+            const fieldsToFetch = operation === "count" ? ["docId"] : (output_fields.length > 0 ? output_fields : ["docId"]); // Default to docId if no output_fields for non-count
+
+            while (hasMore) {
+                const queryParams = {
                     collection_name: collection_name,
                     filter: filter,
-                    output_fields: output_fields,
-                });
-                result = queryRes.data;
+                    output_fields: fieldsToFetch,
+                    limit: BATCH_SIZE,
+                    offset: offset,
+                };
+
+                console.log(`[ScalarQueryTool] Fetching batch with offset: ${offset}, limit: ${BATCH_SIZE} for collection '${collection_name}'`);
+                console.log("[ScalarQueryTool] Full query parameters sent to Milvus:", JSON.stringify(queryParams, null, 2));
+
+                const results = await milvusClient.query(queryParams);
+
+                console.log("[ScalarQueryTool] Raw Milvus results received for batch:", JSON.stringify(results, null, 2));
+
+                if (results && results.data && results.data.length > 0) {
+                    allResults.push(...results.data);
+                    offset += results.data.length; // Increment offset by the number of records fetched
+                    hasMore = results.data.length === BATCH_SIZE; // If fetched less than BATCH_SIZE, no more records
+                    console.log(`[ScalarQueryTool] Fetched ${results.data.length} records in this batch. Total records so far: ${allResults.length}`);
+                } else {
+                    hasMore = false; // No more data
+                    console.log("[ScalarQueryTool] No more records found in this batch.");
+                }
             }
 
-            console.log(`[ScalarQueryTool] Query result for '${collection_name}':`, JSON.stringify(result, null, 2));
-            return JSON.stringify(result);
+            console.log(`[ScalarQueryTool] Finished fetching all records. Total: ${allResults.length}`);
+
+            if (operation === "count") {
+                return JSON.stringify({ count: allResults.length });
+            } else {
+                if (allResults.length > 0) {
+                    return JSON.stringify(allResults, null, 2);
+                } else {
+                    return "No results found.";
+                }
+            }
 
         } catch (error) {
-            console.error(`[ScalarQueryTool] Error querying collection '${collection_name}':`, error.message);
-            return JSON.stringify({ error: `Error querying collection '${collection_name}': ${error.message}` });
+            console.error(`[ScalarQueryTool] Error during Milvus scalar query (pagination) for collection '${collection_name}':`, error);
+            return JSON.stringify({ error: `Error performing Milvus scalar query for collection '${collection_name}': ${error.message}. Please check the filter syntax or Milvus connection.` });
         } finally {
-            // Releasing is handled externally by the agent or server.js
             console.log(`[ScalarQueryTool] Finished operation on '${collection_name}'. (Collection release handled externally)`);
         }
     }

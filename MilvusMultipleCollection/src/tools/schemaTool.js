@@ -17,11 +17,6 @@ class SchemaTool extends Tool {
         collection_name: z.string().describe("The name of the Milvus collection whose schema is to be retrieved."),
     });
 
-    /**
-     * Extracts the description from the field schema.
-     * @param {object} field - The field object from Milvus schema.
-     * @returns {string} The description or a default message.
-     */
     _extractDescription(field) {
         console.log(`[SchemaTool Debug] Field '${field.name}' description:`, field.description);
         return field.description && field.description.trim() !== ''
@@ -29,11 +24,6 @@ class SchemaTool extends Tool {
             : 'No description provided.';
     }
 
-    /**
-     * The core logic of the tool. It retrieves the schema for the specified collection.
-     * @param {object} input - An object containing the 'collection_name'.
-     * @returns {Promise<string>} A JSON string representing the collection schema.
-     */
     async _call(input) {
         const { collection_name } = input; // Extract collection_name from input
         
