@@ -122,7 +122,10 @@ app.post('/api/chatbot', async (req, res) => {
             chat_history: currentChatHistory, // Pass the chat history to the agent
         });
    
-        const botResponseText = result.output;
+        const botResponse = result.output;
+const botResponseText = typeof botResponse === 'string' 
+                      ? botResponse 
+                      : botResponse?.text || '';
         console.log("Agent's final response:", botResponseText);
 
         // Update chat history with the new turn

@@ -125,6 +125,9 @@ You have access to the following tools:
         maxIterations: 15, // Restored to 15 to handle complex queries
     });
 
+    console.log("inside the langchain agent");
+    
+
     return agentExecutor;
 }
 

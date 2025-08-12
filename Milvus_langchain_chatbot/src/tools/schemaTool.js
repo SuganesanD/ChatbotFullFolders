@@ -13,11 +13,7 @@ class SchemaTool extends Tool {
 
     schema = z.object({});
 
-    /**
-     * Extracts the description from the field schema.
-     * @param {object} field - The field object from Milvus schema.
-     * @returns {string} The description or a default message.
-     */
+
     _extractDescription(field) {
         console.log(`[SchemaTool Debug] Field '${field.name}' description:`, field.description);
         return field.description && field.description.trim() !== ''

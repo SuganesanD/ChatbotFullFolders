@@ -150,9 +150,13 @@ app.post('/api/chatbot', async (req, res) => {
         // Invoke the agent with the current input and chat history.
         // The agentExecutor will internally manage the ReAct loop.
         const result = await agentExecutor.invoke({
-            input: query,
+            input: query,   
             chat_history: currentChatHistory, // Pass the chat history to the agent
         });
+
+
+        console.log("inside the index");
+        
     
         const botResponseText = result.output;
         console.log("Agent's final response:", botResponseText);

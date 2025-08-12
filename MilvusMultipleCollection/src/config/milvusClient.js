@@ -20,7 +20,7 @@ if (!milvusAddress) {
 // This ensures that for unauthenticated setups (like your Docker one), no token is sent.
 const milvusClient = new MilvusClient(
     milvusAddress,
-    milvusToken ? { token: milvusToken } : undefined // Pass token only if it exists and is not empty
+milvusToken ? { token: milvusToken } : undefined // Pass token only if it exists and is not empty
 );
 
 // Export the initialized client and DataType enum for use in other modules
