@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http';
+import { Observable, of,throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
 interface User {
@@ -56,11 +56,43 @@ export class CouchdbService {
     );
   }
 
-    sendQuery(query: string): Observable<any> {
-      console.log(query); 
-      return this.http.post(this.apiUrl3, { query });
-    }
-  imagevalue(imagevalue:boolean): Observable<any>{
+    // sendQuery(query: string): Observable<any> {
+    //   console.log(query); 
+    //   return this.http.post(this.apiUrl3, { query ,sessionId:"234",collectionName:"dynamicRecords",modal:"gemini"});
+    // }
+
+     sendQuery(query: string): Observable<any> {
+    console.log(`Sending query: ${query}`); 
+    return this.http.post(this.apiUrl3, { 
+      query
+      // sessionId: "234",
+      // collectionName: "dynamicRecords",
+      // modal: "gemini"
+    })
+    // .pipe(
+    //   // The `catchError` operator intercepts a failed HTTP request
+    //   catchError((error: HttpErrorResponse) => {
+    //     console.error('Backend returned an error:', error);
+        
+    //     let errorMessage = 'An unknown error occurred.';
+
+    //     // Check if the backend response has a specific error message
+    //     if (error.error && error.error.error) {
+    //       errorMessage = error.error.error;
+    //     } else {
+    //       // Fallback for other types of errors
+    //       errorMessage = `Server returned code ${error.status}: ${error.message}`;
+    //     }
+
+    //     // `throwError` creates an Observable that emits an error, which
+    //     // will trigger the component's `error` callback.
+    //     return throwError(() => new Error(errorMessage));
+    //   })
+    // );
+  }
+
+
+  imagevalue(imagevalue:boolean): Observable<any>{  
     console.log(imagevalue)
     return this.http.post(this.apiUrl2,{imagevalue})
   }

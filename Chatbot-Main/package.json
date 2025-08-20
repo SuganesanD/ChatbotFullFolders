@@ -1,0 +1,23 @@
+{
+  "name": "chatbot-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@langchain/cohere": "^0.3.4",
+    "@langchain/community": "^0.3.53",
+    "@langchain/core": "^0.3.72",
+    "@langchain/google-genai": "^0.2.16",
+    "@zilliz/milvus2-sdk-node": "^2.6.0",
+    "cohere-ai": "^7.18.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1"
+  }
+}

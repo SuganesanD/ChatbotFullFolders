@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="left-panel">
+    <p>Enter single record that you need to create the template in the json format </p>
+    <textarea [(ngModel)]="input"></textarea>
+    <button (click)="generateTemplate()">Generate Template</button>
+   <label for="gemini">
+    <input type="radio" id="gemini"  value="gemini" [(ngModel)]="modal" >
+    gemini
+   </label>
+
+   <label for="cohere">
+    <input type="radio" id="cohere"  value="cohere" [(ngModel)]="modal" >
+    cohere
+   </label>
+<p>{{modal}}</p>
+  </div>
+
+  <div class="right-panel">
+    <h3>TEMPLATE </h3>
+    <p>{{template}}</p>
+    <div class="approval">
+        <button>Confirm</button>
+        <button>Regenerate</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 
+ {
+      "docId": "LEAVE_REC_001",
+      "leaveId": "LREQ001",
+      "leaveType": "Sick Leave",
+      "leaveStartDateUnix": 1721865600,
+      "leaveEndDateUnix": 1722038400,
+      "leaveStatus": "Pending",
+      "leaveReasonText": "Sudden fever and doctor's appointment.",
+      "leaveApprovedByStaffId": null,
+      "leaveIsEmergency": true,
+      "leaveSubmissionTimestamp": 1721779200,
+      "studentId": "STU001",
+      "studentName": "Alice Smith",
+      "studentGradeLevel": 10,
+      "studentEnrollmentDateUnix": 1577836800,
+      "studentIsActive": true,
+      "studentContactEmail": "alice.s@example.com",
+      "studentParentContact": "555-123-4567",
+      "schoolId": "SCH001",
+      "schoolName": "Central High School",
+      "schoolAddressLine1": "123 Main St",
+      "schoolCity": "Anytown",
+      "schoolState": "CA",
+      "schoolZipCode": "90210",
+      "schoolType": "Public",
+      "schoolEstablishedYear": 1985
+    } -->

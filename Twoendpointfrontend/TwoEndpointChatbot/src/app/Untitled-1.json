@@ -1,0 +1,108 @@
+{
+    "orgId": 30,
+    "isHeader": false,
+    "isLookup": false,
+    "objectHierarchyJSON": {
+        "objectName": "testpm2parent",
+        "isStandardObject": "N",
+        "objectType": "PRIMARY",
+        "relationShipType": null,
+        "fieldId": 0,
+        "objectId": 312489,
+        "referenceObjectId": 0,
+        "rootPath": "testpm2parent_DUMMY",
+        "isUserAssignmentRequired": "N",
+        "customizedSortList": [],
+        "workflowHistoryFields": [],
+        "AuditTrackingField": [],
+        "fieldsArray": [
+            {
+                "fieldName": "orgname",
+                "fieldType": "TEXT"
+            },
+            {
+                "fieldName": "contactno",
+                "fieldType": "NUMBER"
+            },
+            {
+                "fieldName": "pfm_312489_id",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "createdby",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "emailid",
+                "fieldType": "EMAIL"
+            },
+            {
+                "fieldName": "display_name",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "name",
+                "fieldType": "TEXT"
+            },
+            {
+                "fieldName": "augmentsourceid",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "isactive",
+                "fieldType": "BOOLEAN"
+            },
+            {
+                "fieldName": "augmentsourcetype",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "companytype",
+                "fieldType": "RADIO"
+            },
+            {
+                "fieldName": "lastmodifiedon",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "lastmodifiedby",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "createdon",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "guid",
+                "fieldType": "HIDDEN"
+            },
+            {
+                "fieldName": "address",
+                "fieldType": "TEXTAREA"
+            }
+        ],
+        "childObject": [],
+        "associationObject": []
+    },
+    "tableStructureReadable": true,
+    "couchApiReferenceDetailsInfo": {
+        "312489": {
+            "couchApiReferenceDetails": {
+                "refrenceMapping": {}
+            }
+        }
+    },
+    "IncreamentalColumn": "",
+    "IncreamentalValue": 0,
+    "isIncremendal": false,
+    "criteriaQueryConfig": {
+        
+    },
+    "criteriaEnabledSet": [
+        
+    ],
+    "filterCriteria": false,
+    "fetchType": "BATCHWISE",
+    "fetchLimit": 200,
+    "bookmark": ""
+}

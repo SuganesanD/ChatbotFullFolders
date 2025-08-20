@@ -1,12 +1,11 @@
 // src/index.js
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); // Ensure .env is loaded from root
+require('dotenv').config({ path: '../.env' }); 
 
 const { MilvusClient } = require('@zilliz/milvus2-sdk-node');
-const { GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI } = require('@langchain/google-genai');
-const { AIMessage, HumanMessage } = require('@langchain/core/messages'); // Correct import for message classes
+const { ChatGoogleGenerativeAI } = require('@langchain/google-genai');
+const { AIMessage, HumanMessage } = require('@langchain/core/messages'); 
 
 // Import the agent initialization function
 const initializeAgentExecutor = require('./agent/langchainAgent');
@@ -23,21 +22,17 @@ if (!GOOGLE_API_KEY) {
     process.exit(1);
 }
 
-// --- Initialize Milvus and LLM Clients (Global/Singleton) ---
+// --- Initialize Milvus and LLM Clients ---
 let milvusClient;
-let embeddings;
 let chatModel;
-let agentExecutor; // Declare agentExecutor here
+let agentExecutor; 
 
 try {
     milvusClient = new MilvusClient({ address: MILVUS_ADDRESS });
-    embeddings = new GoogleGenerativeAIEmbeddings({
-        apiKey: GOOGLE_API_KEY,
-        model: "embedding-001",
-    });
+ 
     chatModel = new ChatGoogleGenerativeAI({
         apiKey: GOOGLE_API_KEY,
-        model: "gemini-2.5-flash", // gemini-1.5-flash is good for tool calling
+        model: "gemini-2.5-flash", 
         temperature: 0.3,
     });
     console.log("Milvus, Embeddings, and Chat Model clients initialized.");
@@ -64,7 +59,7 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Enable JSON body parsing
 
-// In-memory chat history storage (for demonstration purposes)
+// In-memory chat history storage
 // In a real application, you'd use a database for persistent storage
 const chatHistories = new Map(); // Maps sessionId to an array of chat messages
 
@@ -80,9 +75,6 @@ async function loadMilvusCollection() {
         console.error(`ERROR: Failed to load Milvus collection '${COLLECTION_NAME}'. ` +
             `Please ensure Milvus is running, the collection exists, and the index is built. ` +
             `Error: ${error.message}`);
-        // Depending on your error handling strategy, you might want to exit or
-        // set a flag that prevents chatbot queries until the collection is loaded.
-        // For now, we'll log and allow the server to start, but queries will fail.
     }
 }
 
@@ -91,7 +83,7 @@ loadMilvusCollection();
 
 // --- Chatbot API Endpoint ---
 app.post('/api/chatbot', async (req, res) => {
-    const { query, sessionId } = req.body; // Expect a sessionId from the frontend
+    const { query, sessionId, } = req.body; // Expect a sessionId from the frontend
 
     if (!query) {
         return res.status(400).json({ error: 'Query is required in the request body.' });

@@ -1,0 +1,8 @@
+<div class="embed-container">
+  <textarea placeholder="Enter your text here..." [(ngModel)]="embeddingInput"></textarea>
+  <button class="embed-btn" (click)="generateEmbeddings()">Embed</button>
+  <p *ngIf="loading">generating...</p>
+  <p>{{output}}</p>
+</div>
+
+

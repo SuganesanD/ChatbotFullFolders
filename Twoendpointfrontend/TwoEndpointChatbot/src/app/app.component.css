@@ -1,0 +1,15 @@
+.buttons{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    color:white;
+    padding: 20px;
+    
+    
+}

@@ -1,0 +1,45 @@
+Total records: 37
+Total students: 18
+Total schools: 10
+Total leaves: 37 
+
+Students name:
+Alice Smith, Bob Johnson, Jane Doe, Kevin White, Laura Green, Mia Black, Noah Brown, Olivia Clark, Peter Davis, Quinn Evans, Rahul Sharma, Sara Khan, Tom Lee, Uma Patel, Vikas Gupta, Wendy King, Xavier Lopez, Yara Singh
+
+Schools name:
+Central High School, Northwood Academy, Green Valley High School, Riverside Elementary, Ocean View Middle, City Center High, Westwood Primary, Eastside Academy, Maplewood Elementary, Grandview High. 
+
+Students in each school:
+  Central High School: 1 student
+  Northwood Academy: 1 student
+  Riverside Elementary: 2 students
+  Ocean View Middle: 1 student
+  City Center High: 2 students
+  Westwood Primary: 2 students
+  Eastside Academy: 3 students
+  Maplewood Elementary: 2 students
+  Grandview High: 3 students
+  Green Valley High School: 1 student
+
+Number of leaves for each students :
+         Alice Smith: 2 leaves
+         Bob Johnson: 1 leave
+         Jane Doe: 3 leaves
+         Kevin White: 2 leaves
+         Laura Green: 1 leave
+         Mia Black: 3 leaves
+         Noah Brown: 2 leaves
+         Olivia Clark: 1 leave
+         Peter Davis: 3 leaves
+         Quinn Evans: 2 leaves
+         Rahul Sharma: 3 leaves
+         Sara Khan: 2 leaves
+         Tom Lee: 1 leave
+         Uma Patel: 2 leaves
+         Vikas Gupta: 3 leaves
+         Wendy King: 1 leave
+         Xavier Lopez: 3 leaves
+         Yara Singh: 2 leaves
+
+
+

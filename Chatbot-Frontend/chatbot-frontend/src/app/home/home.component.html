@@ -16,14 +16,13 @@
         {{ item.response }}
         <span *ngIf="item.isTyping" class="typing-indicator">...</span>
       </div>
-      
-      <div *ngIf="item.chartData && item.chartData.labels && item.chartData.data && item.chartData.chartType" class="ai-chart-wrapper">
-  <app-chart-d3
-    [labels]="item.chartData.labels"
-    [data]="item.chartData.data"
-    [chartType]="item.chartData.chartType">
-  </app-chart-d3>
-</div>
+
+      <div *ngIf="item.chartData && item.chartData.labels && item.chartData.data && item.chartData.chartType"
+        class="ai-chart-wrapper">
+        <app-chart-d3 [labels]="item.chartData.labels" [data]="item.chartData.data"
+          [chartType]="item.chartData.chartType">
+        </app-chart-d3>
+      </div>
 
 
       <!-- <button (click)="renderImage(i)" *ngIf="!item.image && !item.isRendering">Render Image</button> -->

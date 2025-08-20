@@ -30,8 +30,8 @@ const nano = Nano({
   requestDefaults: {
     agent: new https.Agent({ rejectUnauthorized: false }),
     auth: {
-      username: 'd_couchdb',
-      password: 'Welcome#2',
+      username: 'datauser',
+      password: 'Welcome#1',
     }
   }
 });

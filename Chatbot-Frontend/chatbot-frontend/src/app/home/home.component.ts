@@ -51,66 +51,132 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  onSearch(searchValue: string): void {
-    this.query = this.query1;
-    this.query1 = '';
-    if (this.isLoading) return;
+  // onSearch(searchValue: string): void {
+  //   this.query = this.query1;
+  //   this.query1 = '';
+  //   if (this.isLoading) return;
 
-    this.query = searchValue.trim();
-    if (!this.query) {
-      this.errorMessage = 'Enter something to search';
-      return;
-    }
+  //   this.query = searchValue.trim();
+  //   if (!this.query) {
+  //     this.errorMessage = 'Enter something to search';
+  //     return;
+  //   }
 
-    this.isLoading = true;
-    this.errorMessage = null;
+  //   this.isLoading = true;
+  //   this.errorMessage = null;
 
-    this.conversation.push({ query: this.query, response: '', isTyping: true });
+  //   this.conversation.push({ query: this.query, response: '', isTyping: true });
 
-    this.currentRequest = this.couchService.sendQuery(this.query).subscribe({
-      next: (data) => {
-        const response = data?.answer || 'No result found';
-        const image = data?.image || null;
-        const sources = data?.sources || [];
-        const chartData = data?.context?.[0]; // Expecting chart info here
+  //   this.currentRequest = this.couchService.sendQuery(this.query).subscribe({
+  //     next: (data) => {
+  //       const response = data?.answer || 'No result found';
+  //       const image = data?.image || null;
+  //       const sources = data?.sources || [];
+  //       // const chartData = data?.context?.[0]; // Expecting chart info here
 
-        const index = this.conversation.length - 1;
+  //       const index = this.conversation.length - 1;
 
-        // Log the chart data if received
+  //       // // Log the chart data if received
         
-          console.log('✅ Chart data received:', chartData);
+  //       //   console.log('✅ Chart data received:', chartData);
         
 
-        this.typeResponse(response, index, () => {
-          if (!this.conversation[index]) return;
+  //       this.typeResponse(response, index, () => {
+  //         if (!this.conversation[index]) return;
 
-          this.conversation[index].sources = sources;
-          this.conversation[index].image = image;
+  //         this.conversation[index].sources = sources;
+  //         this.conversation[index].image = image;
 
-          // Assign chartData to item
-          if (chartData?.labels && chartData?.data && chartData?.chartType) {
-            this.conversation[index].chartData = chartData;
-          }
-        });
+  //         // // Assign chartData to item
+  //         // if (chartData?.labels && chartData?.data && chartData?.chartType) {
+  //         //   this.conversation[index].chartData = chartData;
+  //         // }
+  //       });
 
-        this.query = '';
-        this.errorMessage = null;
-      },
-      error: (error) => {
-        const response = 'There was an error processing your request';
-        const index = this.conversation.length - 1;
+  //       this.query = '';
+  //       this.errorMessage = null;
+  //     },
+  //     error: (error) => {
+  //       const response = 'There was an error processing your request';
+  //       const index = this.conversation.length - 1;
 
-        this.typeResponse(response, index, () => {
-          if (!this.conversation[index]) return;
-        });
+  //       this.typeResponse(response, index, () => {
+  //         if (!this.conversation[index]) return;
+  //       });
 
-        console.log('Error:', error);
-      },
-      complete: () => {
-        this.isLoading = false;
-      }
-    });
+  //       console.log('Error:', error);
+  //     },
+  //     complete: () => {
+  //       this.isLoading = false;
+  //     }
+  //   });
+  // }
+
+  // Corrected onSearch method
+onSearch(searchValue: string): void {
+  // Clear the search input field after getting the value
+  this.query = searchValue.trim();
+  this.query1 = ''; // Assuming query1 is the ngModel for your input, this will clear it.
+
+  // Prevent multiple requests if a search is already in progress
+  if (this.isLoading) return;
+
+  // Check for an empty query
+  if (!this.query) {
+    this.errorMessage = 'Enter something to search';
+    return;
   }
+
+  // Start the loading state
+  this.isLoading = true;
+  this.errorMessage = null;
+
+  // Add the user's query to the conversation
+  this.conversation.push({ query: this.query, response: '', isTyping: true });
+
+  // Make the API call to the service
+  this.currentRequest = this.couchService.sendQuery(this.query).subscribe({
+    next: (data) => {
+      // Process successful response
+      const response = data?.answer || 'No result found';
+      const image = data?.image || null;
+      const sources = data?.sources || [];
+      const index = this.conversation.length - 1;
+
+      // Type out the response character by character
+      this.typeResponse(response, index, () => {
+        if (!this.conversation[index]) return;
+        this.conversation[index].sources = sources;
+        this.conversation[index].image = image;
+      });
+
+      this.query = '';
+      this.errorMessage = null;
+    },
+    error: (error) => {
+
+      console.log("error:",error);
+      
+      // Correctly handle the error and display the specific message
+      // The `error` object from the service now has a `message` property with the backend's error text
+      const response = error.message || 'There was an error processing your request';
+      const index = this.conversation.length - 1;
+
+      // Display the error message to the user
+      this.typeResponse(response, index, () => {
+        if (!this.conversation[index]) return;
+        this.conversation[index].isTyping = false; // Stop the typing indicator
+      });
+
+      console.error('An error occurred:', error);
+      this.isLoading = false;
+    },
+    complete: () => {
+      // Stop the loading state when the request is complete (success or error)
+      this.isLoading = false;
+    }
+  });
+}
 
   typeResponse(text: string, index: number, callback?: () => void, delay: number = 0): void {
     let i = 0;
