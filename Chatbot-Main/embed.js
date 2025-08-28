@@ -1,16 +1,14 @@
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
-const { milvusClient, DataType } = require('../Chatbot-Main/config/milvusClient');
-const { GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI } = require('@langchain/google-genai');
+const { DataType } = require('@zilliz/milvus2-sdk-node');
+const { GoogleGenerativeAIEmbeddings } = require('@langchain/google-genai');
 const { CohereEmbeddings } = require("@langchain/cohere");
-
-
 
 const { v4: uuid } = require('uuid');
 
-const fs = require('fs');   
-const readline = require('readline');
+// const fs = require('fs');   
+// const readline = require('readline');
 
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
@@ -19,25 +17,17 @@ if (!GOOGLE_API_KEY) {
     process.exit(1);
 }
 
-// Initialize LLM for template generation
-// const chatModel = new ChatGoogleGenerativeAI({
-//     apiKey: GOOGLE_API_KEY,
-//     model: "gemini-2.0-flash",
-//     temperature: 0.1,
-// });
-
 // Initialize embedding model
 const geminiEmbeddings = new GoogleGenerativeAIEmbeddings({
     apiKey: GOOGLE_API_KEY,
-    model: "embedding-001",
+    model: "gemini-embedding-001",
+    outputDimensionality: 768,
 });
 
 const cohereEmbeddings = new CohereEmbeddings({
-  apiKey: process.env.COHERE_API_KEY, // your Cohere API key
-  model: "embed-english-v3.0",        // or "embed-multilingual-v3.0"
+    apiKey: process.env.COHERE_API_KEY, // your Cohere API key
+    model: "embed-english-v3.0",        // or "embed-multilingual-v3.0"
 });
-
-// const COLLECTION_NAME = 'dynamicRecords';
 
 // Helper function to introduce a delay
 function sleep(ms) {
@@ -64,69 +54,6 @@ function inferMilvusDataType(value) {
     }
 }
 
-// // Function to generate a summary template using LLM and get user approval
-// async function getApprovedSummaryTemplate(inferredSchemaFields, firstRecord) {
-//     const rl = readline.createInterface({
-//         input: process.stdin,
-//         output: process.stdout,
-//     });
-
-//     let approvedTemplate = null;
-
-//     while (approvedTemplate === null) {
-//         console.log("\n--- Generating Summary Template with LLM ---");
-//         const schemaForLLM = inferredSchemaFields.map(f => ({
-//             name: f.name,
-//             description: f.description || `Inferred field: ${f.name} (Milvus type: ${f.data_type}).`
-//         }));
-
-//         const llmPrompt = `You are an expert data summarizer. Your task is to create a concise, human-readable summary template for a data record.
-// I will provide you with the schema (field names and their descriptions) and an example data record.
-// Your output should be a single paragraph that uses placeholders for the actual data values.
-// Use double curly braces for placeholders, like \`{{fieldName}}\`.
-// Ensure the summary covers the most important aspects of a record, focusing on what a user would typically ask about.
-// Consider how dates (Unix timestamps) and boolean values should be naturally expressed in the summary.
-// Do not include any introductory or concluding remarks, just the summary paragraph.
-
-// Schema (Field Names and Descriptions):
-// ${JSON.stringify(schemaForLLM, null, 2)}
-
-// Example Record (first record from JSON, use its values to understand context):
-// ${JSON.stringify(firstRecord, null, 2)}
-
-// Generate the summary template (e.g., "Student {{studentName}} from {{schoolName}} requested {{leaveType}} leave..."):`;
-
-//         try {
-//             const response = await chatModel.invoke(llmPrompt);
-//             const generatedTemplate = response.content;
-
-//             console.log("\nGenerated Summary Template:");
-//             console.log("------------------------------------------");
-//             console.log(generatedTemplate);
-//             console.log("------------------------------------------");
-
-//             const answer = await new Promise(resolve => {
-//                 rl.question("Do you approve this template? (yes/no): ", input => {
-//                     resolve(input.toLowerCase());
-//                 });
-//             });
-
-//             if (answer === 'yes') {
-//                 approvedTemplate = generatedTemplate;
-//                 console.log("Template approved. Proceeding with data ingestion.");
-//             } else if (answer === 'no') {
-//                 console.log("Template rejected. Regenerating a new template...");
-//             } else {
-//                 console.log("Invalid input. Please type 'yes' or 'no'. Regenerating...");
-//             }
-//         } catch (error) {
-//             console.error("Error generating template with LLM:", error);
-//             console.log("Attempting to regenerate template due to error...");
-//         }
-//     }
-//     rl.close();
-//     return approvedTemplate;
-// }
 
 function fillTemplate(template, record) {
     let filledText = template;
@@ -192,38 +119,38 @@ async function verifyIndexes(client, collectionName, indexParams) {
 
 
 
-async function embed(jsonData) {
+async function embed(jsonData, milvusClient) {
 
     const MAX_PROCESS_RETRIES = 3;
     let processAttempt = 0;
     console.log("before******************************************");
-    console.log("jsonData:",jsonData);
-    
-    let inputJson=JSON.parse(jsonData);
+    console.log("jsonData:", jsonData);
+
+    let inputJson = JSON.parse(jsonData);
     console.log(JSON.stringify(inputJson));
-    
+
 
     console.log("after*******************************************");
-    
+
     // let database=inputJson.database;
-    let collection=inputJson.collection;
-    let Records=inputJson.records;
+    let collection = inputJson.collection;
+    let Records = inputJson.records;
     // let sessionId=inputJson.sessionId;
-    let modal=inputJson.modal;
-    let template=inputJson.template;
-    let FieldDescription=inputJson.fieldDescriptions;
+    let modal = inputJson.modal;
+    let template = inputJson.template;
+    let FieldDescription = inputJson.fieldDescriptions;
 
-    const embeddings=modal==='gemini'?geminiEmbeddings:cohereEmbeddings
+    const embeddings = modal === 'gemini' ? geminiEmbeddings : cohereEmbeddings
 
 
-    
+
 
 
     while (processAttempt < MAX_PROCESS_RETRIES) {
         processAttempt++;
         console.log(`\n--- Overall Ingestion Attempt ${processAttempt} of ${MAX_PROCESS_RETRIES} ---`);
         try {
-            
+
             if (!Records || Records.length === 0) {
                 console.warn("No records found in sampleRecords.json or 'records' key is missing. Exiting ingestion.");
                 return;
@@ -233,7 +160,7 @@ async function embed(jsonData) {
             }
 
             const firstRecord = Records[0];
-            
+
             // --- REVISED: Build Schema and Index Parameters upfront, starting with special fields ---
             const inferredFields = [
                 // Always include the special RAG fields
@@ -241,11 +168,11 @@ async function embed(jsonData) {
                 { name: "embedding", data_type: DataType.FloatVector, dim: 768, description: "The vector embedding of the document content, used for semantic search." },
                 { name: "documentText", data_type: DataType.VarChar, max_length: 8192, description: "A dynamically generated summary paragraph for each record, used for semantic search." }
             ];
-            
+
             const indexParams = [
                 // Always include the special RAG field indexes
-                { field_name: "docId", index_name: "docId_index", index_type: "INVERTED","mmap.enabled": true },
-                { field_name: "documentText", index_name: "documentText_index", index_type: "INVERTED" ,"mmap.enabled": true},
+                { field_name: "docId", index_name: "docId_index", index_type: "INVERTED", "mmap.enabled": true },
+                { field_name: "documentText", index_name: "documentText_index", index_type: "INVERTED", "mmap.enabled": true },
                 { field_name: "embedding", index_name: "embedding_index", index_type: "DISKANN", metric_type: "COSINE" },
             ];
 
@@ -273,7 +200,7 @@ async function embed(jsonData) {
                 if (value === null) {
                     fieldDefinition.is_nullable = true;
                 }
-                
+
                 inferredFields.push(fieldDefinition);
 
                 // Add scalar index for non-special fields
@@ -321,9 +248,9 @@ async function embed(jsonData) {
             await milvusClient.createCollection({
                 collection_name: COLLECTION_SCHEMA.collectionName,
                 fields: COLLECTION_SCHEMA.fields,
-                enableDynamicField: COLLECTION_SCHEMA.enableDynamicField,    
+                enableDynamicField: COLLECTION_SCHEMA.enableDynamicField,
             });
-             // description: COLLECTION_SCHEMA.description,
+            // description: COLLECTION_SCHEMA.description,
 
             console.log(`Collection '${collection}' created.`);
             await sleep(2000);
@@ -353,13 +280,28 @@ async function embed(jsonData) {
 
             console.log(`Generating documentText, embeddings and upserting ${Records.length} entities...`);
             const entities = [];
-            let i=1;
+            let i = 1;
             for (const record of Records) {
                 const currentDocId = record.docId || uuid.v4();
                 record.docId = currentDocId;
                 const generatedDocumentText = fillTemplate(summaryTemplate, record);
                 record.documentText = generatedDocumentText;
-                const embedding = await embeddings.embedQuery(record.documentText);
+                let embedding = await embeddings.embedQuery(record.documentText);
+                console.log(`embeddings of ${i} record- ${embedding}`);
+
+                // Truncate embedding to 768 dimensions and normalize
+                if (embedding.length === 3072) {
+                    console.log(`Truncating 3072-dimensional embedding to 768 dimensions for record ${i}`);
+                    embedding = embedding.slice(0, 768);
+                    // Normalize vector for IP metric
+                    const magnitude = Math.sqrt(embedding.reduce((sum, val) => sum + val * val, 0));
+                    if (magnitude === 0) throw new Error(`Cannot normalize zero vector for record ${i}`);
+                    embedding = embedding.map(val => val / magnitude);
+                }
+                if (embedding.length !== 768) {
+                    throw new Error(`Vector dimension mismatch for record ${i}: expected 768, got ${embedding.length}`);
+                }
+
                 const entity = {
                     docId: record.docId,
                     embedding: embedding,
@@ -393,10 +335,10 @@ async function embed(jsonData) {
             } else {
                 throw new Error(`Flush operation failed: ${flushResponse.status.reason}`);
             }
-            
+
             // This is still a necessary step to ensure the index building is complete
             await verifyIndexes(milvusClient, collection, uniqueIndexParams);
-            
+
             console.log("Ingestion process complete. Data upserted and indexes are built and ready for use.");
             return "Ingestion process complete. Data upserted and indexes are built";
 

@@ -1,0 +1,6 @@
+<div class="upsert-container">
+  <textarea placeholder="Enter your text here..." [(ngModel)]="upsertInput"></textarea>
+  <button class="upsert-btn" (click)="upsertRecords()">upsert</button>
+  <p *ngIf="loading">generating...</p>
+  <p>{{output}}</p>
+</div>

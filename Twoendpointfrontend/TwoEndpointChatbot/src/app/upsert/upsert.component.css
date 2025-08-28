@@ -1,0 +1,52 @@
+.upsert-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.upsert-container textarea {
+  width: 60%;
+  height: 50%;
+  min-height: 250px;
+  max-height: 70%;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #80bfff;
+  border-radius: 12px;
+  resize: none;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.upsert-container textarea:focus {
+  border-color: #3399ff;
+  box-shadow: 0px 6px 14px rgba(51, 153, 255, 0.2);
+}
+
+.upsert-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #3399ff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.upsert-btn:hover {
+  background: #267acc;
+  transform: translateY(-2px);
+}
+
+.upsert-btn:active {
+  background: #1a5c99;
+  transform: translateY(1px);
+}

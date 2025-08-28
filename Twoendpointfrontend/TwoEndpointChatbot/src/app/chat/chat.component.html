@@ -1,1 +1,8 @@
-<input type="text">
+<div class="chat-container">
+  <textarea placeholder="Enter your text here..." [(ngModel)]="chatInput"></textarea>
+  <button class="chat-btn" (click)="generateChat()">chat</button>
+  <p *ngIf="loading">generating...</p>
+  <p>{{output}}</p>
+</div>
+
+

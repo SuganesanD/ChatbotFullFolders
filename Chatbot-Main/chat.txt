@@ -1,0 +1,6 @@
+{
+"collection":"schoolstudentcollection",
+"modal": "gemini",
+"query": "hi",
+"sessionId":"123" 
+}

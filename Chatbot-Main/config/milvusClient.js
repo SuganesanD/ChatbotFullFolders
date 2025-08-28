@@ -2,7 +2,7 @@
 require('dotenv').config(); // Load environment variables from .env
 
 // Import MilvusClient and DataType from the SDK
-const { MilvusClient, DataType } = require('@zilliz/milvus2-sdk-node');
+const { MilvusClient } = require('@zilliz/milvus2-sdk-node');
 
 // Retrieve Milvus connection details from environment variables
 const milvusAddress = process.env.MILVUS_ADDRESS;
@@ -24,4 +24,4 @@ const milvusClient = new MilvusClient(
 );
 
 // Export the initialized client and DataType enum for use in other modules
-module.exports = { milvusClient, DataType };
+module.exports = { milvusClient };
